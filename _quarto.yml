@@ -22,6 +22,8 @@ format:
     toc-depth: 3
     embed-resources: false
     embed-fonts: true
+    mainfont: TeX Gyre Pagella
+    mathfont: TeX Gyre Pagella Math
     link-citations: true
     smooth-scroll: true
     link-external-newwindow: true
