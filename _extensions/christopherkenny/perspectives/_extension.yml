@@ -1,0 +1,18 @@
+title: Perspectives on Politics
+author: Christopher Kenny
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      toc: false
+    pdf:
+      include-in-header: header.tex
+      format-resources:
+        - "CUP-JNL-PPS.cls"
+        - "orcid_logo.eps"
+      template-partials:
+        - "partials/title.tex"
+        - "partials/doc-class.tex"
+        - "partials/before-body.tex"
+

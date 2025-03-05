@@ -1,0 +1,18 @@
+---
+title: Notebook title
+author: Isaiah
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+Read a clean version of data:
+
+```{r}
+# rio::import() calls on haven::read_dta() based on the file extension
+
+```
+
+
