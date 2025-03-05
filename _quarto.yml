@@ -40,7 +40,7 @@ format:
   # docx: default
   # jats: default
   
-  pdf: 
+  pdf:
     pdf-engine: xelatex
     documentclass: scrartcl
     keep-tex: false
@@ -57,6 +57,10 @@ format:
     fig-width: 7.5
     link-citations: true
     papersize: a4
+    hyperrefoptions: 
+      - linktoc=all
+      - pdfwindowui
+      - pdfpagemode=FullScreen
     geometry:
       - inner=3cm
       - outer=4cm
