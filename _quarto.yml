@@ -4,7 +4,7 @@ project:
 manuscript:
   meca-bundle: false
   notebooks:
-    - notebook: 01-data.qmd
+    - notebook: notebooks/01-data.qmd
       title: "Data Import and Processing"
   code-links: repo
 
