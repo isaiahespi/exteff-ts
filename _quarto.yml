@@ -3,6 +3,8 @@ project:
 
 manuscript:
   meca-bundle: false
+  resources: 
+    - resources/anes_timeseries_2020_userguidecodebook_20220210.pdf
   notebooks:
     - notebook: notebooks/01-data.qmd
       title: "Data Import and Processing"
@@ -17,11 +19,10 @@ date: last-modified
 date-format: "YYYY-M-D"
 
 format:
-  bookup-html:
+  html:
     toc: true
     toc-depth: 3
     embed-resources: false
-    embed-fonts: true
     mainfont: TeX Gyre Pagella
     mathfont: TeX Gyre Pagella Math
     link-citations: true
@@ -31,14 +32,11 @@ format:
     citations-hover: true
     footnotes-hover: false
     theme: 
-      light: [bookup.scss]
-      dark: [bookup.scss, booup_dark.scss]
-  # html:
-  #   toc: true
-  #   comments:
-  #     hypothesis: false
-  # docx: default
-  # jats: default
+      light: flatly
+      dark: darkly
+      
+  docx: default
+  jats: default
   
   pdf:
     pdf-engine: xelatex
