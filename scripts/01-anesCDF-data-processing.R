@@ -23,6 +23,10 @@ data("anesCDF", package = 'miguk')
 # when importing .sav (SPSS) files, `rio::import()` uses `haven::read_sav()`
 # anesCDF <- rio::import("~/R/data/ANES/Time Series Cumulative Data File/data/anes_timeseries_cdf_spss_20220916.sav")
 
+# load ANES CDF data dictionary
+anesCDF_dict <- readr::read_csv("resources/anesCDF_codebook_dictionary.csv")
+
+
 #:::::::: Note on the current release of the ANES CDF data set :::::::::::::####
 
 # The current release (2022-09-16) of the Cumulative Data File contains 1030
@@ -154,218 +158,90 @@ anesCDF |>
 
 # NOTE: the NOSAY external efficacy item was not asked in 1986 for some unknown reason. Neither NOSAY or NOCARE were asked in years 1948, 1954, 1958, 1962, and 2012, but only NOSAY was omitted from the survey in 1986.
 
-# Add variable labels, value labels, and create and save data dictionary :::####
-
-# load variable list (this is an .csv file converted by Adobe Acrobat from the
-# PDF codebook varlist to an Excel file)
-anesCDF_varlist <- rio::import(file = "resources/anes_timeseries_cdf_codebook_varlist.csv") |>
-  # fix case of cell text in `variable` column
-  dplyr::mutate(variable = dplyr::case_when(
-    variable == "VERSION" ~ "Version",
-    .default = as.character(variable)
-  ))
-
-# add variable labels to `anesCDF` data frame ::::::::::::::::::::::::::::::####
-
-# deframe variables with associated variable labels
-anesCDF_varlabels <- anesCDF_varlist |> 
-  dplyr::rename(label = variable_label) |> 
-  dplyr::select(variable, label) |> 
-  tibble::deframe()
-
-# assign the variable lables using the splice operator. Labels are assigned via
-# matching against the variable name, so variable order does not matter.
-anesCDF <- anesCDF |>
-  labelled::set_variable_labels(!!!anesCDF_varlabels)
-
-# clean up global environment a little
-rm(anesCDF_varlist, anesCDF_varlabels)
-
-# add value labels to `anesCDF` data frame :::::::::::::::::::::::::::::::::####
-
-# SO the time series cumulative data file in `anesr` package is outdated
-# compared to what I pulled more recently in placed into my personal `miguk`
-# package.
-
-# However, the `anesr` package has the response options that correspond to each
-# value code (e.g., [1] Strongly disagree, 0. No Post-election interview) which
-# is super helpful. With those, I can check response options and value codes
-# while leaving the variables in the data set as named or labelled numeric
-# values. Otherwise, in order to get response options for each, I'll have to
-# check the official codebooks.
-
-# What I do here is deframe the value labels (label_val in
-# `surveytoolbox::data_dict`) in the same way as before and add them to the
-# anesCDF data frame.
-
-# load the Timeseries cumulative dataset file from `anesr` package
-data(timeseries_cum, package = "anesr")
-
-# generate dictionary from `labelled` R package
-dict_anesr <- timeseries_cum |>
-  labelled::generate_dictionary()
-
-# Not all of the variables in the `timeseries_cum` have value_labels, so I
-# filter the ones that are filled with the character string 'NULL' 
-
-# Here I deframe and save the actual value labels that are not `NULL`
-anesr_dict_value_labels <- dict_anesr |> 
-  dplyr::filter(value_labels != "NULL") |> 
-  dplyr::as_tibble() |> 
-  dplyr::select(variable, value_labels) |> 
-  tibble::deframe()
-
-# now I add the `anesr` value labels to my anesCDF data frame
-anesCDF <- anesCDF |>
-  labelled::set_value_labels(!!!anesr_dict_value_labels) 
-
-# assign data dictionary as tibble dataframe using `surveytoolbox` function
-anesCDF_dict <- anesCDF |> surveytoolbox::data_dict()
-
-# Now the `anesCDF_dict` has 4 variable columns
-# var: the variable identifer in the data set
-# label_var: variable label corresponding to each variable column in the dataset
-# label_val: value label that gives labels that correspond to each value
-# value: the distinct values that correspond to each variable
-
-# save data dictionary to resources directory ::::::::::::::::::::::::::::::####
-
-readr::write_csv(
-  x = anesCDF_dict, 
-  file = "resources/anesCDF_codebook_dictionary.csv"
-  )
-
-
-# remove items from global environment
-rm(
-  anesr_dict_labels,
-  anesr_dict_value_labels,
-  dict_anesr,
-  timeseries_cum
-)
-
-# The added benefit of doing all that to create a data dictionary .csv file is
-# that now the `anesCDF` dataframe contains variable label and value label
-# attributes
-str(anesCDF)
-
-
-
 # subset data frame ::::::::::::::::::::::::::::::::::::::::::::::::::::::::####
+
+
 
 # cdf = cumulative data file
 # subset dataframe by desired variables from ANES variable codebook
 cdf <- anesCDF |>
   janitor::clean_names() |>
   dplyr::select(
-    version, vcf0004, vcf0006, vcf0006a, vcf0009x, vcf0009y, vcf0009z,
-    vcf0010x, vcf0010y, vcf0010z, vcf0011x, vcf0011y, vcf0011z, vcf9999, vcf0013, 
-    vcf0014, vcf0016, vcf0017, vcf0101, vcf0102, vcf0103, vcf0104, vcf0105a, 
-    vcf0105b, vcf0106, vcf0107, vcf0108, vcf0110, vcf0112, vcf0113, vcf0114,
-    vcf0127, vcf0127b, vcf0128, vcf0128a, vcf0128b, vcf0140, vcf0140a, vcf0142,
-    vcf0143, vcf0301, vcf0303, vcf0310, vcf0311, vcf0312, vcf0313, vcf0450, 
-    vcf0451, vcf0601, vcf0602, vcf0603, vcf0604, vcf0605, vcf0606, vcf0608, 
-    vcf0609, vcf0613, vcf0614, vcf0624, vcf0648, vcf0649, vcf0656, vcf0702,
-    vcf0703, vcf0704, vcf0704a, vcf0705, vcf0706, vcf0736, vcf0880, vcf0880a,
-    vcf0881, vcf0900, vcf9009
+    anes_version          = version,
+    year                  = vcf0004,
+    case_id               = vcf0006,
+    panelcase_id          = vcf0006a,
+    weights9x             = vcf0009x,
+    weights9y             = vcf0009y,
+    weights9z             = vcf0009z,
+    weights10x            = vcf0010x,
+    weights10y            = vcf0010y,
+    weights10z            = vcf0010z,
+    weights11x            = vcf0011x,
+    weights11y            = vcf0011y,
+    weights11z            = vcf0011z,
+    weights_vcf9999       = vcf9999,
+    post_electionIW       = vcf0013,
+    pre_electionIW        = vcf0014,
+    cross_sec_comp        = vcf0016,
+    interview_mode        = vcf0017,
+    age                   = vcf0101,
+    age_group             = vcf0102,
+    cohort                = vcf0103,
+    gender                = vcf0104,
+    race_7cat             = vcf0105a,
+    race_4cat             = vcf0105b,
+    race_3cat             = vcf0106,
+    hisp_orgin_type       = vcf0107,
+    hisp_orgin            = vcf0108,
+    educ_4cat             = vcf0110,
+    census_region         = vcf0112,
+    political_south       = vcf0113,
+    income_group          = vcf0114,
+    hh_union_mbr          = vcf0127,
+    union_who             = vcf0127b,
+    relig_major           = vcf0128,
+    relig_7cat            = vcf0128a,
+    relig_8cat            = vcf0128b,
+    educ_6cat             = vcf0140,
+    educ_7cat             = vcf0140a,
+    birthplace            = vcf0142,
+    parents_native        = vcf0143,
+    partyid               = vcf0301,
+    partyid_3cat          = vcf0303,
+    interest_in_elections = vcf0310,
+    care_who_wins         = vcf0311,
+    care_who_wins_house   = vcf0312,
+    attention             = vcf0313,
+    pres_app_anes         = vcf0450,
+    pres_app_strngth      = vcf0451,
+    protest_approval      = vcf0601,
+    civildisobedience     = vcf0602,
+    demonstrations        = vcf0603,
+    trust1                = vcf0604,
+    trust2                = vcf0605,
+    trust3                = vcf0606,
+    trust4                = vcf0608,
+    nocare                = vcf0609,
+    nosay                 = vcf0613,
+    complex               = vcf0614,
+    govrespons_elections  = vcf0624,
+    exteff_index          = vcf0648,
+    gov_resp_index        = vcf0649,
+    trust_gov_index       = vcf0656,
+    turnout               = vcf0702,
+    regis_turnout         = vcf0703,
+    votechoice_candiates  = vcf0704,
+    votechoice_2party     = vcf0704a,
+    votechoice            = vcf0705,
+    voted                 = vcf0706,
+    vote_party_house      = vcf0736,
+    betteroff             = vcf0880,
+    betteroffa            = vcf0880a,
+    betteroff_next_year   = vcf0881,
+    congress_district     = vcf0900,
+    pres_app_econ         = vcf9009
   )
-
-# create subset data codebook/dictionary and rename columns ::::::::::::::::####
-
-# create a data dictionary of subset dataframe. This retains all of the
-# variable, value labels, and value (codes) as the larger data set.
-cdf_dict <- cdf |> surveytoolbox::data_dict()
-
-# save character vector of new column names 
-# (technically a named character object)
-new_var_names <- c(
-  version   = "anes_version",
-  vcf0004   = "year",
-  vcf0006   = "case_id",
-  vcf0006a  = "panelcase_id",
-  vcf0009x  = "weights9x",
-  vcf0009y  = "weights9y",
-  vcf0009z  = "weights9z",
-  vcf0010x  = "weights10x",
-  vcf0010y  = "weights10y",
-  vcf0010z  = "weights10z",
-  vcf0011x  = "weights11x",
-  vcf0011y  = "weights11y",
-  vcf0011z  = "weights11z",
-  vcf9999   = "weights_vcf9999",
-  vcf0013   = "post_electionIW",
-  vcf0014   = "pre_electionIW",
-  vcf0016   = "cross_sec_comp",
-  vcf0017   = "interview_mode",
-  vcf0101   = "age",
-  vcf0102   = "age_group",
-  vcf0103   = "cohort",
-  vcf0104   = "gender",
-  vcf0105a  = "race_7cat",
-  vcf0105b  = "race_4cat",
-  vcf0106   = "race_3cat",
-  vcf0107   = "hisp_orgin_type",
-  vcf0108   = "hisp_orgin",
-  vcf0110   = "educ_4cat",
-  vcf0112   = "census_region",
-  vcf0113   = "political_south",
-  vcf0114   = "income_group",
-  vcf0127   = "hh_union_mbr",
-  vcf0127b  = "union_who",
-  vcf0128   = "relig_major",
-  vcf0128a  = "relig_7cat",
-  vcf0128b  = "relig_8cat",
-  vcf0140   = "educ_6cat",
-  vcf0140a  = "educ_7cat",
-  vcf0142   = "birthplace",
-  vcf0143   = "parents_native",
-  vcf0301   = "partyid",
-  vcf0303   = "partyid_3cat",
-  vcf0310   = "interest_in_elections",
-  vcf0311   = "care_who_wins",
-  vcf0312   = "care_who_wins_house",
-  vcf0313   = "attention",
-  vcf0450   = "pres_app_anes",
-  vcf0451   = "pres_app_strngth",
-  vcf0601   = "protest_approval",
-  vcf0602   = "civildisobedience",
-  vcf0603   = "demonstrations",
-  vcf0604   = "trust1",
-  vcf0605   = "trust2",
-  vcf0606   = "trust3",
-  vcf0608   = "trust4",
-  vcf0609   = "nocare",
-  vcf0613   = "nosay",
-  vcf0614   = "complex",
-  vcf0624   = "govrespons_elections",
-  vcf0648   = "exteff_index",
-  vcf0649   = "gov_resp_index",
-  vcf0656   = "trust_gov_index",
-  vcf0702   = "turnout",
-  vcf0703   = "regis_turnout",
-  vcf0704   = "votechoice_candiates",
-  vcf0704a  = "votechoice_2party",
-  vcf0705   = "votechoice",
-  vcf0706   = "voted",
-  vcf0736   = "vote_party_house",
-  vcf0880   = "betteroff",
-  vcf0880a  = "betteroffa",
-  vcf0881   = "betteroff_next_year",
-  vcf0900   = "congress_district",
-  vcf9009   = "pres_app_econ"
-)
-
-
-# add column of custom variable names to codebook/dictionary while retaining
-# original ANES variable names
-cdf_dict <- cdf_dict |> 
-  dplyr::mutate(var_rename = new_var_names, .before = var)
-
-# rename column names
-colnames(cdf) <- new_var_names
-
-# this adds prefix to each variable label consisting of the ANES variable code
-cdf_dict <- cdf_dict |> dplyr::mutate(label_var = str_glue("[{var}]: {label_var}"))
 
 # Recode `999` values and filter data frame ::::::::::::::::::::::::::::::::####
 
@@ -387,6 +263,102 @@ table(cdf$exteff_index, useNA = "always")
 # omit the years where external efficacy items were not asked
 cdf <- cdf |> 
   dplyr::filter(year %nin% c(1948, 1954, 1958, 1962))
+
+
+# create subset data codebook/dictionary and rename columns ::::::::::::::::####
+
+# save character vector of new column names corresponding to ANES var names 
+# (technically a named character object)
+new_var_names <- c(
+  anes_version          = "version",
+  year                  = "vcf0004",
+  case_id               = "vcf0006",
+  panelcase_id          = "vcf0006a",
+  weights9x             = "vcf0009x",
+  weights9y             = "vcf0009y",
+  weights9z             = "vcf0009z",
+  weights10x            = "vcf0010x",
+  weights10y            = "vcf0010y",
+  weights10z            = "vcf0010z",
+  weights11x            = "vcf0011x",
+  weights11y            = "vcf0011y",
+  weights11z            = "vcf0011z",
+  weights_vcf9999       = "vcf9999",
+  post_electionIW       = "vcf0013",
+  pre_electionIW        = "vcf0014",
+  cross_sec_comp        = "vcf0016",
+  interview_mode        = "vcf0017",
+  age                   = "vcf0101",
+  age_group             = "vcf0102",
+  cohort                = "vcf0103",
+  gender                = "vcf0104",
+  race_7cat             = "vcf0105a",
+  race_4cat             = "vcf0105b",
+  race_3cat             = "vcf0106",
+  hisp_orgin_type       = "vcf0107",
+  hisp_orgin            = "vcf0108",
+  educ_4cat             = "vcf0110",
+  census_region         = "vcf0112",
+  political_south       = "vcf0113",
+  income_group          = "vcf0114",
+  hh_union_mbr          = "vcf0127",
+  union_who             = "vcf0127b",
+  relig_major           = "vcf0128",
+  relig_7cat            = "vcf0128a",
+  relig_8cat            = "vcf0128b",
+  educ_6cat             = "vcf0140",
+  educ_7cat             = "vcf0140a",
+  birthplace            = "vcf0142",
+  parents_native        = "vcf0143",
+  partyid               = "vcf0301",
+  partyid_3cat          = "vcf0303",
+  interest_in_elections = "vcf0310",
+  care_who_wins         = "vcf0311",
+  care_who_wins_house   = "vcf0312",
+  attention             = "vcf0313",
+  pres_app_anes         = "vcf0450",
+  pres_app_strngth      = "vcf0451",
+  protest_approval      = "vcf0601",
+  civildisobedience     = "vcf0602",
+  demonstrations        = "vcf0603",
+  trust1                = "vcf0604",
+  trust2                = "vcf0605",
+  trust3                = "vcf0606",
+  trust4                = "vcf0608",
+  nocare                = "vcf0609",
+  nosay                 = "vcf0613",
+  complex               = "vcf0614",
+  govrespons_elections  = "vcf0624",
+  exteff_index          = "vcf0648",
+  gov_resp_index        = "vcf0649",
+  trust_gov_index       = "vcf0656",
+  turnout               = "vcf0702",
+  regis_turnout         = "vcf0703",
+  votechoice_candiates  = "vcf0704",
+  votechoice_2party     = "vcf0704a",
+  votechoice            = "vcf0705",
+  voted                 = "vcf0706",
+  vote_party_house      = "vcf0736",
+  betteroff             = "vcf0880",
+  betteroffa            = "vcf0880a",
+  betteroff_next_year   = "vcf0881",
+  congress_district     = "vcf0900",
+  pres_app_econ         = "vcf9009"
+)
+
+# In data dictionary of full ANES CDF, prefix all strings in `label_var` with
+# string identifying ANES variable code
+anesCDF_dict <- anesCDF_dict |> 
+  dplyr::mutate(label_var = str_glue("[{var}]: {label_var}"))
+
+# create a data dictionary of subset dataframe. This retains all of the
+# variable, value labels, and value (codes) as the origin ANES CDF data set.
+# while also replacing the `var` character strings with the renamed variable
+# columns of the subsetted data frame
+cdf_dict <- anesCDF_dict |>
+  mutate(var = janitor::make_clean_names(var)) |> 
+  dplyr::filter(var %in% new_var_names) |> 
+  dplyr::mutate(var = names(cdf))
 
 # remove redundant dataframe from environment
 rm(anesCDF, anesCDF_dict)
