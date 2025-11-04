@@ -15,7 +15,7 @@ set.seed(12345)
 
 # import Roper topline data .txt file  ------------------------------------
 
-roper_text <- readr::read_lines("~/R/data/Roper iPOLL/roper_toplines/roper-pres approval by question only-toplines-asof-20250930.txt")
+roper_text <- readr::read_lines("data-raw/roper_data/roper-pres-approval-by-question-only-toplines-asof-20250930.txt")
 
 
 # extract data from txt ---------------------------------------------------
@@ -147,7 +147,7 @@ rm(
 # difference is that the text file contains citations and roper archive numbers.
 # Those I would like to add to the dataframe
 
-roper_toplines_raw <- readr::read_csv("~/R/data/Roper iPOLL/roper_toplines/roper-pres approval by question only-toplines-asof-20250930.csv")
+roper_toplines_raw <- readr::read_csv("data-raw/roper_data/roper-pres approval by question only-toplines-asof-20250930.csv")
 
 dplyr::glimpse(roper_toplines_raw)
 
@@ -157,7 +157,7 @@ dplyr::glimpse(roper_toplines_raw)
 # In the raw topline data, a `*` symbol is used to signify that less than 0.5%
 # of the sample chose a particular response. 
 roper_toplines_raw |> 
-  filter(
+  dplyr::filter(
     stringr::str_detect(RespPct, "\\D+") # detects any string that isn't a digit
          ) |> 
   # filter(RespPct == "*") |> 
@@ -167,7 +167,7 @@ roper_toplines_raw |>
 # also make column names easier to deal with
 roper_toplines_raw <- roper_toplines_raw |>
   janitor::clean_names() |> 
-  mutate(resp_pct = dplyr::na_if(resp_pct, "*"))
+  dplyr::mutate(resp_pct = dplyr::na_if(resp_pct, "*"))
 
 
 
@@ -341,7 +341,8 @@ roper_toplines_clean <- roper_toplines_clean |>
 # this returns distinct values for `sub_population`. I do not need data that
 # consists of only a subportion of the national adult population.
 roper_toplines_clean |> 
-  dplyr::distinct(sub_population) |> print(n = Inf)
+  dplyr::distinct(sub_population) |> 
+  print(n = Inf)
 
 # exclude any 'sub population', retaining only survey data of the national adult
 # population
@@ -349,7 +350,7 @@ roper_toplines_clean <- roper_toplines_clean |>
   dplyr::filter(is.na(sub_population))
 
 
-# n = 1,880
+# n = 1,884
 roper_toplines_clean |> 
   dplyr::distinct(archive_number, start, end, .keep_all = T)
 
@@ -368,15 +369,15 @@ roper_toplines_clean |>
 
 # copy all response options to clipboard, then paste and organize
 # into respective response categories
-roper_toplines_raw |> 
-  # return only the rows with unique/distinct response texts under `resp_txt` 
-  dplyr::distinct(resp_txt) |> 
-  # similar to `data$column`, return each response option 
-  dplyr::pull(resp_txt) |>
-  # dput() puts all elements of resp_txt into a vector, i.e., c("approve",...)
-  dput() |>
-  # this copies them all to the clipboard. 
-  writeClipboard()
+# roper_toplines_raw |> 
+#   # return only the rows with unique/distinct response texts under `resp_txt` 
+#   dplyr::distinct(resp_txt) |> 
+#   # similar to `data$column`, return each response option 
+#   dplyr::pull(resp_txt) |>
+#   # dput() puts all elements of resp_txt into a vector, i.e., c("approve",...)
+#   dput() |>
+#   # this copies them all to the clipboard. 
+#   writeClipboard()
 
 
 
@@ -696,7 +697,7 @@ roper_toplines_wide <- roper_toplines_wide |>
   # dplyr::select(year, quarter, month, president, approve) |> 
   dplyr::arrange(year)
 
-# Final n = 1,875
+# Final n = 1,879
 # year range = 1938-2025 (up to March 2025)
 roper_toplines_wide |> 
   dplyr::summarise(

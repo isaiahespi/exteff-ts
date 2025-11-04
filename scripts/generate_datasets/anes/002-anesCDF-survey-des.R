@@ -109,7 +109,7 @@ cdf_wt |>
   sjlabelled::get_labels(values = 'p')
 
 cdf_wt <- cdf_wt |> 
-  srvyr::mutate(across(c(exteff, govresp, trustgov), 
+  srvyr::mutate(srvyr::across(c(exteff.indx, govresp.indx, trustgov.indx), 
                        ~dplyr::na_if(., 999)))
 
 # states, census regions, fips, and processing :::::::::::::::::::::::::::::####

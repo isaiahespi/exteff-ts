@@ -27,14 +27,14 @@ set.seed(12345)
 # load packages
 library(tidyverse)
 
-# load in ICS quarterly data
-ics_qrtr <- readr::read_csv(
-  "~/R/data/consumer sentiment/index_consumer_sentiment_quarterly_tbqics.csv"
-  ) |>
-  janitor::clean_names() |>
-  dplyr::rename(ics = ics_all)
+# ics_qrtr <- readr::read_csv(
+#   "~/R/data/consumer sentiment/index_consumer_sentiment_quarterly_tbqics.csv"
+#   ) |>
+#   janitor::clean_names() |>
+#   dplyr::rename(ics = ics_all)
 
-# alternatively, import .csv directly from url
+# load in ICS quarterly data
+# import .csv directly from url
 # https://www.sca.isr.umich.edu/files/tbqics.csv
 ics_qrtr <- readr::read_csv("https://www.sca.isr.umich.edu/files/tbqics.csv") |>
   janitor::clean_names() |>
@@ -42,67 +42,63 @@ ics_qrtr <- readr::read_csv("https://www.sca.isr.umich.edu/files/tbqics.csv") |>
 
 # remove `.` string from `quarter` column. Include a column for quarter number 
 ics_qrtr <- ics_qrtr |>
-  mutate(quarter_mon = stringr::str_remove_all(quarter, pattern = "[.]*"), .before = year) |>
-  mutate(quarter = rep(1:4, times= 66, length.out = 261), .before = year) |> 
+  dplyr::mutate(
+    quarter_mon = stringr::str_remove_all(quarter, pattern = "[.]*"),
+    .before = year
+  ) 
+
+ics_qrtr <- ics_qrtr |>
+  dplyr::mutate(quarter = rep(1:4, times = nrow(ics_qrtr), length.out = nrow(ics_qrtr)),
+         .before = year) |>
   dplyr::relocate(quarter, .before = year)
 
 # save as .rds
-readr::write_rds(ics_qrtr, file = "data/quarterly_index_consumer_sentiment.rds")
+readr::write_rds(ics_qrtr, file = "data/ics/quarterly_index_consumer_sentiment.rds")
 
 
 # MONTHLY ICS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::####
 
 # load in ICS monthly data
 # https://www.sca.isr.umich.edu/files/tbmics.csv
-ics_month <- readr::read_csv("~/R/data/consumer sentiment/index_consumer_sentiment_monthly_tbmics.csv") |> 
-  janitor::clean_names() |> 
-  dplyr::rename(ics = ics_all)
-
-# alternatively, import .csv directly from url
+# import .csv directly from url
 ics_month <- readr::read_csv("https://www.sca.isr.umich.edu/files/tbmics.csv") |>
   janitor::clean_names() |>
   dplyr::rename(year = yyyy, ics = ics_all)
 
 # convert `month` into proper format, create column that indicates quarter by month  
-ics_month <- ics_month |>  
-  mutate(year_month = paste(year, month, sep = "-") |> lubridate::ym()) |> 
-  mutate(month = lubridate::month(year_month, label = T, abbr = T),
-         quarter = lubridate::quarter(year_month, type = "quarter"))
+ics_month <- ics_month |>
+  dplyr::mutate(year_month = paste(year, month, sep = "-") |> lubridate::ym()) |>
+  dplyr::mutate(
+    month = lubridate::month(year_month, label = T, abbr = T),
+    quarter = lubridate::quarter(year_month, type = "quarter")
+  )
 
 # save as .rds
-readr::write_rds(ics_month, file = "data/monthly_index_consumer_sentiment.rds")
+readr::write_rds(ics_month, file = "data/ics/monthly_index_consumer_sentiment.rds")
 
 # YEARLY ICS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::####
 
 # load in ICS yearly data
 # [data source](https://www.sca.isr.umich.edu/files/tbyics.csv)
-ics_year <- readr::read_csv("~/R/data/consumer sentiment/index_consumer_sentiment_yearly_tbyics.csv") |>
-  janitor::clean_names() |> 
-  dplyr::rename(ics = ics_all)
-
-# alternatively, import .csv directly from url
+# import .csv directly from url
 ics_year <- readr::read_csv("https://www.sca.isr.umich.edu/files/tbyics.csv") |>
   janitor::clean_names() |>
   dplyr::rename(year = yyyy, ics = ics_all)
 
-
-ics_year |> print(n = Inf)
-
-ics_year <- ics_year |> 
-  mutate(year_month = paste(year, month, sep = "-") |> lubridate::ym()) |> 
-  mutate(month = lubridate::month(year_month, label = T, abbr = T),
-         quarter = lubridate::quarter(year_month, type = "quarter")) |> 
+# create date columns for year_month, month, and quarter
+ics_year <- ics_year |>
+  dplyr::mutate(year_month = paste(year, month, sep = "-") |> lubridate::ym()) |>
+  dplyr::mutate(
+    month = lubridate::month(year_month, label = T, abbr = T),
+    quarter = lubridate::quarter(year_month, type = "quarter")
+  ) |>
   dplyr::relocate(quarter, .before = ics)
 
 # save as .rds
-readr::write_rds(ics_year, file = "data/yearly_index_consumer_sentiment.rds")
+readr::write_rds(ics_year, file = "data/ics/yearly_index_consumer_sentiment.rds")
 
 
 # Combine ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::####
-
-ics_month
-ics_qrtr
-ics_year
 
 # combine all data frames into one
 ics <- dplyr::left_join(
@@ -117,7 +113,7 @@ ics <- dplyr::left_join(
   dplyr::rename(ics.y = ics)
 
 # save as .rds
-readr::write_rds(ics, file = "data/index_consumer_sentiment.rds")
+readr::write_rds(ics, file = "data/ics/index_consumer_sentiment.rds")
 
 
-rm(ics_month, ics_qrtr, ics_year)
+rm(list = ls())

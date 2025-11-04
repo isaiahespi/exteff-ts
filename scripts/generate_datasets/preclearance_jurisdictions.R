@@ -104,4 +104,4 @@ preclearance <- preclearance |>
 # save as rds to check out later
 readr::write_rds(preclearance, file = "data/jurisdictions_previously_covered.rds")
 
-rm(preclear_states, preclear_counties, doj_tabs)
+rm(list = ls())

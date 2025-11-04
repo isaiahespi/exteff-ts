@@ -18,7 +18,8 @@
 
 # packages
 library(tidyverse)
-
+library(readxl)
+library(fipio)
 
 # use `readxl` package to import covi values from 1996-2024
 covi <- readxl::read_xlsx(path = "data-raw/covi/COVI Values 1996-2024 website.xlsx") |> 
@@ -32,3 +33,9 @@ covi <- covi |>
 covi <- covi |> 
   dplyr::mutate(st = fipio::fips_state(st_fips), .before = st_abb)
 
+
+# save data ---------------------------------------------------------------
+
+readr::write_rds(covi, file = "~/R/exteff-ts/data/covi/covi_values_1996_2024.rds")
+
+rm(list = ls())

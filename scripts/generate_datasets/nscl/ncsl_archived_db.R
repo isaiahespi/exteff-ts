@@ -26,12 +26,12 @@
 # set seed for reproducibility
 set.seed(12345)
 
-# load packages (those commented out may or may not be necessary)
+# load packages
 library(tidyverse)
 # library(rvest) # Easily Harvest (scrape) web pages
 
 # load some custom functions
-'%nin%' <- function(x, table) is.na(match(x, table, nomatch=NA_integer_))
+source(here::here('utils', 'funs.R'))
 
 # fork the GitHub repository to local directory
 # easiest way to  fork and clone a github repo
@@ -41,17 +41,24 @@ library(tidyverse)
 #   fork = T
 # )
 
-# path where data is in local directory
-ncsl_db_path <- "~/R/forked_repositories/state-elect-law-db/output/ncsl_bill_database_2011_2024.Rdata"
+# URL to github repo that houses data
+url_rdata <- "https://github.com/jloffredo2/state-elect-law-db/raw/refs/heads/main/output/ncsl_bill_database_2011_2024.Rdata"
 
-# load NCSL data
-load(file = ncsl_db_path)
+# download .Rdata file from URL to destination path 
+download.file(
+  url = url_rdata, 
+  destfile = "data-raw/ncsl_bill_database_2011_2024.Rdata", 
+  method = "wget"
+  )
+
+# load data from path where data is in local directory
+load("data-raw/ncsl_bill_database_2011_2024.Rdata")
 
 # rename and format as tibble
 ncsl <- ncsl_bill_database |> dplyr::as_tibble() 
 
 # remove from memory
-rm(ncsl_bill_database, ncsl_db_path)
+rm(ncsl_bill_database)
 
 
 # obtain topic category descriptions from HTML webpage :::::::::::::::::::::####
@@ -245,7 +252,7 @@ ncsl_topic_dict <- mit |>
 # save as .csv
 write.csv(
   x = ncsl_topic_dict, 
-  file = "~/R/My_projects/exteff-ts/resources/ncsl_topic_descriptions_dictionary.csv")
+  file = "~/R/exteff-ts/resources/ncsl_topic_descriptions_dictionary.csv")
 
 # Add variable labels to NCSL archived db ::::::::::::::::::::::::::::::::::####
 
@@ -290,8 +297,7 @@ ncsl <- ncsl |>
 
 # create a codebook/data dictionary of NCSL archived database 2011-2024 
 ncsl_data_dict <- ncsl |> 
-  surveytoolbox::data_dict() |> 
-  dplyr::as_tibble() |> 
+  codebook() |> 
   dplyr::mutate(col_type = unlist(lapply(ncsl, vctrs::vec_ptype_abbr)))
 
 
@@ -301,9 +307,6 @@ ncsl_data_dict <- ncsl |>
 # rjson::fromJSON(ncsl$HISTORY[1])
 
 # save ncsl codebook :::::::::::::::::::::::::::::::::::::::::::::::::::::::####
-
-# save as .csv
-write.csv(ncsl_data_dict, file = "data/ncsl/ncsl_archived_db_2011_2024_dict.csv")
 
 # save as .rds
 readr::write_rds(ncsl_data_dict, file = "data/ncsl/ncsl_archived_db_2011_2024_dict.rds")
@@ -317,10 +320,6 @@ readr::write_rds(ncsl_data_dict, file = "data/ncsl/ncsl_archived_db_2011_2024_di
 
 # clean up variable column names
 ncsl <- ncsl |> janitor::clean_names()
-
-# This database contains state legislation related to the administration of
-# elections introduced in 2011 through 2024.
-range(ncsl$year)
 
 # subset to include only legislation enacted into law
 stlaws <- ncsl |> 
@@ -339,7 +338,8 @@ stlaws <- ncsl |>
 
 # save data set as .rds ::::::::::::::::::::::::::::::::::::::::::::::::::::#### 
 
-readr::write_rds(stlaws, file = "data/ncsl/ncsl_enacted_state_legislation_2011_2024.rds")
+readr::write_rds(stlaws, 
+                 file = "data/ncsl/ncsl_enacted_state_legislation_2011_2024.rds")
 
 
 # Clear memory
