@@ -1,0 +1,223 @@
+---
+title: "Balch 1974"
+subtitle: "Literature Summary and Notes"
+author: "Isaiah Espinoza"
+date: last-modified
+date-format: iso
+bibliography: political-efficacy.bib
+format: 
+  compact-pdf:
+    keep-tex: false
+    indent: false
+    mainfont: TeX Gyre Pagella
+    reference-location: document
+reference-section-title: References
+---
+
+# Summary:
+
+Balch evaluates the unidimensionality of the concept referred to as a "sense of political efficacy". He utilizes multiple item analysis where in which several theoretically related variables are correlated with the items of the concept to determine whether the measurement items of the concept all behave similarly (i.e., in the same expected direction, with the same relative correlative strength). He finds that the four items used to measure political efficacy behave in consistently divergent ways, and that the scale--which is the sum of the four items--hides or masks the differences in correlation between the items. From this, he confirms the multidimensional nature of political efficacy that had been presupposed in theory prior to. What seems clear to Balch is how both components relate to the same concept by the way in which they appear to move together. However, what isn't clear is how either can be said to fall under the conceptual banner of efficacy at face value.  
+
+## Theoretical Significance of Political Efficacy
+
+Balch begins by introducing the concept as one developed instrumentally to help explain variation in electoral participation. He starts with the original definition of political efficacy and then reviews the significance of the concept in various theories. Rather than focus on the concept itself, Balch assesses the unidimensionality of the concept using *multiple item analysis*. 
+
+
+> "This concept was first developed to help explain variation in electoral participation. The authors predicted and found a positive correlation in their survey data between their hypothesized measures of efficacy and participation..." [@balch1974, 1].
+
+> "...a low sense of political efficacy has been viewed as part of a syndrome of attitudes of the politically apathetic (Campbell et al., 1960:101-7; Verba and Nie, 1972:133). And a high sense of political efficacy has been considered a prerequisite for widespread political participation (Pranger, 1968)." [@balch1974, 2]
+
+> "In any case, the main focus of inquiry has not been sense of political efficacy itself, but its ability to help explain variation in political participation." [@balch1974, 2]
+
+
+> "Sense of political efficacy can also be viewed as a norm which supports a democratic political regime. One who has internalized this norm is presumably less likely to distrust the regime or to engage in regime-challenging acts (Easton and Dennis, 1967; Brown, 1972; Gamson, 1968)." [@balch1974, 2]
+
+This, in my view, is a mistaken view on the concept itself. The view that Balch describes refers to political efficacy as an attitude that is internalized via social norm, but the attitude content appears to have little to do with any kind of efficacy itself. Instead, political efficacy is now described as support for a democratic political regime. This doesn't make sense considering the definition of the concept Balch cites earlier from @campbell1954,
+  > "the feeling that individual political action does have, or can have, an impact upon the political process, i.e., that it is worth while to perform one's civic duties. It is the feeling that political and social change is possible, and that the individual citizen can play a part in bringing about this change." [-@campbell1954, 187]
+
+So from the original conceptual definition (however theoretically sparse or incomplete it may have been) political efficacy was defined as a person's belief about the effect individual political action can or does have upon the political process. However as Balch describes a particular view, political efficacy is seen as a measure of support for a presumably democratic political regime. It is important to note that Balch writes as though this view cogently aligns with the conceptual definition, not to suggest any malicious intent, but to bring into question how such conceptual distortion becomes infused within a particular concept.
+
+
+> "Empirical research on this, too, seems confirmatory. The more efficacious are less "available" for mass movements (Kornhauser, 1959), less likely to support demagogic (i.e., regime-challenging) leaders (Mason and Jaros, 1969: Sokol, 1968), and less likely to engage in protest (Gamson, 1968, 1971; Kornhauser, 1959; Levin, 1960; Horton and Thompson, 1962; McDill and Ridley, 1962; Thompson and Horton, 1960)." [@balch1974, 2]
+
+> "On the system-supportive side, they feel more trusting of the regime and authorities (Agger et al. , 1961; Finifter, 1970; Robinson et al., 1968:490; Aberbach, 1969; Janda, 1965; Stokes, 1962:67. An exception is Litt [1963] ), more obligated to participate in electoral politics (Campbell et al., 1960:102; Almond and Verba, 1963:253-56), more allegiant to the nation-state and more favorable to democratic norms (Almond and Verba, 1963:246-56), and more satisfied with governmental policies (Almond and Verba, 1963:244-56; Finifter, 1970; Di Palma, 1969)." [@balch1974, 2]
+
+What is also important is how this view that Balch describes characterizes such support for a democratic political regime. The concept is reformulated or re-conceptualized by incorporating the behaviors it is associated with into its very definition. That is to say, the behaviors (or lack thereof) presumptively indicate a belief --e.g., one who participates must support democracy, which contrasts with beliefs of one who engages regime-challenging acts. Thus the concept of political efficacy is developed instrumentally to confirm that belief. 
+
+The politically efficacious individual is characterized as more trusting of the regime due to associated likelihoods that higher political efficacy corresponds to lowered likelihood of engaging in "regime-challenging" behavior. Being less "available" for mass movements (whatever the content), less likely to support demagogues (i.e., regime-challenging, or now-a-days, *populist* leaders), and less likely to engage in protest.
+
+Notably, the negative connotation conveyed by the association made between protests, regime-challenging mass movements, and support for demagogues is perhaps telling. The contrast is made with supportive democratic behavior, or behavior supportive of democracy. This was written and published in 1974, so the previous decade or more saw the rise of the civil rights movement and protest demonstrations against the war in Vietnam and the draft, to say the least. 
+
+With reference to the original definition of political efficacy, the concept concerns one's beliefs about the effects of individual political action. However, "individual political action" is confined to some implied set of acts part and parcel of the political process. In other words, the individual political action researchers had in mind was confined to some set of activities they viewed as conventional and appropriate. The classification between *participatory acts* and *regime-challenging acts* was subtle but necessary in order for the concept of political efficacy to stand as an indication of support for a democratic political regime.
+
+Understandably, early researchers looked to those who volunteered their time to partisan political campaigns, attended meetings or rallies, and the like; simply belonging to a political club or organization was considered a mode of political participation [@campbell1980, 91]. So political efficacy is reformulated into an attitude of support for a presumably democratic political regime, and such support looks like this.
+
+What is odd is that the characterization of political efficacy is made in contrast to regime-challenging attitude and action. The attitude of the politically efficacious individual is characterized as trusting, passive, yet active come election time. The politically efficacious behave in conventional ways subtly implied as normatively appropriate. To the fullest extent of the word, their actions are *participatory* rather than *challenging*. 
+
+The odd part is that those who are passive, trusting, appear relatively uncritical yet the concept was developed to explain electoral participation, not the lack thereof. As such, higher levels of political efficacy were expected to, and do, relate strongly to political activity. Balch explains that the view understands increased campaign participation among those higher in political efficacy as indicative of system support.
+
+> "Indeed, the very evidence on higher campaign participation among the more efficacious bears on system support, since one can readily view voting for the candidates chosen through the ordinary channels as an
+endorsement of those very channels (Easton, 1965:159-60; Rose and Mossawir, 1967)." [@balch1974, 2]
+
+Sure one can view voting for candidates that way, but that is not a necessary conclusion one can derive from observation of such behavior. It is if and only if political efficacy is in fact a measure of regime support that such a conclusion can be inferred from its association with such behavior.  
+
+Yet why wouldn't increased trust in the system and governmental regime lead us to suspect just the opposite? If I trust the system and the regime authorities, and I'm more satisfied with government policies, then why bother voting at all? How does political efficacy work to explain variation in political engagement? My vote matters, but to what end? The interpretation stated in the above excerpt is that participation within the system is indicative of support of the system. Yet that presupposes political efficacy as a measure of regime support, which implies the belief that participation in the political process aims to sustain the current regime rather than effectuate change given the methods available within the political system.
+
+An alternative view is that participation is a means to fix or resolve whatever afflictions there are in government and politics. If political participation is seen as a means to fix, or do, or accomplish anything substantial, then the conception of political efficacy as a belief about the effect of political activity to impact the political process makes sense. However, if the system works fine and the government can be trusted, then what is the role of one's participation in the political process? 
+
+> "Once again, the focus is on the political system, rather than the individual: Will the individual support, acquiesce in, or oppose the political system? Empirical research on "sense of political efficacy" has been predominantly concerned with whether the polity has citizens who believe the system is democratic and who act as if they believe it."
+
+Balch includes an excerpt from Almond and Verba [-@almond1963] 
+
+> "In many ways, then, the belief in one's [political] competence is a key political attitude. The self-confident citizen appears to be the democratic citizen. Not only does he think he can participate ,
+he thinks that others ought to participate as well. Furthermore, he does not merely think he can take
+a part in politics: he is likely to be more active. And, perhaps most significant of all, the self confident citizen is also likely to be the more satisfied and loyal citizen." [@almond1963, 257] 
+
+Those who take action that is challenging or critical of the system are characterized subtly as non-democratic; not so much due to the content of their behavior but by the very fact that their actions aim to protest against or seek to reform a system solidly established as democratic.
+
+
+The implication is that political efficacy, from its conception, was conceived as a gauge to capture support for the current political regime, which was denoted as democratic as if by prescription. In other words, the concept of political efficacy helped explain variation in electoral participation by informing researchers more about whether the character of the individual aligned with underlying notions of a democracy-supportive citizen. In effect, those who are more politically active in conventional or normatively appropriate ways are viewed as more supportive of democracy by default, and variation in electoral participation (*the* foremost normatively appropriate way) is explained by a measure of the attitudes supposedly indicative of one's support for a democratic political regime. Those who measure up--i.e., are more politically efficacious--are described as the ideal democratic citizen. Those who do not--i.e., lower political efficacy--take on the implied contrast characterization of regime-challenging, demagogue supporting, populists.
+
+The problem here is that interpretation of political efficacy here is utilized to say more about the individual rather than the individual's appraisal of the political system. Those low in political efficacy may in fact have less faith and support of the system and therefore the conventional actions available to them are evaluated as insignificant, or at the furthest extent, worthless. 
+
+
+> "Another line of thought concerns both the quality of citizens and the quality of political systems. For theorists of "participatory democracy,"  the main purpose of citizen political participation is the character development of the citizens who participate. According to Carole Pateman (1970:45-46 ), a high sense of political efficacy is an important aspect of the character to be developed:"
+
+  > "John Stuart Mill argued that an "active" character would result from participation, and Cole suggested that what we might call a "non-servile" character would be fostered, and it is possible to give these notions some useful empirical content. If one is to be self-governing in, for example, one's workplace, then certain psychological qualities are clearly necessary. For example, the belief that
+one can be self-governing, and confidence in one's ability to participate responsibly and effectively,
+and to control one's life and environment would certainly seem to be required. These are not
+characteristics that would be associated with "servile" or "passive" characters and it is
+reasonable to suggest that the acquisition of such confidence, etc., is part, at least, of what the
+theorists of the participatory society saw as the psychological benefits that would accrue through
+participation...We shall therefore take the sense of political efficacy or competence to be an
+operational interpretation of, at any rate part of, the psychological effect referred to by the theorists
+of participatory democracy." [@pateman1970, 45-46]
+
+
+What is notable in quoting Pateman is that this excerpt from her is about how participation grows the participant. The beneficial effect of participation is to grow (increase) the sense of political efficacy, which is here intertwined with one's sense of personal political competence. Yet again, however, the characterization of the ideal democratic citizen is the focus. Participation forms the public into ideal democratic citizens who believe in themselves, and those who believe in themselves are the one's who participate. 
+
+
+> "For such theorists, participation in the making of decisions which affect one is hypothesized to raise one's sense of political efficacy and other skills and resources for effective participation. While they raise sense of political efficacy, the burdens of decision-making responsibility also incline one to accept the decision outcomes and to feel integrated into the polity, as one learns to emphathize with the political demands of others and comes to regard oneself as an interested, responsible member of a public body. A polity composed of such citizens is held accountable by them, and is highly stable (and powerful) by virtue of the active support of its citizens (Pateman, 1970:22-44). In short, in theories of participatory democracy the citizen who has a high sense of political efficacy is quite similar to the one described above by Almond and Verba: politically active, supportive, informed, interested, loyal, satisfied and public-regarding." [@balch1974, 4]
+
+
+Up until this point, I have been confused as to why Balch meandered around the different discussions around political efficacy. It appears as those the bulk of his introduction of the concept has said almost nothing about the concept itself. Balch's aim in the first section, which I have included only a select few excerpts, is just to overview the significance of the concept to other theories. The concept is defined right and the start and then the different "views" are reviewed. So its viewed as 
+1)    a "norm which supports a democratic political regime" [-@balch1974, 2], 
+2)    reflective of a basic need for the individual to control his or her environment [-@balch1974, 3] (note that this doesn't actually tell us what it is)
+3)    an incidentally beneficial characteristic trait of the citizen developed by participatory democracy [-@balch1974, 4]
+
+Yet ultimately, the conceptual definition is not considered lacking, or it would appear as such. Really it seems that all Balch intends to do in this paper is assess how well the operational definition corresponds with the conceptual definition.
+
+> "To sum up, sense of political efficacy plays a central role in different kinds of political theorizing. Those who have done most of the empirical research on sense of political efficacy have focused on its consequences for the political system's persistence. For theorists of participatory democracy, "moral development" of the individual--including a high sense of political efficacy--is paramount; concern for the stability of any particular political system is subordinate to the quality of life enjoyed (or suffered) by its citizens." [@balch1974, 5]
+
+> "The more important the concept, the more necessary are clarity of conceptualization and validity of measurement. So crucial a concept as sense of political efficacy surely merits great effort at conceptual-operational coordination. To this we now turn." [@balch1974, 5]
+
+## From Concept to Measurement
+
+
+> "This paper will attempt to illustrate the utility of a different strategy, called multiple item analysis by Richard Curtis and Elton Jackson (1962). Its use augurs reformulation of the concept "sense of political efficacy" and, perhaps, of concepts investigated similarly, as well. In multiple item analysis, each item which is intended to tap a particular construct is correlated with each item which is intended to tap the other constructs in a proposition, or preferably, in a set of propositions. Thus, with four items intended to measure sense of political efficacy and four intended to measure conventional political participation, sixteen correlations would be calculated to test the proposition that participation
+increases with sense of political efficacy, instead of the single one usually obtained between a composite index for each concept." [@balch1974, 6]
+ 
+ 
+> "The efficacy items should correlate similarly with the participation items, since items intended to tap the same concept should be "equivalent" or "interchangeable" with respect to external variables (Lazarsfeld, 1958, 1959). Otherwise, the items tap different sources of variance, and possibly other concepts, or different dimensions of the target concept. Such nonequivalent items should be excluded
+from scales, for to merge them into a composite index can only cloud their different associations with external variables. Only after analysis of this matrix (and preferably similar ones which test other propositions about sense of political efficacy) would indices be constructed, if at all." [@balch1974, 6]
+
+
+## The study design and measurement items of political efficacy
+
+> "One week before the Republican Convention of August 1968), several social science instructors in large state universities across the nation administered a questionnaire to their students during class time. Eleven hundred and eight-nine usable questionnaires were thereby obtained. The respondents are disproportionately underclassmen, oriented toward the social sciences, white, and midwestern; but males and females responded in equal numbers" [@balch1974, 7]
+
+> "The university sub-samples do not differ on any of the variables to be examined below, so they have been pooled into a single sample. This sample cannot be considered representative of the population of American college students. At best, the results are suggestive for that population. However, the greater the number and variety of samples which sustain a finding, the more generalizable is the finding. In any case, the data can be used to illustrate the usefulness of multiple item analysis." [@balch1974, 7]
+
+
+
+The items used in Balch's study aren't exactly identical to the original four Michigan SRC items, but the slight modification doesn't seem problematic. 
+
+1.    Federal public officials don't much care what people like me think.
+2.    Voting is the only way that people like me can have any say about how the government in Washington runs things.
+3.    Sometimes national politics and government seem so complicated that a person like me can't really
+understand what's going on. 
+4.    People like me don't have any say about what the government in Washington does.
+
+
+
+
+> "As discussed in the introduction, the most consistent and central correlate of sense of political efficacy in the literature has been political involvement. A person who feels politically efficacious is expected to be politically involved. Political involvement can be viewed in several ways: interest in politics (motivation), knowledge of politics (cognition), and propensity to participate in politics (conation). These are now considered in turn." [@balch1974, 10].
+
+
+> "As noted above, a valid scale more fully represents the concept than does any item. So , its correlations with theoretically relevant external variables should be higher than those for any item." [@balch1974, 12]
+
+
+Balch refers to three aspects which comprise three different views of political involvement: *interest in politics*, *political knowledge*, and *propensity to participate in politics*. In a footnote, he explains that the 'involvement items' form separate externally consistent indicators of their construct.
+
+However, *Political involvement* doesn't mean, literally, to be involved in some intentional political activity but rather seems to refer to some psychological *feeling* of involvement, or rather, engagement with the goings on of politics. Balch says that political involvement can be viewed in several ways, but *interest* in and *knowledge* of politics can hardly be said to comprise any form of involvement beyond the imaginary. I've read elsewhere that a concept is multidimensional so long as it can be viewed differently by different people (i.e, have different meanings). So political involvement is itself a concept with three different aspects, but no real qualifying criteria.
+
+So political involvement is a loose term that is even more broad then political participation because it includes mere interest in politics and knowledge of certain political figures alongside acts that are qualified as "conventional participation". 
+
+He examines correlations between the four efficacy items (now split into two pairs, A and B) with three items "which purport to measure political interest" [-@balch1974, 10], but it's not immediately clear from where these three items are derived. Balch does cite to three different sources but I'd have to review each one just to determine the literal wording of each question. Balch provides a table to examine the correlations, which contain the supposed political interest items, but the first item is noted to be abbreviated.
+
+> "As an aspect of political involvement, the person who feels politically efficacious should also be more knowledge able about politics (Lane, 1959:152 ; Robinson et al., 1968: 490 ). Respondents were asked the number of justices on the U. S. Supreme Court, and the names of the Secretary of Defense and Chairman of the House Committee on Ways and Means." [@balch1974, 12]
+
+
+I won't go over the results in depth here, but ultimately, the pair A items (the first two items of the political efficacy scale) show stronger correlation with political interest, knowledge, and conventional participation than the other pair of political efficacy items (pair B). The divergent correlations between the two pairs of items suggested that the political efficacy measurement items were capturing different components. However it doesn't suggest that the pair B items were conceptually related to the same concept of political efficacy. 
+
+In order to test whether the latter two items of political efficacy do capture some dimensional component of political efficacy, Balch compares the items performance against two other concepts theoretically related to political efficacy: propensity to engage in protest behavior and political trust. 
+
+> "The first of these is positively related to political involvement, while the second is negatively (and weakly) related to political involvement. More important, both differ considerably from political
+involvement variables in their relationships to external variables...." [@balch1974, 17]
+
+
+Once Balch gets into the "propensity to engage in protest behavior", he touches on the things I wrote above regarding the behavior that political efficacy theoretically predicts.
+
+> "One can argue plausibly for any of the following: the more efficacious are (1) more likely, (2 ) less likely, or (3) neither more nor less likely than the inefficacious to engage in political protest behavior. For instance, protesting is another kind of political participation, and, since the more efficacious participate more, they should also be more prone to protest when the occasion arises. " [@balch1974, 17]
+
+> "Alternatively, a person who feels politically efficacious may feel that it is unnecessary or illegitimate to engage in protest. Or, the relationship may be so complicated by additional variables (such as the specific kind of protest act, the situation at hand, the legitimacy of the system, etc. ) that no bivariate relationship can be expected between efficacy and protest. There is some empirical evidence for each view (Cataldo et al. , 1968; Kellstedt, 1 969; Jackson, 1 97 1 ; Kubota, 1972 )." [@balch1974, 17]
+
+> "Whether one predicts a positive or a negative relationship between efficacy and protest, or no relationship at all, the four efficacy items should all have a similar relationship with protest if they measure the same thing. Table 6 investigates this. Respondents were asked whether they (1) would march and (2) have marched peacefully around an area and/or boycotted classes or products. These four items and
+the index of demonstrative participation (which is their sum, corrected for unequal response categories) are correlated with the efficacy items in table 6." [@balch1974, 17]
+
+The results Balch displays present a strong case that the four efficacy items do not belong together, and that the pair B items tap into some "theoretical unity" on their own, but it isn't clear as to what that concept may be from the items alone. 
+
+The problem I see here, and have seemed to have issue with, is that a political concept is theorized, then tested, but when the results don't confirm the theory, the *concept* is subsequently reformulated to fit the empirical observation. Such is also the case for the concept of democracy itself [@achen2016a]. Rather than fail (to reject the null hypothesis), it is as if the "conceptual goal posts" (so to speak) are moved to fit the data whenever the data do not fit the theory. However that is incongruent with the most basic scientific method--to adequately test the theories proposed. When it comes to the concept, the measurement instrument is fuddled around with until it's fit is plausible enough. A concept in the social sciences is, for all intents and purposes, a theory of its own that must be tested for what it is claimed to be. The ontological status of the concept is paramount to consider.
+
+It may very well be the case that the items tap into or capture some latent construct yet to be formulated in theory, but the observed relationship on their own is not sufficient to construct a concept from a process of induction. That is to say, just because we can name it doesn't mean that is what it is in fact. 
+> "...a positive evaluation of the regime is hypothesized for those who feel politically efficacious, Such an evaluation is called political trust, And the research literature which has correlated efficacy and trust scales has generally borne out this hypothesis, If all of this prior work is correct, and if our measures are valid, then the efficacy items and the scale which is their sum should correlate positively with measures of political trust." [@balch1974, 19]
+
+And if our measures are deemed invalid by this test, then all our previous work lies in doubt, and the efficacy items and the scale which is their sum can't be said to properly measure political efficacy as we have conceptualized it. That is what is left unsaid, but seems disregarded. Instead, what happens is that the concept is split apart into multiple components, supposedly representative of multiple dimensions of the same concept, *in order to rescue it*. Yet, despite breaking the concept into multiple components, it then stands that no overarching concept exists; from here on, political efficacy is split into two component dimensions where internal and external political efficacy are inextricably bound somehow conceptually in light of their correlation, but refer to seemingly different independent concepts. The two component dimensions may be independently measured and analyzed at the researcher's convenience.
+
+> "Indeed, the correlations between pair B and political trust are generally higher than those among the four items presumed to measure the concept of "sense of political efficacy" (see table 1 ). They are even higher than several of the correlations among the trust items themselves and comparable to the remainder of them (see Appendix)." [@balch1974, 23]
+
+## Reformulation of the concept
+
+> "At this point, it seems wise to take stock. The sense of political efficacy as a unitary trait measured by four standard items has been examined here. Several variables which are widely theorized to be related to "sense of political efficacy" have been correlated with these items to determine whether the presumed "efficacy" items behave similarly. They do not. A scale which is the sum of the four items consistently hides these differences between items, thereby providing strong grounds for its decomposition (and illustrating the utility of multiple item analysis)." [@balch1974, 23]
+
+> "If the sense of political efficacy is a unitary trait, then at least one pair fails to tap it. Perhaps both pairs measure efficacy, but different parts of a multi-dimensional construct. And both pairs may also be mixed with variance from other constructs, as well as a generous dosage of error variance." [@balch1974, 23]
+
+This is what I mean. There is no indication from what Balch has presented yet to suggest that the pairs of items tap into different parts of the same construct. Perhaps, sure, but such puerile speculation is not based on much more than that. Thus, a concept is reformulated on the basis of interpretation of the data *post hoc*. 
+
+> "What is there in the content of pair B which relates to political trust? The pair B items refer to the respondent's perceived probability of success at influencing public officials, or, alternatively, the potential responsiveness of officials. Do they care what "people like me think" ? Do "people like me" actually have "any say" in public decisions? " [@balch1974, 24]
+
+It is here that external political efficacy becomes inextricably bounded to government responsiveness and confused with political trust. The items used for political trust are also practically identical to the pair B items, and are questionable as items reflecting any coherent conception of 'trust' in the first place. 
+
+
+> "Let us now turn to the content of the pair A items. They seem to refer to the perceived presence or absence of limits to personal activity (understanding politics, means of influence beyond voting), not limits to the effectiveness of such activity. This aspect is the individual's confidence in his own abilities, regardless of the political circumstances." [@balch1974, 24]
+
+
+And it is here that internal political efficacy is bolstered as an individual's perception of their own political competence, in so many words. This is only further solidified by the prominent and comprehensive theory in psychology on self-efficacy by Bandura [@bandura1977] which is subsequently the primary source for which later concept and measures of efficacy are evaluated, especially those found in political science.
+
+
+> " Indeed, this seems much more like the "non-servile character" aspect of theories of participatory democracy. The regime and/or authorities may not produce proper policies on their own (i.e., may not merit trust) but there are ways (including such diverse acts as working for a candidate and picketing) to try to influence them. High motivational, cognitive, and behavioral involvement are concomitants of such a perspective." [@balch1974, 24]
+
+
+> "Thus, the pattern of item performance and item content suggest the existence of two related but separate dimensions of "sense of political efficacy." One might call them "internal" and "external, " for pairs A and B, respectively. "Internal efficacy" is the individual's belief that means of influence are available to him. "External efficacy" is the belief that the authorities or regime are responsive to influence attempts." [@balch1974, 24]
+
+Thus the birth of the two dimensions of political efficacy are born. The relationship between the two components are regulated to the first two tables of this article, but Balch examines the correlations of each item to each other item in the set of four. What he doesn't do is examine the correlation between the pairs *as pairs*. It is only with respect to the correlation with other theoretically relevant variables where the political efficacy items are examined in pairs. 
+
+An important note I forgot to mention is where Balch describes internal efficacy as "...the individual's belief that means of influence are available to him." The significance of this is that the "means of influence" are solely internal--it is implied that the individual has some inherent capacity to engage in the act of influencing politics and government. In other words, internal efficacy is understood as the personal belief that one *can* *act*, that an individual has the capacity *to act*. In the complicated world of efficacy research, this might fall under a theoretical framework proposed recently as the "agency-act" approach to efficacy [@hamann2024]. This concurs with the contemporary definition of internal political efficacy as "to understand and to participate effectively in politics" [@craig1990]. One's sense of personal political competency is simply their perceived capacity to understand politics and to participate in the political process--whether or not such activity constitutes participating "effectively" is unclear. An evaluation of "I can't" in this respect is simply a reflection of an individual's perceived limits. This, of course, is relevant and useful for explaining and predicting political behavior, but does not suffice to distinguish internal and external efficacy as two components of the same construct. Indeed, like previous and subsequent authors, Balch is unable to fully distinguish the external component as adequately as the internal dimension, leaving an open invitation for future authors to provide the appropriate conceptualization and theory of external political efficacy to fit the data.
+
+Left somewhat unexamined is the relationship between internal and external political efficacy under different conceptualizations. Supposing that internal political efficacy is simply a measure of personal confidence, then it is interesting to see studies demonstrating a contrasting relationship between internal and external political efficacy. Balch cites to multiple studies where the contrast between internal and external efficacy can be found, but the theoretical relationship between the two are not expounded upon. Rather, the internal and external efficacy are conceptualized as component dimensions of the same construct without a convincing theoretical basis.
+
+In one cited study, an intervention that effectively increased personal self-confidence, thus internal efficacy, found lower external efficacy among the treated group of Black students (Balch cites to a paper presented at an APSA conference I am unable to locate). Another study cited found strong relation of external efficacy to "...nationalism (loyalty to the state, as measured by willingness to sacrifice for it), as well as those who express approval of "establishment" symbols (American political institutions and authorities)" [@balch1974, 26]. From the studies that Balch references, the relationship would appear centered upon perceptions or feelings of personal political competence: higher perceived or felt competence lessens one's uncritical trust of (faith in) the system and government regime or the individual becomes somehow educated enough to recognize that it cannot simply be trusted at face value. Whereas less personal confidence leads one to more easily defer to their trust and allegiance for the political system in principle. This, however, does not comport with a multidimensional theory of the concept of political efficacy but rather suggests that the measurement of political efficacy has merely centered upon one's sense of personal confidence regarding their political competence. In essence, political efficacy becomes a sense of relative political competence.
+
+Prior studies and scholarship had already made the distinction, and the multidimensional distinction of the concept is found far earlier in Robert Lane's [-@lane1959a] book "Political Life: Why People Get Involved in Politics". This work by Balch may be understood as the empirical confirmation needed to rescue the concept of political efficacy from wherever political concepts go when they die. The subsequent result, however, is a concept formulated primarily by *post hoc* analysis and divorced from coherence with the ordinary meaning of *efficacy* at face value.
+
+

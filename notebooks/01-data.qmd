@@ -1,18 +1,177 @@
 ---
-title: Notebook title
-author: Isaiah
+title: Data
 ---
 
+This document is used to compose the data set that will be used in the replication and analysis.
+
+Since the replication data for Chamberlain (2012) was not readily available, the dataset generated here is composed of three different data sets each gathered independently and generated from resources available to me at the time of writing. Each data set contains one or more of the relevant variables necessary to replicate Chamberlain's analysis. 
+
+The external efficacy and trust in government variables were obtained from the ANES Cumulative data file (ANES CDF). Appropriate weights were applied to the ANES CDF data set and subset to included a selection of variables. The ANES CDF is imported into the R environment and assigned as `cdf_wt`. The unweighted ANES CDF data set is imported and assigned as `cdf`.
+
+Presidential approval ratings data from the Gallup Organization derived from the Roper Center's iPoll database. Note that the Roper Center's iPoll Data base did not contain Gallup Org approval ratings data for Obama for the year 2016. I supplemented that gap in the Presidential approval ratings data by splicing in approval ratings data for Obama covering years 2015 and 2016 scraped from the [Gallup Polling Trend data site](https://news.gallup.com/poll/116479/barack-obama-presidential-job-approval.aspx). The resulting data set is imported in and assigned as `roper`.
+
+The next data set contains the index of consumer sentiment variable, which was readily available and easy to obtain from the [Survey of Consumers at University of Michigan](https://www.sca.isr.umich.edu/tables.html). See also this [link](https://data.sca.isr.umich.edu/data-archive/mine.php#)].
+
 ```{r}
+
+# set seeed
+set.seed(12345)
+
+# load packages
 library(tidyverse)
+# library(srvyr)
+
+# load ANES Time Series Cumualative Data File (CDF)
+cdf <- readr::read_rds(file = "data/anes_cdf_subset.rds")
+
+# load cdf as tbl_svy object (i.e., with weight variable applied)
+cdf_wt <- readr::read_rds(file = "data/anes_cdf_wts_tbl_svy.rds")
+
+# load presidential approval ratings data derived from Roper Center iPOLL
+roper <- readr::read_rds("data/roper_toplines_pres_approval.rds")
+
+# load ics data
+ics <- readr::read_rds("data/index_consumer_sentiment.rds")
+
 ```
 
+This section joins data frames together to create a data set that consists of only the dependent and independent variables of Chamberlain's study. In the combined data set, each row should consist of observations pertaining
+to a particular year, and each column refers to one of the variables in the model.
 
-Read a clean version of data:
+At this point, the ANES CDF contains repeated cross-sectional data at the individual-level spanning across multiple decades. However, I only need index variables by year; I don't need individual-level response data.
+
+Aggregate average external efficacy and trust in government by year. Utilizing the `srvyr` functions, I am able to derive mean with standard error estimates for each index by year.
+
+:::{.callout-note}
+## NOTE: 
+
+-   The trust in government index was not measured consistently until 1964
+-   External efficacy items were not asked in years 1948, 1954, 1958, 1962
+-   The `NOSAY` external efficacy item was not asked in 1986; the external efficacy average index value for that year reflects the average of the `NOCARE` item.
+:::
 
 ```{r}
-# rio::import() calls on haven::read_dta() based on the file extension
+
+anes_indices <- cdf_wt |>
+  # derive mean with standard errors for each index by year
+  srvyr::summarise(across(c(exteff, trustgov), ~ srvyr::survey_mean(.x, na.rm = T)), .by = year)
+
 
 ```
 
+The ANES Index values represent yearly averages, so any value that equals `0.00` indicates that the particular index was not measured for that year. The following code replaces any `0.0000` with `NA`.
+
+```{r}
+
+
+# replace any value of 0.0000 with NA
+anes_indices <- anes_indices |>
+  dplyr::mutate(across(
+    c(exteff, exteff_se, trustgov, trustgov_se),
+    ~ dplyr::na_if(., 0.0000)
+  ))
+
+
+```
+
+Obtain yearly averages of quarterly ICS from 1960 to 2025 from the `ics` data set.
+
+:::{.callout-note}
+There's incomplete quarterly data for the index of consumer sentiment
+before 1960. There is ICS data prior to 1960 as far back as 1952 in the
+monthly ICS data. However, the monthly data prior to 1960 contains ICS values
+for three months per year at best (1952 only has data for November). The ICS
+survey didn't consistently ask all component questions of the ICS until 1960,
+and the survey wasn't conducted monthly until 1978.
+:::
+
+```{r}
+
+# obtain yearly averages of quarterly ICS from 1960 to 2025
+econ_sentiment <- ics |> 
+  dplyr::reframe(ics = mean(ics.q),
+          .by = year) |>
+  dplyr::filter(year >= 1960) |> 
+  dplyr::arrange(year)
+
+
+```
+
+
+Get average presidential approval rating by year from the `roper` data set.
+
+```{r}
+
+# average approval over time
+approval <- roper |>
+  dplyr::reframe(presapp = mean(approve),
+          .by = year) |> 
+  dplyr::arrange(year)
+
+```
+
+
+## Combine variables into dataframe
+
+The following code merges the ANES indices (external efficacy, trust in government), average presidential approval ratings by year, and the yearly average ICS values into a combined dataframe (in 'wide' format). 
+
+```{r}
+# merge index variables, approval ratings, and ICS into dataframe (wide format) 
+d <- dplyr::full_join(approval, econ_sentiment, by = dplyr::join_by(year)) |> 
+  dplyr::full_join(anes_indices, by = dplyr::join_by(year))
+```
+
+Also, following Chamberlain, I create a modified version of the `ics` variable, named `ics_modified`. This new variable is only added to the dataframe and does not overwrite the `ics` values.  
+
+```{r}
+# include modified ICS values following Chamberlain
+d <- d |> 
+  # include modified ICS values following Chamberlain
+  dplyr::mutate(ics_modified = (ics-50), .after = ics)
+
+```
+
+## Final processing of dataframe
+
+The `year` variable is converted to integer
+
+```{r}
+
+# year can't be in `<dbl>` numeric class, must be integer disallowing decimals
+d$year <- as.integer(d$year)
+
+```
+
+Create a 'long-form' version of the data frame.
+
+```{r}
+
+# convert dataframe to long form
+dlong <- d |>
+  # drop lagged versions of variables
+  dplyr::select(-dplyr::contains("L")) |> 
+  tidyr::pivot_longer(cols = -year, names_to = "variable", values_to = "value")
+
+# With the data in long format, NA values can be safely dropped
+dlong <- dlong |> 
+  # filter out (drop) NA values
+  dplyr::filter(!is.na(value))
+
+
+```
+
+## Save data
+
+```{r}
+
+# save d in wide format
+readr::write_rds(d, file = "data/data_wide.rds")
+
+# save d in long format
+readr::write_rds(dlong, file = "data/data_long.rds")
+
+# remove unnecessary objects from memory
+rm(cdf, cdf_wt, approval, econ_sentiment, anes_indices, roper, ics)
+
+```
 

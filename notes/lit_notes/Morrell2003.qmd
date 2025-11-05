@@ -1,0 +1,10 @@
+---
+title: "Morrell 2003"
+subtitle: "Survey and Experimental Evidence for a Reliable and Valid Measure of Internal Political Efficacy."
+author: "Isaiah Espinoza"
+date: last-modified
+date-format: iso
+format: compact-pdf
+---
+
+

@@ -1,0 +1,173 @@
+---
+title: "outline"
+---
+
+
+## Quick overview
+
+Brief overview of Chamberlain's study:
+
+-   Chamberlain conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008. 
+-   His study utilized a time-series lagged dependent variable OLS model. 
+-   The dependent variable was the average index values for external efficacy aggregated across time from 1952 to 2008 (whenever ANES measured it). 
+-   His independent variable predictors included presidential approval ratings, the index of consumer sentiment, trust in government, and a 4-year lag of the DV
+-   His hypothesis was that aggregate external efficacy would appear to be dynamically responsive to the chosen predictors. Null results would suggest the measurement of external efficacy is invalid, and require re-consideration of both concept and measurement.
+-   Results could not reject null: aggregate external efficacy was unresponsive to the predictors across time.
+
+## So What is the problem?
+
+In one sentence: we don't know what external efficacy survey items are measuring because we don't really know what we mean when we refer to external political efficacy. 
+(see more in `notes.qmd`)
+
+problems with external political efficacy itself:
+
+1.    Essentially an issue of construct validity compounded by issues of inadequate measurement instrument (e.g., insufficient number of items to serve as indicators for a solid index, poor coherence between items and construct)
+2.    The number of items used to construct the external efficacy index is insufficient; two items are not enough to measure or estimate any supposed construct of interest.
+3.    Even given the standard meaning of external efficacy, the items do not cohere to the meaning
+4.    Misconstrual of external political efficacy in the literature disallows adequate measurement.
+
+problems with Chamberlain's 2012 study:
+
+1.    Null results from Chamberlain's model does not permit the given interpretation due to inappropriate predictors and incorrect model.
+    a.    Chosen predictors of Chamberlain's model are untenable as factors reflective of the political environment (invalid theoretical justification of model predictors). The factors chosen as predictors of the model do not appropriately test the theory proposed; The idea is viable but the test applied is faulty.
+2.    Lagged dependent variable dynamic time series regression model is inappropriate and unwarranted.
+    a.    Chamberlain uses a 4-year lag despite the irregular iterations of ANES surveys, but it would make more sense to simply create a lag of the dependent variable reflecting the previous iteration.
+    b.    The lagged-DV is only influential on the DV when ANES data from 1952-1986 are included, otherwise prior aggregated index values are not significantly associated with subsequent values.
+    c.    The LDV model is inappropriate given that the ANES data is repeated cross-sectional data (RCS)
+
+ 
+## What is the plan?
+
+-   attempt to replicate results from @chamberlain2012 incorporating data up to the most recent ANES survey (2024)
+-   conduct a better test of the theory proposed by Chamberlain using more appropriate predictors reflective of the (external) political environment.
+-   Consolidate and summarize core issues with the meaning and measure of external political efficacy
+
+
+## How?
+
+-   First replicate results from @chamberlain2012 confined to the same data available to Chamberlain at the time (1952-2008).
+-   Attempt to replicate study incorporating data data gathered since the original study (1952-2024).
+-   
+
+-   In particular, perhaps a criterion feature qualifying a factor of the political context would be a factor that conditions the people's capacity to shape their political environment. Granted, there are many such factors to choose from, as it stands to reason that so very many things affect our ability to bring about a political reality we prefer in common.  
+
+-   Differences-in-differences models to account for changes to political conditions across all states in the United States
+-  Identify a definitive change in conditions of the political environment and evaluate external efficacy before and after said change. Potential cases to consider:
+    - Varying changes to state laws across different states subsequent to judicial rulings by the Supreme Court
+
+    a.    significant results only suggest that the predictors influence these indicators in the aggregate, but does not necessarily validate the link of the items as indicators of external efficacy. 
+    b.    Null results, in contrast, only confirm that the items are not indicators of external efficacy as it is conceived in theory. 
+
+
+### Issue 1: Chosen predictors
+
+-   Crucial here is whether the three predictor variables chosen by Chamberlain are admissible as factors reflective or representative of the external political context. They are not.
+-   The null results reported by @chamberlain2012, and the results from attempted replication, are uninformative because the predictors of that study are ***untenable to consider as factors of the political environment***.
+-   In other words, the factors chosen as predictors of the model do not appropriately test the theory proposed.
+-   The contention is that the predictors chosen are reflective of *public opinion* across time, but are definitely not reflective of the political environment.
+-   The predictors of presidential approval, consumer sentiment, and trust in government (**individual level covariates**) are aggregated into national averages which is, at best, reflective of how the public felt about governing actors or institutions at the particular times when ANES administered surveys, and only partially reflective at that. Such factors are better construed as *satisfaction with government* instead of factors reflective of the subject conditions within the political context. 
+
+### Issue 2: Misconception and Conflation with Government Responsiveness
+
+-   Perhaps more important is whether the conception of external political efficacy as given by @chamberlain2012 (see also @chamberlain2013) was cogent.
+-   At issue in the original study was whether the measurement of external efficacy validly coheres with the meaning of external political efficacy. As such, the given meaning of the construct is paramount as is the notion of what is being measured in the first place.
+-   The conceptual definition of external political efficacy made common by @craig1990 and @niemi1991a is stated as,
+
+> "...beliefs about the responsiveness of governmental authorities and
+institutions to citizen demands" [@craig1990, 290; @niemi1991a, 1408].
+
+-   Chamberlain sought to test validity of the survey items as measures for the construct in a way that was perfectly reasonable given the meaning of external efficacy just stated. However, this given meaning of external efficacy is problematic in more ways than one. As such, issues of measurement cannot be resolved until the meaning of efficacy is grounded in a coherent and sound conceptual foundation.
+-   First, external political efficacy is conflated with government responsiveness
+-   Second, external political efficacy is almost indistinguishable from trust in government, further rendering its meaning and interpretation of results ambiguous.
+
+
+### Issue 3: Recent data
+
+-   A replication of Chamberlain's analysis using the most recent ANES data shows that external efficacy aggregated across time does appear to be dynamically responsive to at least presidential approval.
+-   However, presidential approval is not tenable as a factor reflective of the external political environment, which renders this result superfluous in regard to the aim of the study.
+-   That is, regardless of whether results lead us to reject the null hypothesis or not, the results still leave us with no real idea of what external efficacy means and it still isn't clear whether the two external efficacy items suffice as empirical referents to an efficacy construct.
+
+### Issue 4: LDV model is inappropriate for use with RCS data
+
+-   The ANES cumulative data file is not panel data, but rather repeated cross-sectional data (RCS). RCS data is individual-level data collected at one point in time at regular intervals.
+-   The lagged dependent variable model is sometimes used to handle auto-correlation or problems of non-stationarity in pooled cross-sectional time series (PCSTS) data, but is inappropriate for RCS data since each observation occurs only once. 
+-   To put it differently, values of $y_{i,t-1}$ are not available given that the ANES cumulative data file is RCS data. Even though the ANES samples from the national population, the sample from every iteration of the ANES survey is necessarily independent from the last[^1]. 
+
+-   Multilevel models may allow one to model both the dynamic and static processes at once. For instance, ARFIMA-MLM applies ARFIMA methods at the aggregate level, then accounts for the hierarchical structure of the RCS data [@lebo2015].
+-   This method, however, is not as feasible with ANES CDF data since there are not month-to-month measurements taken for external efficacy; the regular intervals of the ANES are not nearly as granular as daily, weekly, monthly, or even annual iterations. At best, the data available gives us aggregate external efficacy every couple of years. I'm not sure that ARFIMA-MLM is applicable to ANES cumulative data.
+
+-   Moreover, the ARFIMA-MLM method is only feasible so long as the outcome of interest is 1) validly measured, and 2) has been measured the same way consistently for every iteration included in the data. This is the chief issue in question. The ARFIMA-MLM method is not suited as a method to test whether the meaning of external political efficacy coheres with its supposed measurement.
+-   The validity of the index and measurement items the very thing in question. 
+
+[^1]: Unless, of course, ANES specifically includes individual respondents from a prior iteration.
+
+-   A differences-in-differences (DID) approach may be better suited, especially since the cumulative ANES data is repeated cross-sectional data. In a DID model using RCS data, cross-sections are included before and after some intervention (e.g., policy, event).
+
+### Issue 5a: The LDV model approach is unjustified
+
+-   When lagging the dependent variable on the most recent iteration of the ANES due to the irregular interval administration of the survey over time, results show that prior external efficacy index values bear no influence upon subsequent values.
+-   The 4-year lag of the DV employed by Chamberlain omits data arbitrarily. A 4-year or 2-year lag of the DV is irrelevant given the irregularity of ANES surveys over time. It is enough to lag the DV by 1, omitting the years where the ANES survey was not administered, and conducting a regression analysis to determine whether external efficacy at time $t$ is a function of external efficacy at $t-1$. 
+
+-   When regressing aggregated external efficacy index values on a lag of prior aggregated values from 1952 to 2020, results show that external efficacy at time $t$ are significantly associated with external efficacy at $t-1$. To put simply, the effect of $Y_{t-1}$ on later values of itself decays overtime but appears nevertheless significant. 
+-   However, statistical significance only holds when every year from 1952 up to 1986 are included. Constraining the analysis to only include aggregated external efficacy from 1988 onward---i.e., when response options were expanded from the simple binary format yes/no---then results show that prior values of external efficacy in the aggregate do not influence subsequent values of the same index.
+-   More importantly, when the simple LDV model is constrained to analysis of aggregated index values from 1952 to 1986, results are statistically significant.
+-   So to summarize: from 1988 to 2020 ($n = 13$), LDV model that includes only a lag of the dependent variable as a predictor is not statistically significant---prior aggregated index values are not significantly associated with subsequent values. However, from 1952 to 1986 ($n = 15$), the same LDV model is statistically significant; prior index values of external efficacy do affect later values of the same. 
+
+-   Such results point to the differences in the measurement items between the two time periods as the reason.
+
+## Issues beyond Chamberlain's 2012 study:
+
+### Conceptual ambiguity, unrestrained interpretation, and the conceptual canvass
+
+-   Over time, the conception of external efficacy went from explicit conflation with responsiveness of government to an empirically demonstrated distinction from perceived government responsiveness [@esaiasson2015]. Despite the continued march into conceptual obscurity, the items meant to measure external political efficacy have remained virtually unchanged. 
+
+
+
+### flawed coding scheme of the External Efficacy Index
+
+-   Alternatively, the coding scheme of the external efficacy index values may play a larger role.
+-   BLUF: The bottom line is this: the coding scheme of the index takes "neither agree nor disagree" responses as positive evidence of external efficacy despite respondents making no such expression.
+
+-   The coding scheme is complicated by situating "neither agree nor disagree" as a middling value while treating the index as a unipolar scale. For instance, a person who responds with "neither agree nor disagree" to both items would obtain a raw score of 50, whereas full agreement with both external efficacy item statements would amount to 0. Thus, a person who neither agrees nor disagrees with both external efficacy item statements would be considered more externally efficacious (so to speak) than a person who agrees with both statements; the coding scheme of the index takes "neither agree nor disagree" responses as positive evidence of external efficacy despite respondents making no such expression. This coding scheme undermines the credibility of the index itself, further complicating the meaning and measure of external political efficacy.
+(See the full explanation of this issue in `notes.qmd`)
+
+### Kind of a non-issue but whatever: Different Time Period and Small n
+
+-   Since 1988, ANES implemented revised external efficacy items and expanded response options from a simple binary (i.e., yes/no) response format. 
+-   Results are significant when analysis considers ANES data from 1988 onward. However, since outcome is average index values aggregated over time, the number of observations drops down to 13 (including ANES data up to 2020).
+-   If results from Chamberlain's model are only null when results from earlier versions of the survey items are included, then the findings reported by @chamberlain2012 are dubious at best.
+
+-   Using the aggregate of average external efficacy index values results in a very small number of observations.
+-   Including all years where external efficacy was included in the ANES since 1952 up to 2008 alone only results in $n=25$, and including the most recent ANES data since 2008 up to 2020 only adds three observations $n = 28$.
+-   This is more an issue of relying on aggregate values of external efficacy across time.
+-   The literature supports evaluation of repeated cross-sectional data, like the ANES, where there is at least 10-15 cross-sections [@brady2015]. So as long as all measures of external efficacy from 1952 up to 2008 or further are included, then there are enough cross-sections to meet this comfortable minimum. However, if we constrain the ANES data to the years where measures for external efficacy stabilized into their most modern form---i.e., after 1986---then the number of cross-sections available reaches a paltry 13.  
+
+
+
+## Misc
+
+-   
+
+
+Chamberlain's dynamic time series model with lagged dependent variable is insufficient to properly test the validity and congruence of both meaning and measurement of external efficacy. The theoretical justification for the method is lacking, and the chosen predictors are not tenable as factors representative of the political environment. 
+
+Rather, I evaluate external efficacy over time from before and after 2013 when the Supreme Court invalidated the preclearance formula of the Voting Rights Act. After that ruling, many states since have passed a significant number of laws pertaining to voter ID, voter registration, methods of voting, and much more. Some states have passed laws that have are incredibly restrictive, yet other states have also passed laws aiming to expand voting rights^[Further complicating the matter is that states have passed a mix of restrictive and expansive voting and election laws.]. Of particular interest are states that passed restrictive laws immediately following the *Shelby v Holder* ruling. 
+
+The hypothesis posited by Chamberlain still stands: external efficacy should shift upon changes to the political environment. However, this hypothesis relies on an alternate/competing conceptual understanding of external efficacy that substantially deviates from the conventional conceptual definition and understanding often professed in the literature.
+
+
+:::{.callout-note}
+I can't actually conduct an IRT analysis of the external efficacy items because there are only two items used to compute the index. The below bullet point is not something I can do.
+
+-   Consider IRT analysis of external efficacy items to assess whether the items measure a homogeneous underlying trait and how well the items perform in measuring said trait. Factor analysis has been done in the past, but IRT allows us to estimate the subject parameter (theta) and item parameters separately. 
+:::
+
+
+## Questions
+
+Are the survey items that measure external efficacy coherent with the meaning of the construct? How can we tell?
+
+Do results derived from responses to external efficacy items correspond with the given meaning of external political efficacy?
+
+Is external political efficacy, as measured in ANES surveys, responsive to changes in the political context? How can we tell?
+
