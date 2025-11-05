@@ -1,0 +1,150 @@
+---
+title: "Analysis Replication"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: setup
+
+# set seed for reproducibility
+set.seed(12345)
+
+# load packages (those commented out may or may not be necessary)
+library(tidyverse)
+library(naniar) # data structures, summaries, and visuals for missing data
+library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
+library(modelsummary)
+library(tinytable)
+
+# set `modelsummary` R package global options
+options(modelsummary_factory_html = 'tinytable')
+options(modelsummary_factory_latex = 'kableExtra')
+options("tinytable_theme_placement_latex_float" = "H")
+
+# load data in wide and long formats
+d <- readr::read_rds(file = "data/data_wide.rds")
+dlong <- readr::read_rds(file = "data/data_long.rds")
+
+# load replica data, both wide and long formats
+replica <- readr::read_rds(file = "data/replication_dataset.rds")
+replica_long <- readr::read_rds(file = "data/replica_long_dataset.rds")
+
+```
+
+## Replication of Lagged Dependent Variable Model
+
+```{r}
+#| label: tbl-replica
+#| tbl-cap: "Replica of Table 1 from Chamberlain (2012): 'Lagged Dependent Variable Model of Macro-Level Variables on External Efficacy'. Note that Model 5 of the original study is not included. Also note that Model 4 has 1 less observation compared to original study, which should not be since the data is exactly the same."
+#| tbl-cap-location: bottom
+
+# Essentially, this is an attempt to replicate Table 1 in Chamberlain (2012)
+# Except, I exclude Congressional approval as another predictor to examine. I
+# didn't gather it from Roper.
+# Models 1-4 are models for each individual predictor
+# models 5 and 6 are models for sets of predictors (excluding Congressional approval)
+
+# quick way to add lags to each variable column
+replica <- replica |> 
+  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
+
+models <- list(
+  "Model 1" = lm(exteff ~ exteff_lag4, data = replica), 
+  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = replica), 
+  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = replica), 
+  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = replica), 
+  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = replica), 
+  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = replica))
+
+# vector of preferred coefficient names
+coef_names <- c(
+  "exteff_lag4"   =  "External Efficacy (t-4)",
+  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp_lag1"  = "Presidential Approval (t-1)",
+  "trustgov_lag2" = "Trust in Government (t-2)",
+  "(Intercept)"   = "Constant")
+
+# Replication of results from Chamberlain Table 1.
+replica1 <- modelsummary::modelsummary(
+  models = models,
+  fmt = 3,
+  estimate = "{estimate} ({std.error}){stars}",
+  statistic = NULL,
+  coef_map = coef_names,
+  gof_map = c("nobs", "adj.r.squared"),
+  notes = list(
+    "Note.---Lagged dependent variable OLS model",
+    "*p < .05; **p < .01"),
+  width = c(3, 1, 1, 1, 1, 1, 1), 
+  align = "lcccccc"
+) 
+
+replica1 |> 
+  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.80) |> 
+  tinytable::style_tt(j = 2:7, align = "c", fontsize = 0.80)
+
+# For model 4, the N I have differs from the N in Chamberlain by 1. This
+# shouldn't be the case since the data should be exactly the same
+
+```
+
+
+
+
+```{r}
+#| label: tbl-replica2
+#| tbl-cap: "Replication of Table 1 results from @chamberlain2012, including years since original publication."
+#| tbl-cap-location: bottom
+
+# Table 1 of Chamberlain extended out to 2020 
+
+# remove ics_modified var
+d <- d |> dplyr::select(-ics_modified)
+
+# exclude years prior to 1952 and beyond 2020
+d <- d |> 
+  dplyr::filter(!year < 1952, !year > 2020)
+
+# add lags
+d <- d |> 
+  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
+
+models2 <- list(
+  "Model 1" = lm(exteff ~ exteff_lag4, data = d), 
+  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = d), 
+  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = d), 
+  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = d), 
+  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = d), 
+  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = d))
+
+
+# vector of preferred coefficient names
+coef_names <- c(
+  "exteff_lag4"   =  "External Efficacy (t-4)",
+  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp_lag1"  = "Presidential Approval (t-1)",
+  "trustgov_lag2" = "Trust in Government (t-2)",
+  "(Intercept)"   = "Constant")
+
+# Replication of results from Chamberlain Table 1.
+replica2 <- modelsummary::modelsummary(
+  models = models2,
+  fmt = 3,
+  estimate = "{estimate} ({std.error}){stars}",
+  statistic = NULL,
+  coef_map = coef_names,
+  gof_map = c("nobs", "adj.r.squared"),
+  notes = list(
+    "Note.---Lagged dependent variable OLS model",
+    "*p < .05; **p < .01"),
+  width = c(3, 1, 1, 1, 1, 1, 1), 
+  align = "lcccccc"
+) 
+
+replica2 |> 
+  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.80) |> 
+  tinytable::style_tt(j = 2:7, align = "c", fontsize = 0.80)
+
+
+```

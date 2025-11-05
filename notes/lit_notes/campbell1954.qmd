@@ -1,0 +1,336 @@
+---
+title: "campbell1954"
+date: "2025-01-13"
+---
+
+::: {.callout-note}
+Created: {{< meta date >}}
+Modified: {{< meta date-modified >}}
+:::
+
+## Citation
+
+Campbell, Angus, Gurin Gerald, and Warren E. Miller. 1954. The Voter Decides. Evanston, Ill.: Row, Peterson.
+
+
+## Notes
+
+> "From the information on voting behavior and the responses to these four questions--the three about organized party work and the one about informal, individual " campaigning "---we may construct a crude but serviceable scale of political activity by means of which people may be sorted into three categories: (a) those who voted and also participated in the campaign; (b) those who voted but took no other active part; (c) those who did not vote." [@campbell1954, 29] 
+
+> "Some nonvoters were more involved politically than others and did talk politics in a partisan manner, or even in a few cases contributed money and effort to party work; but as the act of voting is, except in uncommon circumstances, the *sine qua non* of political participation for the ordinary citizen, these people are grouped in our scale with other nonvoters. The results of this classification, hereafter referred to as the *index of political participation*, appear in Table 3.2." [@campbell1954, 29]
+
+:::{.callout-note}
+*sine qua non* means literally, "without which, not", which means more or less "Without (something), (something else) won't be possible." It refers to something absolutely indispensable or essential
+:::
+
+
+> "The assumption of a responsive and participating electorate is one of the basic propositions underlying the democratic concept of government." [@campbell1954, 39]
+
+Scholars of the time posed this question on how to consider levels of participation so as to demarcate the politically active from relatively more passive individuals. Yet despite posing the question in the form of different suppositions, no definitive answer is given. However, emphasis on the contrast between who was *really* active and who merely feigned interest served to concentrate on a characterization of the politically active citizen who comprised only a margin of the mass public. So while one paragraph sets up the question, the next presents the answer. 
+
+> "If we regard passive attention to radio or television speeches or newspaper articles as participation in the campaign, then it can be said that virtually the entire public took part in the 1952 election. If we think of voting as the sine qua non of participation, the figure was still quite high-three out of four of the people our sample represented, although many of these voters seemed to have very little interest in how the election came out. If we consider only the more individual, less institutionalized, forms of activity, we find that the proportion of political "actives" dropped off to a very small minority of the total population." [@campbell1954, 39]
+
+> "Despite the appearance of feverish public interest which characterized the 1952 campaign, it seems evident that the bulk of the political activity that went on during that period was concentrated in a fraction of perhaps one-tenth of the public. They were the meeting-goers, money-givers, party-workers. Most people took the campaign much more casually, and approximately one person in three did not seem interested enough to care which party won." [@campbell1954, 39]
+
+
+
+
+
+### Selections from Questionnaire from Appendix E
+
+::: {.callout-note}
+I'll make a note now later to come back and put the entire questionnaire here for my own reference. For now, I just copy pasted directly from the book PDF here and there.
+:::
+
+
+9.  Do you think it will make any difference in how you and your family get
+along financially whether the Democrats or Republicans win? (How is
+that?)
+
+9a. [If makes a difference and not answered in 9] Well, do you think
+you'll be better off or worse off financially if the Republicans win the
+election?
+
+10. Now I'd like to ask you about the good and bad points of the two
+candidates for president. Is there anything in particular about Stevenson
+that might make you want to vote for him? (What is it?)
+
+11. Is there anything in particular about Stevenson that might make you
+want to vote against him? (What is it?)
+
+12. Is there anything in particular about Eisenhower that might make you
+want to vote for him? (What is it?)
+
+13. Is there anything in particular about Eisenhower that might make you
+want to vote against him? (What is it?)
+
+14. Now, adding up the good points and the bad points about the two candidates, and forgetting for a minute the parties they belong to, which one do you think would make the best president?
+
+15. Some people say that Eisenhower is not a real Republican. What do
+you think about this? Is he the kind of man that you think of as being
+a real Republican? (Why do you say that?)
+
+16. [If not answered in 15] What about Eisenhower's ideas and the things he
+stands for? Do you think that he is pretty much the same as most other
+Republicans, or is he different from them? (Why do you say that?)
+
+17. How about the candidates for vice-president? Aside from their parties,
+do you have any strong opinions about either of them? (How is that?)
+
+18. Generally speaking, would you say that you personally care a good deal
+which party wins the presidential election this fall, or that you don't
+care very much which party wins?
+
+19. How about state and local elections? When you have state and local
+elections around here would you say that you care a good deal who wins,
+or that you don't care very much who wins those elections?
+
+20. Some people don't pay much attention to the political campaigns. How
+about you? Would you say that you have been very much interested,
+somewhat interested, or not much interested in following the political
+campaigns so far this year?
+
+Now, I want to ask you how you feel about some of the issues that people
+are talking about these days. For example-
+
+21. Some people think the national government should do more in trying to deal with such problems as unemployment, education, housing, and so on. Others think that the government is already doing too much. On the whole, would you say that what the government has done has been about right, too much, or not enough?
+
+21a. Now, how do you think the two parties feel about this question-
+Do you think there are any differences between the Democratic and
+Republican parties on this issue, or would you say they feel the
+same ? (How is that?)
+
+22. There is a lot of talk these days about discrimination, that is, people
+having trouble getting jobs because of their race. Do you think the
+government ought to take an interest in whether Negroes have trouble
+getting jobs or should it stay out of this problem?
+
+22a. [If government should take an interest] Do you think we need laws
+to deal with this problem or are there other ways that will handle it
+better?
+
+22a(1) [If "other ways" to 22a] What do you have in mind?
+
+22a(2) [If "laws" to 22a] Do you think the national government
+should handle this or do you think it should be left for each
+state to handle in its own way?
+
+22b. [If government should stay out] Do you think the state governments
+should do something about this problem, or should they stay
+out of it also?
+
+23. Have you heard anything about the Taft-Hartley Law?
+
+23a. [If has heard] How do you feel about it? Do you think it's all
+right as it is, do you think it should be changed in any way, or don't
+you have any feelings about it?
+
+23a(1) [If should be changed] Do you think the law should be
+changed just a little, changed quite a bit, or do you think
+it should be completely repealed? (How is that?)
+
+24. Some people think that since the end of the last world war this country
+has gone too far in concerning itself with problems in other parts of the
+world. How do you feel about this?
+
+24a. Now, how do you think the two parties feel about this question-
+Do you think there are any differences between the Democratic
+and Republican parties on this issue, or would you say they feel the
+same? (How is that?)
+
+25. Some people feel that it was our government's fault that China went
+Communist, others say there was nothing that we could do to stop it.
+How do you feel about this?
+
+26. Do you think we did the right thing in getting into the fighting in Korea
+two years ago, or should we have stayed out?
+
+
+Which of the following things do you think it would be best for us to do
+now in Korea? Should we-
+(a) Pull out of Korea entirely?
+(b) Keep on trying to get a peaceful settlement?
+(c) Take a stronger stand and bomb Manchuria and China?
+[Qualifying comments]
+
+Now I would like to ask you a little more about the political parties.
+
+28. Generally speaking, do you usually think of yourself as a Republican, a
+Democrat, an independent, or what?
+
+If Republican or Democrat to Question 28: (if independent or other skip to
+Question 28d.)
+28a. Would you call yourself a strong (11) (D) or a not very strong
+(R) (D) ?
+28b. Was there ever a time when you thought of yourself as a (R) (D)
+rather than a (D) (R)?
+28b(1). [If yes to 28b] When did you change?
+28c. Suppose there was an election where your party was running a
+candidate that you didn't like or you didn't agree with. Which of
+the following things comes closest to what you think you would do?
+D (1) I probably would vote for him anyway because a person
+should be loyal to his party.
+D (2) I probably would not vote for either candidate in that
+election.
+[ (3) I probably would vote for the other party's candidate.
+28c(1). [If 3 is chosen to 28c] How would you feel about voting
+for the other party-would it bother you in any way?
+If independent or other to Question 28:
+28d. Do you think of yourself as closer to the Republican or Democratic
+party?
+28e. Was there ever a time when you thought of yourself as a Democrat
+or a Republican?
+28e(l). [If yes to 28e] Which party was that?
+28e(2). [If yes to 28e] When did you change?
+
+Ask of everyone
+
+29. Do you remember when you were growing up whether your parents
+thought of themselves mostly as Democrats or Republicans, or (lid they
+shift around from one party to another?
+30. In the elections for president since you have been old enough to vote,
+would you say that you have voted in all of them, most of them, some
+of them, or none of them?
+If R has ever voted for president to Question 30, ask Questions 31-33; if R has
+never voted for president, skip to Question 34.
+31. Have you always voted for the same party, or have you voted for different
+parties for president?
+31a. [If same] Which party was that?
+32. Do you remember who you voted for the first time you voted for president
+?
+32a. [If yes] Who was it? What party was it?
+32b. [If yes] Do you remember what year that was? [If yes] When?
+33. In 1948, you remember that Truman ran against Dewey. Do you
+remember for sure whether or not you voted in that election?
+33a. [If yes, does remember voting] Which one did you vote for?
+
+Ask of everyone
+34. Now how about the election this November? Do you know if you are
+(registered) (eligible to vote) so that you could vote in the November
+election if you wanted to?
+34a. [If necessary] Are you (registered) (eligible to vote)?
+35. So far as you know now, do you expect to vote in November or not?
+If yes to Question 35, ask Questions 36-39; if no to Question 35, skip to Question
+40.
+36. How do you think you will vote for president in this election?
+36a. [If mentions candidate or party] What would you say is the most
+important reason why you are going to vote for [answer to 36]?
+37. Who do you plan to vote for as United States senator?
+38. How about congressman? Who do you plan to vote for there?
+39. Who do you think you will vote for as governor here in [your state]?
+If no to Question 35:
+40. If you were going to vote, how do you think you would vote for president
+in this election?
+40a. [If mentions candidate or party] What would you say is the most
+important reason why you would vote for [answer to 40]?
+
+
+Ask of everyone
+41. Some people think that if a voter votes for one party for president he
+should vote for the same party for senator and congressman. Do you
+agree or disagree with that idea?
+41a. Why do you feel that way?
+42. Was there some other candidate whom you would rather have seen
+nominated at Chicago last July? [If necessary] Who?
+42a. [If yes to 42] Why would you like to have seen him nominated?
+43. Do you think the party conventions like they had in Chicago are a good
+way to nominate candidates for president, or do you think there is a
+better way?
+43a. [If a better way] What would you suggest?
+44. Now I'd like to ask you some questions about how you think other
+people will vote in this election.
+For instance, take farmers-do you think farmers around the country
+will vote mostly Republican, mostly Democratic, or do you think they
+will be about evenly split?
+ED ER E Split E DK
+Now, how about working-class people-do you think they will vote
+mostly Republican, mostly Democratic, or do you think they will be
+about evenly split?
+RD ER E Split E DK
+Now, how about:
+Negroes ED ER E Split E DK
+Middle-class people L) E R E Split E DK
+Big-businessmen 1D) 1 R-] I ]R Split [ DK
+Labor union mimnbers LD1) Li I [] Split Li DK
+
+Now, how about people in different religious groups, like Protestants,
+Catholics, and Jews? For instance, how about Protestants
+-do you think Protestants around the country will vote mostly
+Republican, mostly Democratic, or do you think they will be about
+evenly split?
+ED ER E Split E DK
+Now, how about Catholics? E D E R E Split E DK
+How about Jews? E D E R E Split E DK
+44a. [Ask only for groups seen as mostly supporting one or the other
+party to question 44.] Now let me check back and ask you why
+you feel that are more likely to vote (R) (D), etc.
+
+
+45. Are you married?
+
+45a. [If yes] How do you think your husband (wife) will vote?
+
+46. Now how about your five best friends? How do you think they're most
+likely to vote?
+
+::: {.callout-note}
+The Q47 series below contains the "sense of political efficacy" and "sense of citizen duty" survey question items. I don't think the authors mention anything about the question order or are yet concerned in anyway about response effects, but the fact that these two variables were asked in such a way that the items were presented in this revolving fashion potentially had some definite effects. Especially considering the theoretical link between capacity and duty that started me on this trip. I have marked the [DUTY] and [EFFICACY] items, respectively.
+:::
+
+47. Now I'd like to read some of the kinds of things people tell me when I
+interview them and ask you whether you agree or disagree with them.
+I'll read them one at a time and you just tell me whether you agree or
+disagree.
+
+47a. It isn't so important to vote when you know your party doesn't have a chance to win. [DUTY]
+
+47b. I don't think public officials care much what people like me think. [EFFICACY]
+
+47c. The way people vote is the main thing that decides how things are run in this country. [DUTY]
+
+47d. Voting is the only way that people like me can have any say about how the government runs things. [EFFICACY]
+
+47e. A good many local elections aren't important enough to bother with. [DUTY]
+
+47f. So many other people vote in the national elections that it doesn't matter much to me whether I vote or not. [DUTY]
+
+47g. People like me don't have any say about what the government does. [EFFICACY]
+
+47h. If a person doesn't care how an election comes out lie shouldn't vote in it. [DUTY]
+
+47i. Sometimes politics and government seem so complicated that a person like me can't really understand what's going on. [EFFICACY]
+
+
+
+And now I'd like to ask you just two more questions.
+
+48. There's quite a bit of talk these days about different social classes. If you were asked to use one of these four names for your social class, which would you say you belonged in-the middle class, lower class, working class or upper class?
+
+49. Some people say there's not much opportunity in America today-that
+the average man doesn't have much chance to really get ahead. Others
+say there's plenty of opportunity, and anyone who works hard can go as
+far as he wants. How do you feel about this?
+
+
+### Post election questionnaire
+
+:::{.callout-note}
+The following are a series of items from the post-election questionnaire that comprised political participation. The reason why I segmented them here is because I was curious to see what it meant, in 1952, to participate in the political process. 
+:::
+
+
+22. I have a list of some of the things that people do that help a party or a
+candidate win an election. I wonder if you could tell me whether you
+did any of these things during the last election campaign.
+
+22a.  Did you talk to any people and try to show them why they should vote for one of the parties
+or candidates? 
+
+22b.  Did you give any money or buy tickets or anything to help the campaign for one of the parties
+or candidates?
+
+22c.  Did you go to any political meetings, rallies, dinners, or things like that?
+
+22d.  Did you do any other work for one of the parties or candidates?
+
+22e.  Do you belong to any political club or organizations?

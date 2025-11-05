@@ -1,5 +1,7 @@
 ---
-title: Title of Manuscript
+title: Meaning and Measurement of External Political Efficacy
+subtitle: A Replication and Extention of @chamberlain2012
+running-head: External Political Efficacy Revisited
 author:
   - name: Isaiah
     # orcid: 
@@ -13,38 +15,263 @@ author:
 #   - La Palma
 #   - Earthquakes
 abstract: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     
-date: last-modified
-date-format: "YYYY-M-D"
-citation:
-  container-title: Manuscript
-number-sections: false
+  It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. @chamberlain2012 attempted to address this problem in the hopes that results would elucidate the meaning from the measurement. Drawing from the usual conceptual definition of external efficacy, Chamberlain hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to predictors representing the political environment. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the predictors of the analysis are untenable as proxies for the political environment. To conduct a fairer test of the meaning and measurement of external efficacy, I examine whether external efficacy has been responsive to changes to the political environment since 2013 after the Supreme Court decision in *Shelby County v. Holder* which ruled Section 4(b) of the Voting Rights Act unconstitutional.     
 ---
+
+```{r}
+#| label: setup
+
+# set seed for reproducibility
+set.seed(12345)
+
+# load packages (those commented out may or may not be necessary)
+library(tidyverse)
+library(naniar) # data structures, summaries, and visuals for missing data
+library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
+library(modelsummary)
+library(tinytable)
+
+# load some custom functions
+source(here::here('utils', 'funs.R'))
+
+# load data in wide and long formats
+d <- readr::read_rds(file = "data/replica data/replica_data_wide.rds")
+dlong <- readr::read_rds(file = "data/replica data/replica_data_long.rds")
+
+
+# set `modelsummary` R package global options
+options(modelsummary_factory_html = 'markdown')
+options(modelsummary_factory_latex = 'kableExtra')
+
+```
+
 
 ## Introduction
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat [@cicero1931].
 
 
-
-
-
-```{r}
-
-```
-
-```{r}
-```
-
-```{r}
-```
+## Background (Literature Review)
 
 
 ## Data & Methods {#sec-data-methods}
 
+## Replication of Figure 1 from @chamberlain2012
+
+{{< embed notebooks/figure1_replication.qmd#fig-rep1 >}}
+
+
+In the original article, the Y-axis of @fig-rep1 was not scaled to range from 0 to 100. Note also that the `NOSAY` external efficacy question was not asked in the 1986 ANES; A line for responses to the `NOSAY` question between 1984 and 1988 is drawn implicitly via linear interpolation.
+
+I extend the time-series chart to include the years of ANES data made available since Chamberlain's original study^[At the time of writing, preliminary data for ANES 2024 was available but not yet included in the Cumulative Data File.] 
+
+{{< embed notebooks/figure1_replication.qmd#fig-rep1adj >}}
+
+
+## Replication of Figure 2 from @chamberlain2012
+
+@fig-rep2 charts plot lines of the three chosen predictors over time
+
+{{< embed notebooks/figure2_replication.qmd#fig-rep2 >}}
+
+
+The data available to Chamberlain at the time ranged from 1952 to 2008 for Presidential approval ratings (Gallup); 1960 to 2008 for quarterly ICS data (UMich), and of course, 1958 and 1964 to 2008 for trust in government (ANES). @fig-rep2 constrains the data to approximate the data available at the time of the original publication. 
+
+The following chart @fig-rep2adj is expanded to include all years for which data from each source was available^[Note that the Gallup monthly polling data was obtained through The Roper Center's iPoll database.]. In addition, no adjustment was made to the data and the Y-axis was expanded to preserve the full range of each variable. Values of the ICS are not constrained to range on a particular scale
+
+
+{{< embed notebooks/figure2_replication.qmd#fig-rep2adj >}}
+
+Note the distinctive difference in ICS values between @fig-rep2 and @fig-rep2adj. In a footnote, Chamberlain states,
+
+> "The Index of Consumer Sentiment was rescaled for figure 2 by subtracting 50 from all its values (to approximate a measure that would fit on a 100-point scale)" [@chamberlain2012, 120, n7]
+
+@fig-rep2compare includes both the non-modified and modified versions of yearly average ICS values over time.
+
+
+{{< embed notebooks/figure2_replication.qmd#fig-rep2compare >}}
+
+The purpose of @fig-rep2 was not to visually compare average values of each variable. However, such a visualization inevitably presents as such. As stated by Chamberlain, the purpose of the chart was to demonstrate that, "...across time, significant variation exists within these variables." [@chamberlain2012, 120]. 
+
+Understandably, average values are difficult to compare across time due to the fact that they are not all measured on the same scale nor are they obtained by the same survey study. The Index of Consumer sentiment is calculated from a particular formula and then averaged by year; the Trust in Government index is a mean score composite of four question items where higher values indicate higher trust in government; and presidential approval ratings are yearly average approval ratings from monthly Gallup polls^[As an aside, I think the decision to rescale the ICS by subtracting 50 from the mean values for each year presents a chart that is visibly misleading. This visualization of the data as such easily presents a misleading comparison.].
+
+
+
+## Replication of Lagged Dependent Variable Model
+
+
+
+
+```{r}
+#| label: tbl-replica
+#| tbl-cap: "Replica of Table 1 from Chamberlain (2012): 'Lagged Dependent Variable Model of Macro-Level Variables on External Efficacy'. Note that Model 5 of the original study is not included. Also note that Model 4 has 1 less observation compared to original study, which should not be since the data is exactly the same."
+#| tbl-cap-location: bottom
+
+# Essentially, this is an attempt to replicate Table 1 in Chamberlain (2012)
+# Except, I exclude Congressional approval as another predictor to examine. I
+# didn't gather it from Roper.
+# Models 1-4 are models for each individual predictor
+# models 5 and 6 are models for sets of predictors (excluding Congressional approval)
+
+# quick way to add lags to each variable column
+replica <- replica |> 
+  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
+
+models <- list(
+  "Model 1" = lm(exteff ~ exteff_lag4, data = replica), 
+  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = replica), 
+  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = replica), 
+  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = replica), 
+  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = replica), 
+  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = replica))
+
+# vector of preferred coefficient names
+coef_names <- c(
+  "exteff_lag4"   =  "External Efficacy (t-4)",
+  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp_lag1"  = "Presidential Approval (t-1)",
+  "trustgov_lag2" = "Trust in Government (t-2)",
+  "(Intercept)"   = "Constant")
+
+# Replication of results from Chamberlain Table 1.
+modelsummary::modelsummary(
+  models = models,
+  output = "tinytable",
+  fmt = 3,
+  estimate = "{estimate}",
+  statistic = "({std.error}){stars}",
+  stars = T,
+  coef_map = coef_names,
+  gof_map = c("nobs", "adj.r.squared"),
+  notes = list(
+    "Note.---Lagged dependent variable OLS model",
+    "*p < .05; **p < .01"),
+  width = c(3, 1, 1, 1, 1, 1, 1), 
+  align = "lcccccc"
+) |> 
+  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.80)
+
+
+# For model 4, the N I have differs from the N in Chamberlain by 1. This shouldn't be the case since the data should be exactly the same
+
+
+
+```
+
+## Replication Lagged Dependent Variable Model
+
+```{r}
+#| label: tbl-replica2
+#| tbl-cap: "Replication of Table 1 results from @chamberlain2012, including years since original publication."
+#| tbl-cap-location: bottom
+
+# Table 1 of Chamberlain extended out to 2020 
+
+# remove ics_modified var
+d <- d |> dplyr::select(-ics_modified)
+
+# exclude years prior to 1952 and beyond 2020
+d <- d |> 
+  dplyr::filter(!year < 1952, !year > 2020)
+
+# add lags
+d <- d |> 
+  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
+
+models2 <- list(
+  "Model 1" = lm(exteff ~ exteff_lag4, data = d), 
+  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = d), 
+  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = d), 
+  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = d), 
+  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = d), 
+  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = d))
+
+
+# vector of preferred coefficient names
+coef_names <- c(
+  "exteff_lag4"   =  "External Efficacy (t-4)",
+  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp_lag1"  = "Presidential Approval (t-1)",
+  "trustgov_lag2" = "Trust in Government (t-2)",
+  "(Intercept)"   = "Constant")
+
+# Replication of results from Chamberlain Table 1.
+modelsummary::modelsummary(
+  models = models2, 
+  output = "tinytable",
+  fmt = 3,
+  estimate = "{estimate}",
+  statistic = "({std.error}){stars}",
+  stars = T,
+  coef_map = coef_names,
+  gof_map = c("nobs", "adj.r.squared"),
+  notes = list(
+    "Note.---Lagged dependent variable OLS model",
+    "*p < .05; **p < .01"),
+  width = c(3, 1, 1, 1, 1, 1, 1), 
+  align = "lcccccc"
+) |> 
+  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.80)
+
+
+```
+
+
+
+
+
 ## Conclusion
+
+## Appendix {.appendix}
+
+
+```{r}
+#| label: tbl-presterms
+#| tbl-cap: "Presidents"
+#| tbl-cap-location: bottom
+
+# just a dataframe (tbl) of presidents with the dates in office
+pres_terms <- tibble::tribble(
+  ~president,   ~serv_start,         ~serv_end,
+  "Roosevelt",    "March 4th, 1933",     "April 12th, 1945",
+  "Truman",       "April 12th, 1945",    "January 20th, 1953",
+  "Eisenhower",   "January 20th, 1953",  "January 20th, 1961",
+  "Kennedy",      "January 20th, 1961",  "November 22nd, 1963",
+  "Johnson",      "November 22nd, 1963", "January 20th, 1969",
+  "Nixon",        "January 20nd, 1969",  "August 9th, 1974",
+  "Ford",         "August 9th, 1974",    "January 20th, 1977",
+  "Carter",       "January 20th, 1977",  "January 20th, 1981",
+  "Reagan",       "January 20th, 1981",  "January 20th, 1989",
+  "Bush",         "January 20th, 1989",  "January 20th, 1993",
+  "Clinton",      "January 20th, 1993",  "January 20th, 2001",
+  "BushJr",       "January 20th, 2001",  "January 20th, 2009",
+  "Obama",        "January 20th, 2009",  "January 20th, 2017",
+  "Trump",        "January 20th, 2017",  "January 20th, 2021",
+  "Biden",        "January 20th, 2017",  "January 20th, 2025") |>
+  dplyr::mutate(pres_num = as.character(seq(32, 46, by = 1)), .before = president) |>
+  dplyr::mutate(
+    across(c(serv_start, serv_end), ~lubridate::mdy(.)),
+    start_year = lubridate::year(serv_start),
+    end_year = lubridate::year(serv_end),
+    term = lubridate::interval(start = serv_start, end = serv_end, tzone = "UTC")) 
+
+colnames(pres_terms) <- c("Number", "President", "Start", "End")
+
+pres_terms |> 
+  dplyr::select(Number, President, Start, End) |> 
+  tinytable::tt() |> 
+  tinytable::style_tt(
+    fontsize = 0.80, # fontsize of text in table in em units (0.75*default)
+    align = "llcc"
+    )
+
+
+
+
+
+
+```
+
+
 
 ## References {.unnumbered}
 

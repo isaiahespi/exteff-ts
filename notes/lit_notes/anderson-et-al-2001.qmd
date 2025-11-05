@@ -1,0 +1,39 @@
+---
+title: "Anderson and Tverdova 2001"
+subtitle: "Literature Summary and Notes"
+author: "Isaiah Espinoza"
+date: last-modified
+date-format: iso
+bibliography: political-efficacy.bib
+format: 
+  compact-pdf:
+    keep-tex: false
+    indent: false
+    mainfont: TeX Gyre Pagella
+    reference-location: document
+reference-section-title: References
+---
+
+Anderson, Christopher J., and Yuliya V. Tverdova. 2001. “Winners, Losers, and Attitudes about Government in Contemporary Democracies.” International Political Science Review / Revue internationale de science politique 22(4): 321–38.
+
+
+> "Specifically, we examine how people's status as part of the political majority (winners) or political minority (losers) affects their attitudes toward government and political institutions." [@anderson2001]
+
+> "Based on the premise that political losers are most likely to be dissatisfied with the status quo and to push for changes in existing institutional arrangements, we analyze the patterns of variation in attitudes toward government among winners and losers." [@anderson2001]
+
+> "Finally, we investigate the differences in winners' and losers' attitudes with regard to different kinds of attitudes toward government, ranging from political efficacy to trust in civil servants and evaluations of the performance of the political system as a whole." [@anderson2001]
+
+Below is how they classified majority or minority
+
+> "We classified respondents as belonging to the political majority or minority with the help of a survey question that asked which party the individual voted for in the last national election. These responses are then combined with information about the party or parties that controlled the executive branch of government of the countries at the time the survey was conducted. If the respondent's reported vote choice matched the actual party in power-that is, if the person was among those who voted for the new government-that individual is scored as a member of the majority. Those on the other side are categorized as being in the minority." [@anderson2001, 326]
+
+
+These authors use one item from external efficacy to measure internal efficacy, and use an item not validated for the measure of external efficacy. See below 
+
+
+> "Following prior research, internal efficacy-or people's sense that they have an impact on government-was measured by asking respondents to agree or disagree with the following statement: "People like me don't have any say about what the government does." We report the percentages of winners and losers who indicated that they disagreed. External efficacy, which relates to the responsiveness of the political system, was "Elections are a good way of making the government important political issues facing our country." "strongly agree," "agree," "neither agree nor disagree," "disagree," and "strongly disagree". " [@anderson2001, 329-330]
+
+
+Figure 4 on page 330 is really the only one that matters. Overall, the percentage of respondents across the different countries reported generally low responses to the NOSAY item. The gap between "winners and losers" or, majority and minority, is not really important. Mostly because any statistical difference between the majority and majority groups are not reported, but also because its apparent that there is hardly any difference. Really though, the methods of this paper overall are lacking and not much can be taken away here. The only takeaway really is that the percentage of people who disagreed with the NOSAY item is pretty low across all the countries surveyed. That implies that the majority of most countries in the study responded that "People like me have no say in what the government does"
+
+HOWEVER, again, because this shows responses across multiple countries, question wording is something significant to consider. 

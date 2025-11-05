@@ -2,8 +2,11 @@
 */.ipynb_checkpoints/*
 
 /.quarto/
+/.github/
 /_manuscript
 /notes
+/data
+/data-raw
 
 /agujournal2019.cls
 /trackchanges.sty

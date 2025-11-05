@@ -1,0 +1,91 @@
+---
+title: "Lane 1959"
+date: "2024-02-17, 19:53:40"
+---
+
+::: {.callout-note}
+Created on: {{< meta date >}}
+
+Last Modified on: {{< meta date-modified >}}
+:::
+
+
+## Citation
+
+Lane, Robert Edwards. 1959. Political Life: Why People Get Involved in Politics. Glencoe, Ill.: Free Press.
+
+
+## Summary
+
+
+## Notes
+
+::: {.callout-note}
+## Note
+This is not a summary of the whole book, but rather confined to a few pages of chapter 11.
+:::
+
+The first scholar to distinguish political efficacy into two dimensions was Robert Lane (1959) in "Political Life: Why People Get Involved in Politics". It is in Chapter 11* where he bases much of his consideration of individual political efficacy upon a quality he refers to as "ego strength",
+
+
+
+> "Lying behind the capacity to assert oneself against the environment is the general concept of *ego strength*, a quality which is usually associated with the capacity to order one's life in a rational fashion, controlling at once the impulses which rise anarchically to the surface from within, and external events, in so far as they can be controlled." [@lane1959a, 147, emphasis original]
+
+Quick note from the pedant: the header above the chapter reads "Strength and sense of effectiveness" which is indicative of the common interchangeable use between *efficacy* and *effectiveness*. The slight semantic distinction between the two aren't important in casual use, but when considering the theoretical foundations of the concept and its potential measurement in the context of a scientific endeavor, the semantic distinction seems important. *Efficacy* refers to the capacity to produce some result or achieve some end, whereas *effectiveness* is the adequacy to which the end is brought about. 
+
+
+ADDENDUM 2024-08-30: In the former, someone or something is equipped with a capacity which refers to some indefinite maximum potentiality---i.e., the capacity to cause some particular effect. In the latter case, the deed has been done, observed, and the extent to which the purposed end result came about is appraised. Effectiveness conveys a general *post-priori* evaluation of what is known through observation or experience---i.e., empirical. The two go hand-in-hand because we may appraise or judge the efficacy of something or some course of action by drawing upon empirical data (i.e., information gleaned from experience). In other words, we may consider the past experience of how well or adequately something brought about some result to make a judgement about its efficacy. If it worked, then we might judge its capacity as sufficiently efficacious--i.e., capable of producing whatever outcome. If it didn't, then it simple isn't capable, thus inefficacious. But this dichotomous judgement doesn't take into consideration the margin of effect, i.e., just how effective something was or is.  but we are not limited to how well or adequately it performed in the past. Efficacy, thus, is an appraisal---an evaluation of a things maximum potentiality to bring about a given end.       
+
+
+
+Note in this excerpt the emphasis on rationality and control, as these qualities later become more important for the rationalist social psychological perspective, but also as these qualities become clearly associated with ideal characteristic qualities of the politically efficacious citizen. It is with Lane that the two dimensions of political efficacy begin an asymmetric development, as much of the focus of an individual's sense of political efficacy is derived from this internal quality of one's "ego strength". More so than just an emphasized focus on the internal domain of an individual's personality, the characteristics of the internally efficacious individual is described and given ideal model and form. As Lane writes,
+
+
+
+>   "Ego strength will show itself in many ways, some of them obvious, and others less apparent, perhaps because they are linked to the personality base by a more elaborate chain of attitudes and behavior patterns. A person with a weak ego, one that has been thwarted in its development by repressive measures or simply never encourage to develop--"babified," so to speak--will tend to view the social scene as something over which he has no control. Events happen to him; he lives in the passive tense; his future is viewed as a product of "what fate has in store" for him. He is the antithesis of the hero of Henly's Invictus, "the master of his fate, the captain of his soul." Fatalism, in a non-fatalistic culture, might be said to be a reflection of ego weakness, at least in one area." (148)
+
+
+
+Writing in the late 1950s, there definitely was an ideal character prototype in mind when writers like Lane considered virtues and qualities of strength, rationality, and control. Maybe it was Super-Man. Maybe it was John Wayne, or Dwight D. Eisenhower. Whoever the model character resembled most, the person who felt inefficacious was simply a weak willed little baby, yet to develop confidence in mastery of himself and of the world. As the subtitle of the book makes clear, Lane was describing "Why People Get Involved in Politics", and his interpretation of the results from the earliest measures of political efficacy distinguishes it into a multidimensional concept with strongest emphasis placed upon individual character,
+
+
+
+>   "Where this has been tested it does, in fact, appear that people with weak egos, that is, with little confidence in their capacity to plan ahead or live the lives they would like to lead, have a pervasive feeling that the world is an unpredictable place in which their influence is minimal and their mastery of the situation small. Furthermore, they tend to think of the world as somewhat unfriendly, oppressive in its demands, and unrewarding in its gratifications. Nor should it be surprising that persons with this attitude tend to feel that political decisions are made out of reach and that politicians do not listen to "people like us." " (148)
+
+
+
+Drawing upon psychoanalytic work and perspectives on human nature from social psychology in the later 1920s and onward to the 1950s, the efficacious character was related to twin characteristics of "ascendance" or "dominance", where dominance was seen as an important personality trait for political participation, and ascendance reflected characteristics of "...those recognized leaders in organized groups, persons who make contributions to causes in which they are interested, and opinion leadership." (149). This complex assortment of personal traits coalesced ego strength, sense of personal competence, ascendance and dominance, into a characteristic thought to lead, "...people to engage actively in community affairs and participate, more than others, in the political process." (149). In this way, Lane divided the concept of political efficacy into two dimensional components,
+
+
+
+>   "The qualities of person and mind embodied in these concepts tend to produce a more specific series of attitudes dealing with the relation of the individual to the political process. Men who have feelings of mastery and are endowed with ego strength tend to generalize these sentiments and to feel that their votes are important, politicians respect them, and elections are, therefore, meaningful processes. This constellation of attitudes has been variously called "a sense of political efficacy," "political self-confidence," and, in reverse, "sense of political futility. It has, of course, two components--the image of the self and the image of democratic government--and contains the tacit implication that an image of the self as effective is intimately related to the image of democratic government as responsive to the people." [@lane1959a, 149]
+
+
+
+*To note, Lane goes on to substantiate this with reference to the empirical findings of Campbell and colleagues (1954) described in "The Voter Decides". Lane writes, "The distribution of these attitudes of political effectiveness are, in the main, clear enough:
+
+Men are more likely to feel effective than women.
+
+Groups with more education are more likely to feel effective than those with less education.
+
+The more income one has, the more likely he is to feel effective.
+
+The higher the status of an individual's occupation, the more likely he is to feel effective.
+
+Non-Southerners are more likely to feel effective than Southerners.
+
+The more populous the community in which a person lives, the more likely he is to feel effective." (149-150)
+
+Pages 150 and 151 offer more of Lane's interpretation of the findings in far more detail, though it is notable that he interprets so much from only one set of findings by the early work of the Survey Research Center (SRC). He goes on to theorize plenty on what the results mean or could mean as they pertain to different groups. He references 'dominant' groups as the upper status groups, and finds it easy enough to explain the higher sense of efficacy among those upper status groups, Men, the better educated, more affluent, and Yankees (i.e., Non-Southerners). But Lane becomes perplexed at the equal sense of political efficacy among "Negroes" in a similar status and environment as Whites, since,
+
+
+
+>   "...in the face of the evidence on the effect of discrimination on the human psyche---the loss of self-esteem involved--it is hard to believe that this sense of political effectiveness arises spontaneously from inner feelings of power and a sense of mastery over the environment. On the contrary, here this feeling of political effectiveness seems to be, unlike the middle class feeling of effectiveness, not generalized from private life, but rather arising from the contrast between the political area where the universal franchise grants to the Negro a degree of influence which he so clearly lacks in private life. And this attitude is supported by frequent public recognition of Negro power and ardent political solicitation of Negro votes." (151 ).
+
+
+
+Perhaps characteristic of the times, Lane theorizes different reasonable explanations for the White middle class feeling of effectiveness compared to the "Negro" feeling of effectiveness of equal measure. In the case of the former, a sense of political efficacy draws upon one's ego strength, self-confidence, and self-appraisal of mastery over the environment characteristic of White middle class. Whereas in the latter case, a sense of political efficacy arises from the sense of government responsiveness to citizen demands and power. The "public recognition of Negro power" may have been salient to Lane as it was to others writing in 1959.
+
+
+
+He goes on to theorize further for other groups, offering possible explanations for the findings regarding age groups, those living in rural compared to metropolitan areas, and more.

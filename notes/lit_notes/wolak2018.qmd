@@ -1,0 +1,114 @@
+---
+title: "Wolak 2018"
+subtitle: "Literature Summary and Notes"
+author: "Isaiah Espinoza"
+date: last-modified
+date-format: iso
+bibliography: political-efficacy.bib
+format: 
+  compact-pdf:
+    keep-tex: false
+    indent: false
+    mainfont: TeX Gyre Pagella
+    reference-location: document
+reference-section-title: References
+---
+
+Wolak, Jennifer. 2018. “Feelings of Political Efficacy in the Fifty States.” Political Behavior 40(3): 763–84. doi:10.1007/s11109-017-9421-9.
+
+
+## Dependent vars
+
+**state-level external political efficacy**:
+
+-   measured by three items, one of which seems to be an arbitrary addition that never-the-less showed a factor loading on par with the other two items. Modification to wording of external efficacy items were made to make explicit reference to “my state government” and “people in my state”.
+    
+-   sum of responses to three items and re-scaled to range from 0 to 1
+
+The measurement items used to measure external political efficacy at the state-level were;
+
+1.    Most elected officials in my state government care what people like me think
+2.    My state government is responsive to what the people in my state want
+3.    I feel my voice is heard in state government decisions that affect me
+
+And at the national-level;
+
+1.    Most elected officials in national government care what people like me think
+
+    
+
+**state-level internal political efficacy** (the measure of internal political efficacy was substandard and far weaker than standard measures. Only two items were used, one of which was the item coded as COMPLEX that was dropped for its weak internal consistency with other internal efficacy items.)
+
+Single item for national external political efficacy
+
+
+
+## Important factors (independent vars)
+
+state government controlled by co-partisans = 1
+
+state government controlled by opposing partisans = 0
+
+-   one dichotomous measure indication when governor’s office and both chambers of state legislature are controlled by same party that the respondent identifies with
+    
+-   one indicating when state government is controlled by opposing party
+    
+
+policy congruence = interaction effect between respondent ideology and liberalism of state policy outcomes
+
+-   to measure policy liberalism, 2014 state policy liberalism score is utilized
+    
+
+Descriptive representation = three interactions between group identification and percentage of group in state legislature
+
+-   gender and percent of female in state legislature,
+    
+-   black identification and percentage of Black people in state legislature,
+    
+-   Latino identification interacted with percentage of Latinos in state legislature.
+    
+
+well-functioning elections = state’s score on the Elections Performance Index developed by the Pew charitable Trusts. Index includes 17 components of election administration.
+
+electoral competition = index of party competition
+
+## Controls
+
+education
+
+state political knowledge
+
+strength of partisanship
+
+age
+
+
+## commentary, I guess
+
+In a broad sense of the term, @wolak2018 conceives of [political] efficacy as, "...a barometer of people's feelings of influence and voice" [-@wolak2018, 767]. The suggestion was that feeling influential in politics depends on the degree to which government is perceived to be responsive. 
+
+> "Feelings of external efficacy reflect people’s beliefs that they have voice in government and that politicians care what people think." [@wolak2018, 767]
+
+
+
+@wolak2018 argued that "...feelings of effectiveness in politics follow from the actions of politicians and the design of government" and hypothesizes that political efficacy should increase when citizens have greater opportunities "for voice" and when government "delivers desired policy outcomes". Thus, she investigates how policy congruence, descriptive representation, election administration, and ballot initiatives influence political efficacy.
+
+
+Wolak does take note of current concerns with the question wording of survey items which are said to measure external political efficacy, "The generalized wording of the ANES efficacy items could help explain why scholars have found inconsistent evidence for state factors shaping citizen efficacy" (770). However, despite the contention, Wolak changes little about the usual measurement of external political efficacy beyond having response items make specific reference to "My state government" and adding another item.
+
+Wolak's findings replicate the distinction between internal and external efficacy, even when focused on state-level politics. She also finds that external efficacy is low at the state level just as it is at the national level, showing an average score of 0.39 on her external efficacy scale where 1 reflects strong agreement with all three external efficacy items. When compared to the national government, however, people on average reported stronger agreement with the idea that state government cares about "what people like me think". That is, results suggests that State government might be considered more responsive than national government.
+
+However, Wolak finds that,
+
+> "...feelings of political influence follow from partisan congruence. When people share the same partisan leanings as party that controls the state legislature, they are more likely to feel that state politicians listen to them....While others have found limited evidence that partisan congruence is correlated with higher efficacy...I find that partisans are much more likely to feel that they are heard in state government when the state legislature is controlled by their own party than when it is controlled by the opposing party." [@wolak2018, 773]
+
+This finding adds to the contention that the question wording of the survey items referring to "My state government" and "people like me" likely tap into associated identity characteristics. The state, overall, may be characterized by impressions of its general partisan makeup (e.g., blue state, red state, swing state). Considering that Wolak also finds the same in terms of ideology and a state's policy outputs, the modified question wording of the external efficacy item employed may only exacerbate the salience of partisan identity and subsequent effect on response. 
+
+Conversely, descriptive representation was not found to be related to feelings of external efficacy. Wolak [-@wolak2018] found that, "Blacks, Latinos, and women are no more likely to feel like state politicians listen to citizen concerns when their group is better represented in the state legislature" [-@wolak2018, 777]. The relevance of this finding speaks to the potential that the abstract agent-identifying phrase in the question wording invokes a stronger association with a relatively depersonalized and generalized partisan identity of the state than it does with particular identities of race or gender. First, the modified external efficacy items refer to "*Most* elected officials in my state government...", emphasis added. The addition of "*Most* elected officials" in the question wording gives space for the respondent to cognitively carve out the partisan majority of their state government. The agent of the question item is not situated as a citizen in relation to government officials, but as a constituent of "my state" reflecting upon the relation of "people like me" to "Most elected officials"[^2]. The characteristic presumably most common to "people like me" in the context of "my state" may make partisanship the most salient.
+
+[^2]: Factor analysis of the State-level external efficacy items provided in the supplementary material attest to the validity that the three items all load well enough onto a single factor. Interestingly, however, the first item (i.e., "Most elected officials...") shows a negative factor loading on the second factor in contrast to the other two items (i.e., "My state government is responsive..." and "I feel my voice is heard...") which both show positive factor loadings. Now the item loadings on factor 2 are pretty dismal overall, again, attesting to the validity of the items as measuring a single construct and not two distinct constructs at once. In factor analysis, the factor loading is the correlation between the item and the factor; a factor loading of more than 0.30 usually indicates a moderate correlation between the item and the factor.
+
+Second, although the strong associated links between partisanship and race and gender are well known, association of an entire state with a particular race or gender is far more unusual. Findings might be heavily influenced should an external efficacy statement read, "Most elected officials in my state government care about what [Black/Latino/Women] in my state think," or just as well, "My state government is responsive to what the racial, ethnic, and gender minorities in my state want". And this also may be influenced insofar as the respondent is aware of the partisan makeup of their respective state legislature.
+
+
+@wolak2018 compares a three item measure for state external efficacy to a single-item measure of external efficacy associated with national government. The difference between the state-level and national-level external efficacy items is said to suggest, "...that external efficacy about national politics is distinct from feelings of efficacy about state politics" [-@wolak2018, 771, n9], yet the state-level efficacy items are not compared to the standard external efficacy measurement items. The distinct contrast made when asking respondents to consider "my state government" from "national government" makes explicit the distinction across multiple questions. Considering that partisanship and ideological policy congruence are central to external political efficacy at the state-level, results from state external efficacy items may simply refer to concentrated partisan satisfaction with government and policy.    

@@ -1,0 +1,294 @@
+---
+title: "figure2_replication"
+---
+
+```{r}
+
+# required packages
+library(tidyverse)
+# library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
+
+# load data in long formats
+dlong <- readr::read_rds(here::here("data", "data_long.rds"))
+
+# load replica data in long format
+replica_long <- readr::read_rds(here::here("data", "replica_long_dataset.rds"))
+
+
+```
+
+
+This notebook replicates Figure 2 from @chamberlain2012 (See PDF page 121). Figure 2 charts plot lines of the three chosen predictors over time, and was titled "Changes to the Index of Consumer Sentiment, Presidential Approval, and Trust in Government."
+
+
+```{r}
+#| label: fig-rep2
+#| fig-cap: "Replication of Figure 2 in @chamberlain2012 'Changes to the Index of Consumer Sentiment, Presidential Approval, and Trust in Government'. Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan."
+#| fig-cap-location: bottom
+
+# Note that in a footnote (note 7), Chamberlain states,
+# "The Index of Consumer Sentiment was rescaled for figure 2 by subtracting 50 from all its values (to approximate a measure that would fit on a 1OO-point scale)"
+
+
+# exact replication of Figure 2, modifying ICS values in way described by
+# Chamberlain (2012)
+replica_long |>
+  # adjust values to mirror data available to Chamberlain at the time 
+  dplyr::mutate(value = dplyr::case_when(
+    variable %in% c("ics", "ics_modified") & year <= 1960 ~ NA,
+    variable %in% c("ics", "ics_modified") & year > 2008 ~ NA,
+    variable %in% c("presapp") & year > 2008 ~ NA,
+    variable %in% c("presapp") & year <= 1952 ~ NA,
+    variable %in% c("trustgov") & year > 2008 ~ NA,
+    .default = value
+  )) |> 
+  tidyr::drop_na() |> 
+  # exclude average values for external efficacy index and ics (not modified)
+  dplyr::filter(!variable %in% c("exteff", "ics")) |> 
+  ggplot2::ggplot(aes(x = year, y = value, linetype = variable)) +
+  ggplot2::geom_line() +
+  ggplot2::scale_linetype_manual(
+    values = c(
+      "ics_modified" = "solid",
+      "presapp" = "dashed",
+      "trustgov" = "twodash"
+    ),
+    labels = c(
+      "ics_modified" = "Index of Consumer Sentiment",
+      "presapp" = "Presidential Approval",
+      "trustgov" = "Trust in Government"
+    )
+  ) +
+  ggplot2::scale_x_continuous(
+    limits = c(1950, 2010),
+    breaks = seq(1950, 2020, by = 10),
+    expan = ggplot2::expansion(0.01, 0.01)
+  ) +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 80),
+    breaks = seq(0, 100, by = 20),
+    # expansion gets rid of padding
+    expand = ggplot2::expansion(0.05, 0.05)) +
+  ggplot2::labs(
+    caption = stringr::str_wrap(
+      "Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan.", width = 95),
+    x = "Year",
+    y = "Scale"
+  ) +
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+```
+
+
+The data available to Chamberlain at the time ranged from 1952 to 2008 for Presidential approval ratings (Gallup); 1960 to 2008 for quarterly ICS data (UMich), and of course, 1958 and 1964 to 2008 for trust in government (ANES). @fig-rep2 constrains the data to approximate the data available at the time of the original publication. 
+
+The following chart @fig-rep2adj is expanded to include all years for which data from each source was available^[Note that the Gallup monthly polling data was obtained through The Roper Center's iPoll database.]. In addition, no adjustment was made to the data and the Y-axis was expanded to preserve the full range of each variable. Values of the ICS are not constrained to range on a particular scale, but are calculated using a particular formula. More information on calculation of the ICS can be found in the following [link](https://data.sca.isr.umich.edu/technical-docs.php). 
+
+```{r}
+#| label: fig-rep2adj
+#| fig-cap-location: bottom
+#| fig-cap: "Replication of Figure 2 found in @chamberlain2012 extended to include all years for which data was available. Reflects average Values of the Index of Consumer Sentiment, Presidential Approval, and Trust in Government over time. ICS values have not been re-scaled and the Y-Axis is expanded to preserve full range of values. Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan."
+
+# extended replica of Figure 2. Don't re-scale values; don't cut years.
+dlong |>
+  # exclude average values for external efficacy index and ics (modified)
+  dplyr::filter(!variable %in% c("exteff", "ics_modified")) |> 
+  ggplot2::ggplot(aes(x = year, y = value, linetype = variable)) +
+  ggplot2::geom_line() +
+  # ggplot2::geom_point(mapping = aes(colour = variable))+
+  ggplot2::scale_linetype_manual(
+    values = c(
+      "ics" = "solid",
+      "presapp" = "dashed",
+      "trustgov" = "twodash"
+    ),
+    labels = c(
+      "ics" = "ICS",
+      "presapp" = "Presidential Approval",
+      "trustgov" = "Trust in Government"
+    )
+  ) +
+  ggplot2::scale_x_continuous(
+    limits = c(1938, 2025),
+    breaks = seq(1930, 2025, by = 5),
+    expan = ggplot2::expansion(0.01, 0.01)
+  ) +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 110),
+    breaks = seq(0, 110, by = 20),
+    # expansion controls padding at limit y-axis limits
+    expand = ggplot2::expansion(0.01, 0.01)) +
+  ggplot2::labs(
+    caption = stringr::str_wrap("Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan.", width = 95),
+    x = "Year",
+    y = "Average"
+  ) +
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+
+```
+
+Note the distinctive difference in ICS values between @fig-rep2 and @fig-rep2adj. In a footnote, Chamberlain states,
+
+> "The Index of Consumer Sentiment was rescaled for figure 2 by subtracting 50 from all its values (to approximate a measure that would fit on a 1OO-point scale)" [@chamberlain2012, 120, n7]
+
+@fig-rep2compare includes both the non-modified and modified versions of yearly average ICS values over time.
+
+```{r}
+#| label: fig-rep2compare
+#| fig-cap-location: bottom
+#| fig-cap: "Average Values of the Index of Consumer Sentiment, Presidential Approval, and Trust in Government over time. Includes comparison of modified and original average ICS values over time. Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan."
+
+# same replica chart of Figure 2, except now includes non-modified version of
+# ICS yearly average values
+
+replica_long |>
+  # adjust values to mirror data available to Chamberlain at the time 
+  dplyr::mutate(value = dplyr::case_when(
+    variable %in% c("ics", "ics_modified") & year <= 1960 ~ NA,
+    variable %in% c("ics", "ics_modified") & year > 2008 ~ NA,
+    variable %in% c("presapp") & year > 2008 ~ NA,
+    variable %in% c("presapp") & year <= 1952 ~ NA,
+    variable %in% c("trustgov") & year > 2008 ~ NA,
+    .default = value
+  )) |> 
+  tidyr::drop_na() |> 
+  # exclude average values for external efficacy index
+  dplyr::filter(!variable %in% c("exteff")) |> 
+  ggplot2::ggplot(aes(x = year, y = value, linetype = variable, colour = variable)) +
+  ggplot2::geom_line() +
+  # ggplot2::geom_point(mapping = aes(colour = variable))+
+  ggplot2::scale_linetype_manual(
+    values = c(
+      "ics" = "solid",
+      "ics_modified" = "solid",
+      "presapp" = "dashed",
+      "trustgov" = "twodash"
+    ),
+    labels = c(
+      "ics" = "Index of Consumer Sentiment",
+      "ics_modified" = "Index of Consumer Sentiment (Modified)",
+      "presapp" = "Presidential Approval", 
+      "trustgov" = "Trust in Government"
+    )
+  ) +
+  ggplot2::scale_color_manual(
+    values = c("ics" = "black", "ics_modified" = "red",
+               "presapp" = "azure4", "trustgov" = "darkgray"),
+    labels = c("ics" = "Index of Consumer Sentiment",
+               "ics_modified" = "Index of Consumer Sentiment (Modified)",
+               "presapp" = "Presidential Approval", 
+               "trustgov" = "Trust in Government")
+  )+
+  ggplot2::scale_x_continuous(
+    limits = c(1950, 2010),
+    breaks = seq(1950, 2020, by = 10),
+    expan = ggplot2::expansion(0.01, 0.01)
+  ) +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 110),
+    breaks = seq(0, 100, by = 20),
+    # expansion gets rid of padding
+    expand = ggplot2::expansion(0.01, 0.05)) +
+  ggplot2::labs(
+    caption = stringr::str_wrap("Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan.", width = 95),
+    x = "Year",
+    y = "Average"
+  ) +
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+
+```
+
+The purpose of @fig-rep2 was not to visually compare average values of each variable. However, such a visualization inevitably presents as such. As stated by Chamberlain, the purpose of the chart was to demonstrate that, "...across time, significant variation exists within these variables." [@chamberlain2012, 120]. 
+
+Understandably, average values are difficult to compare across time due to the fact that they are not all measured on the same scale nor are they obtained by the same survey study. The Index of Consumer sentiment is calculated from a particular formula and then averaged by year; the Trust in Government index is a mean score composite of four question items where higher values indicate higher trust in government; and presidential approval ratings are yearly average approval ratings from monthly Gallup polls. However, simple methods exist for comparing means of variables measured on different scales; standardizing each variable might permit better visualization to compare variation in distribution across time.
+
+```{r}
+
+
+# extended replica of Figure 2, standard values to z-scores (center at mean = 0
+# with standard deviation = 1)
+dlong |>
+  # exclude average values for external efficacy index and ics (modified)
+  dplyr::filter(!variable %in% c("exteff", "ics_modified")) |>
+  # adjust values to mirror data available to Chamberlain at the time 
+  dplyr::mutate(value = dplyr::case_when(
+    variable %in% c("presapp") & year <= 1952 ~ NA,
+    .default = value
+  )) |>
+  tidyr::drop_na(value) |> 
+  dplyr::group_by(variable) |> 
+  dplyr::mutate(
+    value_z = scale(value) |> as.vector()) |> 
+  ggplot2::ggplot(aes(x = year, y = value_z, linetype = variable, colour = variable)) +
+  ggplot2::geom_line() +
+  ggplot2::geom_hline(yintercept = 0, color = "darkred")+
+  # ggplot2::geom_point(mapping = aes(colour = variable))+
+  ggplot2::scale_linetype_manual(
+    values = c(
+      "ics" = "solid",
+      "presapp" = "dashed",
+      "trustgov" = "twodash"
+    ),
+    labels = c(
+      "ics" = "ICS",
+      "presapp" = "Presidential Approval",
+      "trustgov" = "Trust in Government"
+    )
+  ) +
+  ggplot2::scale_discrete_manual(
+    aesthetics = c("colour"),
+    values = c(
+      "ics" = "red",
+      "presapp" = "seagreen",
+      "trustgov" = "royalblue"))+
+  ggplot2::scale_x_continuous(
+    limits = c(1950, 2025),
+    breaks = seq(1950, 2025, by = 5),
+    expan = ggplot2::expansion(0.01, 0.01)
+  ) +
+  ggplot2::scale_y_continuous(
+    # expansion controls padding at limit y-axis limits
+    expand = ggplot2::expansion(0.01, 0.01)
+    ) +
+  ggplot2::labs(
+    caption = stringr::str_wrap("Variables have been centered to mean = 0 and a standard deviation = 1. Source data: ANES Time Series Cumulative Data File; The Gallup Organization; Survey of Consumers, University of Michigan.", width = 95),
+    x = "Year",
+    y = ggplot2::element_blank()
+  ) +
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+
+
+
+```
+
+
+As an aside, I think his decision to rescale the ICS by subtracting 50 from the mean values for each year presents a chart that is visibly misleading. On visual inspection of @fig-rep2 in the original publication, the average values for aggregate consumer sentiment across time appear far lower than the actual average values derived from the same data. The variable isn't transformed, but rather the actual values of the data are modified. This was done for the sake of fitting the data to range on a scale between 0 to 100. This seems fine, but the method of modification seems arbitrary. Transforming the variables to range from 0 to 100 through normalization (i.e., a min-max scaling procedure) would, indeed, constrain all variables to the same scale but also present a misleading visual of aggregate averages across time. Although this Figure alone was not the point of the study, the visualization of the data as such easily presents a misleading comparison.

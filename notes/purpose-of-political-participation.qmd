@@ -1,0 +1,148 @@
+---
+title: "On the Purpose of Political Participation"
+date: "2025-08-19"
+---
+
+
+::: {.callout-note}
+I have no real idea when this was written, but I know it was sometime between June 20th, 2024 and July 10th, 2024. I think. In my attempts to make a document for every day I wrote a journal entry, I definitely missed a lot. The original copy I in the path `~/R/notes/journal` and the file is labelled `2024-06-24_on-purpose-of-political-participation.qmd`. I only note that for posterity, as I don't want to edit past journal entries. That seems disingenuous. This version here is one that I intent to clean up and edit. Some minor word changes but we'll see.
+:::
+
+
+## On the purpose of political participation
+
+
+In the early days of survey research, political participation was operationalized according to typical activities researchers associated with active participation in the political process [@campbell1980]. Modes of active participation included belonging to a political club or organization, donating money to a political campaign or cause, attending meetings, rallies, and the like, and volunteer work for a political party or candidate for office. Despite debates over the conceptual and operational definition of political participation over time into the contemporary period [@scaff1975; @conge1988; @fox2014; @vandeth2014; @hooghe2014], researchers are still apt to measure political participation according to the modes of activity most common to citizens of the past while adding in typical activities of the present so long as the sufficient theoretical justification is supplied in tandem. To some extent, there appears to be a mix, or conflation, of political participation with political behavior more generally.
+
+Attempts have been made to construct an operational definition of political participation [@vandeth2014], but a problem persists at the conceptual level. In fact, the conceptual problem concerning the definition of political participation is not new and much has been written on the concept of political participation [@almond1963; @verba1972]. The efforts to clarify the concept have been in an effort to identify acts which fall under the category, which is to say the concept has been constructed instrumentally to establish boundaries which delineate which activities do and do not count as political participation. The definitions of political participation which outpour from decades of research are relatively similar and concord well enough with each other that a list of qualifying criteria underlies the basis of most extant definitions [@conge1988; @fox2014].
+
+Like many other fundamental concepts relevant to the study of politics, scholars have been apprehensive to settle upon a standard (or "true") definition of the concept, instead opting to appeal to a somewhat flexible set of criteria for the researcher to selectively adopt for the sake of a research project. The criteria is used to qualify the kinds of participation or activity of interest to the researcher, and serves as the basis for the conceptualization of political participation. One thing clearly established, however, is that the selection of criteria to base the conceptualization is "...dependent upon the scholar's assessment of *the purpose of political participation*.." [@fox2014, 496, emphasis added]. That is to say, the basal criteria which qualifies behavior as political participation is dependent on the purpose of political participation.
+
+The conceptual problem with political participation is, then, not exactly concerned with qualifying particular activities as political participation; the problem has more to do with the reluctance of scholars to definitively assert the purpose of political participation on the basis of cogent political theory. Rather, scholars rely upon observational evidence of political behavior and associated attitudes to ascertain the purpose of political participation. That is to say, the teleological purpose of participatory activity is ascertained by inference of individual motivations for certain observed political behaviors. Asserting the purpose of political participation in general feels too much like political theory, especially of the normative kind that comes off as prescriptive. However, there seems to be an implicit consensus in the literature on the purpose of political participation, which can be simply stated as "to influence".
+
+The result is that, according to much of the literature in political science, the intended purpose of the political participation is limited in scope. Reference is made to the reality of the political context, i.e., the political conditions in which the people are subject. Despite this recognition, however, the aims of popular political activity are limited to the effect such activities might have within the political context in question. Researchers often make it clear that government agents, or elites, are the ones who bring about political outcomes of consequence and shape political conditions of society. It is recognized that the effect of citizen's intentional political activity is limited to mere *influence* of decisions and behavior of government officials. However this immediate potential effect supplants the theoretical purpose of political participation that extends beyond such effects. Individual motivations for active engagement may vary from person to person, but individual motivations do not impose any weight on the overarching purpose of popular political action.
+
+
+Prior research and scholarship has commonly declared or implied that the purpose of political participation/activity is *to influence* government officials. Most notably seminal work by @verba1972. I include the following excerpts to illustrate this point; 
+
+> "Political participation refers to those activities by private citizens that are more or less directly aimed at influencing the selection of governmental personnel and/or the actions they take" [@verba1972, 2]
+
+> "Our conception of participation is broader than some, narrower than others. It is a _broad_ conception in that we are interested in a wide variety of ways citizens participate in relation to varied issues." [@verba1972, 2, emphasis added]
+
+> "Our conception of participation is _narrower_ than some in that we are interested in acts that aim at influencing the government, either by affecting the choice of government personnel or by affecting the choices made by government personnel." [@verba1972, 2, emphasis added]
+   
+> "...participation is of greatest interest to us as an instrumental activity whereby citizens influence (or try to influence) what the government does. We use a term as vague as *what the government does* rather than *decision-making* or *policy-making* because we want to encompass the widest possible range of governmental activities that might have some impact on the lives of the citizenry". [@verba1972, 8, emphasis original]
+
+> "Our focus is on what we call the *participation input*: the set of pressures that derive from the participatory activities of citizens who are not part of the official structure" [@verba1972, 8, emphasis original]
+
+The above excerpts are something of a rarity; at least in my experience it is rare for authors to explicate the conceptual boundaries. Although it is a common practice, if not standard, for scholars to define the terms of their scholarship or inquiry, it is noteworthy to me that these authors dedicated enough space to define and relate the term in question to how it may be defined elsewhere. Back to the topic at hand, subsequent authors also state the broad purpose of political participation as "to influence..", another example being @nowak1982 
+
+> "Political participation...refers to activity attempting to influence decision makers by modifying their alternatives and redefining the social resources available to them."
+
+That being said, the purpose of political participation is not limited to the potential effect of popular political activity. The limitation of the effect does not weigh on the purpose of participatory activity except in the most immediate sense of its potential function. The purpose of popular political participation is not too different from the purpose of government generally--to shape, control, or constitute the conditions which people are subject. Otherwise and simply stated, the purpose of popular political activity is to govern, to rule.
+
+The most rudimentary conceptions of democracy describe it as a form of government where the people rule, but the purpose of any or all political activity isn't necessarily democracy itself. The purpose of participation for this kind of political system is to self-rule---to collectively self-govern. It is the unique character of a democracy where those empowered to shape political conditions of which people are subject are in fact the people themselves. Yet, in a general sense, regardless of the form or character of the political system, intentional political activity aims to shape the conditions of which people are subject. Thus, in political systems or regime types where governing actors are empowered to insulate themselves from conditions in which the people are subject, the political activity of these subjects is nevertheless purposed toward shaping conditions of the political environment. Be it autocracy, monarchy, or the most oppressive regimes of totalitarian dictators, the popular activity of those subject to rule is always purposed toward that end.
+
+Note however that success toward the end of shaping conditions of the political environment does not necessarily characterize a political system or regime type as democratic. Such characterization is reserved for those conditions, or states, wherein the political system is structured to sustain the relations of power in which governance by the people is at the disposal of the people. That is, a political system wherein the subjects of government retain the powers of government---where the possibility for popular government is always at the disposal of the governed. 
+
+Determining whether the people rule isn't so much contingent on the resultant outcome of whatever political process--i.e., the outcome may or may not align with the preferences held by the majority of people, and the consequences may or may not benefit the people's common interests. Furthermore, fairness and accessibility of procedure is also not a criteria that qualifies a political system as a democracy.
+
+Determining whether the people rule is a matter of attributing fault. Said simply, can the people be held responsible for the political and societal conditions of which they are subject? Additionally, To what extent are the outcomes of government and politics necessarily attributed to the people's political action? To what extent have they, and do they, retain power to shape the conditions of which they are subject and control those who have been delegated with agency to govern those conditions? This latter question distinguishes two distinct ends, but asks whether the people have the power to collectively self-govern at their discretion in spite of those who have been vested with authority to govern, and do they retain power to modify, control, or even revoke the discretionary agency of government actors?
+
+
+
+It may also be asked, to what extent do the people retain power to shape conditions through control of agents of government? Perhaps a common version of the question asks to what extent do the people retain power to shape conditions *through the influence* of government agents? However this latter question is faulty in two respects. First, it conflates *influence* with *control*. Just because a person's decision, choice, or behavior may have been influenced by another doesn't mean that other person is in control of their decisions, choices, or behaviors. Second, it treats/considers the agents of government as a, if not *the*, means for the people to shape conditions. In other words, the people vested with authority to govern are treated as means to political ends. Moral arguments over treating persons as means are not of interest here. Rather, treating government officials as means implies an absence of their own agency as government actors. Suffice to say that influence is not interchangeable with control.
+
+
+
+-   The modes of participation are those legal and legitimized formal means of participation endogenous to the political system. An absence of formal mechanisms and procedures by which the people rule leaves the citizens subject to rules and conditions they have no capacity to affect.
+
+
+
+-   The purpose of the activity is designated by the end the activity aims to achieve, but when the end (purpose) of political participation is identified as "to influence" government officials, then the indefinite multitude of ways that a person can be influenced by others encompasses the universe of possible actions open to individuals and groups for doing so. Delineating categorical criteria to serve as the basis for operational definitions of political participation has been the plight of many researchers aiming to distinguish political activities from non-political activities. There are indeed many ways to influence the decisions and behaviors of others, and the ways of doing so only expand as time and technology advance. Furthermore, it is possible to observe and compare the things that have had the most influence on the decisions and behaviors of government officials. Thus, there is a struggle to conceptualize and categorize the many ways that people can influence government agents, while at the same time there is plenty of research that describes and compares the many things, acts, or groups that actually do influence government action and bias subsequent outcomes. Analysis of that which does seem to impose political influence upon government officials has resulted in a plethora of books and scholarship that points to consistent and severe patterns of inequality concerning such influence.
+
+
+
+-   However, what is overlooked is that designating the overarching point of political participation as "to influence" is not only what leads researchers to conflate political *influence* with political power, but also implies an underlying conception of democracy at base as well as the appropriate role citizens play according to that conception. In short, successfully imposing influence upon government officials is conflated with the power of government, leading to discussions and inquiries over who governs [@dahl1961; @jacobs2005; @kaylehmanschlozman2012; @page2017; @dimaggio2019] as well as fallacious and circular definitions on the concept of power [@dahl1957; @dahl1956; for review see @parietti2022]. Accordingly, democracy is conceived as a political system where in which there exists procedures for public participation in the political process, but the role of citizens is ultimately divested from agency and control of producing outcomes of said process. The role of citizens, then, is relegated to political participation where the ultimate aim is to successfully influence the decisions and behaviors of agents of government without a meaningful criteria for success. Similarly recognized by Almond and Verba's classic study on civic culture, the following excerpt is illustrative of this point.
+
+
+
+-   "Democracy is a political system in which ordinary citizens exercise control over elites; and such control is legitimate, that is, supported by norms that are accepted by elites and nonelites. In all societies, of course, the making of specific decisions is concentrated in the hands of very few people. Neither the ordinary citizen nor "public opinion" can make policy. If this is the case, the problem of assessing the degree of democracy in a nation becomes one of measuring the degree to which ordinary citizens control those who make the significant decisions for a society---in most cases, governmental elites" [@verba1965, 180]
+
+
+
+Note that the authors here supplant *influence* as sufficient for "control of those who make the significant decisions".
+
+
+
+Dahl, Robert A. 1961. *Who Governs?: Democracy and Power in an American City*. Yale University Press.
+
+
+
+DiMaggio, Anthony R. 2019. *Political Power in America : Class Conflict and the Subversion of Democracy*. Albany: SUNY Press.
+
+
+
+Jacobs, Lawrence R., and Theda. Skocpol. 2005. *Inequality and American Democracy : What We Know and What We Need to Learn*. New York: Russell Sage.
+
+
+
+Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady. 2012. *The Unheavenly Chorus : Unequal Political Voice and the Broken Promise of American Democracy*. Princeton, N.J.: Princeton University Press.
+
+
+
+Page, Benjamin I., and Martin Gilens. 2017. *Democracy in America? : What Has Gone Wrong and What We Can Do about It*. Chicago ; The University of Chicago Press. <https://www.degruyter.com/isbn/9780226509013>.
+
+
+
+
+
+-   The reality is that the activities of citizens can only hope to *influence* politicians as government officials move to produce subsequent political outcomes. However, exerting influence upon government agents, or attempting to, is merely a means to achieve the political ends sought by the people subject to a republican form of government.
+
+
+
+-   In theory, the people practice collective self-government to the extent possible through government agents who serve as intermediaries instrumental to producing desired political outcomes and conditions. The extent to which this is possible is referred to as the *popular capacity* to collectively self-govern. Yet it is important to make clear that the limitations of the people's popular capacity does not in turn designate the overarching purpose of political participation. As stated previously, the purpose of political participation is not limited to the potential effect of popular political activity.
+
+
+
+-   The purpose of political participation is to effectuate change in the public realm -- to do things, to produce some result, to change the status quo, to shape political conditions, to inhibit or compel government action, to hold government accountable, and so on and so forth -- the intention of the survey instrument is to measure the extent to which people positively evaluate the people's popular capacity to achieve such goals by engaging in intentional political activity.
+
+
+
+-   Harold Lasswell (1958) once wrote, "The study of politics is the study of influence and the influential" (pg.13). However the study of politics does not determine the purpose of political activity writ large. Moreover, Lasswell wrote, "The science of politics states conditions; the philosophy of politics justifies preferences." This statement exemplifies the endeavor of that age/era to distinguish and relegate the science of politics purely to empirical analysis while shoving all else that has to do with political theory into the realm of philosophy, normative or otherwise. This has clearly been a mistake, if only for the fact that the scholars supposedly focused steadfast on inference made from observed data also wrote plenty of theory --dipping their toes in the philosophical--which forms the basis of much contemporary scholarship and research.
+
+
+
+-   With regard to the people as a collective political actor in the domain of politics, the measurement instrument asks to what extent are the people capable of shaping the political conditions of which they are subject
+
+
+
+-   The end of political participation is to shape political conditions in which the people are subject. The ends of their collective political action are determined by their constitution, that is, in accordance with their status as citizen within the political context. People, individual or as groups, may have differing political interests and preferences for the political conditions that comprise the state of their subject, but taken together, active endeavors to actualize these interests and preferences aim to effectuate some end-state in society. That is to say, there is a plurality of interests and preferences over the state of their subject, but the people are subject to political conditions in common. Endeavors to influence or determine those conditions they are all subject to in common encapsulates the end aimed for by their political participation. Motivations for participation that are expressive (or 'consummative') may be personally significant to the individual--and may help to explain their particular political behavior--but are irrelevant with respect to the function of their collective political activity; Individual motives that explain political behavior do not suffice as the end of political participation.
+
+
+
+
+
+
+
+# On the conceptual and operational definitions of political participation
+
+
+
+-   It is a mistake to classify acts of political participation on the basis of whether those acts **affect** politics and government, or the outcomes thereof, in some way. In that case, assassination of a political official would count as participatory activity due to the effect it caused in government and politics. Terrorism is indeed political activity motivated to achieve political ends, and such activity once carried out does impose political effects. Expressive acts also affect the outcomes of politics and government.
+
+
+
+-   Yet it is also a mistake to classify acts of political participation arbitrarily according to convention or norms; doing so compartmentalizes political activity to a limited set of activities associated with the activities of those who are more involved or interested than others. Thus, the politically involved citizen takes on a certain character whose activities are more or less typical of convention. Furthermore, classifying participatory acts as conventional or unconventional is liable to be constantly reformulated in accordance with the contemporary period. For instance, hand-writing letters to government officials and attending town halls meetings was at some point the primary conventional means of participation but today may not be as prevalent as other modes of political engagement, e.g., communicating to officials through social media. Thus, writing a letter to a Congressman is well known but evidently might be better described as unconventional today without empirical evidence that demonstrates otherwise. Suffice to say that tradition is a poor standard.
+
+
+
+-   There's a clear distinction between formal and informal, or otherwise stated as direct and indirect, ways of producing political outcomes and shaping political conditions. The direct methods formalize the citizenry as a political actor with the capacity to determine political outcomes by voting in elections, referenda, or other forms of plebiscite. The methods are direct with respect to the direct effect the people's activity has on the political conditions of citizens.
+-   
+-   The determination of the outcome is attributed to factors endogenous to the political system--political actors and formal mechanisms. Everything else that may impose some affect on politics and government, the outcomes thereof, are exogenous to the structure, organization, and procedures of the political system. The agents of government are the formally recognized political actors because they are the ones constituted with the authority to act as such in the context of the political system. The branches of government, and the officials therein, are vested with the power to govern. Therefore, innumerable factors may influence the consideration, choices, and behaviors of those with government authority, but these factors are exogeneous to the political system. Only those factors internal to the political system as constituted are endogenous.
+
+# References
+
+Verba, Sidney., and Norman H. Nie. 1972. *Participation in America: Political Democracy and Social Equality*. New York: Harper & Row.
+
+Nowak, Peter J., Roy E. Rickson, Charles E. Ramsey, and Willis J. Goudy. 1982. "Community Conflict and Models of Political Participation." *Rural Sociology* 47(2): 333--48.

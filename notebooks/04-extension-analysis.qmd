@@ -1,0 +1,326 @@
+---
+title: "Extension Analysis"
+---
+
+```{r}
+#| label: setup
+
+# set seed for reproducibility
+set.seed(12345)
+
+# load packages (those commented out may or may not be necessary)
+library(tidyverse)
+library(rvest) # Easily Harvest (scrape) web pages
+# library(naniar) # data structures, summaries, and visuals for missing data
+library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
+library(cspp) # Correlates of State Policy Project data
+library(modelsummary)
+library(tinytable)
+
+# set `modelsummary` R package global options
+options(modelsummary_factory_html = 'tinytable')
+options(modelsummary_factory_latex = 'kableExtra')
+options("tinytable_theme_placement_latex_float" = "H")
+
+# load subset dataframe of ANES Time Series Cumualative Data File (CDF)
+cdf <- readr::read_rds(file = "data/anes_cdf_subset.rds")
+
+# load cdf as tbl_svy object (i.e., with weight variable applied)
+cdf_wt <- readr::read_rds(file = "data/anes_cdf_wts_tbl_svy.rds")
+
+# load data dictionary
+cdf_dict <- readr::read_rds(file = "data/anes_cdf_subset_data_dictionary.rds") |> 
+  dplyr::as_tibble()
+
+# load df that includes jurisdictions subject to preclearance prior to 2013
+sec5sts <- readr::read_rds("data/jurisdictions_previously_covered.rds")
+
+```
+
+
+> "On June 25, 2013, the United States Supreme Court held that it is unconstitutional to use the coverage formula in Section 4(b) of the Voting Rights Act to determine which jurisdictions are subject to the preclearance requirement of Section 5 of the Voting Rights Act, Shelby County v. Holder, 570 U.S. 529 (2013). The Supreme Court did not rule on the constitutionality of Section 5 itself. The effect of the Shelby County decision is that the jurisdictions identified by the coverage formula in Section 4(b) no longer need to seek preclearance for the new voting changes, unless they are covered by a separate court order entered under Section 3(c) of the Voting Rights Act." [justice.gov](https://www.justice.gov/crt/jurisdictions-previously-covered-section-5)
+
+- Identify jurisdictions previously subject to the preclearance coverage formula in Section 4(b) of the Voting Rights Act.
+ 
+List of previously covered jurisdictions derived from [DOJ Site](https://www.justice.gov/crt/jurisdictions-previously-covered-section-5).
+
+```{r}
+
+pander::pandoc.table(
+  sec5sts, 
+  style = "grid", 
+  split.tables = Inf,
+  col.names = c("State", "County", "Applicable Date",
+                "Federal Register", "Date"),
+  caption = "Jurisdictions previously covered by Section 5 at the time of the Shelby County decision. [Source](https://www.justice.gov/crt/jurisdictions-previously-covered-section-5) Note that Shannon County was renamed to Oglala Lakota County in 2015. {#tbl-covered}")
+
+```
+
+From what can be seen in @tbl-covered, a total of 14 states, or select jurisdictions within, were subject to preclearance under Section 5 of the Voting Rights Act^[There were two Townships in two different counties in Michigan, but those are not included in the table.].
+
+Only two of 66 counties in South Dakota were subject to preclearance, whereas 40 of 100 counties in North Carolina were subject to preclearance. 
+
+
+
+
+## States, Census Regions, FIPS, and Geography
+
+Census Regions:
+
+- 0 = NA (1948);
+- 1 = Northeast (CT, ME, MA, NH, NJ, NY, PA, RI, VT);
+- 2 = North Central (IL, IN, IA, KS, MI, MN, MO, NE, ND);
+- 3 = South (AL, AR, DE, D.C., FL, GA, KY, LA, MD, MS, NC);
+- 4 = West (AK, AZ, CA, CO, HI, ID, MT, NV, NM, OR, UT, WA)
+
+```{r}
+#| label: df-processing
+
+# states, census regions, fips, and processing 
+
+# Census Regions
+# 0. NA (1948);
+# 1. Northeast (CT, ME, MA, NH, NJ, NY, PA, RI, VT);
+# 2. North Central (IL, IN, IA, KS, MI, MN, MO, NE, ND);
+# 3. South (AL, AR, DE, D.C., FL, GA, KY, LA, MD, MS, NC);
+# 4. West (AK, AZ, CA, CO, HI, ID, MT, NV, NM, OR, UT, WA)
+
+# replace certain values with NA
+# convert select geographic variables to factor
+cdf_wt <- cdf_wt |>
+  srvyr::mutate(
+    state_postal = dplyr::na_if(state_postal, "99"),
+    state_fips = dplyr::na_if(state_fips, 0),
+    census_region = dplyr::na_if(census_region, 0),
+    state_congdist_fips = dplyr::na_if(state_congdist_fips, 9999),
+    state_congdist_abbrv = dplyr::na_if(state_congdist_abbrv, "9999")
+  ) |>
+  srvyr::mutate(census_region = sjlabelled::set_labels(
+    census_region,
+    labels = c(
+      "Northeast" = 1,
+      "North Central" = 2,
+      "West" = 3,
+      "South" = 4
+    )
+  )) |>
+  srvyr::mutate(political_south = sjlabelled::set_labels(
+    political_south, 
+    labels = c(
+      "South" = 1, "Non-South" = 2
+      ))) |>
+  srvyr::mutate(across(
+    c(census_region, political_south),
+    ~ sjlabelled::as_label(., prefix = TRUE)
+  )) |>
+  srvyr::mutate(state_postal = forcats::as_factor(state_postal),
+                state_congdist_abbrv = forcats::as_factor(state_congdist_abbrv))
+
+# year variable also needs to be a factor
+cdf_wt <- cdf_wt |> 
+  srvyr::mutate(year.f = forcats::as_factor(year), .after = year)
+
+# create tibbles in long and wide format for easier plotting
+erlong <- cdf_wt |>
+  srvyr::filter(!is.na(exteff)) |>
+  srvyr::group_by(year.f, census_region) |> 
+  srvyr::cascade(exteff = srvyr::survey_mean(exteff, na.rm = T), .fill = "National")
+
+erwide <- erlong |> 
+  dplyr::select(-exteff_se) |> 
+  tidyr::pivot_wider(names_from = census_region,  values_from = exteff) |> 
+  dplyr::rename_with(~stringr::str_remove(., pattern = "^\\[[1-4]+\\]\\s+")) |> 
+  dplyr::rename("North_Central" = 'North Central') |> 
+  dplyr::mutate(across(where(is.numeric), ~round(., 1)))
+
+
+```
+
+
+```{r}
+#| label: fig-region1
+#| fig-cap: "External Political Efficacy by Region"
+
+# Average values of external efficacy index by year and region 
+erlong |> 
+  dplyr::mutate(
+    census_region = stringr::str_remove(
+      census_region, 
+      pattern = "^\\[[1-4]+\\]\\s+")) |> 
+  ggplot2::ggplot(aes(x = year.f, y = exteff, 
+                      group = census_region, 
+                      colour = census_region, 
+                      linetype = census_region, shape = census_region))+
+  ggplot2::geom_line()+
+  ggplot2::geom_point(size = 2)+
+  ggplot2::scale_linetype_manual(
+    values = c("National" = "solid",
+               "North Central" = "dashed",
+               "Northeast" = "dotted",
+               "South" = "dotdash",
+               "West" = "twodash"))+
+  ggplot2::scale_colour_manual(
+    values = c("National" = "black"))+
+  ggplot2::scale_y_continuous(
+    limits = c(0,100),
+    breaks = seq(0, 100, by = 5),
+    # expansion gets rid of padding
+    expand = ggplot2::expansion(0,0))+
+  ggplot2::labs(
+    caption = stringr::str_wrap("Source data: ANES Time Series Cumulative Data File"),
+    x = "Year",
+    y = "Average Score on Index")+
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    axis.text.x = element_text(angle = 90),
+    axis.title.x = element_blank(),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.grid = element_blank(),
+    panel.background = element_blank())
+
+```
+
+
+
+```{r}
+#| label: fig-hcregion
+#| fig-cap: "External Political Efficacy Index by Region"
+
+# Interactive plot of yearly average of external efficacy index by region 
+
+# using the `highcharts` that seems to be used on ANES site page. 
+# From the package site page
+# "Highcharter is a R wrapper for Highcharts javascript library and its modules.
+# Highcharts is very flexible and customizable javascript charting library and
+# it has a great and powerful API"
+
+# it's a little tricky, as there are no default arguments; all arguments need to
+# be named
+# see here (https://jkunst.com/highcharter/articles/highcharts-api.html)
+# also (https://api.highcharts.com/highcharts/)
+
+# Still, it's kinda neat.
+plot_exteff_region <- erwide |>
+  highcharter::hchart("line") |>  
+  highcharter::hc_xAxis(categories = erwide$year.f) |>
+  highcharter::hc_add_series(
+    name = "Northeast", 
+    data = erwide$Northeast, 
+    showInLegend = TRUE) |> 
+  highcharter::hc_add_series(
+    name = "North Central", 
+    data = erwide$North_Central, 
+    showInLegend = TRUE) |> 
+  highcharter::hc_add_series(
+    name = "West", 
+    data = erwide$West, 
+    showInLegend = TRUE) |> 
+  highcharter::hc_add_series(
+    name = "South", 
+    data = erwide$South,
+    showInLegend = TRUE) |>
+  highcharter::hc_add_series(
+    name = "National", 
+    data = erwide$National,
+    showInLegend = TRUE) |>
+  highcharter::hc_yAxis(
+    tickInterval = 10,
+    min = 0,
+    max = 100,
+    title = list(text = "Average Score on Index")
+  ) |>
+  highcharter::hc_title(text = "External Political Efficacy Index by Region") |>
+  highcharter::hc_subtitle(text = "Average External Efficacy") |>
+  highcharter::hc_caption(
+    text = "Source data: ANES Time Series Cumulative Data File",
+    hrep = "https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/",
+    enabled = TRUE) |>
+  highcharter::hc_credits(
+    text = "Chart created using R and package `highcharter`",
+    href = "https://jkunst.com/highcharter",
+    enabled = TRUE) |> 
+  highcharter::hc_add_theme(highcharter::hc_theme_tufte())
+  
+
+plot_exteff_region
+
+```
+
+
+
+- Identify the states that enacted changes to voting laws after 2013 (i.e., treated states)
+
+Several states enacted voting rights laws in anticipation to the *Shelby v Holder* case, although at this time it isn't clear which states did so. That being said, however, the analysis is only concerned with changes enacted after the 2013 decision. Although states were enacting or attempting to enact laws in anticipation of a favorable ruling, the political conditions were unchanged until after the decision by the court was passed down. That is to say, Section 4(b) of the VRA was still a condition of the political environment until the court's ruling. Similarly, some states enacted laws that would trigger into effect upon a successful repeal of the core ruling in the *Roe v. Wade* case. 
+
+The coverage formula was used to determine which states would be subject to preclearance under Section 5 of the VRA. Once the coverage formula was ruled unconstitutional, states that were previously subject to preclearance were no longer, and no new states could be made subject to preclearance unless by court order under a different section of the VRA. To put in perspective, the capacity of state government actors to restrict, expand, or otherwise modify the means of popular political production was subject to conditions established by the VRA and for the purposes thereof. In other words, prior to the 2013 ruling, the power of those elected to govern was limited so as not to encroach upon the popular capacity of the people. 
+
+The *Shelby County v Holder* ruling empowered governing actors to shape conditions of the political environment that directly related to the popular capacity of the people to do the very same. The VRA may be seen as empowering the people to engage in the design, shape, and direction of their political reality, but this is only in relation to the power of governing actors to impede upon the means available to the people for doing so. That is, the VRA simply affirmed that the means of popular political production by voting are available to those who citizens who were not otherwise disenfranchised, and the effect of the act was to explicitly constrain governing officials from rendering the means (e.g., voting in elections) inaccessible to anyone whose status entitled said capacity.
+
+Okay here's the thing: the focus should be on events/laws that change the very conditions of which citizens are subject; not necessarily on the outcome effect of some law which may or may not be expansive or restrictive. The outcome is only a possibility---a possible world outcome of the effect of some law. The point is to focus on the change in the relations of power between actors: those empowered to govern the conditions of the political environment and those subject to the conditions of the political environment. 
+
+So selection of states probably shouldn't be those states that passed laws which happened to be restrictive or expansive *in effect*, but rather those states that passed laws pertaining to voting and registration, e.g., voter ID laws, voter registration, and voting method. In other words, states that enacted laws that further condition the people's capacity to effectuate change through the limited means of the electoral process. We can classify (i.e., categorize) the laws as either restrictive or expansive which aligns with expectations about the directional effect such changes should have on external efficacy beliefs. However, this does not include states that enacted laws via ballot initiative---that is, where the public initiated and voted on legislation. No matter how restrictive or expansive. The legislature must have been the origin, which also includes referendums. The legislature can put whatever to a vote, set the agenda of options available, and whatever else. So laws pertaining to voting and registration enacted by referendums will categorize a state among the set.
+
+The Supreme Court ruling in 2013 is the event that changed political conditions writ large, empowering states to emplace conditions on state constituents related to their capacity to effectuate change by means of voting. No new laws were **necessitated** by the decision, rather the possibilities of what state governments could do expanded.
+
+The difficulty in selecting a particular set of states (for a difference-in-difference model) is trying to decide whether to focus on restrictions alone, on states that passed laws, or on states that enacted laws. Some laws were enacted and remain in place; some laws were later repealed or struck down by the judiciary. In some states, legislation was passed but failed to codify into law. Many states also passed what is referred to as expansive legislation regarding voting and registration; so limiting the analysis to only states where restrictions were enacted would be incomplete. Moreover, it is likely that some states enacted both restrictive and expansive laws. So it isn't necessarily whether the law was restrictive or expansive, but whether the event (*Shelby v Holder*) that changed political conditions nationwide impacted external efficacy in the aggregate. 
+
+The theory is that external efficacy should shift upon changes in the political environment. My particularity is that the changes 1) are incontestable as factors of the political environment 2) are directly related to the people's capacity to effectuate change, i.e., shape their political environment.
+
+
+```{r}
+
+# since 2010 25 states have enacted some new restrictive voting law
+sts <- tibble::tribble(
+  ~st,
+  "Alabama", 
+  "Arizona",
+  "Arkansas",
+  "Florida",
+  "Georgia",
+  "Illinois",
+  "Indiana",
+  "Iowa",
+  "Kansas",
+  "Mississippi",
+  "Missouri",
+  "Nebraska",
+  "New Hampshire",
+  "North Carolina",
+  "North Dakota",
+  "Ohio",
+  "Rhode Island",
+  "South Carolina",
+  "South Dakota",
+  "Tennessee",
+  "Texas",
+  "Virginia",
+  "West Virginia",
+  "Wisconsin"
+  )
+
+# 13 States that enacted new voting laws that were still in place for 2012
+# election
+sts13_newlaws <- c(
+  "South Dakota",
+  "Kansas",
+  "Texas",
+  "Iowa",
+  "Wisconsin",
+  "Illinois",
+  "Tennessee",
+  "Georgia",
+  "Florida",
+  "Virginia",
+  "West Virginia",
+  "Rhode Island",
+  "New Hampshire"
+)
+
+
+
+
+```
+
+Note: Montana enacted new law to prevent civic groups and individuals from helping others to vote absentee by collecting and delivering their voted ballots. This is not included, however, because this law was initiated and enacted via ballot initiative. That is, it was the state constituents themselves who changed the political conditions of the state. Thus, if anything, it would be expected that their feelings of efficacy in some form would have increased. However, there would be no expectation that *external efficacy* would be higher or have increased after enactment of the law due to the fact that the two external efficacy statement items pertain specifically to government and government officials. Indeed, low external efficacy may be associated with higher willingness or increased support for citizen initiated directives and governance, and may predict citizen led initiatives provided that mechanism is available in the state.
+
