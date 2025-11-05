@@ -1,0 +1,545 @@
+---
+title: " What is going on with efficacy items in ANES 2008 and 2012?"
+---
+
+## Background
+
+In brief, two versions of the internal and external political efficacy items were administered in the 2008 and 2012 ANES surveys. The new items introduced in 2008 were apparently run in the ANES 2006 Pilot study. The new items were proposed under the notion that the old, standard, efficacy items were prone to acquiescence bias given the bi-polar agree/disagree response format. Upon a quick review of the 2016 and 2020 ANES User guidebooks, variable lists, and associated codebooks, it seems that the 'standard' versions of the external efficacy items remained---the items with the usual question wording and 5-point bi-polar response options (e.g., agree strongly...Neither...disagree strongly). So perhaps concerns for acquiescence bias were unfounded after all? It seems strange that the same split sample experiments were conducted in 2008 and 2012 only to be left without remark or documentation after all these years. ANES could really do with publishing an "after action" report for each iteration.
+
+The ANES Time Series Cumulative Data File (henceforth, CDF) uses the post-election [VERSION C] of both NOSAY and NOCARE items for the year 2008, but the pre-election [STD] versions of both NOSAY and NOCARE for 2012. I confirmed this by loading in the data from the CDF, the ANES 2008, and the ANES 2012 data. I filtered the CDF to the years 2008 and 2012 and compared the (raw) frequencies of response options to the corresponding variable for each year, respectively. This merely confirmed what was already indicated on the CDF variable codebook. Why the CDF uses the post-election response data for 2008 but the pre-election response data for 2012 is beyond me.
+
+In 2008 (and 2012 apparently), respondents were randomly assigned to different versions of political efficacy survey questions, for both internal and external efficacy items: version C and version D. Each version presented four items, two for internal efficacy and two for external efficacy, and the question wording differed depending on which version a respondent was presented. In addition, one of the external efficacy items (NOCARE) had an additional version in the post-election survey distinguished as either [OLD] or [NEW]. The [NEW] version slightly modified the question wording from the standard wording (literally removing a single word). So in the Post-election survey data, three variables correspond to the NOCARE external efficacy item.
+
+From the ANES 2008 pre-election variable documentation file:
+
+> "Respondents were randomly assigned to the standard efficacy questions E9a-E9d (VERSION C) or to new efficacy questions E10a-E10d (VERSION D), as documented in PreRandom.14.
+The C/D version assignment is specific to Pre-election efficacy questions only (E9a-E9d or E10a-E10d) and is independent of the major "OLD/NEW" split documented in PreRandom.2."
+
+From the ANES 2008 post-election variable documentation file:
+
+> "Respondents were randomly assigned to VERSION C or VERSION D efficacy questions, which were repeated in the Pre and the Post. VERSION C efficacy questions were E9a-E9d in the Pre and M2a1-M2a4 in the Post; VERSION D efficacy questions were E10a-E10d in the Pre and M2b1-M2b4 in the Post. Assignment to VERSION C or VERSION D was randomized"
+
+From the "Background Information on the ANES 2008 Time Series Questionnaires (Advance Release Version)"
+
+> "E9-E10. Two versions of an ANES CORE question are asked. The old questions ask about the respondent’s feelings of efficacy in the political domain. New versions of these questions were proposed for and run on the ANES 2006 Pilot Study. The new questions convert the agree/disagree format of the old question into versions that are not prone to acquiescence bias. Recognizing that many scholars use responses to these questions to explain turnout or vote choice, we have moved these questions to the pre-election wave to eliminate the impact of the election outcome on responses (i.e., the outcome can change feelings of efficacy among some voters)."
+
+In 2012, the same split sample method was done regarding political efficacy items (except for the addition of the [OLD] and [NEW] versions in the 2008 post-election survey). The items are split in the same way, and there was no difference between 2012 and 2008 in terms of question wording or response options with respect to the different versions. The 2012 variable codebook refers to the first set as the standard [STD] version, and the alternate "revised" [REV]. The [STD] version corresponds to VERSION C in the 2008 survey, and the [REV] version corresponds to VERSION D in the 2008 survey.
+
+From the ANES 2012 User Guidebook:
+
+> "Efficacy (EFFIC) asked a battery of four questions on political efficacy. Respondents were randomly assigned to receive either the “standard” questions that have been part of the ANES Time Series for many years or a “revised” set of questions introduced on the ANES 2008 Time Series survey that should have better measurement properties than the standard battery because they replace the agree-disagree question format that is subject to acquiescence bias."
+
+> "Efficacy – Post (EFFICPO) asked questions about internal and external political
+efficacy. This section included a splice in which half the respondents were asked an
+old version of the questions repeated since 1952 and half were asked a new version
+introduced in 2008."
+
+All that being said, and I speak for myself here, it was a pain in the ass to get a grip on exactly what occurred despite the documentation provided. Ultimately, in the ANES 2008 Time Series data set, there are 18 variables that account for the different versions of the political efficacy items across the pre- and post-election surveys. 
+
+```{r}
+#| label: tbl-efficy2008
+#| tbl-cap: "Political Efficacy items in ANES 2008"
+
+# load data
+data(anes2008, package = "miguk")
+
+# create data dictionary of only political efficacy items
+efficacy_dict <- anes2008 |> 
+  select(contains("V083079"), 
+         contains("V083080"),
+         contains("V085151"), 
+         contains("V085152"),
+         contains("V085153")) |> 
+  surveytoolbox::data_dict() |> 
+  dplyr::as_tibble()
+
+# anes2008_efficacy_dict |> pull(var) |> writeClipboard()
+
+# long-form tibble with one column of variable codes and one for question text
+wording2008 <- dplyr::tibble(
+  V083079a = "Sometimes, politics and government seem so complicated that a person like me can't really understand what's going on.",
+  V083079b = "I feel that I have a pretty good understanding of the important political issues facing our country.",
+  V083079c = "Public officials don't care much what people like me think",
+  V083079d = "People like me don't have any say about what the government does.",
+  V083080a = "How often do politics and government seem so complicated that you can't really understand what's going on?",
+  V083080b = "How well do you understand the important political issues facing our country?",
+  V083080c = "How much do public officials care what people like you think?",
+  V083080d = "How much can people like you affect what the government does?",
+  V085151a = "Sometimes, politics and government seem so complicated that a person like me can't really understand what's going on.",
+  V085151b = "I feel that I have a pretty good understanding of the important political issues facing our country.",
+  V085151c = "Public officials don't care much what people like me think",
+  V085151d = "People like me don't have any say about what the government does.",
+  V085152a = "How often do politics and government seem so complicated that you can't really understand what's going on?",
+  V085152b = "How well do you understand the important political issues facing our country?",
+  V085152c = "How much do public officials care what people like you think?",
+  V085152d = "How much can people like you affect what the government does?",
+  V085153a = "Public officials don't care much what people like me think.",
+  V085153b = "Public officials don't care much about what people like me think."
+) |> 
+  pivot_longer(cols = everything(), 
+               names_to = "var", 
+               values_to = "wording")
+
+# long-form tibble with one column of variable codes and one for question number
+question_num <- dplyr::tibble(
+  V083079a = "E9a.",
+  V083079b = "E9b.",
+  V083079c = "E9c.",
+  V083079d = "E9d.",
+  V083080a = "E10a.",
+  V083080b = "E10b.",
+  V083080c = "E10c.",
+  V083080d = "E10d.",
+  V085151a = "M2a1.",
+  V085151b = "M2a2.",
+  V085151c = "M2a3.",
+  V085151d = "M2a4.",
+  V085152a = "M2b1.",
+  V085152b = "M2b2.",
+  V085152c = "M2b3.",
+  V085152d = "M2b4.",
+  V085153a = "M3a1.",
+  V085153b = "M3a2."
+) |>
+  pivot_longer(cols = everything(), 
+               names_to = "var", 
+               values_to = "qnum")
+
+
+
+anes2008_efficacy_dict <- efficacy_dict |>
+  
+  # column indicating whether item was asked pre- or post-election
+  mutate(
+    election = dplyr::case_when(
+      var %in% c(
+        "V083079a",
+        "V083079b",
+        "V083079c",
+        "V083079d",
+        "V083080a",
+        "V083080b",
+        "V083080c",
+        "V083080d"
+      ) ~ "pre",
+      var %in% c(
+        "V085151a",
+        "V085151b",
+        "V085151c",
+        "V085151d",
+        "V085152a",
+        "V085152b",
+        "V085152c",
+        "V085152d",
+        "V085153a",
+        "V085153b"
+      ) ~ "post",
+      TRUE ~ NA
+    ),
+    .before = var
+  ) |>
+  
+  # column indicating whether item measured internal or external efficacy
+  mutate(
+    efficacy = dplyr::case_when(
+      var %in% c(
+        "V083079a",
+        "V083079b",
+        "V083080a",
+        "V083080b",
+        "V085151b",
+        "V085151a",
+        "V085152a",
+        "V085152b"
+      ) ~ "internal",
+      var %in% c(
+        "V083079c",
+        "V083079d",
+        "V083080c",
+        "V083080d",
+        "V085151c",
+        "V085151d",
+        "V085152c",
+        "V085152d",
+        "V085153a",
+        "V085153b"
+      ) ~ "external"
+    ),
+    .before = var
+  ) |>
+  
+  # short code labels
+  mutate(
+    short_label = dplyr::case_when(
+      var %in% c("V083079a", "V083080a", "V085151a", "V085152a") ~ "COMPLEX",
+      var %in% c("V083079b", "V083080b", "V085151b", "V085152b") ~ "UNDERSTAND",
+      var %in% c("V083079c", "V083080c", "V085151c", "V085152c") ~ "NOCARE",
+      var %in% c(
+        "V083079d",
+        "V083080d",
+        "V085151d",
+        "V085152d",
+        "V085153a",
+        "V085153b"
+      ) ~ "NOSAY",
+    ),
+    .before = var
+  ) |>
+  
+  # column indicating version of item
+  mutate(
+    version = dplyr::case_when(
+      var %in% c(
+        "V083079a",
+        "V083079b",
+        "V083079c",
+        "V083079d",
+        "V085151a",
+        "V085151b",
+        "V085151c",
+        "V085151d"
+      ) ~ "[VERSION C]",
+      var %in% c(
+        "V083080a",
+        "V083080b",
+        "V083080c",
+        "V083080d",
+        "V085152a",
+        "V085152b",
+        "V085152c",
+        "V085152d"
+      ) ~ "[VERSION D]",
+      var %in% c("V085153a") ~ "[OLD]",
+      var %in% c("V085153b") ~ "[NEW]"
+    ),
+    .after = var
+  ) |>
+  
+  # include column that corresponds to item question number
+  mutate(qnum = question_num$qnum, .after = version) |>
+  
+  # replace variable label with item question wording
+  mutate(label_var = wording2008$wording) |> 
+  mutate(year = 2008, .before = election) |> 
+  dplyr::relocate(var, .after = year) |> 
+  dplyr::relocate(election, .before = version)
+
+```
+
+```{r}
+
+# load data
+data(anes2012, package = "miguk")
+
+anes2012_eff_dict <- anes2012 |> 
+  select(contains("effic_"), contains("efficpo_"), -efficpo_bothside) |> 
+  surveytoolbox::data_dict() |> 
+  dplyr::as_tibble()
+
+# anes2012_eff_dict |> 
+#   pull(var) |> 
+#   writeClipboard()
+
+# long-form tibble with one column of variable codes and one for question text
+wording2012 <- dplyr::tibble(
+  effic_complicstd   = "Sometimes, politics and government seem so complicated that a person like me can't really understand what's going on.",
+  effic_undstd       = "I feel that I have a pretty good understanding of the important political issues facing our country.",
+  effic_carestd      = "Public officials don't care much what people like me think",
+  effic_saystd       = "People like me don't have any say about what the government does.",
+  effic_complicrev   = "How often do politics and government seem so complicated that you can't really understand what's going on?",
+  effic_undrev       = "How well do you understand the important political issues facing our country?",
+  effic_carerev      = "How much do public officials care what people like you think?",
+  effic_sayrev       = "How much can people like you affect what the government does?",
+  efficpo_complicstd = "Sometimes, politics and government seem so complicated that a person like me can't really understand what's going on.",
+  efficpo_undstd     = "I feel that I have a pretty good understanding of the important political issues facing our country.",
+  efficpo_carestd    = "Public officials don't care much what people like me think",
+  efficpo_saystd     = "People like me don't have any say about what the government does.",
+  efficpo_complicrev = "How often do politics and government seem so complicated that you can't really understand what's going on?",
+  efficpo_undrev     = "How well do you understand the important political issues facing our country?",
+  efficpo_carerev    = "How much do public officials care what people like you think?",
+  efficpo_sayrev     = "How much can people like you affect what the government does?"
+) |>  
+  pivot_longer(cols = everything(), 
+               names_to = "var", 
+               values_to = "wording")
+
+
+anes2012_eff_dict <- anes2012_eff_dict |>
+  # column indicating whether item was presented pre- or post-election
+  mutate(
+    election = dplyr::case_when(
+      var %in% c(
+        "effic_complicstd",
+        "effic_undstd",
+        "effic_carestd",
+        "effic_saystd",
+        "effic_complicrev",
+        "effic_undrev",
+        "effic_carerev",
+        "effic_sayrev"
+      )
+      ~ "pre",
+      var %in% c(
+        "efficpo_complicstd",
+        "efficpo_undstd",
+        "efficpo_carestd",
+        "efficpo_saystd",
+        "efficpo_complicrev",
+        "efficpo_undrev",
+        "efficpo_carerev",
+        "efficpo_sayrev"
+      ) ~ "post",
+      TRUE ~ NA
+    ),
+    .before = var
+  ) |>
+  
+  # internal or external political efficacy
+  mutate(
+    efficacy = dplyr::case_when(
+      var %in% c(
+        "effic_complicstd",
+        "effic_undstd",
+        "effic_complicrev",
+        "effic_undrev",
+        "efficpo_complicstd",
+        "efficpo_undstd",
+        "efficpo_complicrev",
+        "efficpo_undrev"
+      ) ~ "internal",
+      var %in% c(
+        "effic_carestd",
+        "effic_saystd",
+        "effic_carerev",
+        "effic_sayrev",
+        "efficpo_carestd",
+        "efficpo_saystd",
+        "efficpo_carerev",
+        "efficpo_sayrev"
+      ) ~ "external"
+    ),
+    .before = var
+  ) |>
+  
+  # short code labels
+  mutate(
+    short_label = dplyr::case_when(
+      var %in% c(
+        "effic_complicstd",
+        "effic_complicrev",
+        "efficpo_complicstd",
+        "efficpo_complicrev"
+      ) ~ "COMPLEX",
+      
+      var %in% c(
+        "effic_undstd",
+        "effic_undrev",
+        "efficpo_undstd",
+        "efficpo_undrev"
+      ) ~ "UNDERSTAND",
+      
+      var %in% c(
+        "effic_carestd",
+        "effic_carerev",
+        "efficpo_carestd",
+        "efficpo_carerev"
+      ) ~ "NOCARE",
+      
+      var %in% c(
+        "effic_saystd",
+        "effic_sayrev",
+        "efficpo_saystd",
+        "efficpo_sayrev"
+      ) ~ "NOSAY",
+    ),
+    .after = var
+  ) |>
+  
+  # version of item in ANES 2012
+  mutate(
+    version = dplyr::case_when(
+      var %in% c(
+        "effic_complicstd",
+        "effic_undstd",
+        "effic_carestd",
+        "effic_saystd",
+        "efficpo_complicstd",
+        "efficpo_undstd",
+        "efficpo_carestd",
+        "efficpo_saystd"
+      ) ~ "[STD]",
+      var %in% c(
+        "effic_complicrev",
+        "effic_undrev",
+        "effic_carerev",
+        "effic_sayrev",
+        "efficpo_complicrev",
+        "efficpo_undrev",
+        "efficpo_carerev",
+        "efficpo_sayrev"
+      ) ~ "[REV]",
+      TRUE ~ NA
+    ),
+    .after = var
+  ) |>
+  
+  # replace variable label with item question wording
+  mutate(label_var = wording2012$wording) |> 
+  mutate(year = 2012, .before = election) |> 
+  dplyr::relocate(var, .after = year) |> 
+  dplyr::relocate(election, .before = version)
+
+
+
+```
+
+```{r}
+#| label: tbl-1
+
+anes_eff_dict <-
+  dplyr::full_join(x = anes2008_efficacy_dict, y = anes2012_eff_dict) |>
+  dplyr::select(-qnum) |> 
+  # modify character strings in `label_val` for them to print as list
+  dplyr::mutate(
+    label_val = str_replace_all(label_val, pattern = ";", replacement = "\n"),
+    label_val = str_replace_all(label_val, pattern = "-*\\d[.]", replacement = ""),
+    label_val = str_replace_all(label_val, pattern = "\\s", replacement = "\n"),
+    label_var = sjmisc::word_wrap(label_var, wrap = 20, linesep = "\n"))
+
+anes_eff_dict |>
+  # filter(short_label == 'NOCARE' | short_label == 'NOSAY') |> 
+  gt::gt(groupname_col = "short_label") |>
+  gt::tab_style(style = gt::cell_text(weight = "bold"),
+                locations = gt::cells_row_groups()) |> 
+  gt::tab_style(style = gt::cell_text(weight = "bold"),
+                locations = gt::cells_column_labels()) |> 
+  gt::fmt_markdown(columns = c("label_var", "label_val"))
+# alt
+# tinytable::tt(anes_eff_dict) |> tinytable::format_tt(markdown = T)
+
+
+```
+
+********************************************************************************
+
+| COMPLEX [VERSION C/STD]
+| Pre- and Post-election internal efficacy item
+| 2008 variables: `V083079a`, `V085151a`
+| 2012 variables:`effic_complicstd`, `efficpo_complicstd`
+|
+| "Sometimes, politics and government seem so complicated that a person like me can't |  really understand what's going on."
+|  
+|  -9. Refused;
+|  -8. Don't know;
+|  -1. INAP, R selected for VERSION D;
+|  1.  Agree strongly;
+|  2.  Agree somewhat;
+|  3.  Neither agree nor disagree;
+|  4.  Disagree somewhat;
+|  5.  Disagree strongly
+
+| **UNDERSTAND** [VERSION C/STD]
+|  Pre- and Post-election internal efficacy item
+|  2008 variables: `V083079b`, `V085151b`
+|  2012 variables: `effic_undstd`, `efficpo_undstd`
+|
+|  "I feel that I have a pretty good understanding of the important
+|  political issues facing our country."
+|  
+|  -9. Refused;
+|  -8. Don't know;
+|  -1. INAP, R selected for VERSION D;
+|  1.  Agree strongly;
+|  2.  Agree somewhat;
+|  3.  Neither agree nor disagree;
+|  4.  Disagree somewhat;
+|  5.  Disagree strongly
+
+| **NOCARE** [VERSION C/STD]
+|  Pre- and Post-election external efficacy item
+|  2008 variables: V083079c, V085151c,
+|  2012 variables: `effic_carestd`, `efficpo_carestd`
+| 
+|  "Public officials don't care much what people like me think"
+| 
+|  -9. Refused;
+|  -8. Don't know;
+|  -1. INAP, R selected for VERSION D;
+|  1. Agree strongly;
+|  2. Agree somewhat;
+|  3. Neither agree nor disagree;
+|  4. Disagree somewhat;
+|  5. Disagree strongly
+
+| **NOSAY** [VERSION C/STD]
+|  Pre- and Post-election external efficacy item
+|  2008 variables: `V083079d`, `V085151d`,
+|  2012 variables: `effic_saystd`, `efficpo_saystd`
+| 
+| "People like me don't have any say about what the government does."
+| 
+|  -9. Refused;
+|  -8. Don't know;
+|  -1. INAP, R selected for VERSION D;
+|  1. Agree strongly;
+|  2. Agree somewhat;
+|  3. Neither agree nor disagree;
+|  4. Disagree somewhat;
+|  5. Disagree strongly
+
+
+**internal efficacy, COMPLEX, [VERSION D/REV], pre- and post-election**
+"How often do politics and government seem so complicated that
+you can't really understand what's going on?"
+1.  All the time; 
+2.  Most of the time; 
+3.  About half the time; 
+4.  Some of the time; 
+5.  Never
+
+**internal efficacy, UNDERSTAND, [VERSION D/REV], pre- and post-election**
+"How well do you understand the important political issues facing
+our country?"
+1.  Extremely well; 
+2.  Very well;
+3.  Moderately well; 
+4.  Slightly well; 
+5.  Not well at all
+
+**external efficacy, NOCARE, [VERSION D/REV], pre- and post-election**
+"How much do public officials care what people like you think?"
+1.  A great deal; 
+2.  A lot; 
+3.  A moderate amount; 
+4.  A little; 
+5.  Not at all
+
+**external efficacy, NOSAY, [VERSION D/REV], pre- and post-election**
+"How much can people like you affect what the government does?"
+1.  A great deal; 
+2.  A lot; 
+3.  A moderate amount;
+4.  A little;
+5.  Not at all
+
+:::{.callout-note}
+## NOTE
+The following two items only pertain to the 2008 ANES post-election survey. This question is among a selection of Post-election questions which were assigned to either "OLD" (standard) or "NEW" version.
+VERSION `OLD` represents exact standard wording. VERSION `NEW` wording differs only in the addition of the word "about" (..don't care much about..).
+:::
+
+**external efficacy, NOCARE, OLD, post-election only**
+"Public officials don't care much what people like me think."
+1.  Agree strongly; 
+2.  Agree somewhat; 
+3.  Neither agree nor disagree; 
+4.  Disagree somewhat;
+5.  Disagree strongly
+
+**external efficacy, NOCARE, NEW, post-election only**
+"Public officials don't care much about what people like me think."
+1.  Agree strongly; 
+2.  Agree somewhat; 
+3.  Neither agree nor disagree; 
+4.  Disagree somewhat;
+5.  Disagree strongly

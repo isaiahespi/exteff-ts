@@ -1,0 +1,186 @@
+---
+title: "Figure 1 Replication"
+---
+
+```{r}
+#| label: setup
+
+# set seed for reproducibility
+set.seed(12345)
+
+# load packages (those commented out may or may not be necessary)
+library(tidyverse)
+library(naniar) # data structures, summaries, and visuals for missing data
+library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
+
+# load cdf as tbl_svy object (i.e., with weight variable applied)
+cdf_wt <- readr::read_rds(here::here("data", "anes_cdf_wts_tbl_svy.rds"))
+
+```
+
+This notebook replicates Figure 1 from @chamberlain2012. Constructing this figure requires the ANES Time Series Cumulative Data file.
+
+First, I convert the two variables of interest into factors, where response codes are converted to the text of the response option categories. Each level of the factor variables corresponds to one of the response option categories and is prefixed with the corresponding response value label (e.g., [1] Agree, [2] Disagree).
+
+```{r}
+
+# convert `nocare` and `nosay` to factor vars
+cdf_wt <- cdf_wt |>
+  srvyr::mutate(across(c(nocare, nosay), ~ sjlabelled::set_labels(
+    .x, labels = c(
+      "Agree" = 1,
+      "Disagree" = 2,
+      "Neither" = 3,
+      "DK" = 9
+    )
+  ))) |>
+  srvyr::mutate(across(c(nocare, nosay), ~ sjlabelled::as_label(., prefix = TRUE)))
+
+
+```
+
+Create a function that returns a table of proportions of for each factor level conditioned on a grouping variable for a single categorical variable (i.e., survey question item). This function is useful in particular for `tbl_svy` objects and relies on the `srvyr` R package. This function is a slightly modified version of a similar one found [here](https://tidy-survey-r.github.io/tidy-survey-book/c05-descriptive-analysis.html#example-3-purrrmap).
+
+In other words, I create a function that will return the proportion of responses by year, and since I have applied the appropriate weights provided in the ANES cumulative data file using the `srvyr` R package, the function also returns the standard error for each estimate.
+
+```{r}
+
+# create function that returns a table of response proportions for a single
+# variable (factor) by grouping variable, i.e., proportions of `var` conditional
+# to `group_var`
+# this function is a modified version of the one from the following url
+# (https://tidy-survey-r.github.io/tidy-survey-book/c05-descriptive-analysis.html#example-3-purrrmap)
+
+calcps <- function(dat, var, group_var) {
+  { dat } |>  
+    srvyr::drop_na(!!sym(var)) |> 
+    srvyr::group_by(!!sym(group_var), !!sym(var)) |> 
+    srvyr::summarize(prop = srvyr::survey_prop() * 100) |> 
+    srvyr::mutate(Variable = stringr::str_to_upper(var)) |> 
+    srvyr::rename(Response := !!sym(var)) |> 
+    srvyr::select(!!sym(group_var), Variable, everything())
+}
+
+```
+
+I create two tables of proportions for both the `NOCARE` and `NOSAY` external political efficacy items conditioned on the year of the ANES. Then, I bind the rows of the two tables together, which basically stacks one table atop the other, and assign this as a named object `resp_tab_by_year`. This combined table organizes the date into long format, where each row is a response to the particular question item by year. Organizing the data into long format allows me to replicate proportion of particular responses across the years. 
+
+```{r}
+
+# this returns a table of response proportions for a single variable (factor)
+# using this table, I am able to get the proportion of "Agree", "Disagree" etc.
+# for the `NOCARE` and `NOSAY` variables by year.
+
+# create two tables for NOSAY and NOCARE variables
+nocare_by_yr <- calcps(cdf_wt, var = "nocare", group_var = "year")
+nosay_by_yr <- calcps(cdf_wt, var = "nosay", group_var = "year")
+
+
+# bind rows of tables (basically stack one on top of the other)
+resp_tab_by_year <- nosay_by_yr |> 
+  dplyr::bind_rows(nocare_by_yr) |> 
+  dplyr::arrange(year)
+
+```
+
+To replicate Figure 1, I filter to "Disagree" responses and plot lines representing the proportion of those who "Disagree" to each question across time as a percentage. Also, the data in the replicated figure is limited to the data available to Chamberlain at the time
+
+
+```{r}
+#| label: fig-rep1
+#| fig-cap: "Replication of Figure 1 in @chamberlain2012---Percent of Respondents Who Feel Efficacious for Each Question. Survey respondents are asked whether they agree or disagree with the following statements: 'Public officials don't care much what people like me think' and 'People like me don't have any say about what the government does.'. Disagreement reflects feelings of external political efficacy. Source data: ANES Time Series Cumulative Data File."
+#| fig-cap-location: bottom
+
+# replicate plot 
+# Figure 1. Percent of Respondents Who Feel Efficacious for Each Question NOTE:
+# This doesn't expand the y-axis to range from 0-100, which mirrors Figure 1 in
+# Chamberlain (2012). Also limit the data to what was available to Chamberlain
+# at the time
+resp_tab_by_year |>
+  dplyr::filter(Response == "[2] Disagree", year <= 2008) |> 
+  ggplot2::ggplot(aes(x = year, y = prop, linetype = Variable))+
+  ggplot2::geom_line()+
+  ggplot2::scale_linetype_manual(
+    values = c("NOSAY" = "solid", "NOCARE" = "dashed"), 
+    labels = c("NOSAY" = "No Say", "NOCARE" = "Don't Care"))+
+  ggplot2::scale_x_continuous(
+    limits = c(1950, 2010),
+    breaks = seq(1950, 2010, by = 10),
+    expan = ggplot2::expansion(0.01,0.01))+
+  ggplot2::scale_y_continuous(n.breaks = 6)+
+  ggplot2::labs(
+    caption = stringr::str_wrap("Source data: ANES Time Series Cumulative Data File"),
+    x = "Year",
+    y = "Percent")+
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+
+```
+
+In the original article, the Y-axis of @fig-rep1 was not scaled to range from 0 to 100. Note also that the `NOSAY` external efficacy question was not asked in the 1986 ANES; A line for responses to the `NOSAY` question between 1984 and 1988 is drawn implicitly via linear interpolation. It is possible to highlight the year where `NOSAY` was not asked by including layer of point values via `geom_miss_point` from the `naniar` R package.
+
+I extend the time-series chart to include the years of ANES data made available since Chamberlain's original study^[At the time of writing, preliminary data for ANES 2024 was available but not yet included in the Cumulative Data File.] 
+
+```{r}
+#| label: fig-rep1adj
+#| fig-cap: "Extended Replication of Figure 1 in @chamberlain2012---Percent of Respondents  Who Disagree with Either Question Statement. Survey respondents are asked whether they agree or disagree with the following statements: 'Public officials don't care much what people like me think' and 'People like me don't have any say about what the government does.'. Disagreement reflects feelings of external efficacy. Source data: ANES Time Series Cumulative Data File. Note that the `NOSAY` question was not included in the 1986 ANES"
+#| fig-cap-location: bottom
+
+
+# Now same plot, but this time the y-axis is scaled to range from 0-100 and
+# point values for each response proportion value is added to each line for
+# better comparison. A single point highlights the year `NOSAY` was not asked.
+# Data from subsequent ANES surveys since 2008 is also included
+resp_tab_by_year |> 
+  # temporarily ungroup dataframe; can't add row to grouped dataframe
+  dplyr::ungroup() |> 
+  # add single row of missing data (omitted columns are NA by default)
+  tibble::add_row(tibble::tibble_row(
+    year = 1986, Variable = "NOSAY", Response = "[2] Disagree"), .after = 87) |>
+  # re-group by year
+  dplyr::group_by(year) |>
+  # include only "Disagree" responses
+  dplyr::filter(Response == "[2] Disagree") |>
+  # create plot
+  ggplot2::ggplot(aes(x = year, y = prop, linetype = Variable))+
+  ggplot2::geom_line()+
+  # add point values including points for missing values. 
+  # prop_below: place 75% above min point value
+  naniar::geom_miss_point(prop_below = -0.75)+
+  # ggplot2::geom_point()+
+  ggplot2::scale_linetype_manual(
+    values = c("NOSAY" = "solid", "NOCARE" = "dashed"), 
+    labels = c("NOSAY" = "No Say", "NOCARE" = "Don't Care"))+
+  ggplot2::scale_colour_manual(
+    values = c("Missing" = "red"),
+    labels = c("Missing" = "Not Asked", "Not Missing" = "Asked")
+  )+
+  ggplot2::scale_x_continuous(
+    limits = c(1950, 2020),
+    breaks = seq(1952, 2020, by = 4),
+    expan = ggplot2::expansion(0.01,0.01))+
+  ggplot2::scale_y_continuous(
+    limits = c(0,100),
+    # expansion gets rid of padding
+    expand = ggplot2::expansion(0,0))+
+  ggplot2::labs(
+    caption = stringr::str_wrap("Source data: ANES Time Series Cumulative Data File"),
+    x = "Year",
+    y = "Percent")+
+  ggplot2::theme_bw()+
+  ggplot2::theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+
+
+
+```
+
