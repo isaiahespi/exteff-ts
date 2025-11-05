@@ -36,28 +36,28 @@ cdf <- readr::read_rds(file = "data/anes data/anes_cdf.rds")
 # -------------------------------------------------------------------------
 
 # this matches the ANES CDF documentation (see page 2)
-cdf |> dplyr::summarise(
-  wt9x  = sum(weights9x, na.rm = T),
-  wt9y  = sum(weights9y, na.rm = T),
-  wt9z  = sum(weights9z, na.rm = T),
-  wt10x = sum(weights10x, na.rm = T),
-  wt10y = sum(weights10y, na.rm = T),
-  wt10z = sum(weights10z, na.rm = T),
-  wt11x = sum(weights11x, na.rm = T),
-  wt11y = sum(weights11y, na.rm = T),
-  wt11z = sum(weights11z, na.rm = T),
-  wt9999 = sum(weights_VCF9999, na.rm = T),
-  n = dplyr::n(),
-  .by = year
-  ) |> 
-  print(n = Inf)
+# cdf |> dplyr::summarise(
+#   wt9x  = sum(weights9x, na.rm = T),
+#   wt9y  = sum(weights9y, na.rm = T),
+#   wt9z  = sum(weights9z, na.rm = T),
+#   wt10x = sum(weights10x, na.rm = T),
+#   wt10y = sum(weights10y, na.rm = T),
+#   wt10z = sum(weights10z, na.rm = T),
+#   wt11x = sum(weights11x, na.rm = T),
+#   wt11y = sum(weights11y, na.rm = T),
+#   wt11z = sum(weights11z, na.rm = T),
+#   wt9999 = sum(weights_VCF9999, na.rm = T),
+#   n = dplyr::n(),
+#   .by = year
+#   ) |> 
+#   print(n = Inf)
 
 # verify the years where the external efficacy index was measured
-cdf |>  
-  dplyr::summarise(
-    exteff.indx.avg = mean(exteff.indx, na.rm = T), 
-    .by = year) |> 
-  print(n = Inf)
+# cdf |>  
+#   dplyr::summarise(
+#     exteff.indx.avg = mean(exteff.indx, na.rm = T), 
+#     .by = year) |> 
+#   print(n = Inf)
 # Not measured in 1948, 1954, 1958, and 1962
 
 # apply weights -----------------------------------------------------------
@@ -95,18 +95,18 @@ cdf_wt <- cdf_wt |>
   ))
 
 # check
-cdf_wt |> 
-  srvyr::select(nosay, nocare, trust1, trust2, trust3, trust4) |>
-  srvyr::as_tibble() |> 
-  sjlabelled::get_labels(values = 'p')
+# cdf_wt |> 
+#   srvyr::select(nosay, nocare, trust1, trust2, trust3, trust4) |>
+#   srvyr::as_tibble() |> 
+#   sjlabelled::get_labels(values = 'p')
 
 # For the indices in the ANES CDF, code `999` refers to missing/NA
 # recode `999` as NA for external efficacy, gov responsiveness, and trust in gov
 # indices
-cdf_wt |> 
-  srvyr::as_tibble() |> 
-  dplyr::select(exteff.indx, trustgov.indx, govresp.indx) |> 
-  sjlabelled::get_labels(values = 'p')
+# cdf_wt |> 
+#   srvyr::as_tibble() |> 
+#   dplyr::select(exteff.indx, trustgov.indx, govresp.indx) |> 
+#   sjlabelled::get_labels(values = 'p')
 
 cdf_wt <- cdf_wt |> 
   srvyr::mutate(srvyr::across(c(exteff.indx, govresp.indx, trustgov.indx), 
@@ -167,3 +167,5 @@ cdf_wt <- cdf_wt |>
 # just so I don't have to do it again
 readr::write_rds(cdf_wt, file = "data/anes data/anes_cdf_wts.rds")
 
+# clear envir
+rm(list = ls())

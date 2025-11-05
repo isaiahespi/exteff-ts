@@ -48,9 +48,9 @@ anes_panel_codebook <- readr::read_csv(
 
 # create age group (`age_cat`) variable -----------------------------------
 
-anes_panel |> 
-  dplyr::select(dplyr::contains("age"), V161267c, V161267x) |>
-  var_label_tab()
+# anes_panel |> 
+#   dplyr::select(dplyr::contains("age"), V161267c, V161267x) |>
+#   var_label_tab()
 
 # Age of the panel shouldn't match between elections of course. Only their age
 # in 2024 will matter. I'll retain the other age variables for posterity.
@@ -70,9 +70,9 @@ anes_panel <- anes_panel |>
 ## determine proportion and counts of 'Don't know' responses to efficacy items
 ## for each year
 
-efficacy_items <- anes_panel |> 
-  dplyr::select(dplyr::contains("nocare"), dplyr::contains("nosay")) |> 
-  colnames() |> 
+efficacy_items <- anes_panel |>
+  dplyr::select(dplyr::contains("nocare"), dplyr::contains("nosay")) |>
+  colnames() |>
   dput()
 
 # freaks(dat = anes_panel, vars = dplyr::all_of(efficacy_items))
@@ -116,9 +116,9 @@ anes_panel <- anes_panel |>
 # create recoded variables of NOCARE and NOSAY following ANES CDF  --------
 
 
-anes_panel |> 
-  dplyr::select(dplyr::contains("nocare"), dplyr::contains("nosay")) |>
-  purrr::map(sjlabelled::get_labels, values = 'p')
+# anes_panel |> 
+#   dplyr::select(dplyr::contains("nocare"), dplyr::contains("nosay")) |>
+#   purrr::map(sjlabelled::get_labels, values = 'p')
 
 
 # create an external efficacy index following the coding scheme of the
@@ -146,9 +146,9 @@ anes_panel <- anes_panel |>
   ))
 
 # confirm
-anes_panel |> 
-  dplyr::select(dplyr::contains(".cdf")) |>
-  purrr::map(sjlabelled::get_labels, values = 'p')
+# anes_panel |> 
+#   dplyr::select(dplyr::contains(".cdf")) |>
+#   purrr::map(sjlabelled::get_labels, values = 'p')
 
 # create external efficacy index following ANES CDF coding -------------------
 
@@ -225,9 +225,9 @@ anes_panel <- anes_panel |>
     )
 
 # confirm
-anes_panel |> 
-  dplyr::select(dplyr::contains(".recode")) |>
-  sjlabelled::get_labels()
+# anes_panel |> 
+#   dplyr::select(dplyr::contains(".recode")) |>
+#   sjlabelled::get_labels()
 
 # freaks(dat = anes_panel, vars = dplyr::contains(".recode"))
 
@@ -259,14 +259,14 @@ anes_panel <- anes_panel |>
     ) |> 
   dplyr::ungroup()
 
-anes_panel |>
-  dplyr::select(dplyr::matches("exteff")) |>
-  var_label_tab()
+# anes_panel |>
+#   dplyr::select(dplyr::matches("exteff")) |>
+#   var_label_tab()
 
 # create character vector of only recoded external efficacy index variables
 exteff_rec_vars <- anes_panel |>
-  dplyr::select(dplyr::matches("exteff[0-9]{4}.rec")) |> 
-  colnames() |> 
+  dplyr::select(dplyr::matches("exteff[0-9]{4}.rec")) |>
+  colnames() |>
   dput()
 
 
@@ -346,9 +346,9 @@ anes_panel <- anes_panel |>
 
 
 # confirm
-anes_panel |> 
-  dplyr::select(dplyr::matches("trustgov") & dplyr::ends_with(".cdf")) |>
-  var_label_tab()
+# anes_panel |> 
+#   dplyr::select(dplyr::matches("trustgov") & dplyr::ends_with(".cdf")) |>
+#   var_label_tab()
 
 
 # create trust in government index variable -------------------------------
@@ -396,16 +396,16 @@ anes_panel <- anes_panel |>
 
 # save indices as character vector
 trustgov_indx_vars <- anes_panel |>
-  dplyr::select(dplyr::matches("trustgov[0-9]{4}.")) |> 
-  colnames() |> 
+  dplyr::select(dplyr::matches("trustgov[0-9]{4}.")) |>
+  colnames() |>
   dput()
 
 
 # create `moved` variable  ------------------------------------------------
 
-anes_panel |> 
-  dplyr::select(dplyr::contains("st_abb"),dplyr::contains("census")) |>
-  var_label_tab()
+# anes_panel |> 
+#   dplyr::select(dplyr::contains("st_abb"),dplyr::contains("census")) |>
+#   var_label_tab()
 
 # Given the aim of the study, it is important to consider whether the panel
 # respondent relocated to a different state between elections. This might be

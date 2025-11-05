@@ -149,19 +149,19 @@ rm(
 
 roper_toplines_raw <- readr::read_csv("data-raw/roper_data/roper-pres approval by question only-toplines-asof-20250930.csv")
 
-dplyr::glimpse(roper_toplines_raw)
+# dplyr::glimpse(roper_toplines_raw)
 
 
 # Replace `*` for NA in Response Pct column -------------------------------
 
 # In the raw topline data, a `*` symbol is used to signify that less than 0.5%
 # of the sample chose a particular response. 
-roper_toplines_raw |> 
-  dplyr::filter(
-    stringr::str_detect(RespPct, "\\D+") # detects any string that isn't a digit
-         ) |> 
-  # filter(RespPct == "*") |> 
-  dplyr::select(QuestionID, QuestionNote, RespTxt, RespPct)
+# roper_toplines_raw |> 
+#   dplyr::filter(
+#     stringr::str_detect(RespPct, "\\D+") # detects any string that isn't a digit
+#          ) |> 
+#   # filter(RespPct == "*") |> 
+#   dplyr::select(QuestionID, QuestionNote, RespTxt, RespPct)
 
 # Replace any `*` in `RespPct` with NA
 # also make column names easier to deal with
@@ -247,23 +247,23 @@ roper_toplines_clean <- roper_toplines_clean |>
 
 
 # There are 126 distinct question wordings
-roper_toplines_clean |>
-  dplyr::arrange(year) |> 
-  dplyr::distinct(question_txt) |> 
-  print(n = Inf)
+# roper_toplines_clean |>
+#   dplyr::arrange(year) |> 
+#   dplyr::distinct(question_txt) |> 
+#   print(n = Inf)
 
 
 # remove unnecessary rows -----------------------------------
 
 # There is one question that asked for approval/disapproval of previous
 # presidents (G. W. Bush). I don't need this one "USGALLUP.99JU04.R30"
-roper_toplines_clean |> 
-  dplyr::filter(
-    stringr::str_detect(
-      question_txt, "From what you have heard, read, or remember about former President"
-      )
-    ) |> 
-  dplyr::distinct(question_id, archive_number, source_doc)
+# roper_toplines_clean |> 
+#   dplyr::filter(
+#     stringr::str_detect(
+#       question_txt, "From what you have heard, read, or remember about former President"
+#       )
+#     ) |> 
+#   dplyr::distinct(question_id, archive_number, source_doc)
 
 # question_id = USGALLUP.99JU04.R30 
 # archive number = 31088396       
@@ -289,26 +289,26 @@ roper_toplines_clean <- roper_toplines_clean |>
 # Questions that pertain to approval/disapproval of the way the president is
 # handling some particular issue or domain is not of interest. I only need
 # general approval ratings
-roper_toplines_clean |> 
-  dplyr::arrange(year) |> 
-  dplyr::filter(stringr::str_detect(
-    question_txt, stringr::regex(
-      pattern = ".*as president.*", 
-      ignore_case = T), 
-    negate = T)
-    ) |>
-  dplyr::distinct(year, month, archive_number, question_id, question_txt) |> 
-  print(n = Inf)
+# roper_toplines_clean |> 
+#   dplyr::arrange(year) |> 
+#   dplyr::filter(stringr::str_detect(
+#     question_txt, stringr::regex(
+#       pattern = ".*as president.*", 
+#       ignore_case = T), 
+#     negate = T)
+#     ) |>
+#   dplyr::distinct(year, month, archive_number, question_id, question_txt) |> 
+#   print(n = Inf)
 
 # This returns rows where the question text matches the regular expression pattern
-roper_toplines_clean |> 
-  dplyr::arrange(year) |>
-  dplyr::filter(stringr::str_detect(
-    question_txt, stringr::regex(
-      pattern = ".*is handling...\\s++|is handling the strike problem+|foreign policy+|here at home+", 
-      ignore_case = T))
-    ) |> 
-  dplyr::distinct(year, month, question_txt)
+# roper_toplines_clean |> 
+#   dplyr::arrange(year) |>
+#   dplyr::filter(stringr::str_detect(
+#     question_txt, stringr::regex(
+#       pattern = ".*is handling...\\s++|is handling the strike problem+|foreign policy+|here at home+", 
+#       ignore_case = T))
+#     ) |> 
+#   dplyr::distinct(year, month, question_txt)
 
 # omit rows where approval question pertains to some issue, policy, or domain
 roper_toplines_clean <- roper_toplines_clean |>
@@ -340,9 +340,9 @@ roper_toplines_clean <- roper_toplines_clean |>
 
 # this returns distinct values for `sub_population`. I do not need data that
 # consists of only a subportion of the national adult population.
-roper_toplines_clean |> 
-  dplyr::distinct(sub_population) |> 
-  print(n = Inf)
+# roper_toplines_clean |> 
+#   dplyr::distinct(sub_population) |> 
+#   print(n = Inf)
 
 # exclude any 'sub population', retaining only survey data of the national adult
 # population
@@ -351,8 +351,8 @@ roper_toplines_clean <- roper_toplines_clean |>
 
 
 # n = 1,884
-roper_toplines_clean |> 
-  dplyr::distinct(archive_number, start, end, .keep_all = T)
+# roper_toplines_clean |> 
+#   dplyr::distinct(archive_number, start, end, .keep_all = T)
 
 
 # identify and organize response text options -----------------------------
@@ -536,12 +536,12 @@ roper_toplines_wide <- roper_toplines_clean |>
 # archive_number, start date, end date, and approval ratings data. The question
 # reference IDs are distinct between duplicates, but the archive number is
 # unique. I only need to keep one of each, so the duplicate data can be removed
-roper_toplines_wide |> 
-  dplyr::select(-approve_strength, -disapprove_strength) |> 
-  dplyr::relocate(approve, disapprove, unsure, inap, .after = end) |> 
-  dplyr::filter(!is.na(approve), !is.na(disapprove)) |> 
-  janitor::get_dupes(archive_number, start, end, approve, disapprove, unsure, inap) |> 
-  print(n = Inf)
+# roper_toplines_wide |> 
+#   dplyr::select(-approve_strength, -disapprove_strength) |> 
+#   dplyr::relocate(approve, disapprove, unsure, inap, .after = end) |> 
+#   dplyr::filter(!is.na(approve), !is.na(disapprove)) |> 
+#   janitor::get_dupes(archive_number, start, end, approve, disapprove, unsure, inap) |> 
+#   print(n = Inf)
 
 # remove unnecessary columns and keep only distinct rows based on archive
 # number, start and end dates, and approval ratings
@@ -563,8 +563,8 @@ roper_toplines_wide  <- roper_toplines_wide  |>
 
 # identify duplicate rows by archive number, start date and end date
 # n = 20
-roper_toplines_wide |> 
-  janitor::get_dupes(archive_number, start, end)
+# roper_toplines_wide |> 
+#   janitor::get_dupes(archive_number, start, end)
 
 # Upon review of the duplicate data on the Roper Center's iPoll site itself, the
 # following duplicates can be removed.
@@ -620,8 +620,8 @@ roper_toplines_wide <- roper_toplines_wide |>
 # sample size of that independent sample couldn't be determined. The Roper
 # Center includes a study note that states "Sample size is approximate".
 
-roper_toplines_wide |> 
-  janitor::get_dupes(archive_number)
+# roper_toplines_wide |> 
+#   janitor::get_dupes(archive_number)
 
 # Show duplication question IDs in Roper topline data ---------------------
 
@@ -632,9 +632,9 @@ roper_toplines_wide |>
 # referring to the actual data set (if available).
 
 # return duplicate question IDs, along with archive number, etc.
-roper_toplines_wide |> 
-  janitor::get_dupes(question_id) |>
-  dplyr::select(archive_number, question_id, dupe_count, president, citation)
+# roper_toplines_wide |> 
+#   janitor::get_dupes(question_id) |>
+#   dplyr::select(archive_number, question_id, dupe_count, president, citation)
 
 
 
@@ -649,32 +649,32 @@ roper_toplines_wide <- roper_toplines_wide |>
 # final check -------------------------------------------------------------
 
 # no rows of `approve` or `disapprove` should be missing (i.e., NA)
-roper_toplines_wide |> dplyr::filter(is.na(approve))
-roper_toplines_wide |> dplyr::filter(is.na(disapprove))
+# roper_toplines_wide |> dplyr::filter(is.na(approve))
+# roper_toplines_wide |> dplyr::filter(is.na(disapprove))
 
 # The column variable `unsure` includes any "No opinion", "Don't know",
 # "Refused", etc.. The `inap` includes any NA, missing, or responses that were inapplicable
 # as either `approve` or `disapprove` (e.g., "Both Approve and Disapprove", "*")
-roper_toplines_wide |> 
-  dplyr::filter(is.na(unsure)) |> 
-  dplyr::select(archive_number, question_id, president, year, 
-         approve, disapprove, unsure, inap) |> 
-  print(n = Inf)
+# roper_toplines_wide |> 
+#   dplyr::filter(is.na(unsure)) |> 
+#   dplyr::select(archive_number, question_id, president, year, 
+#          approve, disapprove, unsure, inap) |> 
+#   print(n = Inf)
 
 # The `unsure` column for at least three observations needs to be corrected from
 # NA to the actual value in the data set.
 
 # this shows the actual response percent values for the three observations 
-roper_toplines_clean |> 
-  dplyr::filter(archive_number %in% c("31089821", "31089745", "31088524")) |> 
-  dplyr::select(archive_number, question_id, president, start, end, resp_txt, resp_pct)
+# roper_toplines_clean |> 
+#   dplyr::filter(archive_number %in% c("31089821", "31089745", "31088524")) |> 
+#   dplyr::select(archive_number, question_id, president, start, end, resp_txt, resp_pct)
 
 # and this shows the same observations in the wide data frame. 
 # Note how `unsure` is NA for each. 
-roper_toplines_wide |> 
-  dplyr::filter(archive_number %in% c("31089821", "31089745", "31088524")) |> 
-  dplyr::select(archive_number, question_id, president, start, end, 
-         approve, disapprove, unsure, inap)
+# roper_toplines_wide |> 
+#   dplyr::filter(archive_number %in% c("31089821", "31089745", "31088524")) |> 
+#   dplyr::select(archive_number, question_id, president, start, end, 
+#          approve, disapprove, unsure, inap)
 
 # correct the three observations from NA to the actual response percentage value
 roper_toplines_wide <- roper_toplines_wide |> 
@@ -699,16 +699,16 @@ roper_toplines_wide <- roper_toplines_wide |>
 
 # Final n = 1,879
 # year range = 1938-2025 (up to March 2025)
-roper_toplines_wide |> 
-  dplyr::summarise(
-    n = dplyr::n(),
-    earliest_year = min(year),
-    latest_year = max(year)
-  )
+# roper_toplines_wide |> 
+#   dplyr::summarise(
+#     n = dplyr::n(),
+#     earliest_year = min(year),
+#     latest_year = max(year)
+#   )
 
 # number of observations per president
-roper_toplines_wide |> 
-  dplyr::reframe(n = dplyr::n(), .by=president)
+# roper_toplines_wide |> 
+#   dplyr::reframe(n = dplyr::n(), .by=president)
 
 
 # merge 2015 and 2016 Obama ratings ---------------------------------------
@@ -720,8 +720,7 @@ roper_toplines_wide |>
 
 # get approval ratings for Obama in 2016 ----------------------------------
 
-# load `rvest` R package
-library(rvest)
+
 
 # this reads all tables on the page and returns them in a list
 # you can save those tables, and then use magrittr to extract specific ones
@@ -820,7 +819,7 @@ obama2015 <- gallup_obama_tables %>%
   dplyr::filter(!date == "" & !date == "Gallup") |>
   dplyr::mutate(across(c(approve, disapprove, no_opinion), ~as.numeric(.)))
 
-obama2015 |> print(n = Inf)
+# obama2015 |> print(n = Inf)
 
 
 obama2015 <- obama2015 |> 

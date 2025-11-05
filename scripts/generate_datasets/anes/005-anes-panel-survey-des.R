@@ -85,8 +85,8 @@ pum_2016vars <- censusapi::listCensusMetadata(name = "acs/acs1/pums", vintage = 
 pum_2016vars <- dplyr::as_tibble(pum_2016vars)
 
 # identify PUMs variables of interest
-pum_2016vars |>
-  dplyr::filter(name %in% c("AGEP", "TYPE", "CIT", "PWGTP", "ST"))
+# pum_2016vars |>
+#   dplyr::filter(name %in% c("AGEP", "TYPE", "CIT", "PWGTP", "ST"))
 
 # quick function to make it easier to get value labels from the census meta data
 # using `censusapi` package
@@ -159,7 +159,7 @@ acs1_2016 <- acs1_2016 |>
 targetpop2016 <- acs1_2016 |> dplyr::pull(PWGTP) |> sum()
 
 # U.S. Citizens, 18 or older, residing in U.S. at time of 2016 election
-scales::comma(targetpop2016) 
+# scales::comma(targetpop2016) 
 
 # get the same by state
 state_pops2016 <- acs1_2016 |> 
@@ -170,13 +170,13 @@ state_pops2016 <- acs1_2016 |>
   dplyr::select(st, st_abbr, stfips, pop)
 
 # return each state's population alongside proportion of national population 
-state_pops2016 |> 
-  dplyr::select(st, pop) |> 
-  dplyr::mutate(
-    pct = pop/sum(pop)*100,
-    pop = scales::comma(pop)
-    ) |> 
-  print(n = Inf)
+# state_pops2016 |> 
+#   dplyr::select(st, pop) |> 
+#   dplyr::mutate(
+#     pct = pop/sum(pop)*100,
+#     pop = scales::comma(pop)
+#     ) |> 
+#   print(n = Inf)
 
 
 
@@ -184,10 +184,10 @@ state_pops2016 |>
 
 # the 2024 ANES panel weight sums to the panel sample, i.e., data is weighed to
 # the sample and not the population.
-anes_panel |> 
-  dplyr::summarise(
-    sample_2024 = sum(wt_panel, na.rm = T)
-  )
+# anes_panel |> 
+#   dplyr::summarise(
+#     sample_2024 = sum(wt_panel, na.rm = T)
+#   )
 
 # For post-election panel sample, use these PSU and stratum pairs
 # wt_panel = V240106b, psu = V240106c, strata = V240106d
@@ -200,11 +200,11 @@ anes_panel <- anes_panel |>
 
 
 # the adjusted weight variable will sum to the respective target population
-anes_panel |> 
-  dplyr::summarise(
-    population = scales::comma(sum(wt_panel_adj)),
-    unweighed_sample_n = scales::comma(sum(wt_panel)) 
-  )
+# anes_panel |> 
+#   dplyr::summarise(
+#     population = scales::comma(sum(wt_panel_adj)),
+#     unweighed_sample_n = scales::comma(sum(wt_panel)) 
+#   )
 
 
 # create the survey design object for 2016-2020-2024 ANES panel 
@@ -216,7 +216,7 @@ anes_panel_des <- anes_panel |>
     nest = TRUE             # ensure clusters (PSU) are nested within strata
   )
 
-anes_panel_des
+# anes_panel_des
 
 # save survey design objects ----------------------------------------------
 

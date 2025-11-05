@@ -147,4 +147,5 @@ readr::write_csv(
   file = "resources/anes resources/anes cdf/anesCDF_codebook.csv"
   )
 
+# clear envir
 rm(list = ls())

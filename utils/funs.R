@@ -608,3 +608,23 @@ continuous_stats <- function(data, var) {
 # column names with the quos() function, we are telling R to look for them in
 # the data frame being passed to a dplyr verb rather than looking for them as
 # objects in the global environment.
+
+# fun: source_dir ---------------------------------------------------------
+
+# custom function to source all .R script files in a directory
+source_dir <- function(path, trace = TRUE, recursive = TRUE, ...){
+  rscripts <- list.files(path, pattern = "\\.R$", full.names = TRUE, recursive = recursive)
+  
+  # check for .R scripts
+  if (length(rscripts) > 0){
+    # source each file
+    for (file in rscripts){
+      if (trace) cat("sourcing:", basename(file), "\n")
+      source(file)
+    }
+    cat("finished source of all .R scripts in path:", path, "\n")
+  }
+  else {
+    cat("No .R scripts found in path:", path, "\n")
+  }
+}
