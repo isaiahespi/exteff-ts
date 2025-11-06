@@ -1,4 +1,4 @@
-# This script is used to compose the data set that will be used in the
+# This script is used to compose the replica data set that will be used in the
 # replication and extended analysis.
 
 
@@ -44,7 +44,7 @@ source(here::here('utils', 'funs.R'))
 cdf_wt <- readr::read_rds(file = "data/anes data/anes_cdf_wts.rds")
 
 # also load 2024 ANES survey data (saved as survey design object)
-anes2024 <- readr::read_rds(file = "data/anes2024des.rds")
+anes2024 <- readr::read_rds(file = "data/anes data/anes2024des.rds")
 
 # load presidential approval ratings data derived from Roper Center iPOLL
 roper <- readr::read_rds("data/roper/roper_toplines_pres_approval.rds")
