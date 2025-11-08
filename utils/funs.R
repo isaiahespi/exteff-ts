@@ -122,8 +122,8 @@ codebook <- function(x){
 # compute counts and proportions
 count_prop <- function(df, var, sort = FALSE) {
   df |>
-    count({{ var }}, sort = sort) |>
-    mutate(prop = n / sum(n),
+    dplyr::count({{ var }}, sort = sort) |>
+    dplyr::mutate(prop = n / sum(n),
            n_miss = sum(is.na({{ var }})))
 }
 
@@ -329,6 +329,34 @@ calcps2 <- function(data, var, drop_na = TRUE, ...) {
 
 
 
+# fun: count_group --------------------------------------------------------
+
+# this is essentially the same as the `calcps` function, except not specific to
+# srvyr
+
+# count x by group
+
+count_group <- function(dat, var, group_var, prop = TRUE, drop_na = TRUE) {
+  counts <- { dat } |>   
+    dplyr::group_by({{ group_var }}) |> 
+    dplyr::count({{ var }})
+  
+  if (prop == TRUE){
+    counts <- counts |>  
+      dplyr::mutate(prop = (n/sum(n))*100)
+  }
+  
+  counts <- counts |>
+    dplyr::mutate(Variable = stringr::str_to_upper(rlang::englue("{{ var }}"))) |> 
+    dplyr::rename(Response = {{ var }}) |> 
+    dplyr::select({{ group_var }}, Variable, dplyr::everything()) 
+  
+  if (drop_na == TRUE){
+    counts <- counts |>
+      tidyr::drop_na()
+  }
+  return(counts)
+}
 
 # fun: counts and proportions for single factor of tbl_svy object --------
 
@@ -627,4 +655,17 @@ source_dir <- function(path, trace = TRUE, recursive = TRUE, ...){
   else {
     cat("No .R scripts found in path:", path, "\n")
   }
+}
+
+
+# fun: out2fig ------------------------------------------------------------
+
+# function shamelessly copied from
+# https://arelbundock.com/posts/quarto_figures/index.html
+
+# this is a simple calculator to figure out what value of `fig-width` to select
+# as output for a .qmd document
+
+out2fig = function(out.width, out.width.default = 0.7, fig.width.default = 6) {
+  fig.width.default * out.width / out.width.default 
 }

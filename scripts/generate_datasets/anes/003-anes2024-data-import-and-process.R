@@ -946,8 +946,15 @@ na_vals <- c(
 )
 
 anes2024 <- anes2024 |>
-  dplyr::mutate(dplyr::across(dplyr::where(labelled::is.labelled),
-                ~sjlabelled::set_na(., na = na_vals)))
+  dplyr::mutate(dplyr::across(
+    dplyr::where(labelled::is.labelled),
+    ~ sjlabelled::set_na(
+      .,
+      na = na_vals,
+      as.tag = TRUE,
+      drop.levels = TRUE
+    )
+  ))
 
 # Alternatively, just NA the specific values
 # anes2024 |>

@@ -4,13 +4,11 @@ project:
     - "index.qmd"
     - "notebooks/figure1_replication.qmd"
     - "notebooks/figure2_replication.qmd"
-    - "!notebooks/02-political_efficacy_in_ANES2008_and_2012.qmd"
-    - "!01-data.qmd"
 
 manuscript:
   meca-bundle: false
-  resources: 
-    - resources/anes_timeseries_2020_userguidecodebook_20220210.pdf
+  # resources: 
+  #   - resources/anes_timeseries_2020_userguidecodebook_20220210.pdf
   notebooks:
     - notebook: notebooks/figure1_replication.qmd
       title: "Figure 1 Replication"
@@ -22,6 +20,7 @@ manuscript:
 
 execute:
   freeze: auto
+  echo: false
 
 notebook-links: false
 bibliography: references.bib
@@ -30,13 +29,16 @@ date-format: "YYYY-M-D"
 citation:
   container-title: Manuscript
 
+functions: place
+
 format:
   html:
     toc: true
     toc-depth: 3
     embed-resources: false
-    mainfont: TeX Gyre Pagella
-    mathfont: TeX Gyre Pagella Math
+    mainfont: STIX Two Text
+    mathfont: New Computer Modern Math
+    monofont: Fira Code
     link-citations: true
     smooth-scroll: true
     link-external-newwindow: true
@@ -49,6 +51,27 @@ format:
   
   typpo-typst:
     keep-typ: false
+    fig-width: 4
+    fig-asp: 0.618
+    # uncomment to adjust these options
+    # two-column: true # default is `two-column: true` layout
+    # paper: "us-letter",    
+    # mainfont: "STIX Two Text"
+    # mathfont: "New Computer Modern Math"
+    # monofont: "Fira Code"
+    # fontsize: 11pt
+    # leading: 0.65em # spacing between lines
+    # spacing: 1.2em # spacing between paragaphs
+    # first-line-indent: 1em
+    # all: true
+    # linkcolor: "#800000",
+    # title-size: 1.5em,
+    # subtitle-size: 1.25em,
+    # sectionnumbering: "I.A.1",
+    # pagenumbering: "1",
+    # linenumbering: none
+    # bibliography-titel: "Reference"
+    # bibliographystyle: "chicago-author-date"
       
   # docx:
   #   reference-doc: custom-reference.docx

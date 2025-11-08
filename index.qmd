@@ -3,23 +3,24 @@ title: Meaning and Measurement of External Political Efficacy
 subtitle: A Replication and Extention of @chamberlain2012
 running-head: External Political Efficacy Revisited
 author:
+    #   - Primary 
   - name: Isaiah
     # orcid: 
     corresponding: true
     email: gespinoz@umd.edu
     # roles:
-    #   - Primary 
     affiliations:
       - Department of Government and Politics, University of Maryland at College Park
 # keywords:
-#   - La Palma
-#   - Earthquakes
 abstract: |
-  It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. @chamberlain2012 attempted to address this problem in the hopes that results would elucidate the meaning from the measurement. Drawing from the usual conceptual definition of external efficacy, Chamberlain hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to predictors representing the political environment. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the predictors of the analysis are untenable as proxies for the political environment. To conduct a fairer test of the meaning and measurement of external efficacy, I examine whether external efficacy has been responsive to changes to the political environment since 2013 after the Supreme Court decision in *Shelby County v. Holder* which ruled Section 4(b) of the Voting Rights Act unconstitutional.     
+  Drawing from the conventional conceptual definition of external efficacy, Chamberlain hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to chosen predictors. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the construst validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the method of analysis does not appropriately test the hypotheses, and the predictors of the analysis are untenable as factors of the political environment. I attempt to conduct a fairer test of the same hypothesis through different methods and factors of the political environment.      
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
 #| label: setup
+#| include: false
 
 # set seed for reproducibility
 set.seed(12345)
@@ -40,15 +41,41 @@ dlong <- readr::read_rds(file = "data/replica data/replica_data_long.rds")
 
 
 # set `modelsummary` R package global options
-options(modelsummary_factory_html = 'markdown')
-options(modelsummary_factory_latex = 'kableExtra')
+# options(modelsummary_factory_html = 'markdown')
+# options(modelsummary_factory_latex = 'kableExtra')
+
+# Replication data set
+
+# the `replica` data set is constrained to the data (presumably) available to
+# Chamberlain at the time
+replica_long <- dlong |> dplyr::filter(year >= 1952 & year <= 2008)
+
+replica <- d |> dplyr::filter(year >= 1952 & year <= 2008)
+
 
 ```
 
+```{=typst}
+#show figure.caption: it => [
+    #v(-2em)
+    #set text(size:  0.95em, style: "oblique")
+    #align(left)[
+      #block(inset: 2em)[
+        #text(weight: "bold")[
+          #it.supplement
+          #context it.counter.display(it.numbering)
+          ]
+          #it.separator
+          #it.body
+          ]
+        ]
+      ]
+
+```
 
 ## Introduction
 
-
+It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. @chamberlain2012 attempted to address this problem in the hopes that results would elucidate the meaning from the measurement.
 
 ## Background (Literature Review)
 
@@ -57,29 +84,41 @@ options(modelsummary_factory_latex = 'kableExtra')
 
 ## Replication of Figure 1 from @chamberlain2012
 
+:::{.place arguments='top, scope: "parent", float: true'}
+
 {{< embed notebooks/figure1_replication.qmd#fig-rep1 >}}
 
+:::
 
 In the original article, the Y-axis of @fig-rep1 was not scaled to range from 0 to 100. Note also that the `NOSAY` external efficacy question was not asked in the 1986 ANES; A line for responses to the `NOSAY` question between 1984 and 1988 is drawn implicitly via linear interpolation.
 
 I extend the time-series chart to include the years of ANES data made available since Chamberlain's original study^[At the time of writing, preliminary data for ANES 2024 was available but not yet included in the Cumulative Data File.] 
 
+:::{.place arguments='top, scope: "parent", float: true'}
+
 {{< embed notebooks/figure1_replication.qmd#fig-rep1adj >}}
 
+:::
 
 ## Replication of Figure 2 from @chamberlain2012
 
 @fig-rep2 charts plot lines of the three chosen predictors over time
 
+:::{.place arguments='top, scope: "parent", float: true'}
+
 {{< embed notebooks/figure2_replication.qmd#fig-rep2 >}}
 
+:::
 
 The data available to Chamberlain at the time ranged from 1952 to 2008 for Presidential approval ratings (Gallup); 1960 to 2008 for quarterly ICS data (UMich), and of course, 1958 and 1964 to 2008 for trust in government (ANES). @fig-rep2 constrains the data to approximate the data available at the time of the original publication. 
 
 The following chart @fig-rep2adj is expanded to include all years for which data from each source was available^[Note that the Gallup monthly polling data was obtained through The Roper Center's iPoll database.]. In addition, no adjustment was made to the data and the Y-axis was expanded to preserve the full range of each variable. Values of the ICS are not constrained to range on a particular scale
 
+:::{.place arguments='top, scope: "parent", float: true'}
 
 {{< embed notebooks/figure2_replication.qmd#fig-rep2adj >}}
+
+:::
 
 Note the distinctive difference in ICS values between @fig-rep2 and @fig-rep2adj. In a footnote, Chamberlain states,
 
@@ -87,8 +126,11 @@ Note the distinctive difference in ICS values between @fig-rep2 and @fig-rep2adj
 
 @fig-rep2compare includes both the non-modified and modified versions of yearly average ICS values over time.
 
+:::{.place arguments='top, scope: "parent", float: true'}
 
 {{< embed notebooks/figure2_replication.qmd#fig-rep2compare >}}
+
+:::
 
 The purpose of @fig-rep2 was not to visually compare average values of each variable. However, such a visualization inevitably presents as such. As stated by Chamberlain, the purpose of the chart was to demonstrate that, "...across time, significant variation exists within these variables." [@chamberlain2012, 120]. 
 
@@ -98,13 +140,17 @@ Understandably, average values are difficult to compare across time due to the f
 
 ## Replication of Lagged Dependent Variable Model
 
+Recall @chamberlain2012's hypothesis was that, according to the conceptual definition of the construct, aggregate external efficacy would appear to be dynamically responsive to "changes in the political environment" [-@chamberlain2012, 120]. In order to test this hypothesis, he conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008 by use of a lagged dependent variable OLS model. The dependent variable was the average index values for external efficacy aggregated across time from 1952 to 2008 (whenever ANES measured it). His independent variable predictors included presidential approval ratings, an index of consumer sentiment, trust in government, and a 4-year lag of the dependent variable external efficacy. Null results would invalidate, or at least challenge, the measurement of external efficacy and require re-consideration of both concept and measurement. Stated a bit more exhaustively, given the conceptual definition of external political efficacy, null results would invalidate the interpretation that results from the two survey items represent the construct external political efficacy.
 
+Chamberlain reported that results could not reject null: aggregate external efficacy was unresponsive to the predictors across time. @tbl-1 is an attempt to replicate the same table from the original study [see -@chamberlain2012 123].
 
+:::{.place arguments='top, scope: "parent", float: true'}
 
 ```{r}
-#| label: tbl-replica
+#| label: tbl-1
 #| tbl-cap: "Replica of Table 1 from Chamberlain (2012): 'Lagged Dependent Variable Model of Macro-Level Variables on External Efficacy'. Note that Model 5 of the original study is not included. Also note that Model 4 has 1 less observation compared to original study, which should not be since the data is exactly the same."
 #| tbl-cap-location: bottom
+
 
 # Essentially, this is an attempt to replicate Table 1 in Chamberlain (2012)
 # Except, I exclude Congressional approval as another predictor to examine. I
@@ -112,24 +158,21 @@ Understandably, average values are difficult to compare across time due to the f
 # Models 1-4 are models for each individual predictor
 # models 5 and 6 are models for sets of predictors (excluding Congressional approval)
 
-# quick way to add lags to each variable column
-replica <- replica |> 
-  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
-
 models <- list(
-  "Model 1" = lm(exteff ~ exteff_lag4, data = replica), 
-  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = replica), 
-  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = replica), 
-  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = replica), 
-  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = replica), 
-  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = replica))
+  "Model 1" = lm(exteff ~ exteff.T4, data = replica), 
+  "Model 2" = lm(exteff ~ exteff.T4 + ics.T1, data = replica), 
+  "Model 3" = lm(exteff ~ exteff.T4 + presapp.T1, data = replica), 
+  "Model 4" = lm(exteff ~ exteff.T4 + trustgov.T2, data = replica), 
+  "Model 5" = lm(exteff ~ exteff.T4 + ics.T1 + presapp.T1, data = replica), 
+  "Model 6" = lm(exteff ~ exteff.T4 + ics.T1 + presapp.T1 + trustgov.T2, data = replica))
+
 
 # vector of preferred coefficient names
 coef_names <- c(
-  "exteff_lag4"   =  "External Efficacy (t-4)",
-  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
-  "presapp_lag1"  = "Presidential Approval (t-1)",
-  "trustgov_lag2" = "Trust in Government (t-2)",
+  "exteff.T4"   =  "External Efficacy (t-4)",
+  "ics.T1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp.T1"  = "Presidential Approval (t-1)",
+  "trustgov.T2" = "Trust in Government (t-2)",
   "(Intercept)"   = "Constant")
 
 # Replication of results from Chamberlain Table 1.
@@ -142,22 +185,24 @@ modelsummary::modelsummary(
   stars = T,
   coef_map = coef_names,
   gof_map = c("nobs", "adj.r.squared"),
-  notes = list(
-    "Note.---Lagged dependent variable OLS model",
-    "*p < .05; **p < .01"),
-  width = c(3, 1, 1, 1, 1, 1, 1), 
+  notes = list("*p < .05; **p < .01"),
+  width = c(.3, .1, .1, .1, .1, .1, .1), 
   align = "lcccccc"
 ) |> 
-  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.80)
-
+  tinytable::style_tt(j = 1, align = "l", bold = T, fontsize = 0.85)
 
 # For model 4, the N I have differs from the N in Chamberlain by 1. This shouldn't be the case since the data should be exactly the same
 
-
-
 ```
 
+:::
+
+The table I generate almost replicates Table 1 from @chamberlain2012. The coefficients are not identical, but very close. The number of observations, however, differ for at least one model but not others. Models 1, 2, 3, 5, and 6 have same number of observations, but model 4 has two fewer observations compared to Table 1 in Chamberlain (2012).
+
+
 ## Replication Lagged Dependent Variable Model
+
+:::{.place arguments='top, scope: "parent", float: true'}
 
 ```{r}
 #| label: tbl-replica2
@@ -169,29 +214,26 @@ modelsummary::modelsummary(
 # remove ics_modified var
 d <- d |> dplyr::select(-ics_modified)
 
-# exclude years prior to 1952 and beyond 2020
+# exclude years prior to 1952 and beyond 2024
 d <- d |> 
-  dplyr::filter(!year < 1952, !year > 2020)
+  dplyr::filter(year >= 1952, year <= 2024)
 
-# add lags
-d <- d |> 
-  timetk::tk_augment_lags(.value = -year, .lags = 1:4)
 
 models2 <- list(
-  "Model 1" = lm(exteff ~ exteff_lag4, data = d), 
-  "Model 2" = lm(exteff ~ exteff_lag4 + ics_lag1, data = d), 
-  "Model 3" = lm(exteff ~ exteff_lag4 + presapp_lag1, data = d), 
-  "Model 4" = lm(exteff ~ exteff_lag4 + trustgov_lag2, data = d), 
-  "Model 5" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1, data = d), 
-  "Model 6" = lm(exteff ~ exteff_lag4 + ics_lag1 + presapp_lag1 + trustgov_lag2, data = d))
+  "Model 1" = lm(exteff ~ exteff.L4, data = d), 
+  "Model 2" = lm(exteff ~ exteff.L4 + ics.T1, data = d), 
+  "Model 3" = lm(exteff ~ exteff.L4 + presapp.T1, data = d), 
+  "Model 4" = lm(exteff ~ exteff.L4 + trustgov.T2, data = d), 
+  "Model 5" = lm(exteff ~ exteff.L4 + ics.T1 + presapp.T1, data = d), 
+  "Model 6" = lm(exteff ~ exteff.L4 + ics.T1 + presapp.T1 + trustgov.T2, data = d))
 
 
 # vector of preferred coefficient names
 coef_names <- c(
-  "exteff_lag4"   =  "External Efficacy (t-4)",
-  "ics_lag1"      = "Index of Consumer Sentiments (t-1)",
-  "presapp_lag1"  = "Presidential Approval (t-1)",
-  "trustgov_lag2" = "Trust in Government (t-2)",
+  "exteff.L4"   =  "External Efficacy (t-4)",
+  "ics.T1"      = "Index of Consumer Sentiments (t-1)",
+  "presapp.T1"  = "Presidential Approval (t-1)",
+  "trustgov.T2" = "Trust in Government (t-2)",
   "(Intercept)"   = "Constant")
 
 # Replication of results from Chamberlain Table 1.
@@ -215,14 +257,64 @@ modelsummary::modelsummary(
 
 ```
 
+:::
+
+## Lagged by Prior Observed Value
+
+Since the general idea is that prior values of aggregated external efficacy account for a portion of subsequent values of the same, then it seems reasonable enough to simply regress external efficacy on the most recent observed values of itself instead of its value four years prior.
+
+I run the same analysis lagging the dependent variable by it's preceding value, i.e., the average index value of the previous ANES survey iteration. Moreover, I lag the trust-in-government index by its prior value as well for the models that include the aggregated index.
+
+```{r}
+
+jtools::export_summs(
+  lm(exteff ~ exteff.L1, data = replica), 
+  lm(exteff ~ exteff.L1 + ics.L1, data = replica), 
+  lm(exteff ~ exteff.L1 + presapp.L1, data = replica), 
+  lm(exteff ~ exteff.L1 + trustgov.L1, data = replica), 
+  lm(exteff ~ exteff.L1 + ics.L1 + presapp.L1, data = replica), 
+  lm(exteff ~ exteff.L1 + ics.L1 + presapp.L1 + trustgov.L2, data = replica), 
+  digits = 3,
+  statistics = c("N" = "nobs", "Adj. R-Squared" = "adj.r.squared"),
+  coefs = c(
+  "External Efficacy (prior value)" = "exteff.L1",
+  "Index of Consumer Sentiments (t-1)" = "ics.L1",
+  "Presidential Approval (t-1)" = "presapp.L1",
+  "Trust in Government (prior value)" = "trustgov.L1",
+   "Constant" = "(Intercept)") 
+  )
 
 
+```
+
+Here results are similar to Table 1; only the lagged dependent variable significantly influences subsequent values of itself (b1 = 0.658, s.e. = 0.162, p < 0.001).
+
+
+# LDV model is unwarrented
+
+It is not necessary to lag the dependent variable, and there's good reason not to; a lagged dependent variable is apt to soak up all influence from the predictors, especially if serial autocorrelation is present. Chamberlain doesn't provide a check for serial autocorrelation.
+
+However, it is not necessary even theoretically. Even taking Chamberlain's contention that respondent's take past government performance and economic conditions into consideration, there's no good reason to then lag the dependent variable as well. Given the logic provided, we might as well include lagged variables for every attitudinal outcome of interest consistently measured in national election studies. 
+Here I conduct the same simple OLS model excluding the lagged dependent variable
+
+```{r}
+
+d |> 
+  lm(exteff ~ ics.T1 + presapp.T1 + trustgov.T2, data = _) |> 
+  summary()
+
+# As predicted, the original LDV model doesn't hold
+
+```
+
+Given the conceptual overlap between trust-in-government and external political efficacy, it has not been well established that the items measuring one are not also capturing the other. That is, the trust-in-government items 
 
 
 ## Conclusion
 
 ## Appendix {.appendix}
 
+:::{.place arguments='top, scope: "parent", float: true'}
 
 ```{r}
 #| label: tbl-presterms
@@ -270,6 +362,8 @@ pres_terms |>
 
 
 ```
+
+:::
 
 
 

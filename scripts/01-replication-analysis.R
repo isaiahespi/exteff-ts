@@ -180,7 +180,7 @@ jtools::export_summs(
 
 # Lag DV by prior value -----------------------------------------------
 
-# Since the general idea is that prior values of aggregated external efficacy account for a portion of subsequent values of the same, then it seems reasonable enough to simply regress external efficacy on most recent prior values of itself while recognizing that the preceding value of external efficacy was measured during the previous iteration of the ANES survey.
+# Since the general idea is that prior values of aggregated external efficacy account for a portion of subsequent values of the same, then it seems reasonable enough to simply regress external efficacy on prior observed values of itself while recognizing that the preceding value of external efficacy was measured during the previous iteration of the ANES survey.
 
 # In a final analysis using the replica data, I run the same analysis lagging the dependent variable by it's preceding value, i.e., the average index value of the previous ANES survey iteration. Moreover, I lag the trust-in-government index by its prior value as well for the models that include the aggregated index.
 

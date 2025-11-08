@@ -2580,3 +2580,136 @@ The two items that comprise the measurement of external efficacy follow,
 1.  "People like me don't have any say about what the government does." [NOSAY]
 
 2.  "I don't think public officials care much what people like me think." [NOCARE]
+
+
+# 2025-11-07
+
+The only way I'm able to get the same number of observations as Chamberlain's Table 1 for model 4 is if I use lags of the prior observation, not t-4 and t-2
+
+```{r}
+
+# why does number of obs in model 4 differ from Chamberlain?
+# Chamberlain model 4, n = 21
+# replication model 4, n = 19
+
+# lagged by 1 observation, not time
+# this is the only way that the number of obs match with chamberlain, except the
+# coefficients are completely different. I'm not sure what he did or how he did
+# it.
+replica |>  
+  lm(exteff ~ exteff.L1 + trustgov.L1, data = _) |> 
+  summary()
+
+jtools::export_summs(
+  lm(exteff ~ exteff.L1 + trustgov.L1, data = replica),
+  digits = 3,
+  statistics = c("N" = "nobs", "Adj. R-Squared" = "adj.r.squared"),
+  coefs = c(
+    "External Efficacy (L-1)" = "exteff.L1",
+    "Trust in Government (L-1)" = "trustgov.L1",
+    "Constant" = "(Intercept)"
+  )
+)
+
+
+replica |> 
+  dplyr::select(
+    year,
+    election_yr,
+    exteff,
+    exteff.L1,
+    trustgov,
+    trustgov.L2
+    ) |> 
+  dplyr::filter(!is.na(trustgov)) |> 
+  print(n = Inf)
+
+
+```
+
+```{r}
+
+names(models) <- janitor::make_clean_names(names(models), sep_in = " ")
+
+models.tidy <- purrr::map(models, broom::tidy)
+
+list2env(models.tidy, envir = .GlobalEnv)
+
+models.tidy[1] |> str()
+
+og.model.1 <- model.1 |>
+  dplyr::mutate(
+    estimate = c(13.039, 0.730),
+    std.error = c(8.059, 0.149),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 21)
+  )
+
+og.model.2 <- model.2 |>
+  dplyr::mutate(
+    estimate = c(24.702, 0.568, -0.048),
+    std.error = c(17.436, 0.162, 0.162),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 18)
+  )
+
+og.model.3 <- model.3 |>
+  dplyr::mutate(
+    estimate = c(-1.253, 0.719, 0.271),
+    std.error = c(10.598, 0.140, 0.140),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 20)
+  )
+
+og.model.4 <- model.4 |>
+  dplyr::mutate(
+    estimate = c(17.824, 0.613, 0.033),
+    std.error = c(9.343, 0.221, 0.252),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 18)
+  )
+
+og.model.5 <- model.5 |>
+  dplyr::mutate(
+    estimate = c(18.875, 0.587, -0.132, 0.223),
+    std.error = c(17.554, 0.159, 0.170, 0.163),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 17)
+  )
+
+og.model.6 <- model.6 |>
+  dplyr::mutate(
+    estimate = c(35.538, 0.383, -0.208, 0.121, 0.169),
+    std.error = c(25.520, 0.300, 0.324, 0.206, 0.320),
+    statistic = estimate / std.error,
+    p.value = pt(-abs(statistic), df = 14)
+  )
+
+models2 <- list(
+  "Model 1" = og.model.1,
+  "Model 2" = og.model.2,
+  "Model 3" = og.model.3,
+  "Model 4" = og.model.4,
+  "Model 5" = og.model.5,
+  "Model 6" = og.model.6)
+
+models.tidy
+models2
+
+
+# Replication of results from Chamberlain Table 1.
+jtools::export_summs(
+  models2,
+  ci_level = 0.95,
+  digits = 3,
+  statistics = c("N" = NULL),
+  coefs = c(
+    "External Efficacy (t-4)" = "exteff.T4",
+    "Index of Consumer Sentiments (t-1)" = "ics.T1",
+    "Presidential Approval (t-1)" = "presapp.T1",
+    "Trust in Government (t-2)" = "trustgov.T2",
+    "Constant" = "(Intercept)"
+  )
+)
+
+```
