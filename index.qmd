@@ -13,7 +13,7 @@ author:
       - Department of Government and Politics, University of Maryland at College Park
 # keywords:
 abstract: |
-  Drawing from the conventional conceptual definition of external efficacy, Chamberlain hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to chosen predictors. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the construst validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the method of analysis does not appropriately test the hypotheses, and the predictors of the analysis are untenable as factors of the political environment. I attempt to conduct a fairer test of the same hypothesis through different methods and factors of the political environment.      
+  It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. Drawing from the conventional conceptual definition of external efficacy, @chamberlain2012 hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to chosen predictors. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the construst validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the method of analysis does not appropriately test the hypotheses, and the predictors of the analysis are untenable as factors of the political environment. I attempt to conduct a fairer test of the same hypothesis through different methods and factors of the political environment.      
 editor_options: 
   chunk_output_type: console
 ---
@@ -75,9 +75,217 @@ replica <- d |> dplyr::filter(year >= 1952 & year <= 2008)
 
 ## Introduction
 
-It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. @chamberlain2012 attempted to address this problem in the hopes that results would elucidate the meaning from the measurement.
+This paper applies heavier scrutiny to the construct validity of external political efficacy according to its conventional definition and measurement. Although surely I am not the first to do so in the long years since its conception, critical scrutiny about the meaning and measure of political efficacy beliefs has stagnated into comfortable waters. 
+
+The multidimensional conception of political efficacy has been generally accepted on the basis of meager results affirming the internal and external dimensions proposed in theory. 
+
+While much effort was expended to construct a reliable and valid measurement method for *internal* political efficacy [@craig1990; @craig1982; @niemi1991a], and later research bolstered its validation [@morrell2003], *external* political efficacy has not received the same critical focus despite its questionable validity. In fact, the two survey items used by the American National Election Studies (ANES) to construct the external political efficacy index have persisted relatively unchanged from the original "sense of political efficacy" measurement scale introduced by @campbell1954 in "The Voter Decides". What's worse is that while the two survey items have remained unchanged, the definition of external political efficacy has deviated substantially from that original concept of political efficacy and even seems divorced from the ordinary meaning of 'efficacy'. As it is conceptualized, discussed, and understood in the literature, external political efficacy doesn't make sense on its own terms. From such fundamental issues around its conception follows issues regarding measurement.
+
+The trouble with the meaning and measure of external political efficacy has not gone unnoticed in prior literature, but there's been little in terms of dedicated scrutiny. One notable effort by @chamberlain2012 stands out as a lonely attempt to validate external efficacy according to it conventional conception. Simply put, Chamberlain posited that according to the definition of external efficacy, we would expect to see dynamic shifts in aggregate levels of external efficacy in accordance with changes in the political environment. His study stands as a unique way to test the construct validity of external efficacy that isn't reliant upon methods of common factor analysis or structural equation modeling (SEM). And it is appropriate considering that external efficacy, as conceived and measured, has remained generally unchallenged by scholars despite common acknowledgement of issues in measurement.
+
+Using aggregate data compiled from multiple sources, he conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008. Specifically, his study utilized a time-series lagged dependent variable ordinary least squares (OLS) model. The dependent variable was the average index values for external efficacy aggregated across time. The independent variable predictors were aggregated averages of presidential approval ratings, the index of consumer sentiment, trust in government, and a 4-year lag of the dependent variable. The hypothesis was that aggregate external efficacy would appear to be dynamically responsive to the chosen predictors. Null results would suggest the measurement of external efficacy is invalid, and require re-consideration of both concept and measurement. Results could not reject null: aggregate external efficacy was unresponsive to the predictors across time.
+
+Accordingly, Chamberlain's study was intended to test the construct validity of external political efficacy in reference to how it is understood, defined, and measured in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways. Chamberlain's dynamic time series model with lagged dependent variable is insufficient to properly test the validity and congruence of both meaning and measurement of external efficacy. The theoretical justification for the method is lacking, the lags for the model are arbitrary, and the chosen predictors are not tenable as factors representative of the political environment.
+
+The aim of this paper is to conduct a fairer test of external political efficacy given its conventional definition. As a first step, I attempt to replicate results from @chamberlain2012 and then extend them to include observations since the original study. I then address problems with the original study concerning the methods employed to test the theory.
+
+Then, I conduct a separate analysis with different predictors that serves as a more appropriate test. Using data from the 2016, 2020, and 2024 American National Election Studies (ANES), I examine whether external efficacy differs for panel respondents over time as political conditions differ between them and have changed around them. If external efficacy levels of the panel respondents are unresponsive to changes in political conditions, then response data from the survey items cannot be validly interpreted as reflective of the construct.
+
+
+
+Because the foundational conception of external efficacy is semantically disconnected from efficacy, attempts to measure the construct are doomed to fail. Even taken on their own, response data resulting from the items purported to measure the construct cannot be validly interpreted as evaluations of efficacy at all. As such, no interpretation of response data from external efficacy items cohere with its given conception, but worse, the given conception itself is misconstrued and semantically divorced from "efficacy" in the first place.
+
+...
+
+
+
+
+The question posed and investigated by him was whether external political efficacy in the aggregate is responsive to changes in the political environment.
+
+His reported findings suggest no. However, the predictors (explanatory variables) chosen as factors of the external political environment were not, indeed, factors of the political context. That is, the factors selected as predictors in Chamberlain's model can not be understood as representative, in part or in whole, of the political environment. Said predictor variables, of which there were three, were not independent of the individual nor could they be understood as representative of the political context at point in time. 
+
+He critiques the reliance or use of structural equal modeling in development of the measurement instrument on the basis that the question wording and definition of external political efficacy "implies a dynamic relationship" [-@chamberlain2012, 119], suggesting that novel measurement items would better cohere to the conceptual understanding of external efficacy if results captured individual's response to variation in government performance and economic conditions in retrospect. In other words, if external efficacy items measured perceptions of government responsiveness in reference to relatively recent actions of political actors, political institutions, and ever-changing economic conditions, then external efficacy in the aggregate would appropriately respond the such dynamic variation over time. 
+
+
+
+Chamberlain [-@chamberlain2012] was one of a few who focused on external political efficacy and exposed substantive faults in both its conception and measurement. Rather than propose a new measurement or offer a new conceptual understanding, Chamberlain attempted to discern whether this individual-level construct was sensitive to external factors in the environment as would be expected given its conceptual meaning. His research showed that aggregate external efficacy was not responsive to particular changes in the political environment. However, immediately brought into question is whether the predictors he selected are reflective or representative of the external political environment in the first place. 
+
+Despite Chamberlain's revelations, no subsequent work has been done to reconsider the conceptual foundation of external political efficacy in relation to it's twin component, internal political efficacy, nor with respect to any sensible theoretical framework in the current age. Although vital at exposing fault lines of efficacy research in political science, Chamberlain relied on a conception of external efficacy conflated with government responsiveness. Moreover, his selected predictors are dubious as factors representative of the external political environment. Indeed, the independent variables used in his analysis are not factors or variables of the external political context but individual attitudes related to satisfaction with, and trust in, government.
+
+The issue realized by Chamberlain was that external efficacy in the aggregate was insensitive to dynamic shifts of certain predictors. This invited challenge to both the concept and measure of external efficacy [-@chamberlain2012; see also @chamberlain2013]. However, @chamberlain2012's external predictors used to assess aggregate levels of external efficacy were a yearly average of Presidential approval, a yearly average of consumer confidence in the economy, and an average score on the trust in government index. These predictors were, nor are, hardly of the sort that have anything to do with the people's capacity to shape their political environment. Rather, these predictors are more inclined to show strong relationship with satisfaction with government. 
+
+Yet therein lies the problem: external efficacy **is not** understood in the literature as a belief about one's ability to impose effects upon, or very well *shape*, the political environment. In fact, its conceptual definition is most often described as "...referring to beliefs about the responsiveness of governmental authorities and institutions to citizen demands [@craig1990, 290; @niemi1991a, 1408]. In other words, external political efficacy is conceived as a measure of an individual's evaluation of the government's sensitivity to public preference by reference to the government's perceived responsiveness to "people like me".
+
+...
+
+
+
+...
+
+
+
+
+
+...
+
+-   To put it more formally: given that external political efficacy is based on a person's evaluation of the external political environment, and in so far as the external efficacy survey items validly cohere to the given meaning of the construct, then changes to the political environment should result in movement of external efficacy in the aggregate over time. If shifts in the external efficacy index are not significantly associated with factors reflective of the political context across time, then the external efficacy survey items do not coherently correspond with the given meaning of the construct, rendering the survey items invalid as measures thereof.
+
+Chamberlain concluded that, "aggregate external political efficacy does not appear to be dynamically responsive to changes in the political environment" [-@chamberlain2012, 125]. This might not be problematic if we suppose that people, generally, are insensitive to changes in the political environment. Surely an argument can be made there, but it is predicated on the notion that the measurement of external political efficacy is valid---i.e., that the survey items sufficiently measure the concept in question. However, we can't presume as such for the simple issue that we don't really have an unambiguous conception of external political efficacy. Never mind it's relationship to its sister component internal political efficacy; external political efficacy is so conceptually ambiguous that it is liable to stand as whatever internal political efficacy is not.
+
+The conventional definition of external political efficacy refers to, "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands" [@craig1990, 290; @niemi1991a, 1408]. However, the measures don't ask respondents to evaluate and report the extent to which they think governmental authorities and institutions respond to national public opinion or grievances. Nor do items make clear what it means for the government or institutions to be responsive. Rather, the two survey items that purported to measure external political efficacy are, 1) "People like me don't have any say about what the government does." \[NOSAY\], and 2) "I don't think public officials care much what people like me think." \[NOCARE\]. Response options usually range on a 5-point or 7-point scale from strongly agree to strongly disagree. From that, we can see that "having a say about what the government does" and "what people like me think" comprises "citizen demands" in the conceptual definition. The measurement items better reflect a judgement about how aligned government action and concern is with the individual's general political predilections and sentiment.
+
+Chamberlain's research note is an important article that demonstrates the weakness and ill-fit of both the concept and measurement of external political efficacy. Validity of measurement of the concept appeared hard to ignore as earlier researchers have recognized measurement problems at the outset. Importantly, the original authors of the survey items used to measure external political efficacy were themselves unsure of what those items actually measure. 
+
+> “...[Niemi et al. (1991)]  note that the two questions "are tapping something quite different from the new efficacy questions" but that "whatever they do measure. . .they do not measure internal efficacy" (italics in original) (Niemi et al. 1991, p. 1412).3 Thus, the authors who created the measure are unclear as to what it really measures.” [@chamberlain2012, 118]
+
+...
+
+
+
+...
+
+
+...
+
+:::{.note}
+This short paragraph describes the problem succinctly. The problem of not having valid ways to ascertain what we want to know. Ultimately, external efficacy items are uninformative in this regard. More broadly, however, the problem extends to the beloved internal political efficacy as well. 
+:::
+
+-   The measures of internal and external political efficacy do not tell us whether one believes that individual political action is worthwhile, whether political action matters, whether and to what extent active political engagement imposes any influence on the actions of governing actors, nor whether public intervention results in political outcomes.
+
+-   The important part is that, taken together or separately, neither external nor internal efficacy measures tell us the maximum effect of individual nor popular political activity from the perspective of the subject. This means that neither are tenable as evaluations of political efficacy.
+
+-   For interested researchers, the conventional measures of political efficacy do not nor can not inform us as whether the impact of public intervention, if any, would be recognizable as such from the perspective of the public. This point requires emphasis: scholars are unable to evaluate whether an individual, and by extension the mass public, is sensitive to the effects, if any, of their own political participation. Most importantly, scholars are also unable to evaluate whether the public is sensitive to substantial changes to the political environment---to conditions that pertain to the people's capacity to produce political outcomes, to impose influence, or even to participate as political actors. That is, we're unable to ascertain whether the people's political efficacy beliefs are sensitive to the conditions of their political status.
+
+...
+
+
+
+
+...
+
+This study addresses the construct validity of external political efficacy. Specifically, I aim to test the validity of a particular interpretation of data arising from survey items purported to measure the construct. 
+
+
+
+
+
 
 ## Background (Literature Review)
+
+:::{.note}
+This section is meant to brief the reader on the necessary background literature on political efficacy (internal, external, etc.) in order to understand the core issue and also to understand what prompted Chamberlain's original study. From this review, the reader should understand the issue clearly as an issue related to political methodology. As such, the focus should be more on reviewing the methods of political science previously employed regarding external political efficacy. I first need to provide a review of political efficacy and its breakdown into a multidimensional construct. Then, I will need to give some focus to construct validity---what it means and the literature thereof. I need to convey that this is a methods paper/project squarely concerned with construct validity.
+:::
+
+The seminal book titled "The Voter Decides" by @campbell1954 introduced the concept and initial measure of political efficacy which they believed was related to political activity. These authors referred to this variable as "sense of political efficacy". The full original excerpt is best to include, if not just for posterity, to understand the breadth of the original idea.
+
+> "Sense of political efficacy may be defined as the feeling that individual political action does have, or can have, an impact upon the political process, i.e., that it is worth while to perform one's civic duties. It is the feeling that political and social change is possible, and that the individual citizen can play a part in bringing about this change." [@campbell1954, 187]
+
+Positive correlation between one's "sense of political efficacy" and political participation was found and often replicated in subsequent studies [@agger1961; @campbell1960; @dahl1961]. It is with @lane1959a that the two dimensions of political efficacy were conceptually distinguished. Writing in "*Political Life: Why People Get Involved in Politics*", Lane bases much of his consideration of individual political efficacy upon a quality he refers to as "ego strength",
+
+> "Lying behind the capacity to assert oneself against the environment is the general concept of *ego strength*, a quality which is usually associated with the capacity to order one's life in a rational fashion, controlling at once the impulses which rise anarchically to the surface from within, and external events, in so far as they can be controlled....A person with a weak ego, one that has been thwarted in its development by repressive measures or simply never encourage to develop--"babified," so to speak--will tend to view the social scene as something over which he has no control." [@lane1959a, 147, emphasis original]  
+
+@lane1959a assessed that political efficacy distinguishes into two component sub-dimensions relating to "...the image of the self and the image of democratic government" (149).
+
+> "Men who have feelings of mastery and are endowed with ego strength tend to generalize these sentiments and to feel that their votes are important, politicians respect them, and elections are, therefore, meaningful processes. This constellation of attitudes has been variously called "a sense of political efficacy," "political self-confidence," and, in reverse, "sense of political futility. It has, of course, two components--the image of the self and the image of democratic government--and contains the tacit implication that an image of the self as effective is intimately related to the image of democratic government as responsive to the people." [@lane1959a, 149].
+
+These component dimensions evidently became distinguished as the "internal" and "external" dimensions of political efficacy.
+
+The original concept lacked a strong theoretical foundation, which led to subsequent research intent on reinterpreting the meaning from results of the survey items.
+
+Between the 1950s to 1970s, researchers concluded after some theoretical consideration and empirical examination that political efficacy was comprised of two components, internal and external political efficacy [@lane1959a; @converse1972; @balch1974]. 
+
+
+If the theoretical distinction made by Lane did anything, it helped to generate   
+
+...
+
+To determine whether results from measurement items cohere with the conventional conception of external efficacy, the interpretation of item responses must indicate the belief that government officials are responsive to citizen demands. It is questionable, however, whether this is at all feasible by use of the two items purported to measure external efficacy. In fact, there is already a long history of empirical studies that have scrutinized these two items to determine whether they sufficiently correspond to a multitude of different conceptions of "efficacy". 
+
+Indeed, the conventional conception of external efficacy is essentially boiled down from a torrid conceptual journey in which multiple scholars have contributed varied distortions to the meaning of the concept. As such the conventional conception of external efficacy is an amalgamation of meanings accrued from the residue of past attempts to make sense of the '*internal*' and '*external*' decomposition of political efficacy. 
+
+For instance, the conventional conception of external political efficacy is not much more than the combined ideas offered by @shingles1987: "*Incumbent-Based Efficacy*" and "*Regime-Based Efficacy*". @craig1990 compiled together an interpretation of results from confirmatory factor analysis in which they state, "...the results suggest that (1) NOSAY and NOCARE combine both regime- and incumbent-based assessments of governmental responsiveness to citizen demands" [@craig1990, 294]
+
+Shingles delineation of Incumbent- and Regime-based efficacy is itself drawn from earlier conceptions of external political efficacy made in an attempt to distinguish a precise conception of the construct distinct from political trust [@shingles1987; @gamson1968; @easton1967].
+
+> "Gamson defines political trust as a belief in the basic integrity of government; it is the expectation that government will produce preferred outcomes whether or not citizens participate (1968, p.54). Political efficacy is the belief that citizen participation is effective. Easton's distinguishes between two foci of political support: (1) effectiveness of citizens' inputs (supports and demands) in policy making and implementation and (2) satisfaction with policy outputs (the quality, efficiency and equity of government's response). Political efficacy is the belief that citizen participation is effective. Easton's distinguishes between two foci of political support: (1) effectiveness of citizens' inputs (supports and demands) in policy making and implementation and (2) satisfaction with policy outputs (the quality, efficiency and equity of government's response). Whereas political trust focuses solely on outputs; [External Political Efficacy] addresses both. As such, political trust is a component of [External Political Efficacy]. [External Political Efficacy] refers to whether one can condition policy outputs by making political inputs. Political trust does not require inputs. As Gamson states, [External Political Efficacy] is the perceived ability to act effectively. Political trust addresses the need to act. Trusting citizens need not participate in politics (unless otherwise motivated). Cynical citizens must act to protect their own interests." [@shingles1987, 2]
+
+Coleman and Davis make an important contribution stating that the conception of external efficacy must take stock of the political context. And not much later, @craig1979 provides more theoretical support for the multi-dimensional distinction.
+
+...
+
+So if whatever is being measured is moved by some systematic "mover", we may better understand what *it* is. That's the idea anyway. The thing is, we already claim to know what is being measured, but the measurement doesn't really validate the theory or understanding of the concept. As a hypothetical construct of political interest, external efficacy is inherently conflated with government responsiveness, easily conflated with trust in government, and detached from even the lexical meaning of efficacy---the power to produce an effect^[See [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/efficacy). Also simply defined as "the ability of something to produce the intended result" in the [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/efficacy).].
+
+
+
+### Pertaining to Construct Validity
+
+The conceptual definition is the basal reference from which the coherence of the measurement items is evaluated. A valid interpretation of results as measurement (or estimation) of the intended construct depends on this coherent link between meaning and measurement; first, and primarily, in theory. Then, to the extent possible, by analysis of correlations with other theoretically related factors or constructs. The conceptual definition guides us on how best to measure the construct, but the quality and coherence of the measurement item questions or statements and response options are all that permit valid interpretations of measurement results. We can say that agreement/disagreement with this item statement implies this sentiment, but the validity of the interpretation of the response data as measurement of the construct depends on the logical force of the theory.
+
+We coin a term that encompasses an idea we have, i.e., we make up a thing by giving it a name. We describe what the named thing is and what it refers to, but importantly posit that it is an abstract and intangible thing unavailable for direct observation and measurement. A *thing* that isn’t a *thing* at all, so to speak. We develop a way of validating that the thing is theoretically viable as a thing (especially a thing worth understanding). The usual way of doing this in the social sciences is to identify empirical indicators of the unobservable named thing. The idea is that we validate the named thing by observing a set of multiple empirical indicators which all correlate well enough as to suggest that they are influenced or sourced from the named thing in question.
+
+
+
+## Overview of @chamberlain2012
+
+:::{.note}
+This section is meant to brief the reader on Chamberlain's study.
+:::
+
+-   For his part, Chamberlain deserves praise for considering that which prior scholars had not considered. It makes sense that a person's judgement of their efficacy within a particular space would be affected by changes to that space; in broad strokes the theory is quite sensible.
+
+
+Rather than propose new measurement items or offer a novel conceptual understanding, Chamberlain aimed to discern whether this individual-level construct is even sensitive to external factors of the environment as would be expected given its conventional understanding. The question posed and investigated by Chamberlain was whether external political efficacy in the aggregate is responsive to changes in the political environment. If aggregated external efficacy was unresponsive, then it would be necessary to reconsider the meaning more so than the measurement of external political efficacy.
+
+His idea was that a dynamic time-series model of aggregate external efficacy was needed to reveal factors that shift (or don't shift) external efficacy overtime. If external efficacy beliefs in the aggregate were seemingly unmoved despite changes to the political environment overtime, then the conventional interpretation of results gathered from the survey items would be invalid.
+
+## Problems with Chamberlain's study
+
+:::{.note}
+Here, I cover the problems of his study, focusing first on the most immediate problems with the independent predictors of the model, then on the appropriateness of the method (dynamic lagged DV OLS model) to test the theory. 
+:::
+
+Chamberlain's study was an attempt to validate the measure of external political efficacy in reference to its constructed meaning in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways.
+
+First, the chosen predictors (i.e., independent variables) of the model aren't sensible representations of the political environment. Chamberlain devised a model of temporal dependence with three predictors he claimed were representative of the political environment. The reported findings suggested no: aggregated external efficacy was seemingly unresponsive to changes to the political environment. However, the predictors chosen to serve as proxies of the external political environment were not, indeed, tenable as such. That is, the factors selected can not be understood as representative, in part or in whole, of the political environment. The independent variables of the model were not independent of the individual, of each other, nor could they be understood as representative of the political context along the time series.
+
+Second, a dynamic time-series lagged dependent variable model is questionable but more importantly, inappropriate given that the ANES data is not panel data. 
+
+[^1]: Note the careful connotation of *construct* as in reference to a theoretical concept created by researchers (hence, *construct*). I take care to avoid reification of the construct of interest as a literal object under study. See @slaney2015
+
+
+Now the ANES isn't a yearly survey; the ANES has been conducted every two years starting from 1964. In his article, Chamberlain lags the dependent variable (external efficacy) by 4 years---i.e., a four year lag.
+
+His reasoning mostly hangs on theoretical grounds---primarily the notion that the definition of the concept itself implies that past government performance should influence external efficacy. Or simply, evaluations of perceived government responsiveness to public demands leaves lasting impressions on later evaluations of the same. Yet, this reasoning seems a bit loose; there isn't a thorough explanation offered by Chamberlain for why a person's level of *external efficacy* at one point in time will influence their level of *external efficacy* at some later point in time. All the definition implies is that perceived government responsiveness---drawn from considerations of today and yesteryear---will influence one's sense of external political efficacy. So based on the current conceptual definition for external efficacy, my feelings of external efficacy today are informed by my impressions about the extent to which I believe government officials have been responsive to public demands, i.e., the extent to which I believe government officials care about what people like me think and the extent to which I believe people like me have any say in what government does.
+
+Accordingly, Chamberlain's study was an attempt to validate the measure of external political efficacy in reference to its constructed meaning in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways.
+
+### on the model itself
+
+First, the chosen predictors (i.e., independent variables) of the model aren't sensible representations of the political environment. Chamberlain devised a model of temporal dependence with three predictors he claimed were representative of the political environment. The reported findings suggested no: aggregated external efficacy was seemingly unresponsive to changes to the political environment. However, the predictors chosen to serve as proxies of the external political environment were not, indeed, tenable as such. That is, the factors selected can not be understood as representative, in part or in whole, of the political environment. The independent variables of the model were not independent of the individual, of each other, nor could they be understood as representative of the political context along the time series.
+
+Presidential approval ratings, consumer sentiment, and trust in government are not tenable as factors representative of the political environment. Rather, these are attitudinal variables also arising from the perspective of the subject^[To be clear, the individual is subject to the political context, and attitudinal variables about that context from the perspective of the subject are not suitable as proxy for the political conditions thereof]. As such, it is difficult to substantiate the null results as informative or reflective of the author's conclusions.
+
+...
+
+### on the method
+
+...
+
+The theoretical support for the dynamic model that includes a lagged dependent variable seems justified under the notion that an individual's attitude, external efficacy, at time $t$ "is a function of that same attitude at $t-1$ as modified by new information" [@keele2006]. Chamberlain develops a dynamic model where external efficacy at time $t$ is a function of external efficacy at $t-4$ as modified by presidential approval at $t-1$, consumer sentiment at $t-1$, and trust in government at $t-2$. On its face, it seems a bit odd that external efficacy today at time $t$ would be partly a function presidential approval from a year ago but not, say, the same month, or the month prior, or even concurrently at time $t$. 
+
+Regardless, what is more odd is the notion that presidential approval, consumer sentiment, and trust in government are all referred to as factors representative of the political environment. Surely these may be considered factors *about* the contemporary political environment, and these factors doubtlessly correlate with conditions of the political environment to some unknown extent, but it is far too much of a reach to consider these factors as sufficient proxies of the political environment. 
+
+
+A dynamic model of aggregate external efficacy implies that external efficacy today is a function of external efficacy four years ago modified by new information on, or changes to, the the political environment. However, this is valid only insofar as the new information ascertained over the lagged time period pertains to conditions of the political environment associated with external efficacy beliefs. The explanatory variables that Chamberlain employs as predictors are untenable as factors representative of the political environment. Rather, the factors he employs are attitudinal variables---opinions, sentiments---related to the political environment, once or twice removed. Thus, in Chamberlain's study, the dynamic model implies that external efficacy today is a function of external efficacy four years ago modified by new public sentiment within that period. In particular, sentiment concerning presidential approval, the economy, and trust in government. 
+
+As commonly defined, external efficacy beliefs take into account a government's responsiveness. Chamberlain uses government responsiveness as interchangeable with government performance, thus justifying the use of factors such as presidential approval, consumer sentiment, and trust in government as sufficient proxies. These factors are arguably evaluations of, or related to, government performance in some way, though such an argument is not my own. What these factors are definitely not, however, are reflections of the political environment or conditions thereof. 
+
+This is in spite of there already being a closely related, if not conflated, index of government responsiveness consistently measured in national election studies.  
+
+
+
+
 
 
 ## Data & Methods {#sec-data-methods}
@@ -134,15 +342,17 @@ Note the distinctive difference in ICS values between @fig-rep2 and @fig-rep2adj
 
 The purpose of @fig-rep2 was not to visually compare average values of each variable. However, such a visualization inevitably presents as such. As stated by Chamberlain, the purpose of the chart was to demonstrate that, "...across time, significant variation exists within these variables." [@chamberlain2012, 120]. 
 
-Understandably, average values are difficult to compare across time due to the fact that they are not all measured on the same scale nor are they obtained by the same survey study. The Index of Consumer sentiment is calculated from a particular formula and then averaged by year; the Trust in Government index is a mean score composite of four question items where higher values indicate higher trust in government; and presidential approval ratings are yearly average approval ratings from monthly Gallup polls^[As an aside, I think the decision to rescale the ICS by subtracting 50 from the mean values for each year presents a chart that is visibly misleading. This visualization of the data as such easily presents a misleading comparison.].
+Understandably, average values are difficult to compare across time due to the fact that they are not all measured on the same scale nor are they obtained by the same survey study. The Index of Consumer sentiment is calculated from a particular formula and then averaged by year; the Trust in Government index is a mean score composite of four question items where higher values indicate higher trust in government; and presidential approval ratings are yearly average approval ratings from monthly Gallup polls^[As an aside, I think the decision to re-scale the ICS by subtracting 50 from the mean values for each year presents a chart that is visibly misleading. This visualization of the data as such easily presents a misleading comparison.].
 
 
 
 ## Replication of Lagged Dependent Variable Model
 
-Recall @chamberlain2012's hypothesis was that, according to the conceptual definition of the construct, aggregate external efficacy would appear to be dynamically responsive to "changes in the political environment" [-@chamberlain2012, 120]. In order to test this hypothesis, he conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008 by use of a lagged dependent variable OLS model. The dependent variable was the average index values for external efficacy aggregated across time from 1952 to 2008 (whenever ANES measured it). His independent variable predictors included presidential approval ratings, an index of consumer sentiment, trust in government, and a 4-year lag of the dependent variable external efficacy. Null results would invalidate, or at least challenge, the measurement of external efficacy and require re-consideration of both concept and measurement. Stated a bit more exhaustively, given the conceptual definition of external political efficacy, null results would invalidate the interpretation that results from the two survey items represent the construct external political efficacy.
+Recall @chamberlain2012's hypothesis was that, according to the conceptual definition of the construct, aggregate external efficacy would appear to be dynamically responsive to "changes in the political environment" [-@chamberlain2012, 120]. In order to test this hypothesis, he conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008 by use of a lagged dependent variable OLS model. The dependent variable was the average index values for external efficacy in the aggregate and across time from 1952 to 2008. His independent variable predictors included presidential approval ratings, an index of consumer sentiment, trust in government, and a 4-year lag of the dependent variable external efficacy. Null results would invalidate, or at least challenge, the measurement of external efficacy and require re-consideration of both concept and measurement. Stated a bit more exhaustively, given the conceptual definition of external political efficacy, null results would invalidate the interpretation that results from the two survey items represent the construct external political efficacy.
 
-Chamberlain reported that results could not reject null: aggregate external efficacy was unresponsive to the predictors across time. @tbl-1 is an attempt to replicate the same table from the original study [see -@chamberlain2012 123].
+Chamberlain reported that results could not reject null: aggregate external efficacy was unresponsive to the predictors across time. I attempted to replicate[^1] the same table of results from the original study [see -@chamberlain2012 123].
+
+[^1]: Note that I did not attempt to replicate 'Model 5' from the original publication. In that model, the dependent variable was regressed on congressional approval and a four-year lag of the dependent variable.
 
 :::{.place arguments='top, scope: "parent", float: true'}
 
@@ -197,7 +407,7 @@ modelsummary::modelsummary(
 
 :::
 
-The table I generate almost replicates Table 1 from @chamberlain2012. The coefficients are not identical, but very close. The number of observations, however, differ for at least one model but not others. Models 1, 2, 3, 5, and 6 have same number of observations, but model 4 has two fewer observations compared to Table 1 in Chamberlain (2012).
+@tbl-1 almost replicates the published results from @chamberlain2012, but with minor differences. The regression coefficients and standard errors are not identical, but very close. However the number of observations for model 4 differs by two for unknown reasons. 
 
 
 ## Replication Lagged Dependent Variable Model
@@ -290,27 +500,100 @@ jtools::export_summs(
 Here results are similar to Table 1; only the lagged dependent variable significantly influences subsequent values of itself (b1 = 0.658, s.e. = 0.162, p < 0.001).
 
 
-# LDV model is unwarrented
+## LDV model is unwarrented
 
-It is not necessary to lag the dependent variable, and there's good reason not to; a lagged dependent variable is apt to soak up all influence from the predictors, especially if serial autocorrelation is present. Chamberlain doesn't provide a check for serial autocorrelation.
+There's good reason not to conduct a lagged dependent variable model in this case, especially for the sake of construct validation. A lagged dependent variable is apt to soak up all influence (i.e., bias regression coefficients downward) from the predictors, especially if serial autocorrelation is present among the independent predictors. Chamberlain doesn't provide a check for serial autocorrelation of the predictors.
 
-However, it is not necessary even theoretically. Even taking Chamberlain's contention that respondent's take past government performance and economic conditions into consideration, there's no good reason to then lag the dependent variable as well. Given the logic provided, we might as well include lagged variables for every attitudinal outcome of interest consistently measured in national election studies. 
-Here I conduct the same simple OLS model excluding the lagged dependent variable
+The issue is that a lagged dependent variable soaks up, or essentially steals, the effect of both excluded and included variables [@achen2000]. That is, when the independent variables included in the model are "sufficiently trending", then including a lagged dependent variable results in biased coefficients.  
+
+One could hypothesize that past values of external efficacy predict current (or recent) values of presidential approval, trust, and economic sentiment. If past external efficacy is an influential factor to current levels of all three, then current levels of external efficacy probably predict later values of the predictors. The causal path is muddled up quite a bit.
+
+It is also simply not necessary to include a lagged the dependent variable as there is little in terms of theoretical support. Even taking Chamberlain's contention that respondent's take past government performance and economic conditions into consideration, there's no good reason to then lag the dependent variable as well. Given the logic provided, we might as well include lagged dependent variables for every attitudinal outcome of interest consistently measured in national election studies.
+
+Here I conduct the same simple lagged OLS model excluding the lagged dependent variable. The expectation is that the lagged predictors will be significantly associated with the dependent variable. 
+
+
+In addition, I suspect lagged values of trust-in-government to be significantly, and most prominently, associated with external efficacy at time $t$ on average and all else equal. I include two lagged OLS models: one where values of trust-in-government are lagged by 2-years and another where trust-in-government is lagged by its previously observed value.
 
 ```{r}
 
-d |> 
-  lm(exteff ~ ics.T1 + presapp.T1 + trustgov.T2, data = _) |> 
-  summary()
+jtools::summ(lm(exteff ~ ics.T1 + presapp.T1 + trustgov.T2, data = d))
+
+jtools::export_summs(
+  lm(exteff ~ ics.T1 + presapp.T1 + trustgov.T2, data = d),
+  lm(exteff ~ ics.T1 + presapp.T1 + trustgov.L1, data = d),
+  lm(exteff ~ ics.T1 + presapp.T1 + trustgov, data = d),
+  digits = 3,
+  statistics = c("N" = "nobs", "Adj. R-Squared" = "adj.r.squared"),
+  coefs = c(
+  "Index of Consumer Sentiments (t-1)" = "ics.T1",
+  "Presidential Approval (t-1)" = "presapp.T1",
+  "Trust in Government (t-2)" = "trustgov.T2",
+  "Trust in Government (prior value)" = "trustgov.L1",
+   "Constant" = "(Intercept)") 
+  )
+
 
 # As predicted, the original LDV model doesn't hold
 
 ```
 
+Excluding the lagged dependent variable changes the outcome as suspected; trust in government in the aggregate from two years prior is significantly associated with external efficacy in the aggregate, on average and all else equal. This isn't all too surprising given the ambiguous distinction between the two variables conceptually and empirically. Notably, the index of consumer sentiment is *negatively* associated with external efficacy, although there's less confidence in the statistical significance of this association ($p = 0.09$).
+
+
+```{r}
+
+jtools::export_summs( 
+  lm(exteff ~ ics.T1 + presapp.T1 + trustgov.L1, data = d), 
+  digits = 3,
+  statistics = c("N" = "nobs", "Adj. R-Squared" = "adj.r.squared"),
+  coefs = c(
+  "Index of Consumer Sentiments (t-1)" = "ics.T1",
+  "Presidential Approval (t-1)" = "presapp.T1",
+  "Trust in Government (prior value)" = "trustgov.L1",
+   "Constant" = "(Intercept)") 
+  )
+
+
+```
+
+
+
+
 Given the conceptual overlap between trust-in-government and external political efficacy, it has not been well established that the items measuring one are not also capturing the other. That is, the trust-in-government items 
 
 
+
+
+## Statement of the Problem beyond Chamberlain
+
+Efficacy is a noun. Ordinarily, efficacy refers to the capacity to produce some intended result or outcome.
+
+External political efficacy is a noun (rather, a noun phrase). The conventional meaning of external political efficacy refers to the belief about the responsiveness of government officials and institutions to public demands.
+
+Juxtaposing the meanings together like this illustrates that external political efficacy has diverged from having a basic semantic connection with the ordinary meaning of 'efficacy'. Although ordinary meanings do not authoritatively prescribe meaning, external political efficacy is a technical term in political science that is divorced from what it would appear to mean on its face. 
+
+The problem is not simply that we're referring to something by the wrong name. The problem is that the conception of the construct is also detached from the items purported to measure it, and results of those measures do not permit an interpretation coherent with the conventional theory of the concept nor with an improved conception of external political efficacy better aligned with the nominal meaning of the word 'efficacy'.
+
+...
+
+-   If external efficacy is not influenced by shifts to external conditions, then there are two plausible conclusions. Either the measure corresponds to the meaning of the construct which would imply that people in general are insensitive to changes to external conditions, or the items are not valid measures of the construct as conceived.
+
+-   We already know that the former conclusion is a *non sequitur*; people are generally sensitive to changes in the political environment, both in attitude and behavior---especially those of which pertain to their capacity to participate and effectuate change through government and politics. Previous research has already demonstrated that changing the rules significantly effects voter turnout, participation, vote choice, and the like [@ang2019].
+
+-   Relatedly, a recent working paper from the National Bureau of Economic Research (NBER) [@dench2025] shows that after the Supreme Court 2022 decision in *Dobbs v Jackson Women's Health Organization*, bans to abortion increased net migration outflows. This bolsters the notion that people are indeed sensitive to changes to external political conditions
+
+-   My argument is not merely that @chamberlain2012's model was incorrectly specified due to the chosen predictors, but goes further to assert that the problems with the measurement of external efficacy stems directly from its misconstrual; we are unable to develop valid measures when we have not a coherent idea about what we're trying to measure in the first place.
+
+-   The conceptual definition is the basal reference from which the coherence of the measurement items is evaluated. A valid interpretation of results as measurement (or estimation) of the intended construct depends on this coherent link between meaning and measurement; first, and primarily, in theory. Then, to the extent possible, by analysis of correlations with other theoretically related factors or constructs. The conceptual definition guides us on how best to measure the construct, but the quality and coherence of the measurement item questions or statements and response options are all that permit valid interpretations of measurement results. We can say that agreement/disagreement with this item statement implies this sentiment, but the validity of the interpretation of the response data as measurement of the construct depends on the logical force of the theory.
+
 ## Conclusion
+
+In order to resolve the issue of external efficacy, our conceptual understanding of it must first be addressed and scrutinized. We don't know what we're measuring if we do not have a clear, concise, and distinct conception of it (whatever it is). Especially in relation to the supposed contrast, internal efficacy. Whether that relationship is both coherent and valid is not purely an empirical matter that can be resolved through complex measurement methodology or creative use of the methods of statistical inference. We first must be clear about what it is we mean when we refer to this concept in theory, which, in turn, means that the theory of the concept itself must be valid on its own terms. 
+
+We must understand what we want to know, which is fundamental to scientific inquiry. When we select a measurement instrument, it is presumed that we have clearly identified what we'd like to know because of what results the measurement instrument can produce. When I want to know how much I weigh, I use the appropriate measurement instrument that reliably provides me with valid results corresponding to my weight in an appropriate unit metric for (e.g., pounds lbs, kilos, grams).  
+
+Then we must recognize whether we are forming the theory of a concept instrumentally to further the aims of research---to find the answer to the question we have---or whether we are merely giving a name to a pattern or phenomenon observed in nature.
 
 ## Appendix {.appendix}
 
@@ -372,3 +655,41 @@ pres_terms |>
 :::{#refs}
 
 :::
+
+
+### Temporal Dependence with a Lagged Dependent Variable
+
+Lagged dependent variable model without fixed effects
+
+$$
+Y_{it} = \gamma Y_{i,t-1} + \beta_{0} + \beta_{i}x_{1it} + \beta_{2}x_{2it} + \epsilon_{it}
+$$
+
+- $\gamma$ is the effect of the lagged dependent variable
+- $Y_{i,t-1}$ is the dependent variable of the previous period (i.e., lagged by one time period)
+- $\beta$'s are the immediate effects of the independent variables
+- $\epsilon_{it}$ is the error term uncorrelated with the independent variables and homoscedastic.
+
+As usual, a unit-increase of $X_{it}$ will be associated with a $\beta_{1}$ increase in $Y_{it}$ that period. An increase in $Y_{it}$ in one period affects $Y_{it}$ in subsequent periods via the $\gamma Y_{i,t-1}$ term in the model. Thus, a change in $X_{it}$ not only corresponds with a $\beta_{1}$ effect on $Y_{it}$, but also corresponds with a $\gamma \times \beta_{1}$ effect on $Y$ in the next period.
+
+If there is **serial autocorrelation** and **trending** in the independent variable $x$, then including a lagged dependent variable $Y_{i,t-1}$ will bias estimated coefficients downward. Even though autocorrelation does not cause bias in OLS models, autocorrelation can cause bias in dynamic models. 
+
+The model needs to be estimated with and without the lagged dependent variable. There needs to be no serial autocorrelation nor trending in the independent variables of the model. There are a few ways to test for autocorrelation
+
+- auxiliary regression
+- Durbin-Watson Test
+- Ljung-Box Test
+- Visual inspection
+
+First, I have to estimate the models without the lagged dependent variable. Then I test for autocorrelation of those models. So the external efficacy model,
+
+$$
+Y_{t} = \beta_{0} + \beta_{1}X_{t}+\epsilon_{t}
+$$
+
+The $t$ of $Y_{t}$ and $X_{t}$ represents the value of the dependent and independent variable at time $t$. In the data set I have, each row represents average values of each variable for the particular year. So estimating the basic models is as simple as including each variable without lags.  
+
+$$
+Ext.Efficacy_{t} = \beta_{0} + \beta_{1}Presidential Approal_{t}+ \beta_{2}ICS_{t} + \beta_{3}Trust in Government_{t} + \epsilon_{t}
+$$
+

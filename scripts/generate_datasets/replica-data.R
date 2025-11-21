@@ -92,7 +92,7 @@ anes_indices <- cdf_wt |>
   # derive mean with standard errors for each index by year
   srvyr::summarise(
     dplyr::across(
-      c(exteff.indx, trustgov.indx),
+      c(exteff, trustgov),
       ~ srvyr::survey_mean(.x, na.rm = T)),
     .by = year)
 
@@ -102,7 +102,7 @@ anes_indices <- cdf_wt |>
 # replace any value less than or equal to 0 as NA
 anes_indices <- anes_indices |>
   dplyr::mutate(across(
-    c(exteff.indx, exteff.indx_se, trustgov.indx, trustgov.indx_se),
+    c(exteff, exteff_se, trustgov, trustgov_se),
     ~ dplyr::na_if(., 0.0000000)
   ))
 
@@ -117,10 +117,10 @@ anes_indices <- anes_indices |>
 # add year column with 2024 as the year
 anes2024_indices <- anes2024 |> 
   srvyr::summarise(
-  exteff.indx = srvyr::survey_mean(exteff.cdf, na.rm = T),
-  trustgov.indx = srvyr::survey_mean(trustgov.indx, na.rm = T)
+  exteff = srvyr::survey_mean(exteff.cdf, na.rm = T),
+  trustgov = srvyr::survey_mean(trustgov.indx, na.rm = T)
 ) |> 
-  dplyr::mutate(year = as.integer(2024), .before = exteff.indx)
+  dplyr::mutate(year = as.integer(2024), .before = exteff)
 
 # merge the anes_indices from the CDF with the 2024 ANES indices
 # this simply incorporates the most recent 2024 ANES data 
@@ -174,9 +174,9 @@ d <- d |>
   dplyr::select(-dplyr::contains("_se"))
 
 # remove `.indx` suffix for external efficacy and trust in gov indices
-d <- d |> 
-  dplyr::rename_with(.cols = c(exteff.indx, trustgov.indx),
-                     .fn = \(x) stringr::str_remove(x, pattern = ".indx"))
+# d <- d |> 
+#   dplyr::rename_with(.cols = c(exteff.indx, trustgov.indx),
+#                      .fn = \(x) stringr::str_remove(x, pattern = ".indx"))
 
 
 # pivot data to long format -----------------------------------------------
@@ -231,11 +231,6 @@ d <- d |>
   dplyr::rename_with(
     .cols = -year, 
     .fn = \(x) stringr::str_remove(x, pattern = ".value"))
-
-# check
-# d |>
-#   dplyr::filter(year >= 1952 & year <= 2024) |>
-#   dplyr::select(year, dplyr::contains("exteff"))
 
 # create numeric interval corresponding to general election years, i.e., every 4
 # years since 1940

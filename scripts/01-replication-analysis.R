@@ -102,9 +102,15 @@ d |>
 
 lm(exteff ~ exteff.L1, data = replica) |> summary()
 
-
 # After running the lagged dependent variable model explained above, the result is pretty similar; average external efficacy in the aggregate is affected by it's most prior value (b1 = 0.6585, se = 0.16), and the estimated coefficient on the lagged dependent variable is less than 1, indicating that the effect decays over time. (This model disregards whether the DV was measured during a general election year or midterm election year.)
 
+lm(exteff ~ exteff.L1, data = d) |> summary()
+
+d |> 
+  dplyr::filter(year > 1986) |> 
+  lm(exteff ~ exteff.L1, data = _) |>
+  jtools::summ()
+  
 # Replication of Table 1 in Chamberlain (2012) --------------------------
 
 # Essentially, this is an attempt to replicate Table 1 in Chamberlain (2012)
@@ -137,9 +143,17 @@ jtools::export_summs(
 # For model 4, the N I have is one less than the N in Chamberlain. This
 # shouldn't be the case since the data is exactly the same
 
+
+# Why does model 4 N differ? ---------------------------------------------
+
+# The number of obs for model 4 differs from Chamberlain by 2 but I'm not sure why. The data of the model is, or should be, exactly the same as the data utilized by Chamberlain. The dependent and independent variables are only from the ANES Cumulative Data File.
+
+
+
+
 # Analysis with 2-year lag ------------------------------------------------
 
-# For some reason, Chamberlain decides to lag the dependent variable by four years but lags the trust in government predictor by two years. Starting in 1964 up until 2004, both external efficacy and trust in government were measured every two years; justification for the different lags for external efficacy and trust in government is not provided by Chamberlain nor is the reasoning obvious. 
+# For some reason, Chamberlain decides to lag the dependent variable by four years but lags the trust in government predictor by two years. Starting from 1964 up until 2004, both external efficacy and trust in government were measured every two years; justification for the different lags for external efficacy and trust in government is not provided by Chamberlain nor is the reasoning obvious. 
 
 # Since external efficacy was measured at an irregular interval, the lag of 4 years is difficult to justify in theory. This 4-year lag ignores external efficacy in periods where there was not a general election even though external efficacy was measured every two years from 1964 up until 2004. The idea is that prior levels of external efficacy influence current level of external efficacy, but a lag of four years skips years where external efficacy and trust in government was measured by ANES surveys during midterm election cycles.
 
@@ -175,7 +189,25 @@ jtools::export_summs(
    "Constant" = "(Intercept)") 
   )
 
-# In this table, no coefficient of any predictor in any of the models, nor of the lagged dependent variable, obtains statistical significance. 
+# In this table, no coefficient of any predictor in any of the models, nor of the lagged dependent variable, obtains statistical significance. The number of observations for all models is equal (n = 20), indicating that the years included in the model range from 1964 to 2004. 
+
+
+
+# Constraining analysis to relatively recent eras -------------------------
+
+# restricting to years since 1988, n = 14, which isn't great but is perhaps more
+# theoretically viable.
+d |> 
+  dplyr::filter(year >= 1988) |> 
+  lm(exteff ~ exteff.L1 + ics.T1 + presapp.T1 + trustgov.L1, data = _) |> 
+  summary()
+
+d |> 
+  dplyr::filter(year >= 1988) |>
+  lm(exteff ~ exteff.L1 + ics.T1 + presapp.T1 + trustgov.L1, data = _) |>  
+  jtools::summ()
+
+# Results show that aggregated external efficacy is significantly influenced by previous values of trust in government and presidential approval from a year prior (t-1). 
 
 
 # Lag DV by prior value -----------------------------------------------

@@ -60,6 +60,144 @@ cdf <- readr::read_rds(file = "data/anes data/anes_cdf.rds")
 #   print(n = Inf)
 # Not measured in 1948, 1954, 1958, and 1962
 
+
+
+# re-code external efficacy and trust in gov items following ANES CDF --------
+
+
+# This note is from the ANES CDF documentation regarding how the external
+# efficacy index (VCF0648) is computed from the component survey items
+# GENERAL NOTE:
+# Built from VCF0609 AND VCF0613.
+# Component vars are first recoded as follows: VCF0609,VCF0613:
+# 1=0,2=100,3=50. The recoded values are then totaled and divided by
+# the number of valid responses. The result is then rounded.
+
+
+# first, re-code `NOCARE` and `NOSAY` items following ANES CDF documentation
+cdf <- cdf |> 
+  dplyr::mutate(dplyr::across(c(nocare, nosay), ~labelled::labelled(
+    dplyr::case_when(.x == 1 ~ 0, .x == 2 ~ 100, .x == 3 ~ 50, TRUE ~ NA),
+    labels = c(
+      "Agree" = 0,
+      "Neither agree nor disagree" = 50,
+      "Disagree" = 100
+    ),
+    label = paste(
+      attr(.x, "label"),
+      " values recoded to match ANES CDF coding scheme",
+      sep = ","
+    )
+  ),
+  .names = "{col}.cdf"
+  ))
+
+
+
+# This note is from the ANES CDF documentation regarding how the
+# trust-in-government (VCF0656) index is computed from the component survey items
+# GENERAL NOTE:
+# Built from VCF0604, VCF0605, VCF0606, VCF0608.
+# Component vars are first recoded as follows:
+# VCF0604: 1=0,2=33,3=67,4=100; VCF0605: 1=0, 2=100;
+# VCF0606,VCF0608: 1=0,2=50,3=100.
+# The recoded values are then totaled and divided by the number of valid
+# responses. The result is then rounded.
+
+# cdf |>
+#   dplyr::select(trust1, trust2, trust3, trust4) |> 
+#   purrr::map(~sjlabelled::get_labels(.x, values = 'p'))
+
+# re-code trust in gov items following the ANES CDF coding scheme 
+cdf <- cdf |>
+  dplyr::mutate(
+    trust1.cdf = dplyr::case_when(
+      trust1 == 1 ~ 0,
+      trust1 == 2 ~ 33,
+      trust1 == 3 ~ 67,
+      trust1 == 4 ~ 100,
+      TRUE ~ NA
+    ),
+    trust2.cdf = dplyr::case_when(trust2 == 1 ~ 0, trust2 == 2 ~ 100, TRUE ~ NA),
+    trust3.cdf = dplyr::case_when(trust3 == 1 ~ 0, trust3 == 2 ~ 50, trust3 == 3 ~ 100, TRUE ~ NA),
+    trust4.cdf = dplyr::case_when(trust4 == 1 ~ 0, trust4 == 2 ~ 50, trust4 == 3 ~ 100, TRUE ~ NA)
+  )
+
+
+# manually compute external efficacy and trust in gov indices ------------------
+
+# compute external efficacy index according to ANES CDF documentation.
+# create unipolar external efficacy index variable matching ANES CDF external
+# efficacy variable (VCF0648)
+# NOTE: this is different from the aggregate average value of the index. This
+# variable reflects an individual's 'score' on the index
+
+# create composite mean individual score for trust in government
+# sum of means = sum(mean(x1), mean(x2))/k
+# k = number of items, variables, elements in set. 
+exteff <- cdf |>  
+  dplyr::select(case_id, year, nocare.cdf, nosay.cdf) |> 
+  dplyr::mutate(exteff = rowMeans(
+    dplyr::pick(nocare.cdf, nosay.cdf, -case_id, -year), na.rm=TRUE))
+
+
+# compute trust in gov index according to ANES CDF documentation.
+# create composite mean individual score for trust in government
+# sum of means = sum(mean(x1), mean(x2))/k
+# k = number of items, variables, elements in set. 
+trust <- cdf |>  
+  dplyr::select(case_id, year, trust1.cdf, trust2.cdf, trust3.cdf, trust4.cdf) |>
+  dplyr::mutate(trustgov = rowMeans(
+    dplyr::pick(trust1.cdf, trust2.cdf, trust3.cdf, trust4.cdf, -case_id, -year), na.rm = T))
+
+# round the result
+trust <- trust |> 
+  dplyr::mutate(trustgov = round(trustgov, digits = 0))
+
+# join
+tmp <- dplyr::left_join(exteff, trust)
+
+# remove from env, clear memory
+rm(exteff, trust)
+gc()
+
+cdf <- cdf |> dplyr::left_join(tmp)
+
+# remove from env, clear memory
+rm(tmp)
+gc()
+
+
+# set value labels
+cdf <- cdf |>
+  labelled::set_value_labels(
+    exteff = attr(cdf$exteff.indx, "labels"),
+    trustgov = attr(cdf$trustgov.indx, "labels")
+  )
+
+# set variable labels
+cdf <- cdf |> 
+  labelled::set_variable_labels(
+    exteff = paste(attr(cdf$exteff.indx, "label"), ", manually computed"),
+    trustgov = paste(attr(cdf$trustgov.indx, "label"), ", manually computed")
+  )
+
+
+# check to ensure that the average external efficacy var matches the external
+# efficacy index provided by ANES
+
+# manual coding and computation of indices matches ANES CDF computation
+# cdf |>
+#   dplyr::summarise(
+#     exteff_manual = mean(exteff, na.rm = TRUE),
+#     exteff.indx = mean(exteff.indx, na.rm = TRUE),
+#     trustgov_manual = mean(trustgov, na.rm = TRUE),
+#     trustgov.indx = mean(trustgov.indx, na.rm = TRUE),
+#     .by = year
+#   ) |>
+#   print(n = Inf)
+
+
 # apply weights -----------------------------------------------------------
 
 
@@ -79,14 +217,10 @@ cdf_wt <- srvyr::as_survey_design(weights = weights9z, .data = cdf)
 
 # process -----------------------------------------------------------------
 
-# filter to only include years where the external political efficacy index was
-# measured
-cdf_wt <- cdf_wt |> 
-  srvyr::filter(!is.na(exteff.indx))
-
 # for many variables in the CDF, `0` = NA; no Post IW, and 9 = DK. This is not
 # the case for all variables in the entire CDF, so I set these values as NA for
-# only a select few variables.
+# only these select few variables.
+
 
 cdf_wt <- cdf_wt |>
   srvyr::mutate(dplyr::across(
@@ -94,23 +228,20 @@ cdf_wt <- cdf_wt |>
     ~ sjlabelled::set_na(., na = c(0, 9))
   ))
 
-# check
-# cdf_wt |> 
-#   srvyr::select(nosay, nocare, trust1, trust2, trust3, trust4) |>
-#   srvyr::as_tibble() |> 
-#   sjlabelled::get_labels(values = 'p')
 
 # For the indices in the ANES CDF, code `999` refers to missing/NA
 # recode `999` as NA for external efficacy, gov responsiveness, and trust in gov
 # indices
-# cdf_wt |> 
-#   srvyr::as_tibble() |> 
-#   dplyr::select(exteff.indx, trustgov.indx, govresp.indx) |> 
+
+# cdf_wt |>
+#   srvyr::as_tibble() |>
+#   dplyr::select(exteff, trustgov, exteff.indx, trustgov.indx, govresp.indx) |>
 #   sjlabelled::get_labels(values = 'p')
 
 cdf_wt <- cdf_wt |> 
   srvyr::mutate(srvyr::across(c(exteff.indx, govresp.indx, trustgov.indx), 
                        ~dplyr::na_if(., 999)))
+
 
 # states, census regions, fips, and processing :::::::::::::::::::::::::::::####
 

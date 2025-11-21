@@ -14,67 +14,6 @@ It is not sufficiently clear what is being measured by external political effica
 
 -   To put it more formally: given that external political efficacy is based on a person's evaluation of the external political environment, and in so far as the external efficacy survey items validly cohere to the given meaning of the construct, then changes to the political environment should result in movement of external efficacy in the aggregate over time. If shifts in the external efficacy index are not significantly associated with factors reflective of the political context across time, then the external efficacy survey items do not coherently correspond with the given meaning of the construct, rendering the survey items and index invalid.
 
-
--   Updating the concept and theory; given that a person's capacity (modal condition) as a political actor is determined by the external political environment...
-
-
-## More On the Concept
-
--   If internal political efficacy refers to a person's self-evaluation of their ***competence*** as an individual political actor to engage in the political process meant to influence the outcomes and shape conditions thereof, then external political efficacy would refer to a person's evaluation of their ***capacity*** to influence the outcomes of the political process and shape conditions of the political environment.
-
--   It is vital to understand that one's judgement of their own political competence is determined by *internal conditions*, otherwise understood as individual differences; internal efficacy is a certain kind of self-esteem conditioned upon various internal factors such as level of education, personal confidence, political interest, knowledge of political affairs, government processes, and so on.
-
--   In contrast, one's judgement of their own capacity as a political actor is determined by the external political conditions in which they are subject on par with other political actors of common status. Thus, one's appraisal of their own external political efficacy must directly reference the extent of their own capacity 1) as a political equal 2) to shape conditions of the political environment 3) as determined by the very political conditions in which they are subject. 
-
--   This appraisal of external efficacy is made of themselves as a political actor which is also necessarily an appraisal of all political actors subject to the same conditions (hence "People like me"). Thus, when a person evaluates their capacity as a citizen, they necessarily evaluate the capacity of all citizens of equal status strictly because said evaluation is not based upon individual differences, but rather based on that in which they do not differ: the conditions of their common status. Thus, in the first sense, external efficacy is an appraisal of their capacity to shape the political environment as subjects of that political environment. 
-    -   But there's more to it than that, as this isn't to say that the citizenship renders all citizens of equal capacity to shape the political environment. Citizenship is merely used as an example to illustrate the point. Indeed, the status of citizen does not necessarily guarantee equal conditions placed on one's capacity. For one, many citizens in the United States are incapacitated by their disenfranchisement in accordance with laws of a particular state. For two, many citizens of the United States who reside in non-state territories are unable to engage or participate in the governance of the political environment in which their citizenship pertains. In fact, the right of citizens to vote is not constitutionally protected considering that the United States constitution very meekly prohibits the United States or any State from denying or abridging the right of citizens to vote on account of particular conditions. For instance, the fifteenth amendment prohibits denial or abridgment of the right of citizens to vote on account of race, color, or previous condition of servitude---but not on current condition of servitude.
-
--   This is worthy of emphasis: the capacity (to shape the political environment) of the individual as a political actor does not differ from other political actors who are all subject to the very same conditions. 
--   Where internal efficacy is a metric of one's self-assessed competence based on their individuality, external efficacy is one's appraisal of the public's capacity to shape the political environment under conditions which they share in common as subjects.  
-
--   Common to both (supposed) dimensions of political efficacy is the common purpose, or point, of political participation and engagement, which is ultimately to shape the conditions of the political environment. Prominent research and scholarship of yesteryear has unwittingly, but detrimentally, constrained the whole point of engagement and participation to imposing influence on the considerations of government officials. That is to say, previous scholars have stated that the point of participating in the political process is, at most, meant to influence those political actors who govern rather than to govern as political actors. Regardless of the political system or regime type, the purpose of political action is to shape the political environment and conditions thereof.
-
-
-
-## Writing 
-
-The question posed and investigated by @chamberlain2012 was whether external political efficacy in the aggregate is responsive to changes in the political environment. His reported findings suggest no. However, the predictors (explanatory variables) chosen as factors of the external political environment were not, indeed, factors of the political context. That is, the factors selected as predictors in Chamberlain's model can not be understood as representative, in part or in whole, of the political environment. Said predictor variables, of which there were three, were not independent of the individual nor could they be understood as representative of the political context at point in time. 
-
-He critiques the reliance or use of structural equal modeling in development of the measurement instrument on the basis that the question wording and definition of external political efficacy "implies a dynamic relationship" [-@chamberlain2012, 119], suggesting that novel measurement items would better cohere to the conceptual understanding of external efficacy if results captured individual's response to variation in government performance and economic conditions in retrospect. In other words, if external efficacy items measured perceptions of government responsiveness in reference to relatively recent actions of political actors, political institutions, and ever-changing economic conditions, then external efficacy in the aggregate would appropriately respond the such dynamic variation over time. 
-
-Accordingly, Chamberlain's study is intended to test the validity of the construct in reference to how it is understood, defined, and measured in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways;  
-
-- Chamberlain used predictors which were not tenable as representative of the external political environment. Such contextual factors (or variables) are those independent of the individual, yet the predictors of the original study were attitudinal and not at all coherent with the proposed theory of the study. 
-- given the understanding of external political efficacy, shifts in the external political context 
-
-
-In addition, while Chamberlain was right to call into question the validity of the concept and measure of external political efficacy, his proposed 'new test for external efficacy' only *further* deviates from a cogent understanding of external efficacy. That is, as an underlying, latent, psychological factor that generalizes across (influences) responses to attitudinal survey items and individual behaviors. 
-
-The subtly of the issue is that this conception detracts from any coherence as a dimension of political efficacy or as a construct coherent with the meaning of efficacy. 
-
-This understanding of external political efficacy has little to nothing to do with an individual's appraisal of their ability to affect, change, or control the political environment in which they are subject. Indeed, under Chamberlain's notional framework, external political efficacy stands as more of a performance review on government actors, institutions, and the economy writ large; a more appropriate moniker would be 'political satisfaction' or something of the sort.  
-
-## 
-
-::: {.callout-note}
-The below was written on 2025-03-25
-:::
-
-One clear case is the controversial redistricting of Congressional districts in GA. If I recall correctly, the issue arose shortly after the 2010 Census and continued on up to 2020 at least. Although the public is not commonly sensitive to immediate shifts or changes to the size, shape, and composition of Congressional districts in general, nor their own specifically, the GA case renders the issue salient and substantial to voters in the affected districts. 
-
--  Yet the GA case also potentially imparts influence among the public at the national level given that suspect redistricting practices conveys multiple messages about the state of the union and conditions therein. For one, undermining the Voting Rights Act, whether expressive or rendered *de jure* by judicial decision, is apt to impose influence upon one's sense of external efficacy---the extent to which they are capable of shaping the political context. Second, politicking from the bench from supposed politically impartial Justices imparts both obstacles and avenues depending on one's political inclinations and ambitions. However, although changes to who currently sits on the bench of the Supreme Court are not necessarily changes to conditions of the political environment, judicial appointments likely signal such change as more likely in the future. 
-
-- Though one need not consider whether particular nominees or appointments influence external efficacy, because the decisions of the Justices shape and re-shape conditions of the political environment every year. While normally the effect of a ruling on public opinion comes down to issue salience among the public, i.e., whether the general public is aware, interested, or perturbed by Supreme Court rulings, the shift in the political reality is substantial and directly attributable to rulings by the Supreme Court. The repeal of Roe v. Wade changed conditions across multiple states but not uniformly as state governments were endowed with novel possibilities for action formerly prohibited as violations to individual privacy implied by the U.S. Constitution. Yet as it concerns external efficacy, we should not expect external efficacy to vary based on the ruling alone, but based on whether the state changed conditions of the political environment subsequent to the ruling of the Supreme Court. Some states enacted restrictive prohibitions, others codified legal protections in their state constitutions, whereas some (presumably) have not instituted changes in law or enforcement. 
-
-- In addition, in some states where changes to abortion laws took place, such changes were initiated or assented to by the public as either citizen initiatives to amend the state constitution or as referendums to do the same. In other states, the state legislature acted without input or initiation by the public^[In some cases, certain state laws were triggered to go into effect only in case the substantial ruling of *Roe v. Wade* was ever over-turned by the Supreme Court. Such cases sought to prohibit abortion, as state legislatures are not beholden to rulings from the court in order to instantiate, codify, or expand upon individual rights within the bounds of federal law but only to repeal, prohibit, or constrain individual liberties.] in concert with the state executive to either codify protections or prohibitions. 
-
-Given the variation in how changes to the political environment came about, who initiated (public or government actors), and public opinion on the issue at the time, we would expect current indices and measures of external efficacy to be contingent on one's particular position when it comes to the issue at hand, yet independent of how the change came to pass and whether public input was an essential component. That is to say, given contemporary measures, I expect external political efficacy to be independent of (i.e., unrelated, not significantly associated with) the conditions of the people's popular capacity to shape the political environment, but instead strongly associated with partisanship and issue position---in particular whether one endorses a pro-choice or pro-life position on abortion in states where changes took place, and congruence of partisan identification with the partisan makeup of the state government.
-
-Supporting results would invalidate the contemporary conception and measure of external political efficacy as coherent and valid, respectively. To be clear, it would be a mistake to interpret findings as indicative of public opinion, individual dispositions, or as saying something about the public generally if our instruments for measuring one thing are, not only inadequate, but instead measure something else entirely. That is, it would be wrong to conclude that the people are insensitive to changes in the political environment when we have no instruments available to measure their sensitivity in that respect. Since we have no ability to assess their appraisal of their own capacity to shape their political environment, we cannot conclude whether or not they are attuned to conditions of the political environment in which they are subject.        
-
-
-
-
 # 
 
 **External efficacy**--- refers to citizens' perceptions of the "responsiveness of political bodies and actors to citizens' demands (e.g., Balch 1974; Converse 1972)" [@craig1990, 290]
@@ -95,59 +34,6 @@ Supporting results would invalidate the contemporary conception and measure of e
 [vers.D] E10c. How much do public officials care what people like you think?
 [vers.D] E10d. How much can people like you affect what the government does?
 [1 = great deal…5=not at all,  -1=inap, -8=dk, -9=refused]
-
-
-
-
-## Potential text and garbage
-
-one of the issues raised by @chamberlain2012 was that, "aggregate external political efficacy does not appear to be dynamically responsive to changes in the political environment" [-@chamberlain2012, 125]. This might not be problematic if we suppose that people, generally, are insensitive to changes in the political environment. Surely an argument can be made there, but it is predicated on the notion that the measurement of external political efficacy is solid---i.e., sufficiently measures the concept in question. However, we can't presume as such for the simple issue that we don't really have a good, distinct, proper, solid conceptual definition for external political efficacy. Never mind it's relationship to its sister component internal political efficacy; external political efficacy is so conceptually ambiguous that it is sufficient to stand as whatever isn't internal political efficacy.
-
-We would expect external efficacy to be conceived as an individual-level attitude reflective of (based upon) the variable conditions of the external political environment from the perspective of the subject. However, not only is it **not** conceptualized as such, it is not measured in accordance with that conceptual understanding. Rather, external efficacy is usually confused with responsive government. To illustrate metaphorically, external efficacy is defined as the extent to which a person believes their voice echoes in the cave; those who report hearing less of an echo report lower external efficacy. 
-
-That metaphorical description of external political efficacy is just as good as the standard contemporary definition, "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands" [@craig1990, 290; @niemi1991a, 1408]. However, the measures don't ask respondents to evaluate and report the extent to which they think governmental authorities and institutions respond to national public opinion or grievances. Nor do items make clear what it means for the government or institutions to be responsive. Rather, the two survey items that purport to measure external political efficacy are, 1) "People like me don't have any say about what the government does." \[NOSAY\], and 2) "I don't think public officials care much what people like me think." \[NOCARE\]. Response options usually range on a 5-point or 7-point scale from strongly agree to strongly disagree. From that, we can see that "having a say about what the government does" and "what people like me think" comprises "citizen demands" in the conceptual definition. The measurement items better reflect a judgement about how aligned government action and concern is with the individual's general political predilections and sentiment.
-
-@chamberlain2012 is an important article that demonstrates the weakness and ill-fit of both the concept and measurement of external political efficacy. Validity of measurement of the concept appeared hard to ignore as Chamberlain recognized measurement problems at the outset. Importantly, he takes note that the original authors of the survey items used to measure external political efficacy were unsure of what those items actually measure. 
-
-> “...[Niemi et al. (1991)]  note that the two questions "are tapping something quite different from the new efficacy questions" but that "whatever they do measure. . .they do not measure internal efficacy" (italics in original) (Niemi et al. 1991, p. 1412).3 Thus, the authors who created the measure are unclear as to what it really measures.” [@chamberlain2012, 118]
-
-He also noted that the ANES has adopted and still utilize this definition and measurement for external political efficacy, indicating scholarly acceptance. Chamberlain cites to other research where external political efficacy is used as a meaningful variable construct as evidence that its conventional measurement has generally been accepted in research and scholarship.
-
-Rather than propose new items or offer a new conceptual understanding, Chamberlain attempts to discern whether this individual-level construct is even sensitive to external factors in the environment as would be expected given its current conception and measurement. That is, whether aggregate levels of external political efficacy shift over time in response to dynamic changes in the environment.
-
-> “External efficacy is a measure that takes into account a government's responsiveness; people should draw on past experiences with government before assessing whether they have any effect on its behavior. Past government performance, and the economic conditions it presides over, should have an effect on changes to external efficacy over time.” [@chamberlain2012, 119]
-
-What is notable is that he takes into account the definition of the conception and wording of the measurement items, as both imply that an individual must draw upon the past in order to evaluate the degree to which they believe the government is responsive to public demands. In other words, external political efficacy is conceived as an individual’s judgement of how responsive the government is with respect to how responsive government has been.
-
-Although the definition of external efficacy situates public demands as that reference point from which to judge government responsiveness, the survey items don’t make the efficacy of public action or expression the focal point of the appraisal. Instead, the items segregate the public into “People like me” to compare against an implicit “others unlike me”. The difficulty in this is just that each individual is poised to have a different reference point for “People like me” to judge how far government outcomes deviates from their demands. So rather than government responsiveness to *public demands*, the items already deviate from the concept by having individual’s appraise government official responsiveness to demands of people like me.
-
-The second issue is that what qualifies as government responsiveness is undefined nor made concrete in the survey items. There’s two things the items have respondents consider: what the government does and what government officials care about. The former may be readily understood as, broadly, outcomes of government and politics. However to the individual respondent, what the government does is not necessarily the official productions of government, e.g., legislation, policy, resolution, court opinions, orders, etc. Rather, what the government does is broad enough to include practically anything that government officials do. The latter, however, forces the respondent to consider what, or who, is important to government officials generally. The item refers to ‘Public officials’ in the general sense, and so an individual either bases their judgement on a hasty generalization about what or who all government officials care about, or bases consideration on only a particular subset of public officials. More importantly, however, is that the focal point of this item does not lead respondents to appraise the *efficacy of their actions* or expressions on the concerns of public officials. In other words, the items have respondents assess the levels of concern of public officials, but they do not evaluate the efficacy of their intervention on those levels of concern. This would be akin to ascertaining blood sugar levels but not the effect of one’s diet on blood sugar levels.
-
-The time-series analysis is an interesting way to assess whether external efficacy moves with shifts of the external environment. However, what this implies is that external efficacy is linked to particular factors of the environment chosen by the researcher.
-
-
-Note too that external efficacy and internal efficacy are treated as distinct *components* rather than latent factors. This means that, as scores are linear sum scores of responses to the respective items wherein all variance is preserved. Correlation is expected and found [@morrell2003] when internal and external efficacy are considered to be distinct latent factors. However, the usual method is to treat internal and external efficacy variables as components manifested from a linear sum of responses to their respective items rather than as latent factors.  
-
-To put in other words, conceptually, internal and external efficacy are theorized as latent factors which influence an individual's responses to the respective survey items, but individual scores are computed as though internal and external efficacy are components manifested by the given items. This may be fine, more or less, for research concerning internal political efficacy given the sufficiently high factor loadings and support that the items indicate a homogeneous underlying factor. However, the same strategy is more objectionable given that the measure of external political efficacy consists of only two items. In addition, it is common for researchers to modify item wording or add in novel items not yet tested or validated when it suits their research endeavors [@wolak2018].
-
-Factor analysis has been used as a method to validate the items as imperfect indicators of two separate but related homogeneous constructs [@niemi1991a; @morrell2003], but researchers still utilize methods that assume perfect measurement of the constructs in order to generate individual scores. 
-
-[Even still, factor analysis of all the conventional internal and external efficacy items demonstrates that a significant amount of variance is attributable to a common factor, but the factor loadings of the external efficacy items on their own distinct factor are insufficient to validate that the items measure what they purport to measure.]
-
-... 
-
-
-Yet therein lies the problem: external efficacy **is not** understood in the literature as a belief about one's ability to impose effects upon the political environment, and so changes to particular external conditions shouldn't have any effect on one's external efficacy unless the conditions in question relate directly to the people's capacity to effectuate change within or upon the political realm. 
-
-If we expect an increase after some shift of some arbitrary predictor variable such as Presidential approval, then we betray the conception of external efficacy as a measure of satisfaction and not an appraisal of popular capacity. The crucial missing element is that we don't know whether, nor to what extent, people believe they can shape their political environment as a popular political actor.
-
-
-If the political environment does change in one way or another, why would we have any expectation that the people's perception of their capability to shape that environment would change? That is, in what direction would we expect aggregate external efficacy to shift if the external political context does change in accordance with popular political activity? We would either expect 
-  1)  external efficacy to remain steady as belief that the system is receptive to popular input holds *as expected* (i.e., the system works as expected, no surprise here); or 
-  2)  aggregate external efficacy to increase proportionate to the *unexpected* change that comes about by popular activity; or
-  3)  external efficacy would decrease in response to changes in the political environment that result in spite of popular political activity.
-  
-Thus, if the people were to unify as one to dramatically shift, change, or reform some aspect of the political system, then we'd expect the shift in aggregate external efficacy to increase in relation to the baseline reference of external efficacy in the aggregate prior to the change taking place, and only insofar as the change that comes about is attributed to the people's popular political activity.
 
 
 ## Note on the current release of the ANES CDF data set
@@ -173,172 +59,6 @@ When using the combined sample, one of the following three CDF weight variables 
 - VCF0011z
 
 Since I am using the combined sample (FTF and web) from 2012, and the External efficacy items indicate `Type 0` for 1970 time series, then I must use the variable `VCF0009z`
-
-## The problem of the coding scheme of the external efficacy index
-
-External political efficacy, in the Time Series Cumulative Data file (CDF), is captured by two variables which are used as components to construct the external efficacy index variable. The external efficacy index variable (VCF0648) is a composite of NOCARE (VCF0609) and NOSAY (VCF0613). Values of the index reflect an average, ranging from 0 to 100. The values of the index variable in the dataset, however, reflect the coding scheme of an ordinal categorical variable where the value codes of each category are arbitrary. That is to say, the response categories for the NOCARE and NOSAY variables are collapsed from the original survey data of a particular year and re-coded such that "Strongly agree" or "agree/agree somewhat" = 1 , "strongly disagree" or "disagree/disagree somewhat" = 2, "neither agree nor disagree"^[for years 1988 and later only] = 3, and "Don't know" = 9. These re-coded variables are included in the CDF data, which I refer to as NOCARE (VCF0609) and NOSAY (VCF0613). Then, these re-coded variables are again re-coded and combined into the external efficacy index variable, where 1 = 0, 2 = 100, and 3 = 50. Presuming the appropriate weights have been applied, the values of the index are totaled, then divided by the number of valid responses (for that year, presumably), and finally rounded to the nearest integer.
-
-A score of 0 indicates the "least efficacious", corresponding with those who *agreed* (strongly or somewhat) with item statements from NOSAY and NOCARE. A score of 100 on the index reflects "most efficacious", corresponding to those who disagreed (strongly or somewhat) with the external efficacy item statements. A score of 50 supposedly reflects a middling point on the index. Thus an average score of the external efficacy index presumably reflects the average external efficacy of the nationally representative survey sample for a given year.  
-
-However, it is easy to confuse the coding scheme of response categories as reflective of values of the index, which is an average. The variable for the external efficacy index (VCF0648) is coded such that agree = 0, disagree = 100, and neither agree nor disagree = 50. However, given that an individual may agree with one statement, but disagree with the other, all combinations of responses between NOSAY and NOCARE item statements would need to be accounted for by the coding scheme. Thus, responding with "neither agree nor disagree" to one but "disagree" to the other item statement corresponds to a value code of 75; whereas agreement with one but "neither" with the other corresponds to a value code of 25.
-
-The coding scheme is complicated by situating "neither agree nor disagree" as a middling value while treating the index as a unipolar scale. For instance, a person who responds with "neither agree nor disagree" to both items would obtain a raw score of 50, whereas full agreement with both external efficacy item statements would amount to 0. Thus, a person who neither agrees nor disagrees with both external efficacy item statements would be considered more externally efficacious (so to speak) than a person who agrees with both statements; the coding scheme of the index takes "neither agree nor disagree" responses as positive evidence of external efficacy despite respondents making no such expression. This coding scheme undermines the credibility of the index itself, further complicating the meaning and measure of external political efficacy.
-
-The justification for coding "Neither agree nor disagree" responses as 50 presupposes a unipolar scale for the external efficacy index. However, the response categories presented to respondents are bipolar, especially for items presented in 1988 and later. Thus, a person who neither agrees nor disagrees with both NOCARE and NOSAY external efficacy item statements is considered as externally efficacious by default. Subsequently, as raw values are totaled and then averaged to create the index, the average level is inflated as any "neither" responses contribute positively to the average, giving a false impression of aggregate external political efficacy in the United States.
-
-```{r}
-#| label: tbl-2
-#| results: asis
-
-
-# create a small dataframe (tribble) that represents the potential values of the
-# external efficacy index
-coding_scheme <- tibble::tribble(
-  ~NOSAY,         ~NOCARE,        ~'NOSAY+NOCARE',                ~EEINDEX, ~INTERPRETATION,
-  '[0] NA',       '[1] agree',    '[0] NA AND [1] agree',          0, "Not Efficacious at all",
-  '[0] NA',       '[3] neither',  '[0] NA AND [3] neither',        50, "Moderately Efficacious",
-  '[0] NA',       '[2] disagree', '[0] NA AND [2] disagree',       100, "Fully Efficacious",
-  '[1] agree',    '[0] NA',       '[0] NA AND [1] agree',          0, "Not Efficacious at all",
-  '[1] agree',    '[1] agree',    '[1] agree AND [1] agree',       0, "Not Efficacious at all",
-  '[1] agree',    '[3] neither',  '[1] agree AND [3] neither',     25, "A little Efficacious",
-  '[1] agree',    '[2] disagree', '[1] agree AND [2] disagree',    50, "Moderately Efficacious",
-  '[2] disagree', '[0] NA',       '[2] disagree AND [0] NA',       100,"Fully Efficacious",
-  '[2] disagree', '[1] agree',    '[2] disagree AND [1] agree',    50,"Moderately Efficacious",
-  '[2] disagree', '[3] neither',  '[2] disagree AND [3] neither',  75, "Very Efficacious",
-  '[2] disagree', '[2] disagree', '[2] disagree AND [2] disagree', 100,"Fully Efficacious",
-  '[3] neither',  '[0] NA',       '[3] neither AND [0] NA',        50,"Moderately Efficacious",
-  '[3] neither',  '[1] agree',    '[3] neither AND [1] agree',     25, "A little Efficacious",
-  '[3] neither',  '[2] disagree', '[3] neither AND [2] disagree',  75, "Very Efficacious",
-  '[3] neither',  '[3] neither',  '[3] neither AND [3] neither',   50,"Moderately Efficacious",
-) 
-
-# print a grid style markdown table of the coding scheme and potential values
-pander::pandoc.table(coding_scheme, style = "grid", justify = "llcrl",
-                     split.tables = Inf)
-
-
-```
-
-
-## Obtaining historical presidential approval ratings from Gallup Org
-
-One of Chamberlain's predictor variables is a yearly average of monthly polls from the Gallup Polling Organization. This data, however, is not super easy to obtain like ANES data usually is; there is no ready-made cumulative time series data file freely available. Gallup does provide access to such data via its platform 'Gallup Analytics', but access is limited to those who subscribe or pay for such access. One might have access through an affiliate university. Mine didn't. An alternative is to gather Gallup survey data provided through the [Roper Center's iPoll database](https://ropercenter.cornell.edu/ipoll/), though again, access is limited to those who subscribe or are affiliated with a subscribing university. Fortunately, mine did. 
-
-Drawing from the Roper iPoll database, I searched for presidential approval ratings by entering in a verbatim search query of the typical question posed by monthly Gallup polls, "Do you approve or disapprove of the way...is handling his job as president". I then filtered results by organization (Gallup) and topic (Presidential approval). From the results that populated, I downloaded topline response data pertaining to the questions rather than entire data sets for each survey where the approval question was asked^[To be clear, the Roper iPoll database permits those with access to download entire survey data sets when available. Alternatively, users are also able to download topline response data pertaining to particular questions of interest from a multitude of surveys. Simply, a percentage proportion of a given sample who selected a particular response category, appropriately weighted in accordance with the survey study. Given that I was seeking presidential approval ratings spanning almost a century, it was best to forego downloading every data set available for monthly Gallup polls from 1938 onward.]. I download the topline data as both a .csv file and .txt file. I extracted Roper archive numbers and citations for each data set from the .txt file and merged that information into a single data set.  
-
-Just to note, I initially attempted to download and rely on the Roper Trends data provided, but this trends data was incomplete and. Approval ratings for both Ronald Reagan and George Bush (Sr.) were missing entirely from the available Roper Trends data. Ultimately, the Roper Trends data was insufficiently useful as a data source for my purposes.
-
-Since I have no reference for the Gallup approval ratings data Chamberlain used, I cannot be entirely sure that the data I have matches or even approximates the presidential approval ratings data he gathered (sure, I could attempt to contact him, but that's not the point). I attempted to approximate presidential approval ratings I managed to find presented by other sources and publications. The only references I could find were 
-
-1)  Presidential Approval ratings from [Gallup Historical Statistics and Trends](https://news.gallup.com/poll/116677/presidential-approval-ratings-gallup-historical-statistics-trends.aspx) (which did allow me to download monthly approval ratings for each President, but excluded any 'Disapproval" and "undecided" or "unsure" response data); 
-
-2)  Presidential job approval data derived from Gallup from [The American Presidency Project](https://www.presidency.ucsb.edu/) 
-  2a) access to Google sheets data spreadsheet [here](https://www.presidency.ucsb.edu/statistics/data/presidential-job-approval)
-  2b) presentation of table and trend line graphs for each president [here](https://www.presidency.ucsb.edu/statistics/data/presidential-job-approval-all-data)
-
-3)  A replication data set for a paper by Ghitza et al. (2022) in the Harvard Dataverse that contained historical Gallup polling data.
-
-First, I sought to determine whether the ratings data from each source matched each other. None of the data completely matched each other one-to-one. One issue was that the actual Gallup poll/survey/study source citation was not included in any of the data sets. Some provided question reference IDs which should have worked to locate the particular data sets from which ratings data was drawn, but many of the question reference IDs did not match. Moreover, approval ratings for seemingly matched Gallup polls differed between data sets. The difference wasn't usually large, but deviated by a percentage point in many cases. In addition, for many cases, the start and end dates of particular surveys did not match between data sets. 
-
-I was only able to partially match the approval ratings from the other sources with the Gallup data I gleaned from Roper iPOLL. I was not able to fully replicate the Gallup data to match approval ratings found elsewhere. 
-
-
-## 2025-04-16
-
-We would expect external efficacy to drop upon increased constraints placed upon a group or population's capacity to effectuate change---to shape their political environment---regardless of the construct or face validity of the current measurement instrument. If the instrument validly measures the construct (i.e., construct validity) as I have defined it, then there should be no increase in external efficacy among groups who are/were not subject to increased restrictions or prohibitions on a different group. That is, if political conditions change to be more restrictive (or indeed, oppressive) for women, or Black people, or any other reconciled minority population in the United States, then this should not in turn increase the levels of efficacy among that population not subject to coercive or oppressive restrictions. The political conditions of this group have not changed and as such their status remains unaffected by restrictive laws placed upon other groups. Simply, the favored subject is still subject.
-
-Thus, for example, U.S. citizens are not endowed with new powers of government when further restrictions and prohibitions are placed upon non-citizen immigrants; their capacity to shape the political environment has not changed from its *status quo*. Therefore, from the perspective of the subject, the maximum effect possible given their engagement (intervention) in the political process of government, would or should remain unchanged. 
-
-The issue is determining the general purpose, or end, of political engagement (intervention) for a person of said status. If the purpose of political engagement is, at best, to influence the choices and behaviors of those actors empowered to govern, then the maximum effect of citizen engagement is limited to that end.  In such a case, appraisals of efficacy are beholden to perceived validation of political influence. That is, efficacy beliefs are inherently defined as the extent to which a person believes themselves, or their group, as influential---capable of imposing influence on the actors engaged in the process of governing.
-
-However, despite that stated purpose being the underlying standard consensus in much political science research and theory over the years, it is in contradiction to a system in which the people rule. Thus, our conception of political efficacy in political science and theory is based upon the implied purpose of political participation professed by scholars as to *influence* empowered actors.
-
-## 2025-04-17
-
-Throughout U.S. history, political conditions have changed, sometimes quite significantly from what had been the *status quo* prior to. But as it relates to political efficacy, the political conditions that changed were not always conditions pertaining to the capacity of the people to shape the political environment. To be sure, many changes that pertain to the people *en mass* were ordained in order to prohibit and protect against arbitrary discrimination of one group or another, which no doubt contributes to the people's popular capacity. 
-
-The subject, in this case, doesn't merely refer to one individual person, but to all those people who are equally subject to the same political conditions.
-
-So when considering changes to the 'external' political environment that may relate to efficacy attitudes, consideration must be constrained to the conditions of the political environment that shape the people's popular capacity to shape that very same environment. That is to say, people are subject to conditions of the political environment, but what is of interest in regards to political efficacy is the capacity of the subject, in turn, to subject the political environment. 
-
-To put in other terms, the popular capacity of the people to shape, change, reform, or otherwise constitute the conditions of their political environment is the basal purpose of engagement and participation within, and without, the political system. 
-
-
-Political efficacy has been conceived as an individual's attitude in regard to themselves situated along two component dimensions, but the conception falters as soon as we move to consider the so-called 'external' dimension. In one dimension, political efficacy is conceived as one's personal confidence in their ability to merely encounter or confront political topics, issues, or affairs; internal political efficacy is no more than an individual's self-qualification as more or less politically competent. The conception of the other dimension, external political efficacy, immediately forgoes an appraisal of the individual's ability to do or accomplish or produce or          
-
-
-## Sometime prior to 2025-04-20
-
-Chamberlain (2012) states that the dependent variable in his analysis was "external efficacy values from 1952 to 2008, taken every two years except from 1952 to 1964 and from 2004 to 2008"^[He notes that the Time Series Cumulative Data File did not, nor does not, include data collected from the 2006 ANES Pilot study. New external efficacy items were run in the ANES 2006 Pilot study before being fielded in 2008 ANES on a much smaller sample.].
-
-Basically, Chamberlain relies on the CDF from 1952 to 2008, simply excluding years of which external efficacy items were not asked. The index score from 1986 even though only one item was asked.
-
-NOTE: the NOSAY external efficacy item was not asked in 1986 for some unknown reason. Neither NOSAY or NOCARE were asked in years 1948, 1954, 1958, 1962, and 2012, but only NOSAY was omitted from the survey in 1986. I think it best to exclude these years and only include the years wherein both items were asked. Even though the NOCARE was asked in 1986, NOSAY was not. It's already problematic (methodologically) to take an average of two arbitrarily coded ordinal categorical variables, yet it becomes more dubious to rely on a average of a single item as though it were an index. However, for the sake of replication, I will first include the same years included by Chamberlain.
-
-
-# 2025-04-21 and 2025-04-22
-
-Now the ANES isn't a yearly survey; the ANES has been conducted every two years starting from 1964. In his article, Chamberlain lags the dependent variable (external efficacy) by 4 years---i.e., a four year lag.
-
-His reasoning mostly hangs on theoretical grounds---primarily the notion that the definition of the concept itself implies that past government performance should influence external efficacy. Or simply, evaluations of perceived government responsiveness to public demands leaves lasting impressions on later evaluations of the same. Yet, this reasoning seems a bit loose; there isn't a thorough explanation offered by Chamberlain for why a person's level of *external efficacy* at one point in time will influence their level of *external efficacy* at some later point in time. All the definition implies is that perceived government responsiveness---drawn from considerations of today and yesteryear---will influence one's sense of external political efficacy. So based on the current conceptual definition for external efficacy, my feelings of external efficacy today are informed by my impressions about the extent to which I believe government officials have been responsive to public demands, i.e., the extent to which I believe government officials care about what people like me think and the extent to which I believe people like me have any say in what government does.
-
-There is one line of reasoning that justifies a dynamic model time series analysis as a test of measurement validity. In a dynamic time series model, a change to levels of external efficacy at one point in time will have downstream impact on one's sense of external efficacy in the future. That is, it is the *change* to one's sense of external efficacy that is remembered and influential upon later appraisals. 
-
-When looking back, the experience of when one's feelings changed is conjured up whenever one must consider the extent to which government officials care about and follow public demands. External efficacy beliefs may be relatively persistent, especially when low, and especially since it is harder to earn trust then it is to lose it. An instance of unresponsive government may seem like "more of the same" to the person whose belief has been settled. However, for the person whose appraisal of external efficacy is relatively high, certain events may negatively shift one's views of the conditions of the political environment, and thus influence levels of external efficacy.  
-
-Another line of reasoning may be that one's feelings of external efficacy---being partially, but largely, influenced by the contemporary political context---is considered and then stored in memory only to be recalled upon the next instance where its consideration becomes relevant again. That is to say, an individual remembering the impression or conclusion they reached previously, however partial, in regard to whether government officials care or follow public demands. This previously settled attitude affects their current and later evaluations of the same. While sensible, this line of thought suggests that we would expect a degree of bias in contemporary and future levels of external efficacy towards some previously settled reference level of external efficacy. Therefore the reasoning is predicated on the assumption that the individual has at one point in time considered and settled their attitude about whether government officials care or follow public demands. 
-
-
-Such a line of reasoning would justify a dynamic model, yet this relies on the presumption that an individual has at some point formulated some impressionistic sense of their own external efficacy prior to the questions being asked in a survey. In order to substantiate this theoretical framework, some default reference level of external efficacy must be presumed. Sure enough, the default reference for external efficacy is simply the ideal---that government officials and productions are responsive to public demand. A sticky point is the ambiguity of what is meant by "public demands", i.e., does it refer to expressed preferences of the public or to the common interests of the public? In either case, a normative ideal for how responsive the government should be is implicitly assumed as the reference point of external efficacy.     It is unclear from this theoretical digression whether an individual's level of external efficacy would be biased toward some *status quo* reference level---perhaps hovering around some unknown (but presumed) prior impressions; or whether levels would be biased to continuously increase or decrease depending on the trajectory of the last most influential factor. The implications of the definition alone merely suggest that external efficacy is, indeed, an attitude formed by retrospective, 
-
-
-# 2025-04-22
-
-Chamberlain's study is valuable because it proposes to test whether aggregate results over time conform to what we'd expect given the standard conception of external political efficacy. Simply put, Chamberlain posited that according to the definition of external efficacy, we would expect to see dynamic shifts in aggregate levels of external efficacy in accordance with changes in the political environment. The theory of Chamberlain's study is sensible so long as the common understanding and conceptual definition of external efficacy is taken as a given. His study stands as a unique way to test the construct validity of external efficacy that isn't reliant upon methods of common factor analysis or structural equation analysis. And it is appropriate considering that external efficacy, as conceived and measured, has remained generally unchallenged by scholars despite common acknowledgement of issues in measurement.
-
-
-In that case, results showing that external efficacy in the aggregate is not "dynamically responsive to changes to the political environment" presents a significant challenge to its contemporary conception and measurement. However, even taking the standard conceptual definition of external efficacy as a given, Chamberlain selects predictors that are not reflective of the political environment while treating them as such. His conclusion holds only if one accepts the three predictors he selected as a partial representation, or proxy of, the political environment. Yet, presidential approval ratings, consumer sentiment, and trust in government are not tenable as factors representative of the political environment. As such, it is difficult to substantiate the null results as informative or reflective of the author's conclusions.  
-
-The value of the study is that it stands as an open question---an untested hypothesis, or rather, an improperly tested hypothesis. Given the standard definition and common understanding of external political efficacy, we would expect changes to the political environment to concur with shifts in aggregate external efficacy over time. However, considering the trouble posed by not using predictors that could be reasonably stated as reflective of the political environment, novel predictors would need to be incorporated into the same test. If aggregate external efficacy does not appear to be responsive to said changes over time (dynamically or otherwise), then construct validity for the measurement of external political efficacy is invalid. Doubly so if null results are found provided the novel predictors can be more reasonably understood as reflective of the political environment. The implication would be that the items composing the external efficacy index, while predictive of behavior at the individual level, cannot be said to be measuring external efficacy as understood in the literature. More importantly, external political efficacy would be challenged, if not wholly invalidated, as a distinct dimensional component of political efficacy.
-
-First, I attempt to replicate Chamberlain's results published in 2012 using similar data. Chamberlain's study was limited to evaluating time series data from 1952 to 2008, the most recent data available at the time. My replication will attempt to extend that analysis to range from 1952 to 2020^[Preliminary data from the 2024 ANES is available at the time of writing, but had yet to be finalized and incorporated into the ANES Time Series Cumulative data file.]. Replication of Chamberlain's results wouldn't be too informative---his study produced null results that, while interesting, are substantive only if one accepts his interpretation of the predictors as reflective of the political context. If, however, while following the same methodology employed by Chamberlain, external efficacy does appear to be responsive to the same chosen predictors in the years beyond his original analysis, then further study would be needed to explain why external efficacy appeared unresponsive until late.
-
-Then, I conduct a second time series analysis using a new model with different predictors. Complimentary results would not only replicate Chamberlain's findings, but further substantiate challenge to the concept and measurement of external political efficacy.
-
-
-
-> "This article is an attempt to gain leverage on the measurement issue by using an aggregate, dynamic time-series model to uncover what factors cause external efficacy to change over time." [@chamberlain2012, 118].
-
-Here Chamberlain makes a mistake: we can't determine the causes of some thing or event when we don't have a proper conception nor measurement of it. We may find that the results of our measurements fluctuate up and down and we may be able to attribute such fluctuation to particular factors; but if we don't know what it is we are measuring in the first place, then such measurements are meaningless. Or if we know what we'd like to measure but don't have valid methods of measuring it, then not only are measurement results of the construct invalid but discovering factors that significantly (or not) influence  those measurement results isn't informative. 
-
-
-In that case, we are merely naming patterns observed through particular combinations of data and attributing conceptual substance post-hoc. This is different from inference because instead of letting the patterns of observed data inform us of what is present, we are constricting the information to form the patterns we want to see. 
-
-Or if we **do** know what we'd like to measure---as in, we have a proper conception of some attitude or phenomenon or thing in theory---but haven't developed measurement instruments that consistently validate the concept as theorized nor reliably capture it as well, then nothing can be said about what causes fluctuations in what is being measured. For one, until a measurement method is validated, we must assume that we're not measuring the thing we claim. Factors attributed to fluctuations in its levels can not be informative of its meaning.  
-
- As it stands, external political efficacy refers to    
-
-(For instance, I understand what my body weight is conceptually, but the measurement instruments I have for it cannot be said to validly measure my weight at all. Whenever I supposedly measure my weight by use of these invalid instruments, the results I have can't be said to accurately reflect my body weight. Finding other factors that significantly influence results drawn from invalid measurement of my weight tells me nothing about my current weight, nor about trends in my weight over time, nor of the validity of the measurement instrument itself. However I have an unobjectionable definition for body weight that clearly tells me what body weight refers to and hints at how it might be ascertained. 
-
-External political efficacy, however, refers to a component dimension of a hypothetical construct in theory. Measurement of it must validly conform to its conception, surely, but the conception itself must first be reasonable and (relatively) unobjectionable.)
-
-> "External efficacy is a measure that takes into account a government's responsiveness; people should draw on past experiences with government before assessing whether they have any effect on its behavior. Past government performance, and the economic conditions it presides over, should have an effect on changes to external efficacy over time." [@chamberlain2012, 119]
-
-This is where Chamberlain's reasoning falters. He just said that people should draw on "past experience with government" as in, past experience engaging with government and the with the outcomes thereof, if any. Yet he posits that past government ***approval***, in general, and impressions of contemporary economic conditions should influence the way external efficacy changes over time. 
-
-People can't assess whether they have any effect if there is no experience to draw upon. Experience of engagement is the basis for which one evaluates whether said engagement was effective towards accomplishing or producing the ends sought. Without experience of engagement to draw upon, the basis of their expression, then, is simply how satisfied they are with government officials. It isn't simply evaluating past government performance in general, but rather evaluation of government performance in regard to how responsive government officials and government outcomes *appear to be* to public input. Essentially, respondents are grading government in the category referred to as "responsiveness to public input".
-
-:::{.callout-note}
-## 2025-08-15
-I added more to a comment on the PDF in Zotero that is worth including here too
-:::
-
-If external efficacy takes into account a government's responsiveness, then measurement items should have people evaluate *the maximum effect of their input upon government outputs*, i.e., on the things that government produces (e.g., laws, policies, regulations, etc.). The government responds by enacting new laws, making changes, declaring war, or ultimately **producing outcomes**. Sponsoring legislation, for example, is not enough to qualify as responsive even if said legislation was submitted to Congress due to some kind of popular public input. People aren't evaluating whether government actors or politicians are putting forth effort or trying their best; they are evaluating whether their own popular political activity amounts to effects upon or production of government outputs. Literally, whether the public attempts to stimulate government activity works to bring about desired outcomes. That would be a measure that assessed the efficacy of the means of popular political production---i.e., whether political outcomes are produced upon popular political activity. 
-
-To give an illustrative analogy, a pharmaceutical drug or medicine meant to cure some illness may excite some part of a persons body, or may generate some chemical activity upon ingestion, but ultimately not result in any positive improvement or effective cure of a person's condition. The efficacy of the drug would then be considered null despite whatever somatic excitement.
-
-A government would be unresponsive if popular input did not produce outcomes. Moreover, a government would still be considered unresponsive even if public input stimulated, aroused, or excited politicians into action. The criteria for responsiveness is an actual outcome, not whether politicians are perceived to have put forth effort.
-
 
 # 2025-04-23
 
@@ -418,59 +138,6 @@ As commonly defined, external efficacy beliefs take into account a government's 
 
 This is in spite of there already being a closely related, if not conflated, index of government responsiveness consistently measured in national election studies.  
 
-
-# 2025-04-29
-
-In order to resolve the issue of external efficacy, our conceptual understanding of it must first be addressed and scrutinized. We don't know what we're measuring if we do not have a clear, concise, and distinct conception of it (whatever it is). Especially in relation to the supposed contrast, internal efficacy. Whether that relationship is both coherent and valid is not purely an empirical matter that can be resolved through complex measurement methodology or creative use of the methods of statistical inference. We first must be clear about what it is we mean when we refer to this concept in theory, which, in turn, means that the theory of the concept itself must be valid on its own terms. 
-
-We must understand what we want to know, which is fundamental to scientific inquiry. When we select a measurement instrument, it is presumed that we have clearly identified what we'd like to know because of what results the measurement instrument can produce. When I want to know how much I weigh, I use the appropriate measurement instrument that reliably provides me with valid results corresponding to my weight in an appropriate unit metric for (e.g., pounds lbs, kilos, grams).  
-
-Then we must recognize whether we are forming the theory of a concept instrumentally to further the aims of research---to find the answer to the question we have---or whether we are merely giving a name to a pattern or phenomenon observed in nature.
-
-...
-
-Chamberlain states, 
-
-> "Some might question the causal ordering and argue that external efficacy could predict all of these variables. Theoretically, this would then be a problem with the definition of external efficacy, for the public must assess government responsiveness based on past performance." [@chamberlain2012, 122]
-
-Yes, conceptually, this is a big issue with external efficacy. But also the idea here would also imply that the public's current approval of the incumbent president wouldn't be conditioned on their past appraisals of government responsiveness. Yet, why wouldn't it be? Why wouldn't presidential approval today be influenced by assessments of past gov responsiveness (external efficacy) of the past?
-
-What influences presidential approval? Is past external efficacy independent of presidential approval today?
-
-
-> "Without a government to assess, external efficacy could not conceptually exist." 
-
-Ugh, no.
-
-> "Statistically, the dynamic nature of the lagged time-series approach helps ensure that past performance is being used to predict current levels of external efficacy. External efficacy at time t cannot cause the values of trust and presidential approval at times t - 1, t - 2, or t - 4." [@chamberlain2012, 122]
-
-But what if the external efficacy at $t_4$ influences the predictors at $t_1$, $t_2$, etc.? The lagged external efficacy variable is, in effect, used as an independent predictor in the dynamic model, but if the DV at $t_4$ is significantly related to the other predictors at $t_1$, $t_2$, or $t_3$, then wouldn't the lagged-DV introduce endogeniety and bias estimates?
-
-The other thing is this issue where a lagged dependent variable soaks up, or essentially steals, the effect of both excluded and included variables [@achen2000]. That is, when the independent variables included in the model are "sufficiently trending", then including a lagged dependent variable causes bias.  
-
-One could hypothesize that past values of external efficacy predict current (or recent) values of presidential approval, trust, and economic sentiment. If past external efficacy is an influential factor to current levels of all three, then current levels of external efficacy probably predict later values of the predictors. The causal path is muddled up quite a bit.
-
-However, a more recent study [@ghitza2023] suggests that the cumulative impression left by political events...
-
-
-:::{.callout-note}
-Quick thought on the citation below
-:::
-
-Norris, Mikel. 2015. “The Economic Roots of External Efficacy: Assessing the Relationship between External Political Efficacy and Income Inequality.” Canadian Journal of Political Science/Revue canadienne de science politique 48(4): 791–813. doi:10.1017/S0008423915001080.
-
-
-My initial thoughts on this [@norris2015], before reading the full paper, is that the relationship between external efficacy and income inequality supports my contention that measurement instrument for external efficacy has little to nothing to do with efficacy at all. If lower income inequality improves external efficacy, then all that tells us is that the measures for external efficacy are instead measures of contemporary life or government satisfaction. When I am fat and happy, I feel “externally efficacious”. Thus, *democracy* is actualized when the people are satiated---not necessarily while they are in power. Otherwise said, the power of the people has nothing to do with external efficacy as it is understood and measured today. And that is, chiefly, my primary contention.
-
-
-Then there's the study from the following citation again linking income inequality to external efficacy beliefs. The hint is consistently slapping political scientists in the face but the results are too significant to be concerned with my contrived pedantry. Income inequality depressing external efficacy is interesting in itself, but the substantive importance left unrecognized is that the relationship suggests that 1) measures for "external efficacy" are not related to the belief about the capacity to shape the political environment, and 2) people believe they live in a democracy so long as they are affluent, or at least "economically comfortable". I would imagine (hypothesize) that those with greater affluence would readily endorse the statement that "The United States is a Democracy" compared to those who are, for lack of a better term, poor. If the mechanism of democracy is tied to income, to wealth, then one's conceptions of power are tied to the vehicle rather than the destination. That is to say, the democratic status of the regime is left unquestioned so long as me and mine prosper. Our prosperity may very well be expanded or limited to the extent allowed by our subjugator, but so long as it is prosperity indeed, then to me it feels like *democracy* in fact.
-
-Bienstman, Simon, Svenja Hense, and Markus Gangl. 2024. “Explaining the ‘Democratic Malaise’ in Unequal Societies: Inequality, External Efficacy and Political Trust.” European Journal of Political Research 63(1): 172–91. doi:10.1111/1475-6765.12611.
-
-
-There's more to be said about class, and its seemingly inextricable relation to, well, everything. But I am tired.
-
-
 # 2025-05-01
 
 A two-way fixed effects model to estimate difference-in-difference effects utilizing the time-series (panel) data (which is, really, repeated cross section data, also referred to as rolling cross section data) seems appropriate. 
@@ -481,9 +148,9 @@ y_{it} = \alpha_{i} + \tau_{t} + \beta_{3}(Treated_{i} \times After_{i}) + \beta
 
 $$
 
-- the $\alpha_{i}$ terms (the unit-specific fixed effects) capture differences that exist across units both before and after the treatment (or event)
-- the $\tau_{t}$ terms (the time-specific fixed effects) capture differences that exist across all unit in every period. For instance, if homicide rates are higher in 2007 than 2003, then the $\tau_{i}$ for 2007 will be higher than $\tau_{i}$ for 2003.
-- $Treated_{i} \times After_{i}$ is an interaction of a variable indicating whether a unit is a treated unit (treated = 1 for states that enacted some kind of voting laws) and $Post_{t}$, which indicates whether the observation occurred post-treatment (meaning the observation occurred after the state passed whatever law). This interaction variable will equal 1 for treated states in the post-treatment period (after 2013) and 0 for all other observations. 
+-   the $\alpha_{i}$ terms (the unit-specific fixed effects) capture differences that exist across units both before and after the treatment (or event)
+-   the $\tau_{t}$ terms (the time-specific fixed effects) capture differences that exist across all unit in every period. For instance, if homicide rates are higher in 2007 than 2003, then the $\tau_{i}$ for 2007 will be higher than $\tau_{i}$ for 2003.
+-   $Treated_{i} \times After_{i}$ is an interaction of a variable indicating whether a unit is a treated unit (treated = 1 for states that enacted some kind of voting laws) and $Post_{t}$, which indicates whether the observation occurred post-treatment (meaning the observation occurred after the state passed whatever law). This interaction variable will equal 1 for treated states in the post-treatment period (after 2013) and 0 for all other observations. 
 
 So controlling for pre-existing differences in state external political efficacy (via state fixed effects), and national trends in external efficacy (via time fixed effects) and maybe some additional controls, did external political efficacy shift after states implemented laws that affect their capacity to effectuate change in the political environment?
 
@@ -495,7 +162,7 @@ So controlling for pre-existing differences in state external political efficacy
 Lagged dependent variable model without fixed effects
 
 $$
-Y_{it} = \gamma Y_{i,t-1} + \beta_{0} + \beta_{i}X_{1it} + \beta_{2}X_{2it} + \epsilon_{it}
+Y_{it} = \gamma Y_{i,t-1} + \beta_{0} + \beta_{i}x_{1it} + \beta_{2}x_{2it} + \epsilon_{it}
 $$
 - $\gamma$ is the effect of the lagged dependent variable
 - $Y_{i,t-1}$ is the dependent variable of the previous period (i.e., lagged by one time period)
@@ -504,7 +171,7 @@ $$
 
 As usual, a unit-increase of $X_{it}$ will be associated with a $\beta_{1}$ increase in $Y_{it}$ that period. An increase in $Y_{it}$ in one period affects $Y_{it}$ in subsequent periods via the $\gamma Y_{i,t-1}$ term in the model. Thus, a change in $X_{it}$ not only corresponds with a $\beta_{1}$ effect on $Y_{it}$, but also corresponds with a $\gamma \times \beta_{1}$ effect on $Y$ in the next period.
 
-If there is **serial autocorrelation** and **tending** in the independent variable $X$, then including a lagged dependent variable $Y_{i,t-1}$ will bias estimated coefficients downward. Even though autocorrelation does not cause bias in OLS models, autocorrelation can cause bias in dynamic models. 
+If there is **serial autocorrelation** and **trending** in the independent variable $x$, then including a lagged dependent variable $Y_{i,t-1}$ will bias estimated coefficients downward. Even though autocorrelation does not cause bias in OLS models, autocorrelation can cause bias in dynamic models. 
 
 The model needs to be estimated with and without the lagged dependent variable. There needs to be no serial autocorrelation nor trending in the independent variables of the model. There are a few ways to test for autocorrelation
 
@@ -567,61 +234,8 @@ Aggregating data by year reduces the number of observations $N$ quite dramatical
   
 
 
-## 2025-05-08
 
-::: {.callout-note}
-I was attempting to write out a simple abstract but digressed into other stuff. Some may be worthwhile. The first part I was trying to...formalize the argument against why Chamberlain's chosen predictors were invalid.
-:::
-
-To be clear, the argument goes as follows:
-
-- The individual is subject to the political context (i.e., conditions of the political environment)
-- Attitudinal variables about the context are from the perspective of the subject (i.e., subjective)
-- Political context is not a deterministic influence on attitudes
-- Attitudes about context may or may not related to the political context (i.e., independent of context)
-Therefore...
-
-Attitudinal variables about the political context from the perspective of the subject are not suitable as proxy for the political conditions thereof. 
-
-Simply, attitudes about the environment are not sufficient proxies for the environment.
-
-External political efficacy has been fraught with conceptual and methodological issues since inception. 
-
-
-Tentative abstract: 
-
-It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. @chamberlain2012 attempted to address this problem in the hopes that results would elucidate the meaning from the measurement. Drawing from the usual conceptual definition of external efficacy, Chamberlain hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; according to the original study, aggregated external efficacy was apparently unresponsive across time to predictors representing the political environment. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. However, similar to Chamberlain's study, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the predictors of the analysis are not tenable as proxies for the political environment. To conduct a fairer test of the meaning and measurement of external efficacy, I examine whether external efficacy has been responsive to changes to the political environment across and between states since 2013 after the Supreme Court decision in *Shelby County v. Holder* which ruled Section 4(b) of the Voting Rights Act unconstitutional.         
-
-One may argue that external efficacy refers to beliefs about responsiveness of government authorities and institutions to public demands, but given that Supreme Court rulings need not be responsive to contemporary demands of public opinion or preference, then no shift in external efficacy over time would be expected or attributable to rulings from the high court. Indeed, the rulings of the Supreme Court are not responsive but rather expressive of constitutional authority. The power vested in the Supreme Court, as with the other branches of government, are capable of shaping and re-shaping the political environment*. The legitimacy of federal and state law is contingent on conformity with the constitution, i.e., subject to conditions established as constitutional. And individuals are subject to such political conditions within the jurisdictions of the United States. 
-
-This highlights the conceptual distortion of external efficacy in that the underlying focus is constrained on the people's capacity to *influence* government officials and institutions in reference to perceived sensitivity to public opinion. 
-
-The ideal is not that government actors and institutions, of whatever form, creed, or regime type, are responsive to public demand, opinion, preference, or even common interests, but rather that the popular capacity of the people is not subordinate in relation to the bodies vested with the power to govern political conditions of the state. Indeed, in the the first three articles of the U.S. Constitution, particular powers of government are explicitly *vested* within the three branches. Such power, not by divine right or by laws of nature, is vested by the people for the purposes enscribed in the preamble,
-
-"We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic tranquility, provide for the common defense, promote the general Welfare, and secure the Blessings of Liberty to ourselvs and our Posterity, do ordain and establish this Constitution for the United States of America."
-
-The point of the matter is to make clear that power is vested, not surrendered, to the particular branches to govern the conditions of the state for the purposes outlined by the Preamble. 
-
-  *Note the irony that the power of the people is not to shape the political environment but is limited to influencing those who can and do.    
-
-
-
-Presidential approval doesn't tell us whether political conditions have changed. Steep spikes and dips in approval may correspond with some event, but is not indicative of the political context. The index of consumer sentiment may be expressive of how the public feels about contemporary economic conditions, but consumer sentiment is not independent from presidential approval ratings. Thus the model already risks endogeneity. 
-
-
-# 2025-05-09
-
-::: {.callout-note}
-Throwing all the draft writing here up to now just to clear out the index.qmd doc.
-:::
-
-External political efficacy is difficult as it is not entirely clear what, exactly, is being measured. Especially in relation to other similar constructs[^1] such as trust in government and perceived government responsiveness. External efficacy is too easily conflated with these two at the conceptual level, and also has been shown to be strongly correlated with trust in government in common factor analysis methods. The idea seems to be that the survey items are measuring *something* just distinct enough to qualify its continued measurement as a relatively distinct, homogeneous, psychological construct. The problem is that there's not a clear and concise notion as to what the survey items are actually measuring. In other words, responses to the two survey items appear to be influenced by some underlying factor distinct, but related to, similarly conceived political constructs, but there isn't enough for researchers to distinguish a cogent concept in theory that could be referred to as external political efficacy[^2].
-
-[^1]: Note the careful connotation of *construct* as in reference to a theoretical concept created by researchers (hence, *construct*). I take care to avoid reification of the construct of interest as a literal object under study. See @slaney2015
-
-[^2]: Note the common issue in factor analysis known as the 'naming fallacy'. Just because a factor is given a name doesn't mean that is what influences the various indicators (i.e., survey item responses)
-
-@chamberlain2012 attempts to address this problem in the hopes that results would elucidate the meaning from the measurement, regardless of whether results were supportive or null. Rather than propose new measurement items or offer a novel conceptual understanding, Chamberlain aimed to discern whether this individual-level construct is even sensitive to external factors in the environment as would be expected given its conventional understanding. His idea was that a dynamic time-series model of aggregate external efficacy was needed to reveal factors that shift (or don't shift) external efficacy overtime, thus aiding in the ability of researchers to draw meaning from, and hopefully clarify, what is actually being measured by the survey items. In order to do so, particular external factors reflective of the political context were selected.
+@chamberlain2012 attempts to address this problem in the hopes that results would validate interpretation of measurement. Rather than propose new measurement items or offer a novel conceptual understanding, Chamberlain aimed to discern whether this individual-level construct is even sensitive to external factors of the environment as would be expected given its conventional understanding. His idea was that a dynamic time-series model of aggregate external efficacy was needed to reveal factors that shift (or don't shift) external efficacy overtime, thus aiding in the ability of researchers to draw meaning from, and hopefully clarify, what is actually being measured by the survey items. In order to do so, particular external factors reflective of the political context were selected.
 
 Accordingly, Chamberlain's study was an attempt to validate the meaning and measure of external political efficacy in reference to how it is understood, defined, and measured in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways.
 
@@ -646,7 +260,7 @@ He critiques the reliance or use of structural equal modeling in development of 
 
 Accordingly, Chamberlain's study is intended to test the validity of the construct in reference to how it is understood, defined, and measured in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways.
 
-Chamberlain [-@chamberlain2012] was one of a few who focused on external political efficacy and exposed substantive faults in both its conception and measurement. Rather than propose a new measurement or offer a new conceptual understanding, Chamberlain attempted to discern whether this individual-level construct was sensitive to external factors in the environment as would be expected given its conception and measurement. His research showed that aggregate external efficacy was not responsive to particular changes in the political environment. However, immediately brought into question is whether the predictors he selected are reflective or representative of the external political environment in the first place. 
+Chamberlain [-@chamberlain2012] was one of a few who focused on external political efficacy and exposed substantive faults in both its conception and measurement. Rather than propose a new measurement or offer a new conceptual understanding, Chamberlain attempted to discern whether this individual-level construct was sensitive to external factors in the environment as would be expected given its conceptual meaning. His research showed that aggregate external efficacy was not responsive to particular changes in the political environment. However, immediately brought into question is whether the predictors he selected are reflective or representative of the external political environment in the first place. 
 
 Despite Chamberlain's revelations, no subsequent work has been done to reconsider the conceptual foundation of external political efficacy in relation to it's twin component, internal political efficacy, nor with respect to any sensible theoretical framework in the current age. Although vital at exposing fault lines of efficacy research in political science, Chamberlain relied on a conception of external efficacy conflated with government responsiveness. Moreover, his selected predictors are dubious as factors representative of the external political environment. Indeed, the independent variables used in his analysis are not factors or variables of the external political context but individual attitudes related to satisfaction with, and trust in, government.
 
@@ -676,177 +290,12 @@ However, the fundamental conceptual distinction of political efficacy into two c
 
 Solidifying the divide of political efficacy into its internal and external components was @balch1974's analysis, which applied a unique multitrait-multimethod matrix method [@campbell1959] to test the construct validity of survey measurement items. Analysis since then has primarily aimed to bolster the internal and external dimensions [@hayes1993; @morrell2003].
 
-## 2025-05-15
-
-> "Perhaps in no domain might the potential for these policy feedback effects be more obvious than in the context of electoral reforms, which affect the most central and visible of democratic processes and have the potential to personally impact how each member of the polity engages in the political process." [@trexler2025, 3]
-
-Recent research provides further evidence that bolsters the notion that external political efficacy is invalid in both concept and measure[@trexler2025]. The study by @trexler2025 found that, "...election reforms designed to expand access to mail voting systematically influence people's feelings of political efficacy or trust across time or in response to the unique circumstances of specific elections..." [-@trexler2025, 2].
-
-Shifts in policy, especially shifts related to the means of political production (i.e., voting in elections), should relate to the public's appraisal of their popular capacity to shape the political environment. Reform intent on expanding access to to voting are indeed policy changes that can be understood as changes to the people's capacity to shape the political environment. This is because such policies affect the public's *means of political production* which correspond to the public's appraisal of their popular capacity to effectuate change. Thus, policies which affect the means should influence appraisals of popular efficacy from the perspective of the subject (to which those means apply).
-
-However, according to the commonplace definition of external political efficacy, shifts in such policy can only be expected to relate to shifts in external efficacy with regard to the individual's impressions about government responsiveness to public demand. That is, so long as the individual interprets such policy changes as government action spurred (stimulated) in response to public demand, and so long as such policy changes are considered to be congruent with public demand. 
-
-:::{.good-but-cut}
-A clear issue is the extent to which policy support or endorsement is cued from political elites, i.e., from the top-down. That is, whether a person favors or disfavors a particular policy or political outcome is more-often-than-not informed by a person's partisan inclinations. 
-
-The individual's evaluation is contingent on whatever they believe to be demanded by the public. More importantly, which ever party holds majority power may easily inform one's feelings about the government *writ large*. That is to say, the affective component of one's consideration is easily tempered by partisanship. Yet it is somewhat unclear how those who are generally ambivalent inform their evaluation of government responsiveness. In fact, it is questionable whether any such consideration ever occurs prior to asking the question.
-
-The individual must have reconciled their impressions about the overall responsiveness of government officials and institutions to public demand with the policies and outcomes of government and politics. One clear issue is the limited extent to which the public considers policy at all in their evaluation of government and government officials. Partisanship is a simple heuristic that evidently forms much of the basis of one's impressions about, and evaluations of, government and politics. Such is the case for the most sophisticated as it is for even those of marginal interest and understanding.
-:::
-
-Different policies and regulations that out pour from government action shift and change political conditions regularly. The changes that would be expected to relate to, or influence, a person's beliefs about the capacity to shape conditions of the political environment are those policies that directly pertain to the means incorporated for doing so. As such, it is reasonable to expect that policy changes to elections and voting significantly relate to external political efficacy.
-
-I think one of my strongest arguments against external efficacy is that it can easily be referred to as something else without confusion. For instance, it can be simply referred to as a crude concept and measure of perceived government responsiveness, "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands". Yet better concept and measures for perceived government responsiveness have emerged. The measurement items may serve well if included in a bank of items so long as they are appropriately validated using IRT methodology. 
-
-# 2025-05-16
-
-Previous research has already demonstrated that changing the rules significantly effects voter turnout, participation, vote choice, and the like [@ang2019]. The question is whether particular efficacy beliefs are concurrently impacted. That is, we would expect efficacy beliefs to shift when the rules change; especially those rules pertaining to the people's capacity to effectuate change in their political environment through government and politics. If the measurement instruments in use are sound, then we're better able to determine whether, and to what extent, public attitudes are sensitive or insensitive to actual shifts within the political environment. However, if the measurement instruments in use are not sound (invalid), then credibility of our conclusions are dubious at best.
-
-To put in other words, the event here is the ruling in Shelby County v Holder which empowered state governments to change voting laws without need for preclearance from the federal government. so across the different states, voting laws changed or did not change. The question is whether changes in laws that pertain to popular efficacy stimulate efficacy beliefs *in general* as measured by external political efficacy measures. 
-
-So to be clear, the aim of this study isn't to determine whether changes to voting laws influence external efficacy *per se*. Rather, the aim of this study is to determine whether the meaning and measurement of external efficacy is sound. If the shifts in external efficacy are not significantly related to changes to political conditions (such as voting laws), there are two potential interpretations: either attitudes/beliefs are insensitive to changes in the political environment or the measurement instrument in use is unable to measure the attitude of interest. We can only suppose the former is the case insofar as we are confident that the measurement of the construct is sound. However, multiple studies over time have noted inconsistencies [] and efforts to validate the meaning and measure of external political efficacy are not only sparse but throw a substantial amount of doubt on the validity of the measurement. Moreover the conceptual understanding of external efficacy is hardly distinguishable from government responsiveness, which is further complicated by such strong relation to political trust (trust in government). In fact, early literature attempting to disentangle the conceptual ambiguity refers to external political efficacy as the "responsiveness component" and "perceived responsiveness" [@craig1979]. 
-
-Yet if it happens to be the case that shifts in external efficacy are not related to changes in political conditions, the most damning evidence against the implication that attitudes/beliefs are merely insensitive to changes in the political environment is the evidence showing that significant changes in political behavior can be attributed to, or associated with, changes within the political environment. We may be able to detach political behavior from having a necessary relationship with attitudes; attitudes don't necessarily cause political behavior. Yet it is untenable to consider that shifts in the environment, which subsequently spur changes to political behavior, won't also elicit some shift or development of relevant attitudes. 
-
-The problem with external political efficacy, or political efficacy as it is understood generally, is that nothing seems to account for an upward shift in efficacy despite significantly substantive changes of political conditions in history common to the public writ large. When reviewing average scores of the external efficacy index over time, a steady decline in external efficacy begins from its height in 1960 ($73.5$) downward to 2020 ($28.5$), with yet unexplained spikes and dips from 1984 to 2002. Although comparison shows that higher levels of average external efficacy in the aggregate are most prominently distinguished by educational attainment over time, there is a clear decline despite changes that expanded or further enabled the public to shape the political environment by the means available during the Civil Rights Era. When distinguishing by race, average external efficacy among White non-Hispanics is considerably higher compared to Black non-Hispanic throughout the extent of external efficacy's history of measurement^[I don't think there's an issue with breaking down the trend by race, seeing as how the ANES includes weights so as to be representative of the national population]. However, simply reviewing the external efficacy index does not hint that any dramatic political changes regarding public capacity came about during the era in which the Voting Rights Act (VRA) was enacted and repeatedly affirmed.
-
-In particular, the Voting Rights Act incorporated monumental change in the political environment that affected all subject to that same environment in common^[Perhaps technically speaking, the VRA changed the political environment by serving as an act "[t]o enforce the fifteenth amendment to the Constitution of the United States, and for other purposes.". Ratified in 1870, the fifteenth amendment had already explicitly prohibited government from denying or abridging the citizen's right to vote on account of race, color, or previous condition of servitude. Although prior laws were in place that included provisions intended to guarantee voting rights, the VRA of 1965 conditioned the capacity of state governments to deny or abridge voting rights by imposing criminal penalties for violation of the law, subjected state governments to federal oversight of voting laws, and directed federal intervention to guarantee voting rights.]. Although the extent of what the people could do (i.e., could produce or bring about as governors) didn't change, the conditions shifted to restrain governing actors of the many states from incapacitating whole swaths of the public from participation in the endeavor. Such change in political conditions directly relates to the people's capacity to shape the political environment given the changes pertain to the means of popular political production (even if it is limited to electing persons into official government positions).
-
-The point is not that we would expect to see shifts in political efficacy or external efficacy to be most prominent among Black people or other racial or ethnic minorities during or sometime after this time period. Rather, the point is that levels of external efficacy in the aggregate clearly decline despite changes where we would expect otherwise. Especially as the effect of the VRA on voter turnout and registration was immediate and dramatic in the years following 1965. However, under a conceptual definition of external efficacy seemingly interchangeable with government responsiveness and on par with political trust, the decline in 'external efficacy' as measured seems a bit more reasonable. This is apparent in @converse1972's early conjecture listing common events during the 1960's which, to him, appeared somewhat obvious as influential on the decline of political efficacy,
-
-> "It is not hard to imagine what some of these events were during the 1960's, although specific items on any list would produce somewhat different impact in various segments of the electorate. A list should undoubtedly include the three shocking political assassinations in 1962, 1967, and 1968; the perception in some small but articulate quarters early in 1965 that Lyndon Johnson, after winning a landslide vote for his campaign against Goldwater's proposals to escalate the war, immediately had turned himself to escalating that war; resentment in other larger sectors of the population concerning official pressures toward school desegregation, particularly after 1964; race riots and campus disorders from 1965 on; and throughout, the increasing weariness and frustration with the bleeding war in Vietnam that the government could not seem to win or otherwise terminate. This sequence of national catastrophes, disruptions, and blunders seems adequate *to account for a considerable loss of confidence in the government and politics on the part of the public*. Nor is there much doubt that the decline of efficacy is functionally related to the weakening in sense of partisanship after 1965, which was discussed earlier." [@converse1972, 330, italics added]
-
-Note that, while this small list can't account for all that was eventful during the 1960s, this list of events is indicative of how political efficacy---in particular, external political efficacy---was and has been understood *as an evaluation of government performance*. Converse refers to these events as "national catastrophes, disruptions, and blunders", yet the relation to efficacy in any sense of the word is not clearly explicated. How or why political assassinations would impact or relate to political efficacy is not obvious, at least not to me. In my view, this should have no impact on an appraisal of people's capacity to shape the political environment. Nor does the President's behavior in office concerning campaign promises made. However, if the meaning of 'efficacy', political or external, refers to satisfaction with government performance, then the short list offered by Converse does come off as a somewhat reasonable---though idiosyncratic---explanation for declining efficacy levels over time.       
-
-(and this is my contribution I think) The conceptual understanding of external efficacy is too far removed from the meaning of efficacy to make sense as its own concept.    
-
-The relation of political trust and political (or external) efficacy is, I think, due to the circumstance of the political system and regime type. Trust is requisite when powerless. Power, to be clear, denotes a condition of (having) possibilities for action and representing those possibilities as such. When the capacity to bring about a preferred outcome is unavailable to the one who prefers it, then they must rely on empowered others to take action and bring about preferred outcomes in their stead. Political trust is apt considering the regime type of the United States where a scheme of representation is in place. The actions and outcomes of politics and government are divorced from direct popular control. Those elected to office are vested with the power of government for the purposes outlined in the Preamble to the U.S. Constitution. 
-
-As such, there is a degree of uncertainty that arises from the empowerment of the branches of government. Indeed, there is always uncertainty in the realm of possibility---when possibilities for action are present before actors. Even if the power of the people was explicated as being equal, or superior, to the branches of government and actors therein, there would still arise uncertainty with respect to the power of government and the relations of power. However, if the power of the people were on par with the power of governing actors, concerns over the loss of trust in government would be far reduced from what they are today and have been. Thus, the substantive significance and concern for the public's trust in government is itself an indicator of the relations of power between the people and their government.
-
-Trust concerns how others will act provided the possibilities for action present before them, in particular, whether empowered others will act in accordance with some preference or stipulation. The public's trust of whether those vested with the power to govern the state will purpose their actions toward common ends.
-
-The key difference between political trust and political efficacy must be that the latter is more relevant to appraisal of a state or regime as democratic, whereas the former is not relevant. A lack or absence of political trust in a political system wherein the popular capacity of the people is on par, and ultimately superior to, those agents vested with authority to govern bears no relevance as to the status or regime type of the political system. Of course, high levels of political trust writ large and in general is probably healthy and preferred, but trust is not necessitated due to the relations of power among the people and governing actors. Whatever disfavored acts that government takes is possible for the people to rectify by means of their popular self-governance; sufficient mechanisms of accountability in place render political trust of government a nice privilege but not necessary. In contrast, in a political environment wherein the people's popular capacity is stunted, restrained, or simply notional by the means present within the political system and processes, then a sufficient degree of political trust in government seems necessary to pacify the subjected populace.   
-
-# 2025-05-19
-
-The cost of voting index (COVI) measures the relative restrictiveness of each state's electoral environment [@schraufnagel2020]^[Note, "the 2020 COVI captures only "permanent" changes in state electioneering practices and does not count temporary changes adopted in response to the COVID-19 pandemic." [@schraufnagel2020, n1]]. 
-
->"Both stages of the voting process in the United States—registering to vote and casting a ballot are combined into a single index value." [@schraufnagel2020, 504]
-
-Note from the authors in the 2022 publication update. Correct variable to use is the "Final COVI"
-
-> "Erratum—Since the publication of the 2020 update in the Election Law Journal (Schraufnagel, Pomante, Li 2020), and making available a full replication dataset, third party researchers uncovered errors in our previous data collection efforts. We have made corrections and the new values are available as the “Final COVI” at costofvotingindex.com. We base the comparisons presented in the 2022 update on the corrected 2020 values." [@schraufnagel2022, 2020]
-
-The method of calculating (note, not estimating) the index is by principal components analysis.
-
-> "In each presidential election year, the assortment of relevant state laws is subject to principal component analysis (PCA), which has been used for many years now ‘‘to reduce the dimensionality of a data set consisting of a large number of interrelated variables’’ (Jolliffe 2002, 1). More specifically, PCA is a statistical procedure that uses an orthogonal transformation, which converts a set of observations of potentially correlated variables into a set of values of linearly uncorrelated items called principal components." [@li2018, 237]
-
-> "In using PCA, the number of principal components extracted is always less than or equal to the number of original variables included in the analysis; in our case, seven different indicators each representing different issue areas. The first principal component accounts for as much of the variability in the data as possible, and each of the succeeding components has the topmost variance possible under the limitation that it is orthogonal to the previous components."
-
-
-> "The first '*few*' (Jolliffe 2002, ix *emphasis in the original*) components are then normally weighted and combined to illuminate the internal structure of the data, in a way that best clarifies variance in the data."
-
-So from my understanding, calculation of the index involves computing multiple component indicator variables each representing nine (initially, seven) different issue areas. Then, for a particular presidential year, PCA is conducted which returns two, three, or four components with eigenvalues greater than one. The number of components is selected so that their cumulative variance explained is greater than 70%. The selected principal components are normally weighted and combined to create a final index score. 
-
-It is important to note that the index values themselves are not comparable from election to election, 
-
-> "...it is not possible to simply compare COVI values from one election cycle to the next because there is a different set of laws in each of the 50 states, each election cycle, and the COVI scores derived are not comparable." [@li2018, 241]
-
-However, as the authors note, it is feasible to test changes in relative state *rank*.
-
-Regardless, this COVI may work well to test the meaning and measure of external political efficacy in accordance with what Chamberlain [-@chamberlain2012] initially posited. According to @chamberlain2012, the conceptual definition and measurement of external political efficacy implies that levels of the construct in the aggregate would be a function of prior shifts within the (*external*) political environment. 
-
-Following Chamberlain's hypothesis, one would expect that external efficacy and COVI rank would be significantly associated over time. As a better indicator of the political environment across states, it should be feasible to regress external efficacy on state rank. As state laws change from one election year to the next, their relative rank based on COVI values change as well; states where voting laws became more restrictive from one year to the next will have lowered in rank relative to other states.
-
-After the 2010 midterms, many states began introducing and enacting laws pertaining to voting and registration. After 2010 but prior to the *Shelby County v Holder* decision in 2013, 13 states had enacted new voting laws that were in place for the 2012 election. 
-
-State voting and registration laws condition to the public's capacity to shape political conditions, at both the state and national level. Thus, we would expect that evaluations about the very capacity to shape the political environment---from the perspective of the subject---would shift in accordance with changes to the political environment. In particular, in states where public capacity is expanded, efficacy should be higher; whereas in states where public capacity is constrained or reduced, then efficacy would expected to be lower. Importantly, I would expect to see significant shifts in external efficacy corresponding with the changes in state voting laws that proliferated after the 2013 *Shelby County v. Holder* decision. 
-
-Importantly, the point is not that the individual evaluates whether changes in state law were or are induced by public demand. Rather, the individual evaluates the extent to which the people are capable of changing political conditions given the means of political production. In this case, state voting laws pertain directly to the means available to the people for production of political ends. Voting laws that are more restrictive in turn hinder the capacity of the people, not necessarily by nullifying the people's input, but by reducing the extent to which they represent the possibilities as being possible for them. A proper measure of efficacy would is an appraisal of the people's popular capacity to self-govern from the perspective of the subject. 
-
-The goal is not merely to participate, nor merely influence governing actors. The question posed to the individual is whether the people are able to shape the political environment given the means available for doing so. Thus, an individual evaluates the people's popular capacity to shape the political environment by appraising the means of political production available to them. In the United States, the people are relatively divorced from producing political outcomes directly, and so government officials function as intermediaries toward the ends of the state. 
-
-
-An improved conception of efficacy would not refer to the perceived responsiveness of government officials and institutions, but rather an appraisal of the people's capacity to shape the political environment given the means of political production available to them
-
-Note that the 'cost of voting index' scores for a particular year are not comparable to a subsequent election year. Although (from my understanding) the COVI values cannot be compared to themselves
-
-However, if measures of external efficacy are valid, but simply not sensitive enough, then the magnitude of any shift of aggregated public sentiment would appear dull, if significant at all. If measures are invalid---that is, if measurement items are capturing something unrelated to political efficacy---then any observed relationship would not be explained by the changes to the political environment, but by some other factor, thus failing to conform with theoretical expectations.  
-
-An enormous wrinkle is that public perception measured by external efficacy items have been shown to be influenced by partisanship and policy congruence, at least at the state level [@wolak2018]. In particular, (state) external efficacy is higher if the state legislative chambers and governor's office is controlled by partisanship of the individual, but lower if not. In addition, (state) external efficacy is higher insofar as ideology is congruent with a state's policy liberalism score. That is, self-identified strong conservatives feel more efficacious in states with a score that indicates stronger conservative policy.
-
-> "People are more likely to believe that politicians listen to the public when state officials produce policy outcomes that align with their ideological preferences." [@wolak2018, 776]
-
-> "Feelings of external efficacy are thought to reflect people’s subjective sense of being represented in politics, where those high in external efficacy believe that politicians listen to the public and respond to their concerns. What makes people feel like state politicians listen to what people like them think? I find that when state officials act in accord with people’s preferences and produce policies that align with constituents’ interests, people are more likely to believe that they are influential in state politics. I also find that people feel more external efficacy when state government is controlled by in-partisans and less efficacy when state government is led by out-partisans." [@wolak2018, 780]
-
-The trouble with this is that the public's capacity to shape or change their political environment transcends partisanship and ideology. Political efficacy concerns the capacity of the people as those who are subject to the political environment. Partisanship pervades and distorts perceptions of political reality. Considering that external efficacy is referred to as an individual's perceptions about the responsiveness of government and institutions to public demand, then it should be clear that partisanship is a potent influence upon that perception. The decisions by the Supreme Court apply nationally as supreme law of the land. Although differing policy outputs of the states may conform to a more liberal or conservative ideological classification, laws pertaining to voting and registration apply to people in their status as citizens. In many cases, the purpose of these changes are to marginalize and oppress particular groups of citizens---notably racial and ethnic minority groups.
-
-# 2025-05-22
-
-The coverage formula was used to determine which states would be subject to preclearance under Section 5 of the VRA. Once the coverage formula was ruled unconstitutional, states that were previously subject to preclearance were no longer, and no new states could be made subject to preclearance unless by court order under a different section of the VRA. To put in perspective, the capacity of state government actors to restrict, expand, or otherwise modify the means of political production was subject to conditions established by the VRA and for the purposes thereof. In other words, prior to the 2013 ruling, the power of those elected to govern was limited so as not to encroach upon the popular capacity of the people. 
-
-The *Shelby County v Holder* ruling empowered governing actors to shape conditions of the political environment that directly related to the popular capacity of the people to do the very same. The VRA may be seen as empowering the people to engage in the design, shape, and direction of their political reality, but this is only in relation to the power of governing actors to impede upon the means available to the people for doing so. That is, the VRA simply affirmed that the means of political production are not to be made inaccessible to anyone of citizen status, nor privilege anyone on a basis beyond such status. As citizens are subject to the political environment, governing actors are capable of subjecting the political environment just as well. However, the extent to which governing actors can shape or re-shape the political environment (by modifying the conditions thereof) is subject to conditions ordained and established by the Constitution. 
-
-:::{.callout-note}
-The following is probably useful to consider as thoughts pertaining to my prospectus.
-:::
-
-As citizens are subject to the political environment, governing actors are capable of subjecting the political environment just as well. However, the extent to which governing actors can shape or re-shape the political environment (by modifying the conditions thereof) is subject to conditions ordained and established by the Constitution. This is the case regardless of whether the people themselves are capable to act as governing actors. Yet that is the very question that concerns inquiry of the people's political efficacy: whether, and to what extent, are the people capable of subjecting the conditions in which they are equally subject? Said in other words, to what extent can the people shape their political environment? 
-
-It is implied that this inquiry regards the people in their capacity (i.e., status) as both citizens subject to governance of the state and and as governors of the state. That is, the power of interest here is that which is in accordance with the political system and not beyond it. Beyond the state of the political environment---i.e., the political reality as constituted and governed by recognized political actors---is the state of nature. Thus my interest is not in regard to the power of people in nature---beyond the conditions that comprise the political environment. To put simply, my interest is of the popular capacity of the people as a political actor within a particular political system and context. Yet therein lies an essential point regarding the power of the people as recognized political actors, or indeed recognizable as a popular political actor. 
-
-There is no similar question about the power of government since such powers are vested in the particular branches of government. Indeed, the only questions that arise is whether the actions of government are within the bounds of what is or has been afforded (vested) to governing actors as established or necessarily implied by the Constitution. The branches of government, as well as any officials thereof, are clearly established and recognized as political actors. In fact, one of those branches, the Judiciary, is responsible for confronting such questions about the power of government with respect to the Constitution. 
-
-Yet as it concerns the people, there is nothing so explicit in regard to their power as the supreme popular actor from which all possibilities for action are derived. In theory, it is implied that the people not only have all power of government implied or established explicitly in the Constitution, but also whatever power beyond it. That is to say, it is notional that the possibilities present before the people are represented by them as such (as possible). Yet such notions are merely that: not ordained, not established, but made real only by conviction to legitimacy of the idea and adherence to the same. The power of the people is unwritten, abstract, and *apocryphal*.
-
-Given the means of political production available to the people in accordance with the political system, what is the extent of the people's popular capacity to shape the political environment?  
-
-# 2025-05-27
-
-Political efficacy arose instrumentally as a concept for researchers aiming to explain political behavior. In other words, the concept of political efficacy was invented merely as a tool to explain political behavior---an explanation of behavior based on, or in, the psychology of the individual. Although behavior isn't always coherent with attitudes, nor is it simple to conclude that one's behavior is primarily driven by their attitudes, it is harder to deny links between behavior and the environment. A link without which the field and study of economics cannot do. 
-
-:::{.callout-note}
-2025-05-29, the following is a short little digression that I didn't relate back to the paragraph above.
-:::
-
-The link between behavior and attitudes is far more troublesome, as the assumptions of traditional economic theory---i.e., rationality and self-interest---fail to hold on observation of human behavior in relation to conditions of the environment. Behavioral economics focuses on studying the failures of these assumptions by developing models of behavior consistent with findings from psychology. In particular, behavioral economics incorporates cognition into studying the link between environment and behavior. Incorporating cognition incorporates the study of how humans reason, process information, acquire knowledge, hang on to knowledge, and the like. Thus, what is found in the discipline are concepts and theories related to heuristics, or mental shortcuts, biases, patterns, modes, and methods of thought and the effects thereof on decision-making and judgement; mostly with reference to some deviation from logic into fallacy. 
-
-As such, behavioral economics stops just short of being a disciplinary field focused on the study of opinions, opinion formation, sentiment, attitudes, or simply, beliefs, although there is much overlap and relation. Conditions of the environment are understood as affecting cognition which is doubtlessly connected with behavior in one way or another, thus affirming the link between environment and behavior through cognition. But attitudes are somehow their own beast not wholly detached from any of these but also not necessitated by any of them either. Although the relation is readily apparent, the link is ultimately less clear between attitudes and behavior, the environment and attitudes, and the interconnection between the environment, attitudes, and behavior. Even the coherence between cognition and attitudes is fugitive. A person's cognition may be observed as responsive to the environment, which may help to explain this or that behavior, but an attitude can be studied in much the same way while observed as independent from the particular behavior, and sometimes even seemingly independent of cognition itself. Simply put, attitudes are weird. 
-
-Attitudes are something like fickle conclusions, evanescent in nature. Attitudes are sometimes settled after some cognitive process spurred on by environmental stimuli, or sometimes not. A resulting attitude can be wildly incoherent from, while still significantly related to, contextual stimulus and subsequent cognition. Or sometimes attitudes are seemingly not the result of any conceivable cognitive process or rationale, yet still vary from being weakly held and transient, to strong, intense, and stable over time. 
-
-:::{.callout-note}
-the following is copied from an earlier entry from 2025-05-16, but I added a lot today so I'm copying it here.
-:::
-
-Previous research has already demonstrated that changing the rules significantly effects voter turnout, participation, vote choice, and the like [@ang2019]; changes to the political environment affect subsequent political behavior. The question is whether particular efficacy beliefs are concurrently impacted. That is, we would expect efficacy beliefs to shift when the rules change; especially those rules pertaining to the people's capacity to effectuate change in their political environment through the processes of government and politics. If the measurement instruments in use are sound, then we're better able to determine whether, and to what extent, public attitudes are sensitive or insensitive to actual shifts within the political environment. However, if the measurement instruments in use are not sound (invalid), then credibility of our conclusions are dubious at best.
-
-To put in other words, the event here is the ruling in *Shelby County v Holder* which empowered state governments to change voting laws without need for preclearance from the federal government. so across the different states, voting laws changed or did not change. The question is whether changes in laws that pertain to popular efficacy stimulate efficacy beliefs *in general* as measured by external political efficacy measures. 
-
-So to be clear, the aim of this study isn't to determine whether changes to voting laws influence external efficacy *per se*. Rather, the aim of this study is to determine whether the meaning and measurement of external efficacy is sound. If the shifts in external efficacy are not significantly related to changes to political conditions (such as voting laws), there are two potential interpretations: either attitudes/beliefs are insensitive to changes in the political environment or the measurement instrument in use is unable to measure the attitude of interest. We can only suppose the former is the case insofar as we are confident that the measurement of the construct is sound. However, multiple studies over time have noted inconsistencies [] and efforts to validate the meaning and measure of external political efficacy are not only sparse but throw a substantial amount of doubt on the validity of the measurement. Moreover the conceptual understanding of external efficacy is hardly distinguishable from government responsiveness, which is further complicated by such strong relation to political trust (trust in government). In fact, early literature attempting to disentangle the conceptual ambiguity refers to external political efficacy as the "responsiveness component" and "perceived responsiveness" [@craig1979]. 
-
-Yet if it happens to be the case that shifts in external efficacy are not related to changes in political conditions, the most damning evidence against the implication that attitudes/beliefs are merely insensitive to changes in the political environment is the evidence showing that significant changes in political behavior can be attributed to, or associated with, changes within the political environment. We may be able to detach political behavior from having a necessary relationship with attitudes; attitudes don't necessarily cause political behavior. Yet it is untenable to consider that shifts in the environment, which subsequently spur changes to political behavior, won't also elicit some shift or development of relevant attitudes. 
-
-The problem with external political efficacy, or political efficacy as it is understood generally, is that nothing seems to account for an upward shift in efficacy despite significantly substantive changes of political conditions in history common to the public writ large. When reviewing average scores of the external efficacy index over time, a steady decline in external efficacy begins from its height in 1960 ($73.5$) downward to 2020 ($28.5$), with yet unexplained spikes and dips from 1984 to 2002. Although comparison shows that higher levels of average external efficacy in the aggregate are most prominently distinguished by educational attainment over time, there is a clear decline despite changes that expanded or further enabled the public to shape the political environment by the means available during the Civil Rights Era. When distinguishing by race, average external efficacy among White non-Hispanics is considerably higher compared to Black non-Hispanic throughout the extent of external efficacy's history of measurement^[I don't think there's an issue with breaking down the trend by race, seeing as how the ANES includes weights so as to be representative of the national population]. However, simply reviewing the external efficacy index does not hint that any dramatic political changes regarding public capacity came about during the era in which the Voting Rights Act (VRA) was enacted and repeatedly affirmed.
-
-In particular, the Voting Rights Act incorporated monumental change in the political environment that affected all subject to that same environment in common[^1]. Although the extent of what the people could do (i.e., could produce or bring about as governing actors) didn't change, the conditions shifted to restrain governing actors of the many states from incapacitating whole swaths of the public from participation in the endeavor. Such change in political conditions directly relates to the people's capacity to shape the political environment given that the changes pertain to the means of popular governance (even if it is limited to electing persons into official government positions).
-
-[^1]: Perhaps technically speaking, the VRA changed the political environment by serving as an act "[t]o enforce the fifteenth amendment to the Constitution of the United States, and for other purposes.". Ratified in 1870, the fifteenth amendment had already explicitly prohibited government from denying or abridging the citizen's right to vote on account of race, color, or previous condition of servitude. Although prior laws were in place that included provisions intended to guarantee voting rights, the VRA of 1965 conditioned the capacity of state governments to deny or abridge voting rights by imposing criminal penalties for violation of the law, subjected state governments to federal oversight of voting laws, and directed federal intervention to guarantee voting rights.
-
-The point is not that we would expect to see shifts in political efficacy or external efficacy to be most prominent among Black people or other racial or ethnic minorities during or sometime after this time period. Rather, the point is that levels of external efficacy in the aggregate clearly decline despite changes where we would expect otherwise. Especially as the effect of the VRA on voter turnout and registration was immediate and dramatic in the years following 1965. 
-
-However, under a misconceived definition of external efficacy---seemingly interchangeable with government responsiveness and on par with political trust---the decline in 'external efficacy' as measured seems a bit more reasonable. This is apparent in @converse1972's early conjecture listing common events during the 1960's which, to him, appeared somewhat obvious as influential on the decline of political efficacy,
-
-> "It is not hard to imagine what some of these events were during the 1960's, although specific items on any list would produce somewhat different impact in various segments of the electorate. A list should undoubtedly include the three shocking political assassinations in 1962, 1967, and 1968; the perception in some small but articulate quarters early in 1965 that Lyndon Johnson, after winning a landslide vote for his campaign against Goldwater's proposals to escalate the war, immediately had turned himself to escalating that war; resentment in other larger sectors of the population concerning official pressures toward school desegregation, particularly after 1964; race riots and campus disorders from 1965 on; and throughout, the increasing weariness and frustration with the bleeding war in Vietnam that the government could not seem to win or otherwise terminate. This sequence of national catastrophes, disruptions, and blunders seems adequate *to account for a considerable loss of confidence in the government and politics on the part of the public*. Nor is there much doubt that the decline of efficacy is functionally related to the weakening in sense of partisanship after 1965, which was discussed earlier." [@converse1972, 330, italics added]
-
-Note that, while this small list can't account for all that was eventful during the 1960s, this list of events is indicative of how political efficacy---in particular, external political efficacy---was and has been understood *as an evaluation of government performance*. Converse refers to these events as "national catastrophes, disruptions, and blunders", yet the relation to efficacy in any sense of the word is not clearly explicated. How or why political assassinations would impact or relate to political efficacy is not obvious, at least to me. In my view, this should have no impact on an appraisal of people's capacity to shape the political environment. Nor does the President's behavior in office concerning campaign promises made. However, if the meaning of 'efficacy', political or external, refers to satisfaction with government performance, then the short list offered by Converse does come off as a somewhat reasonable---though idiosyncratic---explanation for declining efficacy levels over time.
 
 # 2025-05-28
 
 Okay to bring it back.
 
-The question at the heart of the issue is whether external efficacy is responsive to changes in the political context. 
+The question at the heart of the issue is whether external efficacy is responsive to changes in the political context. If not, then what does the 'external' refer to? Never mind, for a moment, that the meaning of 'efficacy' is all but lost.
 
 The reason this question arises is because the meaning of the concept is divorced from the meaning of 'efficacy', conflated with government responsiveness, and far too easily confused with trust in government. Adding to this conceptual ambiguity, the measurement of external political efficacy offers no clarity and results from measurement lend little credence to construct validity. Only two items are utilized to construct an index, which itself is inadequate to consider as a measure of some homogeneous construct. 
 
@@ -871,8 +320,9 @@ Notable is the underlying notion that some set of individual personal skills are
 
 The setting---i.e., conditions of the political environment---are paramount in regard to political efficacy of any sort. What Converse seems to assume, however, is that for *democratic settings* a particular set of political skills, such as party organization capabilities, best contribute to one's capacity to produce responsiveness from government in return. 
 
-Efficacy is inherently tied to the end for which some thing or act is purposed. Converse here makes clear that being effective means successfully influencing or being influential in some way in government and politics. Inherent to the notion of political efficacy is the underlying purpose of participating in the political process of whatever system. Implied here by Converse, and by authors everywhere else, is that the purpose of individual or popular political participation is ***to influence*** the actors and institutions of government. Therefore, it is conveyed by implication that *the maximum effect achievable through political activity* is but merely to influence governing actors of the political regime.
+Efficacy is inherently tied to the end for which some thing or act is purposed. Converse here makes clear that being effective means successfully influencing or being influential in some way in government and politics. Inherent to the notion of political efficacy is the underlying purpose of participating in the political process of whatever system. Implied here by Converse, and by authors everywhere else, is that the purpose of individual or popular political participation is ***to influence*** the governing actors and institutions. Therefore, it is conveyed by implication that *the maximum effect achievable through political activity* is but merely to influence governing actors of the political regime.
 
+The scholars of yesteryear faltered in only this: they presumed the political system and regime as democratic in the same way that every man assumes himself good. In so doing, the maximum effect of the people's popular capacity was not *to govern*, but *to influence governors*; not to rule but to hope that their rulers would pity their grievances. And consequently, scholars of today may still be heard professing elections as a form of accountability, all the while the people flail about searching for the means to govern themselves.
 
 The core problem is that there is not a clear way to validate the construct as defined and understood because it is not defined well enough to be understood as a distinctive construct. 
 
@@ -883,148 +333,18 @@ The core problem is that there is not a clear way to validate the construct as d
 
 Chamberlain's dynamic time series model with lagged dependent variable is insufficient to properly test the validity and congruence of both meaning and measurement of external efficacy. The theoretical justification for the method is lacking, and the chosen predictors are not tenable as factors representative of the political environment. 
 
-Rather, I evaluate external efficacy over time from before and after 2013 when the Supreme Court invalidated the preclearance formula of the Voting Rights Act. After that ruling, many states since have passed a significant number of laws pertaining to voter ID, voter registration, methods of voting, and much more. Some states have passed laws that have are incredibly restrictive, yet other states have also passed laws aiming to expand voting rights^[Further complicating the matter is that states have passed a mix of restrictive and expansive voting and election laws.]. Of particular interest are states that passed restrictive laws immediately following the *Shelby v Holder* ruling. 
-
-The hypothesis posited by Chamberlain still stands: external efficacy should shift upon changes to the political environment. However, this hypothesis relies on an alternate/competing conceptual understanding of external efficacy that substantially deviates from the conventional conceptual definition and understanding often professed in the literature.
+The hypothesis posited by Chamberlain still stands: external efficacy should shift upon changes to the political environment.
 
 The conventional, or otherwise, 'standard', definition of external political efficacy is conflated with government responsiveness and difficult to parse from trust in government. The expectation that external efficacy should shift in response to changes in the political environment doesn't necessarily follow from a conception of external efficacy as referring to "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands" [@craig1990, 290; @niemi1991a, 1408]. Even when considering additional clarification regarding what survey items intend to measure and what low or lacking external efficacy implies, conceptual focus and operative measurement is based on the perceived responsiveness of governing officials and institutions.  
 
-> "[External efficacy] measures expressed beliefs about political institutions rather than perceptions about  one's own abilities .... The lack of external efficacy . . . indicates the belief that the public cannot influence political outcomes because government leaders and institutions are unresponsive to their needs" [@craig1982, 86]
-
-:::{.aside}
-Note that a lack of external efficacy implies the "belief that the public cannot influence political outcomes...*because*..." shows that the end/goal/purpose "*to influence political outcomes*" is inherently included in the conception but glazed over by the presumptive cause of the belief. Moreover, the input isn't considered or consistent at all. Public *needs* aren't necessarily considered an input, but simply some stimuli the government is expected to be responsible for addressing. Later definitions speak of the input as "citizen demands" or something similar, but are mostly vague with respect to what is reasonable to expect government to be responsive to. It is a different question entirely to inquire into what stimulus (e.g., issues, situations, circumstances, events) one thinks the government should be sensitive to. Thus the input isn't clear and left vague for both the respondent and researchers alike.      
-:::
-
 Thus, it is hard to validate the expectation that external efficacy would shift upon changes to the political environment based on understanding of the concept expressed in the literature; the expectation doesn't follow from its conceptual definition. The political environment is not interchangeable with government responsiveness in meaning nor metric. Indeed, the very moniker of the construct as "external political efficacy" seems incoherent with its stated meaning.
 
-## Does measurement of the construct imply its meaning?
-
-Does measurement of external efficacy conform to a particular meaning of the construct that leads us to reasonably expect that external efficacy would shift in accordance with changes to the political environment? In other words, does measurement of the construct imply the given meaning of the concept? Evaluation of meaning from wording of the measurement items is certainly different from attempting to discern meaning from results of measurement. Yet the practice is worth doing considering measurement validity of the construct is exactly what is in question here.
-
-The wording of the two measurement items imply that the individual's responses are based on evaluations of past government performance. Indeed, **all** evaluations of government performance or responsiveness are evaluations of past performance or perceived responsiveness; whether one's evaluations concern yesterday or yesteryear. However, for the sake of discerning whether the meaning is implied from measurement, it is not relevant when or how much of the past the individual considers in their evaluation. What matters is what those evaluations are about. Specifically, whether the evaluations are conclusively about government responsiveness. 
-
-The problem is, however, that external political efficacy is not interchangeable with government responsiveness. These two concepts have been so heavily conflated that it is difficult for many reasonable scholars to consider external efficacy as referring to anything else. Conceptual issues inevitably result in measurement problems, and compound into difficulty in interpretation of results. The issue becomes easier to see when one considers how past government performance or responsiveness is evoked as interchangeable with the broader political environment.
-
-Taken to understand external efficacy in this way, it seems reasonable for Chamberlain to argue that, "...the definition of the measure implies that past government performance should affect it." [@chamberlain2012, 119], but only insofar as an individual's evaluation of the contemporary political environment is coterminous with past government performance. The problem is that past government performance is treated as interchangeable with the political environment, "...as the definition of external efficacy implies, the measure is affected by the broader political environment" [@chamberlain2012, 118]. 
-
-___
-
-However, it cannot be readily assumed exactly what is being evaluated beyond what is stated in the survey items; nor can it be assumed just how much of the past is taken into account in order to make a response about today. One who takes much history into account is apt to consider things differently than one who takes into account only the incumbent regime or administration.
-
-When a person agrees with the statement, "People like me have no say about what the government does", it is, of course, unclear how they have come to an agreement with that statement. It may be the case that a person considers the expressions and behavior of government officials writ large in order to decide whether they agree or disagree with the statement; but it may just as easily be the case that the individual relies on a general, holistic perception of the political environment as a proxy for what or who imposes influence on what the government does. 
-In the first case, the individual bases their response on evaluation of perceived responsiveness of government officials to public opinion, demands, or interests of "People like me"^[Whether that is "People who think like me/agree with me" or "People who look like me" is mostly unclear and also confounds the issue to some extent. Note also the inherent collective aspect of external efficacy in contrast to the pure focus on the individual when it comes to internal political efficacy.]. 
-
-In the second case, the individual bases their response on general impressions about the political environment as a proximate indication of who influences government officials or outcomes best in relation to "People like me". As such, if the political environment seems generally appeasing to "People like me", then one might come to disagree with the statement. Although, the 'political environment' in this case refers to whatever the individual conjures up to consider as a proximate indicator. For instance, the partisan makeup of government may suffice to inform the individual exactly who can successfully influence government. Or, more intimately, one's personal circumstances may suffice to convince them of who "has a say" in what government does. 
-
-The point, however, is that the survey item has the individual consider what the government does as indication of who *can* successfully influence the behavior of government officials or political outcomes. Surely, a problem arises due to the need to compare between "people like me" and "others not like me".
-
-___
-
-provided a definition more coherent to the term 'efficacy' with respect to the purpose of the people's participation in government and politics, we can conceive of external political efficacy as referring to an individual's appraisal of the people's capacity to shape the political environment by the means (the possibilities for action present) of political production available. 
-
-
- 
-The theoretical support for the dynamic model that includes a lagged dependent variable seems justified under the notion that an individual's attitude, external efficacy, at time $t$ "is a function of that same attitude at $t-1$ as modified by new information" [@keele2006]. Chamberlain develops a dynamic model where external efficacy at time $t$ is a function of external efficacy at $t-4$ as modified by presidential approval at $t-1$, consumer sentiment at $t-1$, and trust in government at $t-2$. On its face, it seems a bit odd that external efficacy today at time $t$ would be partly a function presidential approval from a year ago but not, say, the same month, or the month prior, or even concurrently at time $t$. 
-
-Regardless, what is more odd is the notion that presidential approval, consumer sentiment, and trust in government are all referred to as factors representative of the political environment. Surely these may be considered factors *about* the contemporary political environment, and these factors doubtlessly correlate with conditions of the political environment to some unknown extent, but it is far too much of a reach to consider these factors as sufficient proxies of the political environment. 
-
-___
-
-The trouble is selecting which states to consider as the "treatment" states, and which to consider the "control" states. An intuitively easy solution would be to simply designate the states formerly subject to preclearance as the "treatment" states, but this to me seems unsound. For one, the change of political conditions was general to all states after the ruling in *Shelby County v Holder*. The states that were previously subject to preclearance were, of course, no longer subject to preclearance, but the ruling rendered the coverage formula for determining which jurisdictions would be subject to federal intervention as unconstitutional. As it stands now, federal intervention in the electoral process of particular states may still happen under other sections of the VRA. 
-
-Prior to the ruling, any state was susceptible to becoming subject to federal intervention (e.g., preclearance) in the electoral process if it met the criteria of the coverage formula. The VRA was amended multiple times over the years, and as new provisions were added to the VRA, other states and jurisdictions were added under new provisions included within the coverage formula. For instance, in 1975, the VRA was amended to include the "minority language provision" under the coverage formula to identify those jurisdictions where voting information was provided only in English and members of a single language minority comprised more than 5% of the citizens of voting age. As such, every state was keen to avoid implementing voting laws liable to charges of discrimination and anything else that was prohibited, while also keeping in consideration whether proposed voting legislation would be in effect discriminatory in ways not yet included in the VRA. In other words, *the possibility that future amendments could be provisioned added a conditional consideration for states aiming to change election and voting laws*.
-
-So if one were to survey the states (as anthropomorphized beings capable of responding to survey questions), a certain efficacy question can be asked about the extent to which the state is capable of shaping its own political environment independent of the federal government and of the constituent populace therein. We would expect the political efficacy of these state-beings to have positively shifted after the *Shelby County v Holder* ruling even if no new voting laws had been enacted since. The condition of possibilities present before all states governments to dictate state voting laws, and thus subject the people to novel and potentially discriminatory conditions, had been expanded (or perhaps, regressed) to present additional possibilities for government action. In other words, the relations of power shifted such that states were empowered to condition the power of the people of the respective states. 
-
-Not all states enacted restrictive voting laws since 2013. But selection of the states isn't necessarily about whether new laws were, in effect or intent, restrictive or expansive.  
-
-The coverage formula was used to determine which states would be subject to preclearance under Section 5 of the VRA. Once the coverage formula was ruled unconstitutional, states that were previously subject to preclearance were no longer, and no new states could be made subject to preclearance unless by court order under a different section of the VRA. To put in perspective, the capacity of state government actors to restrict, expand, or otherwise modify the means of political production was subject to conditions established by the VRA and for the purposes thereof. In other words, prior to the 2013 ruling, the power of those elected to govern was limited so as not to encroach upon the popular capacity of the people. 
-
-The *Shelby County v Holder* ruling empowered governing actors to shape conditions of the political environment that directly related to the popular capacity of the people to do the very same. The VRA may be seen as empowering the people to engage in the design, shape, and direction of their political reality, but this is only in relation to the power of governing actors to impede upon the means available to the people for doing so. That is, the VRA simply affirmed that the means of political production are not to be made inaccessible to anyone of citizen status, nor privilege anyone on a basis beyond such status. As citizens are subject to the political environment, governing actors are capable of subjecting the political environment just as well. However, the extent to which governing actors can shape or re-shape the political environment (by modifying the conditions thereof) is subject to conditions ordained and established by the Constitution. 
 
 # 2025-05-30
 
 Aggregation of the variable should allow us to observe whether systematic shifts in external efficacy are associated with relevant changes within the political environment. 
 
-The changes in particular would pertain to conditions most relevant to external efficacy, namely to do with the capacity to influence the behaviors of government officials and outcomes of politics. That is, of course, given a conceptual definition of external efficacy that refers broadly to the capacity to *induce* response from government. This is in contrast to the capacity to influence the actions and outcomes of government. 
-
-One would examine the actions and outcomes of government and judge whether government actions and political outcomes are responsive to a particular stimulus, namely public opinion[^1]. Alternatively, an individual could review political outcomes and government actions and report back with what or who government appears most responsive.   
-
-Yet the measurement implies a meaning that refers to the degree to which it is the case that the actions and outcomes of government and politics are, and can be, influenced by the demands, preferences, or interests of some people compared to others. 
-
-
-## 2025-07-30
-
-### What's the problem
-
-problems:
-1.    Results no longer replicate with the inclusion of recent data 
-2.    constraining analysis to 1986 and onward does result in significant results.
-3.    Chosen predictors of Chamberlain's model are untenable as factors reflective of the political environment
-4.    The given meaning of external political efficacy is confused.
-
-In one sentence: we don't know what external efficacy survey items are measuring because we don't really know what we mean when we refer to external political efficacy. 
-
-It's not because the measurement items poorly measure external efficacy as conceived, but rather because the very conception of external political efficacy is conflated, confused, and misconstrued.
-
-Results derived from external political efficacy measures are readily accepted and given little to no scrutiny despite issues of measurement validity. Due to its confused meaning, researchers are given a wide berth of conceptual space where that very ambiguity is able to serve as a blank canvas. External political efficacy can range in meaning to such a degree that the conception seemingly detracts from even a simple semantic understanding of the word 'efficacy'.
-
-## 2025-08-04
-
-Note on considerations of RCS data
-
-Even though Repeated Cross-Sectional designs are helpful in a number of ways, not all RCS studies are the same. Three things to consider:
-
--   Time between cross-sections. Time between repetitions of the survey. Variation in period can affect the nature of the sample.
--   Number of cross-sections. Are there enough cross-sections available to identify and analyze temporal trends?
--   Number of interviews at each time point. 
-
-> "Depending on how these dimensions are combined, an RCS can be sensitive to different kinds of change. Larger samples with more interviews at each time point make it possible to distinguish true change from apparent change due to sampling variability. True change can come in two varieties. One is where the composition of the population is stable over time, but the units change their behaviors or attitudes. An obvious example is, where the members of an electorate decide that a candidate is better than they had originally thought, perhaps based on a performance in a debate. The other kind of change is compositional, where individuals do not change their proclivities but are themselves replaced by those with different characteristics. Both kinds of change can coexist in the population, but their relative prevalence and importance in samples depends on the interval between cross-sections and the total length of the data collection period." [@brady2015, 7]
-
-> "The shorter the time between cross-sections, the more that true change must reflect change in individuals’ behavior or attitudes. Apart from sampling variability, change in the sample’s propensities can have no other source but the conversion of its component individuals. As the span of the series increases, on the other hand, attention is forced to compositional change, which typically takes years to register. Again, the passage of time may make possible—may even be necessary for—individuals to change their attitudes or characteristics, but the longer the span the more inevitable it is that samples will also be drawn from populations comprising different individuals." [@brady2015, 7]
-
-
-> "Once again, better theories about how attitudes are affected by social and cultural change over time might be very useful." [@brady2015, 12]
-
-This speaks to me.
-
-
-
-# 2025-08-18 and 2025-08-19
-
-A lot of today was spent reading up this and that around theories of measurement, validity and reliability, and the like. I started hand writing what was suppose to be a quick outline of my thoughts for today from the revelation I had the other night, but it quickly digressed. I'll try to copy down what I have hand written.
-
--   The hypothesis is that results will be uninterpretable regardless of significant or null results due specifically to the inadequacy of the common conceptual definition of external political efficacy.
-
--   Given the common definition of external efficacy as beliefs about the responsiveness of government to citizen demands, the external political environment is omitted from consideration. 
-
--   That fact is that when one appraises the efficacy of something or some act, the thing being evaluated must be the focal point of both the survey items and the definition of the idea. 
-
--   Efficacy items would be expected to place heavy emphasis on evaluating the extent to which political outcomes result from popular effort to induce government response towards particular ends, which may include but is not limited to, adherence to public demand, resolution of public grievances, amelioration of disfavorable conditions, or profit to common interests. In other words, the individual would evaluate and appraise the maximum effect of public intervention toward inducing government response to shape the political environment according to popular demand or common interests. 
-
--   This establishes a different focal point of the efficacy items, which would be the maximum effect of popular intervention toward political ends. Importantly, I start with what we want to know rather than *why* we want to know it or what knowing it would be good for. Political efficacy was conceived of instrumentally as a construct meant to help explain political behavior. The disadvantage is that this anchored the conception of what it meant to *feel* more or less efficacious to a prototypical model for the highly "efficacious" citizen.
-
--   Drawing from the seemingly putative purpose of political participation, early researchers sculpted the concept of "sense of political efficacy" from of the image of the kind of person they believed would engage in the most effective forms of political participation at the time. That is, they established the beliefs and behaviors of the efficacious citizen as the ruler by which one would measure their own sense of political efficacy. The beliefs of the efficacious individual were what theoretically explained a person's political behavior, and as such, researchers endeavored to test a set of beliefs about one's own political efficacy that would match what researchers ***recognized as a matter of fact*** about the efficacy of individual political action. To put in other words, it was, and likely still is, presumed that an individual's political capacity to impact the political process through political action is an objective fact of the political environment and system therein. Thus, the construct is developed to measure the extent to which the efficacy of political action is more or less correctly ascertained from the perspective of the subject (i.e., subjective). 
-
--   The researchers' understanding about the political system implied a steadfast belief that the political system completely facilitated individual efforts to participate in the political process, that the individual would not be inhibited from participation by the conditions of that system, and that said individual political participation doubtlessly influences the outcomes of government. To put in other words, to them the politically efficacious individual was knowledgeable about the way the political system worked because there was no question that it did in the way they understood, and the politically efficacious individual believed in their own capacity to bring about change just as much as the researchers *knew* this to be the case. There was, and perhaps there is, an underlying presumption inherent about the means of political production available to the individual via the political process. Hence the individual was more or less sensitive to the *actual* capacity of individual political action to influence the political process, and this "sense of political efficacy" was meant to be measured to the extent possible by the short number of survey items developed.
-
--   Now to be clear, this is only saying that researchers developed a set of items meant for the individual to subjectively evaluate the efficacy of individual political action without establishing what "having an impact on the political process" actually meant. There's plenty that is conveyed through such a vague statement, and in the evolution of the concept of political efficacy over time we see that "having an impact on the political process" came to mean rendering government responsive to public demands or needs, at least in the *external* sense of political efficacy. 
-
--   To put into perspective, the progenitors of the concept "sense of political efficacy" vaguely established the maximum effect of individual political action as "having an impact on the political process", whereas later on this vague purpose for political action would be more narrowly defined, and limited, to rendering government responsive. Moreover, the emphasis on one's feelings about the efficacy of "individual political action" is refined such that *expression* qualifies as meaningful political action within the political process. This permits more flexibility to promote public opinion as a means to stimulate government response, or rather establish the expectation that government actors ought to be responsive to public opinion, and reduces the purpose of popular political activity to the limit of influencing government actors.
-
--   The point is not that political expression does not qualify as political activity[^1], but rather that political expression is refined as an instrumental means to the end of popular political activity---which is implied as '*to influence government actors*'.  
-
-[^1]: There have been strenuous attempts to set boundaries for what qualifies as political activity or participation, to create a taxonomy for a multitude of activities, as well as attempts to create a method to classify whatever modes and means arise in the future. 
-
--   The meaning of responsiveness that arises from review of the items merely speaks to ephemeral considerations of government actors---whether they take time to consider the thoughts and expressions of "people like me" as they carry on in their role as governing actors.
-
--   This eventually leads to where we are today wherein which the idea of external political efficacy is the extent to which government actors and institutions are responsive to public demands (or needs)---not necessarily responsive to any form of popular input or action. The items meant to measure external efficacy, however, have the respondent evaluate whether government actors appear to be influenced by their own considerations of public wants and needs rather than whether public input effectuates responsive government. In other words, the items have the respondent judge the quality of the ends given some means, instead of having the respondent evaluate the capacity of the means to bring about particular ends. 
-
--   As such, in the 1950s when the idea of political efficacy was devised, *the pursuit of influencing politicians* was achieved most effectively within a more intimate context less familiar today, and researchers modeled an efficacious citizen as an individual well aware of the possibilities present to them within the political system as they knew it then.  
-
--   Consideration about what the survey items are meant to measure, rather than what the measure would help explain or predict, suggests a different conception of efficacy coherent with the purpose of popular political activity.
-
--   conditions of the political environment must be viewed by the respondent as a product of government efforts made in response to public input of some kind. In other words, the individual must place the government at fault for contemporary conditions AND said conditions must have come about in spite of public demand or political activity. Or said another way, government actors and institutions of government are solely responsible for contemporary political conditions and the public cannot be held responsible for contemporary political environment.   
+The changes in particular would pertain to conditions most relevant to external efficacy, namely to do with the capacity to influence the behaviors of government officials and outcomes of politics.
 
 
 # 2025-08-20
@@ -1033,7 +353,7 @@ I think I've worked out what I need or want to do.
 
 I plan to conduct an analysis of external efficacy by states categorized according to the Cost of Voting Index. Because of the fact that state laws change quite significantly in the intervals between general election years, I am unable to simply compare the relationship between (external) political conditions and external political efficacy across time as if the political conditions per state remained constant over time: they do not. 
 
-So long as we accept that a state's cost of voting is, at least in part, a reflection of that state's political environment, then  which conditions the capacity of the people to shape the state, and national, political environment.
+So long as we accept that a state's cost of voting is, at least in part, a reflection of that state's political environment.
 
 As such, it is best to analyze external efficacy for the years where final cost of voting index values (COVI) are available: 1996, 2000, 2004, 2008, 2012, 2020.
 
@@ -1233,15 +553,15 @@ Not that it matters, but the formula to calculate one's weight on the moon can b
 $$
 Weight_{moon} = (Weight_{Earth}/9.81) * 1.622
 $$
-The force of gravity is given in meters per square second $(m/s^2)$. The force of gravity on Earth is $9.81 m/s^2$, where's on the Moon, it is approximately $1.62 m/s^2$. Source [Your Weight on the Moon](https://cosmicopia.gsfc.nasa.gov/qa_earth.html#weight).
+The force of gravity is given in meters per square second $(m/s^2)$. The force of gravity on Earth is $9.81 m/s^2$, whereas on the Moon, it is approximately $1.62 m/s^2$. Source [Your Weight on the Moon](https://cosmicopia.gsfc.nasa.gov/qa_earth.html#weight).
 :::
 
 
 The other problem clear to every social scientist is that the construct of interest is intangible, or rather, abstract. That is, what is of interest is an abstract idea constructed (hence *construct*) by researchers. Suppose that the instrument meant to measure one's body weight was put into question, and as such, we were uncertain about whether measurement results could be validly interpreted as reflective of one's body weight. If we (somehow) still were able to account for the differences between the Earth and the Moon in terms of gravity, then we might be able to determine whether results from the measurement instrument validly reflects the thing we intended to measure---body weight. Suppose that the measure captures one's height instead of one's body weight; comparing measures between both contexts would quickly tell us that we are definitely not measuring body weight given the fact that one's height would not change nearly as much as one's weight under different conditions. Given the fact that the force of gravity is inherent to the definition of weight---the force of gravity acting on an object of a certain mass---we cannot know one's body weight without taking into account this condition of the given context, of nature. 
 
-To take the analogy even further, weight is defined as the force of gravity acting on an object of certain mass, where mass is that tangible property of the object. Even though the weight of an object weighs less on the Moon than on Earth, the object still has the same mass. The object is *of a certain mass*. In contrast, the abstract construct of interest to researchers of the social sciences is not an object at all, and whatever there is to know about the construct of interest is confined to the coherence of the researcher's theoretical propositions about the construct.
+To take the analogy even further, weight is defined as the force of gravity acting on an object of certain mass, where mass is that tangible property of the object. Even though the weight of an object weighs less on the Moon than on Earth, the object still has the same mass. The object is *of a certain mass*. In contrast, the abstract construct of interest to researchers of the social sciences is not an object at all. Rather, an abstract idea is *objectified* and given a name. Whatever there is to know about the construct of interest is confined to the coherence of the researcher's theoretical propositions that define it.
 
-Nevertheless, what is readily assumed is that there is some true value or property for which there is no surefire way of observing, and thus unmeasurable without error. In other words, almost every construct is conceived as some *underlying unobservable* for which direct empirical measurement is unfeasible. As such under a conventional measurement theory such as Classical Test Theory, the measurement of certain constructs of interest are, indeed, not *measurements* at all but rather *estimates* of a presupposed truth. 
+Nevertheless, what is readily assumed is that there is some true value or property for which there is no surefire way of observing, and thus unmeasurable without error. In other words, almost every construct is conceived as some *underlying unobservable* for which direct empirical measurement is unfeasible. As such, under a conventional measurement theory such as Classical Test Theory, the measurement of certain constructs of interest are, indeed, not *measurements* at all but rather *estimates* of a presupposed truth. 
 
 
 # 2025-09-05
@@ -1252,7 +572,7 @@ Something missing here (and in the illustrative example on self-esteem) is the s
 
 Importantly, the concept must not be defined for the sake of affirming the theoretical proposition, i.e., construed *post hoc* said theoretical propositions (i.e., that self-esteem is positively related to participation). The conceptual definition must stand on its own before being relevant to subsequent propositions. Simply put, we must first explicate what we mean when we refer to self-esteem. If self-esteem, **nominalized** as an *it*, an *object*, a *thing*, a *noun*, then we must present a clear and coherent conception of what *it* is on its own terms. Since, in this example, self-esteem and participation are different constructs (one a property of an individual, the other an extent of one’s activity) then self-esteem should be defined without reference to whatever relation or relational effect it may impose, but importantly, it must be defined without regard of whether *it* can be measured.
 
-This is why, as the authors say, the process is, by necessity, theory-laden; without some tangible empirical referent, then the conception of whatever construct is theoretical in the first place.
+This is why, as the authors say, the process is, by necessity, theory-laden; then the conception of the construct is theoretical in the first place.
 
 In the *hard* sciences (e.g., physics) there may be multiple definitions of certain tangible, material objects that are conceptually distinct but still *physically equivalent*. In contrast, for most constructs of the social sciences there is no physical referent from which to base our definitions and as such the thing that we’re talking about is liable to change upon even subtle changes to the conceptual definition. Thus, since the concept of interest is inherently abstract, and thus immaterial, *construal of the concept must be validated* if it is to be accepted.
 
@@ -2403,7 +1723,6 @@ From the start the meaning and measure of internal political efficacy was of spe
 Many diverse scholars imparted substantive independent theoretical work and empirical analysis that tried to better delineate the conceptual distinction between external efficacy and, well, everything else it was related to empirically.   
 
 
-
 The plausibility of the interpretations proposed by the theory of the concept is lacking, dubious, or simply implausible; and the extent to which the evidence supports the proposed interpretation of measurement results is insufficient or otherwise absent. In fact, the claim espoused here is that results *refute* the proposed interpretation of the evidence derived from survey item responses. 
 
 The interpretation proposed by the theory of the concept is provided simply by the conceptual definition taken together with whatever additional explication is provisioned by the researcher. Responses to the survey item statements (taken together or separately) do not imply the interpretation proposed regardless of whether the individual agrees or disagrees.
@@ -2416,9 +1735,9 @@ Traditionally, when a respondent agrees with the statement, "People like me don'
 
 The first item (NOSAY) has the respondent consider the extent to which they "*have a say*" in, simply, whatever government does. The simple phrase "have a say" carries a lot of weight in the statement but it isn't explicitly clear what that refers to. They then must decide whether they agree or disagree with the assertion that "People like me" do not have any say, whatever that means.
 
-Presumably, the aim is to have the respondent evaluate the impact of one's "*say*" on either the actions of governing actors or the resulting outcomes of politics and government (i.e., "what the government does"). We may readily suppose that one's *say* refers to public expression taken as a form of public's attempts at influencing the actions of governing officials[^3].
+Presumably, the aim is to have the respondent evaluate the influence of one's "*say*" on either the actions of governing actors or the resulting outcomes of politics and government (i.e., "what the government does"). We may readily suppose that one's *say* refers to public expression taken as a form of public's attempts at influencing the actions of governing officials[^3].
 
-However, the statement doesn't permit evaluation of the *efficacy* of public input---of expressing one's *say* on the matters at hand. To put in other words, the respondent is not evaluating the means to the end of influencing the acts of government officials and outcomes of politics. Instead, the individual is prompted to evaluate whether "people like me" 
+However, the statement doesn't permit evaluation of the *efficacy* of public input---of expressing one's *say* on the matters at hand. To put in other words, the respondent is not evaluating the means to the end of influencing the acts of government officials and outcomes of politics. Instead, the individual is prompted to consider whether current conditions and government output favor "people like me". 
 
 
 because of this, the respondent is no longer evaluating the efficacy of one's *say* toward influencing what the government does. 
@@ -2472,7 +1791,7 @@ This study addresses the construct validity of external political efficacy. Spec
 
 Taken together, responses from these survey items are thought to indicate, to some extent, one's position along the dimension of the belief as it has been construed in theory. The external efficacy belief informs or influences responses to the respective survey items. As such, an individual is considered more or less 'externally efficacious' as indicated by their responses to the appropriate survey items. 
 
-The question is how do we validate the interpretation that responses to the survey items represent the belief they are purported to measure. How are we sure that agreement or disagreement with these particular items describes a person as more or less 'externally efficacious'? Given the conventional definition, do the item responses really indicate the degree to which a person believes the government is responsive to citizen demands?  
+The question is how do we validate the interpretation that responses to the survey items represent the belief they are purported to measure? How are we sure that agreement or disagreement with these particular items describes a person as more or less 'externally efficacious'? Given the conventional definition, do the item responses really indicate the degree to which a person believes the government is responsive to citizen demands?  
 
 Because the foundational conception of external efficacy is semantically disconnected from efficacy, attempts to measure the construct are doomed to fail. Even taken on their own, response data resulting from the items purported to measure the construct cannot be validly interpreted as evaluations of efficacy at all. As such, no interpretation of response data from external efficacy items cohere with its given conception, but worse, the given conception itself is misconstrued and semantically divorced from "efficacy" in the first place.
 
@@ -2519,8 +1838,6 @@ An attitude, to put simply, refers to that which houses one's *considerations* (
 :::
 
 
-
-
 ### part 1: the misconstrual of external efficacy
 
 In a very basic sense, a theory must be logically valid before all else. In this case, the conception of external political efficacy is, simply, not logically valid because even if the premises of the concept were true, the truth of the 'conclusion' is not guaranteed. 
@@ -2540,19 +1857,18 @@ The conceptual definition is the basal reference from which the coherence of the
 
 -   The important part is that, taken together or separately, neither external nor internal efficacy measures tell us the maximum effect of individual nor popular political activity from the perspective of the subject. This means that neither are tenable as evaluations of political efficacy.
 
--   For interested researchers, the conventional measures of political efficacy do not nor can not inform us as whether the impact of public intervention, if any, would be recognizable as such from the perspective of the public. This point requires emphasis: scholars are unable to evaluate whether an individual, and by extension the mass public, is sensitive to the effects, if any, of their own political participation. Most importantly, scholars are also unable to evaluate whether the public is sensitive to substantial changes to the political environment---to conditions that pertain to the people's capacity to produce political outcomes, to impose influence, or even to participate as political actors. That is, we're unable to ascertain whether the people are sensitive to the conditions of their political status.
+-   For interested researchers, the conventional measures of political efficacy do not nor can not inform us as whether the impact of public intervention, if any, would be recognizable as such from the perspective of the public. This point requires emphasis: scholars are unable to evaluate whether an individual, and by extension the mass public, is sensitive to the effects, if any, of their own political participation. Most importantly, scholars are also unable to evaluate whether the public is sensitive to substantial changes to the political environment---to conditions that pertain to the people's capacity to produce political outcomes, to impose influence, or even to participate as political actors. That is, we're unable to ascertain whether the people's political efficacy beliefs are sensitive to the conditions of their political status.
 
 
 ### part 2: the interpretations of item responses are untenable as efficacy beliefs
 
 It is very important to remember, "In general, the evidence to be expected in a validity analysis depends on the proposed interpretations and uses of the test scores." [@kane2009, 45]. "One validates, not a test, but an interpretation of data arising from a specified procedure." [@cronbach, 1971, 447].
 
-To determine whether results from measurement items cohere with the conventional conception of external efficacy, the interpretation of item responses must indicate the belief that government officials are responsive to citizen demands. It is questionable, however, whether this is at all feasible by use of the two items purported to measure external efficacy. In fact, there is already a long history of empirical studies that have scrutinized these two items to determine whether they sufficiently correspond to a  multitude of different conceptions of "efficacy". 
+To determine whether results from measurement items cohere with the conventional conception of external efficacy, the interpretation of item responses must indicate the belief that government officials are responsive to citizen demands. It is questionable, however, whether this is at all feasible by use of the two items purported to measure external efficacy. In fact, there is already a long history of empirical studies that have scrutinized these two items to determine whether they sufficiently correspond to a multitude of different conceptions of "efficacy". 
 
 Indeed, the conventional conception of external efficacy is essentially boiled down from a torrid conceptual journey in which multiple scholars have contributed varied distortions to the meaning of the concept. As such the conventional conception of external efficacy is an amalgamation of meanings accrued from the residue of past attempts to make sense of the '*internal*' and '*external*' decomposition of political efficacy. 
 
 For instance, the conventional conception of external political efficacy is not much more than the combined ideas offered by @shingles1987: "*Incumbent-Based Efficacy*" and "*Regime-Based Efficacy*". @craig1990 compiled together an interpretation of results from confirmatory factor analysis in which they state, "...the results suggest that (1) NOSAY and NOCARE combine both regime- and incumbent-based assessments of governmental responsiveness to citizen demands" [@craig1990, 294]
-
 
 Shingles delineation of Incumbent- and Regime-based efficacy is itself drawn from earlier conceptions of external political efficacy made in an attempt to distinguish a precise conception of the construct distinct from political trust [@shingles1987; @gamson1968; @easton1967].
 
@@ -2713,3 +2029,90 @@ jtools::export_summs(
 )
 
 ```
+
+
+## 2025-11-10
+
+
+> "Imagine the articulate and gregarious individual with great organizational expertise transplanted from a democratic setting where he has employed his capabilities in party organization with high success to a dosed and heavy-handed authoritarian regime. The transplantation would not have affected his skills and, ideally, measurements should show a high sense of political competence but a low estimate of system responsiveness. However, most ways of assessing the individual's own sense of political competence would be inadvertently influenced in such a situation by limitations on skills that could plausibly achieve a political response in his immediate setting." [@converse1972, 334]
+
+The setting---i.e., conditions of the political environment---are paramount in regard to political efficacy of any sort. What Converse seems to assume, however, is that for *democratic settings* a particular set of political skills, such as party organization capabilities, best contribute to one's capacity to produce responsiveness from government in return. 
+
+Efficacy is inherently tied to the end for which some thing or act is purposed. Converse here makes clear that being effective means successfully influencing or being influential in some way in government and politics. Inherent to the notion of political efficacy is the underlying purpose of participating in the political process of whatever system. Implied here by Converse, and by authors everywhere else, is that the purpose of individual or popular political participation is ***to influence*** the actors and institutions of government. Therefore, it is conveyed by implication that *the maximum effect achievable through political activity* is but merely to influence governing actors of the political regime.
+
+The scholars of yesteryear faltered in only this: they presumed the political system and regime as democratic in the same way that every man assumes himself good. In so doing, the maximum effect of the people's popular capacity was not *to govern*, but *to influence governors*; not to rule but to hope that their rulers would pity their grievances. And consequently, scholars of today may still be heard professing elections as a form of accountability, all the while the people flail about searching for the means to govern themselves.
+
+## 2025-11-11
+
+My aims in this project are deceptively simple: 
+
+-   attempt to replicate results from @chamberlain2012 incorporating data up to the most recent ANES survey (2024)
+
+-   conduct a better test of the theory proposed by Chamberlain using more appropriate predictors reflective of the (external) political environment.
+
+-   Since external political efficacy is, roughly speaking, an attitude based on considerations of the (external) political environment, then changes to that environment should influence shifts of external efficacy among all of the same political status.
+
+-   the changes to the environment are with respect to contextual factors that condition the individual or public capacity to effectuate change through the political process.
+
+...
+
+Political efficacy has been conceived as an individual's attitude in regard to themselves situated along two component dimensions, but the conception falters as soon as we move to consider the so-called 'external' dimension. In one dimension, political efficacy is conceived as one's personal confidence in their ability to merely encounter or confront political topics, issues, or affairs; internal political efficacy is no more than an individual's self-qualification as more or less politically competent. The conception of the other dimension, external political efficacy, immediately forgoes an appraisal of the means of political action available to the individual, and as such is not related to political efficacy at all. Instead, external efficacy is referred to as a belief about government responsiveness to public demands. Even if the definition is focused squarely on a person's beliefs about the efficacy of public demands, the wording of the survey items do not prompt an individual to evaluate the efficacy of public influence attempts.  
+
+
+...
+
+
+Accordingly, Chamberlain's study was an attempt to validate the measure of external political efficacy in reference to its constructed meaning in political science and public opinion. However, while sensible, the study misses the mark in a few clear ways.
+
+First, the chosen predictors (i.e., independent variables) of the model aren't sensible representations of the political environment. Chamberlain devised a model of temporal dependence with three predictors he claimed were representative of the political environment. The reported findings suggested no: aggregated external efficacy was seemingly unresponsive to changes to the political environment. However, the predictors chosen to serve as proxies of the external political environment were not, indeed, tenable as such. That is, the factors selected can not be understood as representative, in part or in whole, of the political environment. The independent variables of the model were not independent of the individual, of each other, nor could they be understood as representative of the political context along the time series.
+
+Presidential approval ratings, consumer sentiment, and trust in government are not tenable as factors representative of the political environment. Rather, these are attitudinal variables also arising from the perspective of the subject^[To be clear, the individual is subject to the political context, and attitudinal variables about that context from the perspective of the subject are not suitable as proxy for the political conditions thereof]. As such, it is difficult to substantiate the null results as informative or reflective of the author's conclusions.
+
+
+## 2025-11-13
+
+@craig1990's analysis of the 1987 NES pilot study---where they examined 35 different efficacy and trust items to empirically distinguish between political efficacy and trust in government---included at least four items that are far more theoretically viable as items indicative of political efficacy than any other (arguably, even internal efficacy). At least conceptually. They conducted a confirmatory factor analysis with four items meant to capture external efficacy, but the items they selected do not coherently correspond to a valid interpretation of responses. That is, the responses to the items cannot all be validly interpreted as reflecting beliefs about the efficacy of public intervention on the political process to influence governing actors. A valid argument could be made to always include NOSAY as an item composing the external efficacy scale for continuity sake if for nothing else, at least four other items are more theoretically viable as indicants of an underlying political efficacy construct.
+
+Drawing from...
+
+These items are more conceptually coherent as efficacy evaluations than any other. For LEGAL and MAKELSTN, respondents assess and report the extent to which they believe that there are ***means available*** to them to 1) influence what the government does, 2) influence the attention of government officials. "There are many legal ways..." and "...there really is no way to..." can be rephrased as "There are many legal means..." and "...there are really no means to...", which implies that the respondent must consider and judge whether there are means available to the people ***to influence*** government action and outcomes. These are clearly and coherently items that pertain to 'efficacy' more so than many of the others.
+
+As for the third item, VOTESAY is irrefutably an efficacy evaluation. Responses to this item can only be interpreted as an ***evaluation of the efficacy of voting as a means*** toward the stated end. Now the end stated as, “…for people to have a say about what the government does” leads us to understand that voting is evaluated as a form of expression---a form of expressing grievances, opinions, preferences, demands, and so on---and so respondents evaluate the efficacy of one form of expression towards influencing the actions or outcomes of government.
+
+A fourth item that was included in the traditional CPS Responsiveness scale, ELECRESP, is understood more coherently as pertaining to efficacy beliefs than of perceived government responsiveness. The statement reads, “And how much do you feel that having elections makes the government pay attention to what the people think---a good deal, some, or not much?”  
+
+The ELECRESP item statement **focuses on the efficacy of having elections**, which is much more coherent with the ordinary meaning of ‘efficacy’ in the first place---the capacity to produce or achieve intended ends. That item statement prompts an individual to consider the efficacy of elections at achieving a particular end---making the government pay attention to what the people think. Or even more pointedly, the individual considers the extent to which “having elections” facilitates or functions as a means to direct government attention to popular grievance, preferences, demands, etc. So much like the VOTING item, respondents report efficacy beliefs by way of evaluating their capacity to achieve some end by means of the institution designed for that purpose.
+
+The items VOTESAY and ELECRESP clearly follow from the LEGAL and MAKELSTN items; where the LEGAL and MAKELSTN items prompt individuals to report whether there are any means available to them to achieve certain ends, ELECRESP and VOTESAY prompts individuals to report their appraisal of the most prominent means purposed toward such ends.  
+
+In these four items, respondents are at once indicating the extent they believe there to be means available to the people or citizens *writ large*, and the efficacy of certain means, all towards the end of influencing government officials---influencing the actions they take or what they attend to. Thus, these four items are theoretically viable to stand as indicators of a political efficacy belief that generalizes across survey item responses.
+
+Empirically, however, it is unclear given that the original pilot study by @craig1990 did not consider these items to compose a cohesive construct. The average correlation between the six RBE items (LEGAL; FEWPOWER; VOTESAY; FINALSAY; MAKELSTN; NOSAY) was 0.29, which already seems abysmal. The authors stated that adding in two CPS responsiveness items (GOVRESP; ELECRESP) reduces that correlation down to 0.26. However, bear in mind that FEWPOWER, FINALSAY, and GOVRESP do not prompt the individual to appraise a means to some stated end and thus responses cannot be validly considered to reflect efficacy beliefs.
+
+Although FEWPOWER and FINALSAY may reflect an individual’s overarching perspective on conditions of political power within the given country (i.e., “In this country”) or regime (i.e., “Under our form of government…”), item responses reflect one’s perspective on the contemporary political conditions, and not an appraisal of the people’s capacity subject to such conditions. The GOVRESP item is also not an evaluation regarding the efficacy of public input or means thereof, but rather reflects the extent to which government officials take heed of “what people think”, generally speaking, during the process of decision making. The bottom line being that the individual is not prompted to evaluate or appraise the efficacy of the means of political production available to themselves or the people writ large in either of the three items: FEWPOWER, FINALSAY, or GOVRESP.
+
+
+## 2025-11-17
+
+Note in the 1987 NES Pilot, some (external) efficacy questions were pre-faced with the following
+
+> "We are interested in people's opinions about how government works in general in the United
+States and how much influence ordinary people have over it. I am going to read some of the
+things people have said about the type of government we have in this country. After I
+read each statement, please tell me whether you strongly agree, somewhat agree, neither
+agree nor disagree, somewhat disagree, or strongly disagree."
+
+Also note that the internal efficacy items were pre-faced with the following,
+
+> "We are also interested in what people think of their own ability to understand and become involved in politics. I will read some statements. After each, please tell me whether you strongly agree with the statement, somewhat agree, neither agree nor disagree, somewhat disagree, or strongly disagree with the statement as it applies to you."
+
+## 2025-11-20
+
+I think it has become clear to me. 
+
+There's a definite pattern that can be observed from the different attempts to conceptualize and distinguish the internal and external dimensions of political efficacy. In almost every case, the external dimension is simply the contrast established to better conceptualize and validate the internal dimension, whereas the internal dimension reflects the model of an ideal political character. The person with high internal political efficacy is confident in their own sense of political awareness and understanding and are generally more interested in public affairs; they deem themselves well qualified and generally well-read on politics and issues of the day; and they are not so intimidated by prospects of political engagement. This internal sense of political efficacy seems to stem from a more general sense of personal competence---a psychoanalytic atavism earlier scholars often referred to as "ego strength"---which is bolstered by higher education. So those high in internal efficacy are also better educated.
+
+A set of characteristics consistently and strongly associated with internal efficacy excludes all else to the external dimension but leaves us wanting for a cohesive characterization of the "externally efficacious" citizen. In fact, the literature reveals that it is far easier to characterize those who lack external political efficacy than it is for us to imagine those who would be externally efficacious. 
+
+Over the years scholars have searched in every undesirable place hoping to establish some link with external efficacy. Early on, a lack of external efficacy was, in theory, characteristic of apathy. The politically apathetic individuals who were described as withdrawn and disinterested in politics were expected to be those who also didn't participate. In other words, external efficacy explained a lack of engagement. This gets thrown on its head, however, as external efficacy in the aggregate continues to fall despite the tumultuous 60s and 70s.
+
