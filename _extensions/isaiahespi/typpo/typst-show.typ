@@ -18,11 +18,15 @@ $for(by-author)$
 $if(it.name.literal)$
     ( name: [$it.name.literal$],
       last: [$it.name.family$],
-      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],
-      $if(it.email)$
-        email: [$it.email$],
-      $endif$
-      ),
+    $for(it.affiliations/first)$
+    department: $if(it.department)$[$it.department$]$else$none$endif$,
+    university: $if(it.name)$[$it.name$]$else$none$endif$,
+    location: [$if(it.city)$$it.city$$if(it.country)$, $endif$$endif$$if(it.country)$$it.country$$endif$],
+    $endfor$
+    $if(it.email)$
+      email: [$it.email$],
+    $endif$
+    ),
 $endif$
 $endfor$
     ),

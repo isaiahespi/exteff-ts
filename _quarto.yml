@@ -25,7 +25,7 @@ execute:
 notebook-links: false
 bibliography: references.bib
 date: last-modified
-date-format: "YYYY-M-D"
+date-format: "YYYY-MM-DD"
 citation:
   container-title: Manuscript
 
@@ -54,17 +54,17 @@ format:
     fig-width: 4
     fig-asp: 0.618
     # uncomment to adjust these options
-    # two-column: true # default is `two-column: true` layout
+    two-column: false # default is `two-column: true` layout
     # paper: "us-letter",    
-    # mainfont: "STIX Two Text"
+    mainfont: "STIX Two Text"
     # mathfont: "New Computer Modern Math"
     # monofont: "Fira Code"
     # fontsize: 11pt
     # leading: 0.65em # spacing between lines
     # spacing: 1.2em # spacing between paragaphs
     # first-line-indent: 1em
-    # all: true
-    # linkcolor: "#800000",
+    # all: false
+    # linkcolor: "#800000"
     # title-size: 1.5em,
     # subtitle-size: 1.25em,
     # sectionnumbering: "I.A.1",

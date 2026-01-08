@@ -610,7 +610,7 @@ anes2024 <- anes2024 |>
   trustgov3        = V241232,     # PRE: Does government waste much tax money
   trustgov4        = V241233,     # PRE: How many in government are corrupt
   trustppl         = V241234,     # PRE: How often can people be trusted
-  govresp          = V241235,     # PRE: Elections make government pay attention
+  elecresp         = V241235,     # PRE: Elections make government pay attention
   votecount        = V241314,     # PRE: Votes counted accurately
   trustelectnoff   = V241315,     # PRE: Trust election officials
   votestop         = V241316,     # PRE: How often people denied right to vote
@@ -1159,7 +1159,7 @@ anes2024 <- anes2024 |>
       trustcrt,
       trustppl,
       trustelectnoff,
-      govresp
+      elecresp
     ),
     ~ sjlabelled::as_label(.),
     .names = "{col}.fct"

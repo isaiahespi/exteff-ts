@@ -251,11 +251,15 @@
             if "affiliation" in author [
               \ #emph(author.affiliation)
             ]
-            if "email" in author [
-              \ #link("mailto:" + "author.email")
-            ]
-            }))
-          )
+            if "email" in author {
+              if type(author.email) == str [
+                \ #link("mailto:" + author.email)
+              ] else [
+                \ #author.email
+              ]
+            }
+          }))
+        )
         }
   
 

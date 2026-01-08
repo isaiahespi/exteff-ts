@@ -144,6 +144,11 @@ jtools::export_summs(
 # shouldn't be the case since the data is exactly the same
 
 
+lm(exteff ~ exteff.T4 + presapp.T1, data = replica) |> broom::tidy()
+summary(models$`Model 3`)$coefficients[3,4]
+
+
+
 # Why does model 4 N differ? ---------------------------------------------
 
 # The number of obs for model 4 differs from Chamberlain by 2 but I'm not sure why. The data of the model is, or should be, exactly the same as the data utilized by Chamberlain. The dependent and independent variables are only from the ANES Cumulative Data File.
@@ -191,8 +196,6 @@ jtools::export_summs(
 
 # In this table, no coefficient of any predictor in any of the models, nor of the lagged dependent variable, obtains statistical significance. The number of observations for all models is equal (n = 20), indicating that the years included in the model range from 1964 to 2004. 
 
-
-
 # Constraining analysis to relatively recent eras -------------------------
 
 # restricting to years since 1988, n = 14, which isn't great but is perhaps more
@@ -207,8 +210,7 @@ d |>
   lm(exteff ~ exteff.L1 + ics.T1 + presapp.T1 + trustgov.L1, data = _) |>  
   jtools::summ()
 
-# Results show that aggregated external efficacy is significantly influenced by previous values of trust in government and presidential approval from a year prior (t-1). 
-
+# Results show that aggregated external efficacy is significantly influenced by prior value of trust in government and presidential approval. However, note that the number of observations drops down to 14.
 
 # Lag DV by prior value -----------------------------------------------
 
@@ -245,7 +247,7 @@ d <- d |>
 # 2024. This adds four observations, n = 29
 
 d |> 
-  dplyr::select(year, exteff, exteff.T4, exteff.L4, exteff.T1, exteff.L1) |> 
+  dplyr::select(year, exteff, trustgov, exteff.T4, trustgov.T2, exteff.L1, trustgov.L1) |> 
   dplyr::filter(!is.na(exteff)) |>
   print(n = Inf)
 
@@ -286,6 +288,17 @@ jtools::export_summs(
 # trust in government at t-2 removes statistical significance from lagged
 # presidential approval.
 
+lm(exteff ~ exteff.T4 + presapp.T1, data = d) |> broom::tidy()
+
+# Incorporating data from years since 2008 doesn't change anything for Model 4, however.
+
+d |> 
+  dplyr::select(year, exteff, trustgov, exteff.T4, trustgov.T2, exteff.L1, trustgov.L1) |> 
+  dplyr::filter(!is.na(exteff)) |>
+  print(n = Inf)
+
+
+# Model out to 2024 lagged by preceding values ----------------------------
 
 # running the same LDV models except now external efficacy and trust in
 # government are lagged by their previously observed values

@@ -19,7 +19,7 @@ library(srvyr) # 'dplyr'-Like Syntax for summary statistics of survey data
 cdf_wt <- readr::read_rds(here::here("data", "anes data", "anes_cdf_wts.rds"))
 
 # also load 2024 ANES survey data (saved as survey design object)
-anes2024 <- readr::read_rds(file = here::here("data", "anes data", "anes2024des.rds"))
+# anes2024 <- readr::read_rds(file = here::here("data", "anes data", "anes2024des.rds"))
 
 ```
 
@@ -42,27 +42,27 @@ cdf_wt <- cdf_wt |>
   srvyr::mutate(across(c(nocare, nosay), ~ sjlabelled::as_label(., prefix = TRUE)))
 
 # same for 2024 ANES
-anes2024 <- anes2024 |>
-  srvyr::mutate(srvyr::across(
-    c(nocare, nosay),
-    ~ dplyr::case_when(
-      .x %in% c(1, 2) ~ 1,
-      .x == 3 ~ 3, 
-      .x %in% c(4, 5) ~ 2,
-      TRUE ~ NA),
-    .names = "{col}.cdf"
-  )) |>
-  srvyr::mutate(srvyr::across(c(nocare.cdf, nosay.cdf), ~ sjlabelled::set_labels(
-    .x, 
-    labels = c("Agree" = 1, "Disagree" = 2, "Neither" = 3)
-    ))) |>
-  srvyr::mutate(srvyr::across(c(nocare.cdf, nosay.cdf),
-                       ~ sjlabelled::as_label(., prefix = TRUE)))
-  
+# anes2024 <- anes2024 |>
+#   srvyr::mutate(srvyr::across(
+#     c(nocare, nosay),
+#     ~ dplyr::case_when(
+#       .x %in% c(1, 2) ~ 1,
+#       .x == 3 ~ 3, 
+#       .x %in% c(4, 5) ~ 2,
+#       TRUE ~ NA),
+#     .names = "{col}.cdf"
+#   )) |>
+#   srvyr::mutate(srvyr::across(c(nocare.cdf, nosay.cdf), ~ sjlabelled::set_labels(
+#     .x, 
+#     labels = c("Agree" = 1, "Disagree" = 2, "Neither" = 3)
+#     ))) |>
+#   srvyr::mutate(srvyr::across(c(nocare.cdf, nosay.cdf),
+#                        ~ sjlabelled::as_label(., prefix = TRUE)))
+#   
 
 # add redundant `year` var to 2024 ANES data set
-anes2024 <- anes2024 |> 
-  srvyr::mutate(year = rep_len(2024, length.out = nrow(anes2024)))
+# anes2024 <- anes2024 |> 
+#   srvyr::mutate(year = rep_len(2024, length.out = nrow(anes2024)))
 
 
 ```
@@ -104,17 +104,20 @@ nocare_yr <- calcps(cdf_wt, var = "nocare", group_var = "year")
 nosay_yr <- calcps(cdf_wt, var = "nosay", group_var = "year")
 
 # same for 2024 ANES
-nocare2024 <- anes2024 |> 
-  srvyr::select(year, nosay = nosay.cdf, nocare = nocare.cdf) |>
-  calcps(var = "nocare", group_var = "year")
+# nocare2024 <- anes2024 |> 
+#   srvyr::select(year, nosay = nosay.cdf, nocare = nocare.cdf) |>
+#   calcps(var = "nocare", group_var = "year")
 
-nosay2024 <- anes2024 |>
-  srvyr::select(year, nosay = nosay.cdf, nocare = nocare.cdf) |>
-  calcps(var = "nosay", group_var = "year")
+# nosay2024 <- anes2024 |>
+#   srvyr::select(year, nosay = nosay.cdf, nocare = nocare.cdf) |>
+#   calcps(var = "nosay", group_var = "year")
 
 # bind rows of tables (basically stack one on top of the other)
-resp_by_yr <- dplyr::bind_rows(nocare_yr, nosay_yr, nosay2024, nocare2024) |>
+resp_by_yr <- dplyr::bind_rows(nocare_yr, nosay_yr) |>
   dplyr::arrange(year)
+
+# resp_by_yr <- dplyr::bind_rows(nocare_yr, nosay_yr, nosay2024, nocare2024) |>
+#   dplyr::arrange(year)
 
 
 ```

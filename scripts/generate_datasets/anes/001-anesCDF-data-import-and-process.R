@@ -1,12 +1,12 @@
 # this script imports and processes a subset of variables from the ANES
-# Cumulative Data File (1948-2020)
+# Cumulative Data File (1948-2024)
 
-# The 2022-09-16 version of the ANES CDF is openly available to export at the following [link](https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/)
+# The 2025-12-11 version of the ANES CDF is openly available to export at the following [link](https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/)
 
 # Citation:
-# American National Election Studies. 2022. ANES Time Series
-# Cumulative Data File [dataset and documentation]. September 16,
-# 2022 version. www.electionstudies.org
+# American National Election Studies. 2025. ANES Time Series
+# Cumulative Data File [dataset and documentation]. December 11,
+# 2025 version. www.electionstudies.org
 
 # set up ---------------------------------------------------
 
@@ -20,8 +20,8 @@ source(here::here("utils", "funs.R"))
 # library(tidyverse)
 # library(fipio)
 
-# load data
-anesCDF <- haven::read_sav("data-raw/anes/anes_timeseries_cdf_spss_20220916.sav")
+# load data into environment
+anesCDF <- haven::read_sav("data-raw/anes/anes_timeseries_cdf_spss_20251211.sav")
 
 # rename select columns and create cdf codebook ------------------------------
 
@@ -101,7 +101,8 @@ new_var_names <- c(
   nocare                = "VCF0609",
   nosay                 = "VCF0613",
   complex               = "VCF0614",
-  govresp               = "VCF0624",
+  govresp               = "VCF0622",
+  elecresp              = "VCF0624",
   exteff.indx           = "VCF0648",
   govresp.indx          = "VCF0649",
   trustgov.indx         = "VCF0656",

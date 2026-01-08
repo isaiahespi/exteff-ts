@@ -107,24 +107,34 @@ anes_indices <- anes_indices |>
   ))
 
 
-# Also incorporate the average external efficacy index value derived from the
-# 2024 ANES data. I coded the `exteff.cdf` variable following the coding scheme
-# of the ANES CDF. Variable coding for the trust-in-government items slightly
-# differed for 2024 compared to ANES CDF, but I computed the trust-in-government
-# index according to the ANES CDF documentation.
+
+# NOTE: this part is no longer necessary; ANES CDF now includes 20 --------
+
+# I am keeping this code commented out for posterity Also note that even though
+# I followed the ANES CDF coding scheme, the values I got for 2024 external
+# efficacy index differed from the updated ANES CDF index values.
+
+# Also incorporate the average external efficacy index value derived from
+# the 2024 ANES data. I coded the `exteff.cdf` variable following the coding
+# scheme of the ANES CDF. Variable coding for the trust-in-government items
+# slightly differed for 2024 compared to ANES CDF, but I computed the
+# trust-in-government index according to the ANES CDF documentation.
 
 # extract averages of 2024 external efficacy index and trust in government index
 # add year column with 2024 as the year
-anes2024_indices <- anes2024 |> 
-  srvyr::summarise(
-  exteff = srvyr::survey_mean(exteff.cdf, na.rm = T),
-  trustgov = srvyr::survey_mean(trustgov.indx, na.rm = T)
-) |> 
-  dplyr::mutate(year = as.integer(2024), .before = exteff)
+# anes2024_indices <- anes2024 |> 
+#   srvyr::summarise(
+#   exteff = srvyr::survey_mean(exteff.cdf, na.rm = T),
+#   trustgov = srvyr::survey_mean(trustgov.indx, na.rm = T)
+# ) |> 
+#   dplyr::mutate(year = as.integer(2024), .before = exteff)
 
 # merge the anes_indices from the CDF with the 2024 ANES indices
 # this simply incorporates the most recent 2024 ANES data 
-anes_indices <- dplyr::full_join(anes_indices, anes2024_indices)
+# anes_indices <- dplyr::full_join(anes_indices, anes2024_indices)
+
+# -------------------------------------------------------------------------
+
 
 # obtain yearly averages of quarterly ICS from 1960 to 2025
 econ_sentiment <- ics |> 
@@ -172,12 +182,6 @@ d$year <- as.integer(d$year)
 # drop standard error estimates columns; not needed
 d <- d |>
   dplyr::select(-dplyr::contains("_se"))
-
-# remove `.indx` suffix for external efficacy and trust in gov indices
-# d <- d |> 
-#   dplyr::rename_with(.cols = c(exteff.indx, trustgov.indx),
-#                      .fn = \(x) stringr::str_remove(x, pattern = ".indx"))
-
 
 # pivot data to long format -----------------------------------------------
 
