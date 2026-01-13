@@ -52,7 +52,7 @@
   mathfont: ("New Computer Modern Math"),
   monofont: ("Fira Code", "DejaVu Sans Mono"),
   fontsize: 11pt,
-  linkcolor: "#800000",
+  linkcolor: rgb(128, 0, 0),
   title-size: 1.5em,
   subtitle-size: 1.25em,
   
@@ -170,17 +170,18 @@
   // link and cite colors
   show link: this => {
     if type(this.dest) != label {
-      text(this, fill: rgb(linkcolor.replace("\\#", "#")))
+      text(this, fill: rgb(linkcolor))
     } else {
       text(this, fill: rgb("#0000CC"))
     }
   }
-  
-  show cite.where(form: "prose"): this => {
-    text(this, fill: rgb("#800000"))
-  }
+
   show ref: this => {
-    text(this, fill: rgb("#800000"))
+    text(this, fill: rgb("#640872"))
+  }
+
+  show cite.where(form: "prose"): this => {
+    text(this, fill: rgb(128, 0, 0))
   }
 
   // Lists

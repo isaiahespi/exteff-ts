@@ -4,6 +4,7 @@ project:
     - "index.qmd"
     - "notebooks/figure1_replication.qmd"
     - "notebooks/figure2_replication.qmd"
+    - "notebooks/anes_external_efficacy_index_chart.qmd"
 
 manuscript:
   meca-bundle: false
@@ -14,8 +15,8 @@ manuscript:
       title: "Figure 1 Replication"
     - notebook: notebooks/figure2_replication.qmd
       title: "Figure 2 Replication"
-    # - notebook: notebooks/01-data.qmd
-    #   title: "Data Import and Processing"    
+    # - notebook: notebooks/anes_external_efficacy_index_chart.qmd
+    #   title: "ANES External Efficacy Index Chart"
   code-links: repo
 
 execute:
@@ -63,14 +64,14 @@ format:
     # leading: 0.65em # spacing between lines
     # spacing: 1.2em # spacing between paragaphs
     # first-line-indent: 1em
-    # all: false
-    # linkcolor: "#800000"
+    all: false
+    # linkcolor: rgb(128, 0, 0)
     # title-size: 1.5em,
     # subtitle-size: 1.25em,
     # sectionnumbering: "I.A.1",
     # pagenumbering: "1",
     # linenumbering: none
-    # bibliography-titel: "Reference"
+    # bibliography-title: "Reference"
     # bibliographystyle: "chicago-author-date"
       
   # docx:
