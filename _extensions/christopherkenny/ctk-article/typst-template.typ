@@ -89,6 +89,7 @@
   linkcolor: "#800000",
   title-page: false,
   blind: false,
+  author-note: none,
   doc,
 ) = {
 
@@ -107,9 +108,8 @@
     paper: paper,
     margin: margin,
     numbering: "1",
-    header: locate(
-      loc => {
-      let pg = counter(page).at(loc).first()
+    header: context {
+      let pg = counter(page).at(here()).first()
         if pg == 1 {
           return
         } else if (calc.odd(pg)) [
@@ -129,7 +129,6 @@
           line(length: 100%)
       }
     )
-  )
 
   set page(
     numbering: none
@@ -157,9 +156,8 @@
       #block(inset: 1em)[
         #text(weight: "bold")[
           #it.supplement
-          #context it.counter.display(it.numbering)
+          #context it.counter.display(it.numbering)#it.separator
         ]
-        #it.separator
         #it.body
       ]
     ]
@@ -173,8 +171,10 @@
     title: title,
     author: to-string(runningauth),
     date: auto,
-    keywords: keywords.join(", ")
   )
+  set document(
+    keywords: keywords.join(", ")
+  ) if keywords != none
 
   // show rules
   // show figure.where(kind: "quarto-float-fig"): set figure.caption(position: top)
@@ -203,8 +203,9 @@
   // start article content
   if title != none {
     align(center)[
-      #block(inset: 2em)[
-        #text(weight: "bold", size: 30pt)[
+      #block(inset: 1em)[
+        #set par(justify: false)
+        #text(weight: "bold", size: 24pt, hyphenate: false)[
           #title #if thanks != none {
             footnote(thanks, numbering: "*")
             counter(footnote).update(n => n - 1)
@@ -230,12 +231,17 @@
         gutter: 12pt,
         ..slice.map(author => align(center, {
               text(weight: "bold", author.name)
+              if "equal-contributor" in author {
+                 super(numbering("*", 2))
+              }
               if "orcid" in author [
                 #link("https://orcid.org/" + author.orcid)[
-                  #box(height: 9pt, image.decode(orcid_svg))
+                  #box(height: 9pt, image(bytes(orcid_svg)))
                 ]
               ]
+              set text(size: 0.8em)
               if author.department != none [
+              #show ",": linebreak()
               \ #author.department
               ]
               if author.university != none [
@@ -254,8 +260,15 @@
     }
   }
 
+  if author-note != none {
+    counter(footnote).update(n => 2)
+    footnote(author-note, numbering: "*")
+    counter(footnote).update(n => 0)
+  }
+
   if date != none {
-    align(center)[#block(inset: 1em)[
+    v(-1em)
+    align(center)[#block(inset: 0em)[
       #date
     ]]
   }
@@ -284,9 +297,8 @@
     counter(page).update(n => n - 1)
   }
   set page(numbering: "1",
-        header: locate(
-      loc => {
-      let pg = counter(page).at(loc).first()
+        header: context {
+      let pg = counter(page).at(here()).first()
         if (calc.odd(pg)) [
           #align(right, runningtitle)
         ] else [
@@ -297,7 +309,7 @@
           ]
         ]
       }
-    )) if title-page
+    ) if title-page
 
 
   if toc {

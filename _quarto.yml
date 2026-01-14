@@ -61,11 +61,11 @@ format:
     # mathfont: "New Computer Modern Math"
     # monofont: "Fira Code"
     # fontsize: 11pt
-    # leading: 0.65em # spacing between lines
+    leading: 0.75em # spacing between lines
     # spacing: 1.2em # spacing between paragaphs
-    # first-line-indent: 1em
+    first-line-indent: 1em
     all: false
-    # linkcolor: rgb(128, 0, 0)
+    linkcolor: maroon
     # title-size: 1.5em,
     # subtitle-size: 1.25em,
     # sectionnumbering: "I.A.1",

@@ -11,6 +11,7 @@ author:
     # orcid: 
     # corresponding: true
 # keywords:
+
 abstract: |
   It is not sufficiently clear what is being measured by external political efficacy measurement items. Not only is the conceptual definition of external efficacy conflated with similar concepts, empirical results are too closely related to satisfactorily distinguish external efficacy as a distinct component on par with internal political efficacy. Drawing from the conventional conceptual definition of external efficacy, @chamberlain2012 hypothesized that external efficacy beliefs would be dynamically responsive to changes in the political environment. Results from the study could not reject the null; aggregated external efficacy was apparently unresponsive across time to chosen predictors. Extending his analysis to include years since the original study partially replicates the original findings. Following the same methodology, updated results show that external efficacy in the aggregate is positively associated with presidential approval ratings with a one year lag. Similar to the previous results, statistical significance disappears upon inclusion of consumer sentiment and trust in government. Such results pose a severe challenge to the construst validity of measurement for external political efficacy. However, results from then and now are contestable on the grounds that the method of analysis does not appropriately test the hypotheses, and the predictors of the analysis are untenable as factors of the political environment. I attempt to conduct a fairer test of the same hypothesis through different methods and factors of the political environment.     
 
@@ -70,6 +71,24 @@ replica <- d |> dplyr::filter(year >= 1952 & year <= 2008)
           ]
         ]
       ]
+```
+
+```{=typst}
+#show link: this => {
+    if type(this.dest) != label {
+      text(this, fill: rgb(128, 0, 0))
+    } else {
+      text(this, fill: rgb("#0000CC"))
+    }
+  }
+
+#show ref: this => {
+    text(this, fill: rgb("#640872"))
+  }
+
+#show cite.where(form: "prose"): this => {
+    text(this, fill: rgb(128, 0, 0))
+  }
 
 ```
 
@@ -91,7 +110,7 @@ The aim of this paper is to attempt a fairer test of external political efficacy
 
 The initial idea of political efficacy arose instrumentally as a concept for researchers aiming to explain political behavior---an explanation of behavior based on, or in, the psychology of the individual. The seminal book titled "The Voter Decides" by @campbell1954 introduced the concept and initial measure of political efficacy which they believed was related to political activity. These authors referred to this variable as "sense of political efficacy" and described it like this,
 
-> "Sense of political efficacy may be defined as the feeling that individual political action does have, or can have, an impact upon the political process, i.e., that it is worth while to perform one's civic duties. It is the feeling that political and social change is possible, and that the individual citizen can play a part in bringing about this change." [@campbell1954, 187]
+> "Sense of political efficacy may be defined as the feeling that individual political action does have, or can have, an impact upon the political process, i.e., that it is worth while to perform one's civic duties. It is the feeling that political and social change is possible, and that the individual citizen can play a part in bringing about this change." [@campbell1954, p.187]
 
 The original "sense of political efficacy" scale was measured by having respondents select either "agree" or "disagree" to the following survey items:
 
@@ -99,8 +118,8 @@ The original "sense of political efficacy" scale was measured by having responde
 #{
   show table.cell: set text(size: 0.85em)
   show table.cell.where(y: 0): set text(style: "oblique", weight: "bold")
-  show table.cell.where(x: 3): smallcaps 
-  set table(stroke: 0.6pt)
+  show table.cell.where(x: 2): smallcaps 
+  set table(align: left, stroke: 0.6pt)
   
   block(
     inset: 8pt,
@@ -108,16 +127,16 @@ The original "sense of political efficacy" scale was measured by having responde
       columns: 3,
       stroke: none,
       table.header(
-        table.cell(colspan: 3, align: center)[*Sense of Political Efficacy*]
+        table.cell(colspan: 3, align: left)[*Sense of Political Efficacy*]
         ),
       table.hline(),
         ["I don't think public officials care much what people like me think."], [Disagree = 1],
-        [NOCARE],
+        [[nocare]],
         ["The way people vote is the main thing that decides how things are run in this country."], [Agree = 1], [--],
-        ["Voting is the only way that people like me can have any say about how the government runs things."], [Disagree = 1], [VOTING],
+        ["Voting is the only way that people like me can have any say about how the government runs things."], [Disagree = 1], [[voting]],
         ["People like me don't have any say about what the government does."], [Disagree = 1],
-        [NOSAY],
-        ["Sometimes politics and government seem so complicated that a person like me can't really understand what's going on."], [Disagree = 1], [COMPLEX]
+        [[nosay]],
+        ["Sometimes politics and government seem so complicated that a person like me can't really understand what's going on."], [Disagree = 1], [[complex]]
         )
       )
 }
@@ -126,13 +145,13 @@ The original "sense of political efficacy" scale was measured by having responde
 ```
 
 
-At this point, political efficacy was evaluated on the basis of its standing as a Guttman-type scale---as a unidimensional and unidirectional scale with a high coefficient of reproducibility[^1]. Although there were initially five items, the second "The way people vote...." item was dropped from the scale due to its relatively larger error compared to the other items[^2]. Except for this second item, disagreement with the rest of the item statements (NOSAY, NOCARE, VOTING, COMPLEX) was was thought to indicate one's "sense of political efficacy". Positive relationship between one's "sense of political efficacy" and political participation was found and often replicated in subsequent studies [@agger1961; @campbell1960; @dahl1961]. This relationship held after controlling for education and a variety of demographic variables, leading the the authors to conclude that "sense of political efficacy" was, "not merely a function of education or any other likely demographic factor" (@campbell1954, 194).
+At this point, political efficacy was evaluated on the basis of its standing as a Guttman-type scale---as a unidimensional and unidirectional scale with a high coefficient of reproducibility[^1]. Although there were initially five items, the second "The way people vote...." item was dropped from the scale due to its relatively larger error compared to the other items[^2]. Except for this second item, disagreement with the rest of the item statements (NOSAY, NOCARE, VOTING, COMPLEX) was was thought to indicate one's "sense of political efficacy". Positive relationship between one's "sense of political efficacy" and political participation was found and often replicated in subsequent studies [@agger1961; @campbell1960; @dahl1961]. This relationship held after controlling for education and a variety of demographic variables, leading the the authors to conclude that "sense of political efficacy" was, "not merely a function of education or any other likely demographic factor" (@campbell1954, p.194).
 
 [^1]: Guttman scales are also referred to as cumulative scales, where hierarchical arrangement of items suggests that agreement/disagreement with one statement implies agreement with with preceding statements. So for a multi-item scale of five statements with dichotomous response options $[0,1]$, a score of $4$ is on a scale of $0-5$. The coefficient of reproducibility reflects how closely a set of items reproduce a "perfect scale". From an individual's scale score alone we would be able to reproduce their pattern of responses to the items perfectly. Of course, we'd occasionally reproduce the wrong response pattern for each person, reflecting the percent of error in the scale. So if a scale has 10 percent error, then we would be able to reproduce their response choices 90 percent of the time. Hence, the coefficient of reproducibility, $C_{R} = 1 - \frac{E}{N \times I}$, where $E$ = sum of the observed response minus expected response, $N$ = number of respondents, and $I$ = number of items [See: @guttman1944; @ford1950; @jobling1961].
 
 [^2]: Ironically, the only survey item asking respondents to express whether the voter decides was dropped from the scale introduced in the book entitled "The Voter Decides".
 
-The first intuitive conception of "sense of political efficacy", however, has been retired; a multidimensional conception of political efficacy now prevails. Today, political efficacy is conceived as an individual's attitude situated along two dimensions of belief. In one dimension, *internal political efficacy* refers to "...beliefs about one's own competence to understand and to participate effectively in politics" [@craig1990, 290; @niemi1991a, 1407]. The other dimension, *external political efficacy*, refers to "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands" [@craig1990, 290; @niemi1991a, 1408]. It is said to be a mistake to refer to the two dimensions as comprising a single, cohesive attitudinal construct [@balch1974]. Thus separate sets of survey items have been devised specifically to measure either attitude as a distinct construct on its own.
+The first intuitive conception of "sense of political efficacy", however, has been retired; a multidimensional conception of political efficacy now prevails. Today, political efficacy is conceived as an individual's attitude situated along two dimensions of belief. In one dimension, *internal political efficacy* refers to "...beliefs about one's own competence to understand and to participate effectively in politics" [@craig1990; @niemi1991a]. The other dimension, *external political efficacy*, refers to "...beliefs about the responsiveness of governmental authorities and institutions to citizen demands" [@craig1990; @niemi1991a]. It is said to be a mistake to refer to the two dimensions as comprising a single, cohesive attitudinal construct [@balch1974]. Thus separate sets of survey items have been devised specifically to measure either attitude as a distinct construct on its own.
 
 In order to assess political efficacy beliefs along the internal dimension, researchers have survey participants indicate the extent to which they agree or disagree with at least four statements, where agreement indicates internal efficacy:
 
@@ -140,8 +159,9 @@ In order to assess political efficacy beliefs along the internal dimension, rese
 #{
   show table.cell: set text(size: 0.85em)
   show table.cell.where(y: 0): set text(style: "oblique", weight: "bold")
-  show table.cell.where(x: 2): smallcaps 
-  set table(stroke: 0.6pt)
+  show table.cell.where(x: 1): smallcaps 
+  set table(align: left, stroke: 0.6pt)
+  
   
   block(
     inset: 8pt,
@@ -149,14 +169,14 @@ In order to assess political efficacy beliefs along the internal dimension, rese
       columns: 2,
       stroke: none,
       table.header(
-        table.cell(colspan: 2, align: center)[*Internal Political Efficacy*]
+        table.cell(colspan: 2, align: left)[*Internal Political Efficacy*]
         ),
       table.hline(),
-        ["I consider myself well-qualified to participate in politics"], [SELFQUAL],
-        ["I feel I have a pretty good understanding of the important political issues facing our country"], [UNDRSTND],
-        ["I feel that I could do as good a job in public office as most other people"], [PUBOFF],
+        ["I consider myself well-qualified to participate in politics"], [[selfqual]],
+        ["I feel I have a pretty good understanding of the important political issues facing our country"], [[undrstnd]],
+        ["I feel that I could do as good a job in public office as most other people"], [[puboff]],
         ["I think that I am better informed about politics and government as most people"],
-        [INFORMED]
+        [[informed]]
         )
       )
 }
@@ -169,12 +189,11 @@ A separate set of survey items are consistently utilized to estimate the extent 
 
 
 ```{=typst}
-#{
-  show block: set align(center) 
+#{ 
   show table.cell: set text(size: 0.85em)
   show table.cell.where(y: 0): set text(style: "oblique", weight: "bold")
-  show table.cell.where(x: 2): smallcaps
-  set table(stroke: 0.6pt)
+  show table.cell.where(x: 1): smallcaps
+  set table(align: left, stroke: 0.6pt)
   
   block(
     inset: 8pt,
@@ -182,11 +201,11 @@ A separate set of survey items are consistently utilized to estimate the extent 
       columns: 2,
       stroke: none,
       table.header(
-        table.cell(colspan: 2, align: center)[External Political Efficacy]
+        table.cell(colspan: 2, align: left)[External Political Efficacy]
         ),
       table.hline(),
-        ["People like me don't have any say about what the government does."], [NOSAY],
-        ["I don't think public officials care much what people like me think."], [NOCARE]
+        ["People like me don't have any say about what the government does."], [[nosay]],
+        ["I don't think public officials care much what people like me think."], [[nocare]]
         )
       )
 }
@@ -199,19 +218,84 @@ For these items, disagreement with either statement is thought to imply positive
 
 Today, only two items are used to compose the external political efficacy index and these two items remain virtually unchanged from the original "sense of political efficacy" measurement scale. Whatever conceptual ambiguity remains, the two dimensional conception of political efficacy has been generally accepted in the political science of public opinion and behavior. As such, when researchers refer to political efficacy in general terms, they are most often referring to, and including variable measures for, either the internal or external dimensions of political efficacy.
 
+### Common Methods Assessing Measurement
+
 The eventual empirical deconstruction of a "sense of political efficacy" into multiple dimensions of belief relied on various techniques that seemingly coincided with advances in political methodology and survey research. Validation of the internal and external dimensions of belief has been approached in more than a few ways: comparing relationships of item response data with other variables expected to be related in theory, i.e., external validation [@balch1974]; analysis of measurement reliability and stability of survey items, specifically test-retest reliability [@asher1974]; some form of factor analysis [@craig1982; @finkel1985; @shingles1987; @craig1990; @acock1990; @niemi1991a], to include principal components analysis [@muller1970; @bowler2002], and path analysis techniques [@mcpherson1977]; and finally examination of over time change and correlation of item responses in the aggregate [@converse1972; @chamberlain2012]. Of these, the favored method used to validate the two dimensional construction of political efficacy has been factor analysis[^3].
 
 [^3]: Factor analysis is a multivariate statistical technique that falls under dimension reduction methods, alongside Principal Components analysis and multidimensional scaling, and is also used for the exploration of underlying latent structures within a data set. Broadly speaking, factor analysis encompasses two main approaches: Exploratory Factor Analysis (EFA) and Confirmatory Factor Analysis (CFA). EFA attempts to identify any underlying factor structure of a set of observed variables without making any prior assumptions, i.e., *exploring* the factor structure that might underlie given data. Confirmatory factor analysis, in contrast, is theory driven. In CFA, a researcher hypothesizes the number of factors and patterns of factor loadings expected *a priori* (i.e., proposed in theory) and tests the fit of the factor model. In other words, the CFA approach tests the hypothesis that a set of items are associated with one or more specified factors.
 
+Most prominent in the literature are the empirical studies that have scrutinized the internal and external political efficacy items, alongside many others, by way of factor analysis techniques in order to determine whether response data could be validly interpreted according to a multitude of different conceptually distinct dimensions of political efficacy [@craig1982; @craig1990; @niemi1991a]. However despite widespread use, this method of approach is still liable to reasonable criticism; in particular the subjectivity in the interpretation, and naming, of factors. 
+
+For instance, competing research asserted that the NOSAY and NOCARE survey items indicate internal efficacy and proposed a different set of survey items (ELECRESP and GOVRESP, shown below) as measures for external efficacy [@acock1985; @clarke1989; @acock1990]. Indeed, these alternate survey items are used by ANES to construct the *government responsiveness index*[^5] separate from the external efficacy index. These authors argued that the alternative set of survey questions have better appeal as measures of external efficacy in terms of face validity. Additionally, @acock1990's argument for these two items (ELECRESP, GOVRESP) as proposed measures of external efficacy defined interchangeably with government responsiveness was based on the reasoning that, "...respondents are asked to evaluate if some aspect of the political system is receptive to citizen inputs" [-@acock1990, 89]. Across multiple studies, they also provided evidence from factor analytic methods and covariance structure analysis that the alternative set of items worked well as indicators of external efficacy.
+
+[^5]: Both items were included starting in the 1964 ANES survey, however the GOVRESP item stopped being included in ANES surveys after 2004. From 1964-1980, ANES also had included two additional items in computation of the government responsiveness index: 1) "How much do you feel that political parties help to make the government pay attention to what the people think---a good deal, some, or not much?", 2) "How much attention do you think most congressmen pay to the people who elect them when they decide what to do in congress ---a good deal, some, or not much?".  
+
+```{=typst}
+#{
+  show table.cell: set text(size: 0.85em)
+  show table.cell.where(x: 1): smallcaps
+  set table(align: left, stroke: 0.6pt)
+  
+  block(
+    inset: 8pt,
+    table(
+      columns: 2,
+      stroke: none,
+      table.hline(),
+        ["How much do you feel that having elections makes the government pay attention to what the people think --- a good deal, some, or not much?"], [ELECRESP],
+        ["Over the years, how much attention do you feel the government pays to what people think when it decides what to do --- a good deal, some, or not much?"], [GOVRESP]
+        )
+      )
+}
+
+
+```
+
+
+Around the same time, @craig1990 conducted separate factor analysis on data from the 1987 NES pilot study and presented limited evidence supporting a different set of four items (below) as sufficient indicators for external efficacy, while also giving credence to the inclusion of the ELECRESP and GOVRESP as a six-item measure of the construct. As can be seen, three of the survey items below purported to indicate external efficacy in @craig1990's confirmatory factor analysis differ from the two items that became the conventional standard for external efficacy in subsequent studies; nor does the ANES utilize these four items to compose the external political efficacy index. Importantly, their report advised that the **internal political efficacy** battery tested should be used in future NES surveys as it "...would correct a major flaw in the original political efficacy scale", whereas additional indicators of external political efficacy "...should probably be developed" [@craig1990, 307].
+
+```{=typst}
+#{
+  show table.cell: set text(size: 0.85em)
+  show table.cell.where(x: 1): smallcaps 
+  set table(align: left, stroke: 0.6pt)
+  
+  block(
+    inset: 8pt,
+    table(
+      columns: 2,
+      stroke: none,
+      table.hline(),
+        ["People like me don't have any say about what the government does."], [[nosay]],
+        ["If public officials are not interested in hearing what the people think, there is really no way to make them listen."], [[makelstn]],
+        ["Under our form of government, the people have the final say about how the country is run, no matter who is in office."], [[finalsay]],
+        ["There are many legal ways for citizens to successfully influence what the government does"], [[legal]],
+        )
+      )
+}
+
+
+```
+
+
+The 1988 NES deployed the four newly revised internal efficacy items seen above (SELFQUAL, UNDRSTND, PUBOFF, INFORMED), while retaining three of the original "sense of political efficacy" items (NOSAY, NOCARE, COMPLEX). @niemi1991a reported results that validated the new internal efficacy scale as a measure of a distinct dimension of political efficacy beliefs. However the authors noted throughout that the external efficacy items were "considerably less impressive" but nevertheless "adequate for the task of evaluating the external validity of our four-item internal efficacy battery." [@niemi1991a, 1411]. In other words, the external efficacy items were not sufficient on their own but good enough to help validate the internal efficacy scale. The most that is stated about the measures for external efficacy is that, "...whatever they do measure...they do *not* measure internal efficacy" [-@niemi1991a, 1412, emphasis original].
+
+Although the results from the competing CFA models appear compelling, even if conflicting, the lack of consensus and consistency in the literature was primarily conceptual, which highlights a notable flaw in relying too heavily on factor analysis methods for the sake of construct validation---the naming fallacy. We merely name a factor "internal efficacy" when it just as easily can be called anything else without clear and sufficient conceptual justification. Factor loadings may reflect the strength of the relationship between variable and factor, but the interpretation of that factor is not also given. The only cogent justification for a particular nominal moniker (name) would be its semantic coherence in ordinary language. Yet, this coherence is not simply established "on the face of it", but regards the logical coherence between the conceptual meaning of the concept and its operative measurement.
+
+Despite the involved and voluminous literature, the substantive problem remains regarding measurement and meaning of external political efficacy. That is, the construct validity of survey items purported to indicate external political efficacy has seldom been scrutinized.
+
 ### Conceptual Confusion
 
-The conflation between perceived government responsiveness and external efficacy has made valid interpretation of item response data difficult to stomach. It is not clear whether external efficacy is a belief about perceived government responsiveness or a belief about public capacity to influence government officials given conditions of the political environment. On the one hand, the political context is established as the main focus of the belief from the name of the construct itself; external political efficacy concerns beliefs about their own and others political efficacy (capacity) as conditioned by the *external* political environment. We can think of internal efficacy in much the same way; internal efficacy concerns one's beliefs about their own political efficacy conditioned by that "*internal environment*", so to speak. One's subjective assessment of their own political knowledge, awareness, esteem, and whatever other personal quality pertains to their perceived political competence conditions the extent of what we call their internal political efficacy[^5]. 
+The conflation between perceived government responsiveness and external efficacy has made valid interpretation of item response data difficult to stomach. It is not clear whether external efficacy is a belief about perceived government responsiveness or a belief about public capacity to influence government officials given conditions of the political environment. On the one hand, the political context is established as the main focus of the belief from the name of the construct itself; external political efficacy concerns beliefs about their own and others political efficacy (capacity) as conditioned by the *external* political environment. We can think of internal efficacy in much the same way; internal efficacy concerns one's beliefs about their own political efficacy conditioned by that "*internal environment*", so to speak. One's subjective assessment of their own political knowledge, awareness, esteem, and whatever other personal quality conditions their perceived political competence, which is what we call their internal political efficacy[^6]. 
 
-[^5]: Indeed it may be less confusing to simply refer to internal political efficacy as perceived personal political competence as many authors already conceive it as such [@almond1963; @converse1972; @abravanel1975]. Especially since immediate links to a generalized "sense of personal competence" and "ego strength" were embedded into the original "sense of political efficacy" idea by psychologists, sociologists, and political scientists [@douvan1956; @douvan1958; @lane1959a; @campbell1960]. And most especially given that internal efficacy does not refer to a belief about the efficacy of political action to achieve political ends.
+[^6]: Indeed it may be less confusing to simply refer to internal political efficacy as perceived personal political competence as many authors already conceive it as such [@almond1963; @converse1972; @abravanel1975]. Especially since immediate links to a generalized "sense of personal competence" and "ego strength" were embedded into the original "sense of political efficacy" idea by psychologists, sociologists, and political scientists [@douvan1956; @douvan1958; @lane1959a; @campbell1960]. And most especially given that internal efficacy does not refer to a belief about the efficacy of political action to achieve political ends.
 
 On the other hand, the perceived responsiveness of government takes central emphasize in the conceptual definition of external political efficacy. Even though the conventional definition refers to external efficacy as a belief about responsiveness *to public input*, it is not defined as an evaluation or appraisal on *the efficacy of public input*. Indeed, external efficacy is primarily an evaluation of perceived government responsiveness and much less an appraisal of the efficacy of public demands, if at all. 
 
-Chamberlain conceptualized external efficacy in such a way that conflates government satisfaction with perceived government responsiveness, and further deviates the meaning of external efficacy away from ordinary meanings of both "external" and "efficacy". Although his overall notion that external political efficacy beliefs should be responsive to shifts in the external political environment was intuitive and sensible, the conceptual definition of external efficacy from which he based his theory and expectations reverted to focus on beliefs about government responsiveness, which in turn led him to base his modeling approach on satisfaction with government.
+
+
+Chamberlain conceptualized external efficacy in much the same way that conflates government satisfaction with perceived government responsiveness, and further deviates the meaning of external efficacy away from ordinary meanings of both "external" and "efficacy". Although his overall notion that external political efficacy beliefs should be responsive to shifts in the external political environment was intuitive and sensible, the conceptual definition of external efficacy from which he based his theory and expectations reverted to focus on beliefs about government responsiveness, which in turn led him to base his modeling approach on satisfaction with government.
+
 
 
 ## Data & Methods {#sec-data-methods}
@@ -282,9 +366,9 @@ Understandably, average values are difficult to compare across time due to the f
 
 Recall @chamberlain2012's hypothesis was that, according to the conceptual definition of the construct, aggregate external efficacy would appear to be dynamically responsive to "changes in the political environment" [-@chamberlain2012, 120]. In order to test this hypothesis, he conducted a dynamic time-series analysis on aggregate external political efficacy from 1952 to 2008 by use of a lagged dependent variable OLS model. The dependent variable was the average index values for external efficacy in the aggregate and across time from 1952 to 2008. His independent variable predictors included presidential approval ratings, an index of consumer sentiment, trust in government, and a 4-year lag of the dependent variable external efficacy. Null results would invalidate, or at least challenge, the measurement of external efficacy and require re-consideration of both concept and measurement. Stated a bit more exhaustively, given the conceptual definition of external political efficacy, null results would invalidate the interpretation that results from the two survey items represent the construct external political efficacy.
 
-Chamberlain reported that results could not reject null: aggregate external efficacy was unresponsive to the predictors across time. I attempted to replicate[^7] the same table of results from the original study [see -@chamberlain2012 123].
+Chamberlain reported that results could not reject null: aggregate external efficacy was unresponsive to the predictors across time. I attempted to replicate[^8] the same table of results from the original study [see -@chamberlain2012 123].
 
-[^7]: Note that I did not attempt to replicate 'Model 5' from the original publication. In that model, the dependent variable was regressed on congressional approval and a four-year lag of the dependent variable.
+[^8]: Note that I did not attempt to replicate 'Model 5' from the original publication. In that model, the dependent variable was regressed on congressional approval and a four-year lag of the dependent variable.
 
 :::{.place arguments='top, scope: "parent", float: true'}
 

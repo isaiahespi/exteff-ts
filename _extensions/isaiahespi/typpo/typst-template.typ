@@ -32,6 +32,19 @@
 }
 
 
+// better way to avoid escape characters, rather than doing a regex for \\@
+#let to-string(content) = {
+  if content.has("text") {
+    content.text
+  } else if content.has("children") {
+    content.children.map(to-string).join("")
+  } else if content.has("body") {
+    to-string(content.body)
+  } else if content == [ ] {
+    " "
+  }
+}
+
 #let typpo-article(
   title: none,
   subtitle: none,
@@ -52,7 +65,7 @@
   mathfont: ("New Computer Modern Math"),
   monofont: ("Fira Code", "DejaVu Sans Mono"),
   fontsize: 11pt,
-  linkcolor: rgb(128, 0, 0),
+  linkcolor: "#800000",
   title-size: 1.5em,
   subtitle-size: 1.25em,
   
@@ -67,7 +80,7 @@
   
   leading: 0.65em,
   spacing: 1em,
-  first-line-indent: 1.8em,
+  first-line-indent: 1em,
   all: true,
   // Bibliography settings (no effect if citeproc used)
   bibliography-title: "References",
@@ -179,9 +192,14 @@
   show ref: this => {
     text(this, fill: rgb("#640872"))
   }
+  
+  show cite: it => {
+    show regex("\d{4}"): set text(maroon)
+    it
+  }
 
   show cite.where(form: "prose"): this => {
-    text(this, fill: rgb(128, 0, 0))
+    text(this, fill: rgb("#640872"))
   }
 
   // Lists
@@ -254,7 +272,7 @@
             ]
             if "email" in author {
               if type(author.email) == str [
-                \ #link("mailto:" + author.email)
+                \ #link("mailto:" + to-string(author.email))
               ] else [
                 \ #author.email
               ]
